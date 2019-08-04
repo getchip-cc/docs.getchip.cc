@@ -1,0 +1,24 @@
+{
+  "name": "docs.getchip.cc",
+  "private": true,
+  "homepage": "https://github.com/jgarber623/docs.getchip.cc",
+  "bugs": {
+    "url": "https://github.com/jgarber623/docs.getchip.cc/issues"
+  },
+  "license": "CC0-1.0",
+  "author": {
+    "name": "Jason Garber",
+    "email": "jason@sixtwothree.org",
+    "url": "https://sixtwothree.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jgarber623/docs.getchip.cc.git"
+  },
+  "scripts": {
+    "build": "npx @11ty/eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.9.0-beta.1"
+  }
+}
