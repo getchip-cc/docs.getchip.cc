@@ -1,0 +1,4206 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+		<link rel="shortcut icon" href="//s3-us-west-2.amazonaws.com/ntcpublic/icon-16.png" type="image/x-icon">
+    <link rel="icon" href="//s3-us-west-2.amazonaws.com/ntcpublic/icon-16.png" type="image/x-icon">
+		
+    <title>Next Thing Co. C.H.I.P. Pro Documentation</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #f8f8f2;
+  background-color: #272822;
+}
+.highlight .err {
+  color: #272822;
+  background-color: #f92672;
+}
+.highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #f4bf75;
+}
+.highlight .nt {
+  color: #f4bf75;
+}
+.highlight .o, .highlight .ow {
+  color: #f8f8f2;
+}
+.highlight .p, .highlight .pi {
+  color: #f8f8f2;
+}
+.highlight .gi {
+  color: #a6e22e;
+}
+.highlight .gd {
+  color: #f92672;
+}
+.highlight .gh {
+  color: #66d9ef;
+  background-color: #272822;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #ae81ff;
+}
+.highlight .kc {
+  color: #fd971f;
+}
+.highlight .kt {
+  color: #fd971f;
+}
+.highlight .kd {
+  color: #fd971f;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #a6e22e;
+}
+.highlight .sr {
+  color: #a1efe4;
+}
+.highlight .si {
+  color: #cc6633;
+}
+.highlight .se {
+  color: #cc6633;
+}
+.highlight .nn {
+  color: #f4bf75;
+}
+.highlight .nc {
+  color: #f4bf75;
+}
+.highlight .no {
+  color: #f4bf75;
+}
+.highlight .na {
+  color: #66d9ef;
+}
+.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
+  color: #a6e22e;
+}
+.highlight .ss {
+  color: #a6e22e;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+    
+    <link href="stylesheets/ntc_override.css" rel="stylesheet" media="screen" />
+    
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAVI
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+    
+      <div class="nav-bar-logo">
+        <a href="index.html"><img src="images/ntclogo_doccorner.png" alt="Ntclogo doccorner" /></a>
+      </div>
+      
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc">
+      </div>
+        <ul class="toc-footer">
+            <li>Have something to add or change? <br> Email us at docs@nextthing.co.</li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        
+          <h1 id="get-started-with-c-h-i-p-pro">Get Started With C.H.I.P. Pro</h1>
+
+<p><img src="images/CHIP_ProMain.jpg" alt="C.H.I.P. Pro" /></p>
+
+<p>The C.H.I.P. Pro System-on-Module (SOM) is designed to get you making great products instead of re-inventing computers. It&rsquo;s a low-cost, high-capability module that lets you focus on fast iterations of brilliant ideas that will be ready to manufacture. </p>
+
+<p>To get the most out of developing and designing for C.H.I.P. Pro we recommend prototyping with the <a href="http://docs.getchip.com/chip_pro_devkit.html">C.H.I.P. Pro Development Kit</a>. </p>
+
+<p>This document provides technical details that will make integrating C.H.I.P. Pro module into your designs a breeze, along with technical specifications and basic guides to get you connected and working with software on C.H.I.P. Pro. </p>
+
+<p><strong>At a Glance C.H.I.P. Pro&rsquo;s Features:</strong></p>
+
+<ul>
+<li>512MB of NAND storage</li>
+<li>2.4GHz WiFi and Bluetooth connectivity</li>
+<li>Onboard power and battery charging management</li>
+<li>Pins for popular I/O busses</li>
+<li>2x USB Port (1x USB 2.0 Host, 1x OTG)</li>
+<li>Security and flexibility of mainline Linux </li>
+<li>Breadboard and SMT compatible</li>
+<li>Dimensions: 45mm x 30mm</li>
+</ul>
+
+<p>Comprehensive audio handling includes:</p>
+
+<ul>
+<li>24-bit ADC/DAC for stereo audio in and out</li>
+<li>one-wire audio digital out</li>
+<li>I2S digital audio for interfacing with industry standard audio codecs.</li>
+</ul>
+
+<p>To learn more, go to our <a href="https://docs.getchip.com/chip_pro.html#specifications">Specification</a> section.</p>
+
+<h2 id="gr8-sip">GR8 SiP</h2>
+
+<p><img src="images/CHIP-Pro-Exploded-View.png" alt="GR8" /></p>
+
+<p>C.H.I.P. Pro is powered by Next Thing Co’s GR8 SiP (System in Package). GR8 features a 1GHz Allwinner R8 ARMv7 Cortex-A8 processor with NEON SIMD extensions and a Mali-400 GPU. 256MB of Nanya DDR3 SDRAM is combined with the R8 processor into a 14mm x 14mm, 0.8mm pitch 252 ball FBGA package. </p>
+
+<p>In addition to the Mali-400 graphic engine that supports OpenGL ES 1.0 and 2.0. GR8 includes a video engine for encoding and decoding codecs such as VP6/8, AVS, H.264, H.263, MPEG-1/2/4 and a display engine for a hardware cursor, alpha blending, and anti-flicker.</p>
+
+<p>More information about the GR8 SiP can be found in the <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/raw/master/Datasheets/GR8_Datasheet_v1.0.pdf">GR8 data sheet.</a></p>
+
+<h2 id="block-diagram">Block Diagram</h2>
+
+<p><img src="images/blockDiagram.jpg" alt="C.H.I.P. Pro Block Diagram" /></p>
+
+          <h1 id="connect-and-control">Connect and Control</h1>
+
+<h2 id="flash-an-operating-system">Flash an Operating System</h2>
+
+<p>Like its older sibling C.H.I.P., C.H.I.P. Pro&rsquo;s GR8 SiP runs mainline Linux by default. This provides security, flexibility, robust tools, and open-source options. In the interest of power consumption and storage space, we have two OS options to best fit your needs: </p>
+
+<p><strong>Debian</strong> is a classic amongst embedded Linux board users for rapid prototyping. It offers a full package manager and loads of precompiled software and familiar command-line tools. </p>
+
+<p><strong>Buildroot</strong> is simple and stripped down making it efficient and ideal for permanent deployment and high-reliability embedded systems. </p>
+
+<p>C.H.I.P. Pro has 512MB of high-reliability SLC NAND storage onboard for holding the core operating system and a limited amount of user and program data. While the storage is faster and more reliable it has less capacity. Because of this, it&rsquo;s a good idea to know how much storage software will take before flashing and installing. Where needed, additional high-speed storage can be added through C.H.I.P. Pro’s SDIO bus.</p>
+
+<p>Grab these items to flash C.H.I.P. Pro:</p>
+
+<ul>
+<li>C.H.I.P. Pro </li>
+<li>USB A to Micro-USB B cable</li>
+<li>Separate computer with <a href="https://www.google.com/chrome/browser/desktop/index.html">Chrome</a> or <a href="https://www.chromium.org/getting-involved/download-chromium">Chromium</a> browser and an internet connection.</li>
+</ul>
+
+<h3 id="flashing-process">Flashing Process</h3>
+
+<p>Head over to the web flasher at <a href="http://flash.getchip.com/pro">flash.getchip.com/pro</a>. If it&rsquo;s your first time flashing, when you arrive you will be asked to install the NTC Flasher Chrome Extension.</p>
+
+<p>After installing the extension, the main page will give you the option to either download an image or follow the wizard to flash C.H.I.P. Pro. </p>
+
+<p>Download an image to look at the source code or store and flash a board with it when you see an option for choosing an image from your computer. </p>
+
+<p>Click <strong>FLASH</strong> to flash C.H.I.P. Pro.</p>
+
+<p><img src="images/main.png" alt="flasher home page" /></p>
+
+<p>You will then arrive at the <strong>&ldquo;Flasher First Time Setup&rdquo;</strong> page which will have setup instructions specific to your computer&rsquo;s operating system. Follow along in the browser or below.</p>
+
+<ul>
+<li><p>Linux-specific</p>
+
+<ul>
+<li>A Debian-based Linux computer requires creating a set of udev rules to communicate with your C.H.I.P. Pro. Paste the following into a terminal window. </li>
+</ul>
+<pre class="highlight shell"><code>sudo usermod -a -G dialout <span class="k">${</span><span class="nv">USER</span><span class="k">}</span>
+sudo usermod -a -G plugdev <span class="k">${</span><span class="nv">USER</span><span class="k">}</span>
+
+<span class="c"># Create udev rules</span>
+<span class="nb">echo</span> -e <span class="s1">'SUBSYSTEM=="usb", ATTRS{idVendor}=="1f3a", ATTRS{idProduct}=="efe8",       GROUP="plugdev", MODE="0660" SYMLINK+="usb-chip"
+SUBSYSTEM=="usb", ATTRS{idVendor}=="18d1", ATTRS{idProduct}=="1010", GROUP="plugdev",   MODE="0660" SYMLINK+="usb-chip-fastboot"
+SUBSYSTEM=="usb", ATTRS{idVendor}=="1f3a", ATTRS{idProduct}=="1010", GROUP="plugdev",   MODE="0660" SYMLINK+="usb-chip-fastboot"
+SUBSYSTEM=="usb", ATTRS{idVendor}=="067b", ATTRS{idProduct}=="2303", GROUP="plugdev",   MODE="0660" SYMLINK+="usb-serial-adapter"
+'</span> | sudo tee /etc/udev/rules.d/99-allwinner.rules
+
+sudo udevadm control --reload-rules
+</code></pre>
+<p>Then logout and log back in.</p>
+
+<p>For the curious:
+- ${USER}: outputs your username
+- dialout: gives non-root access to serial connections
+- plugdev: allows non-root mounting with pmount</p>
+
+<p>The udev rules then map the usb device to the groups. For more information, check <a href="https://wiki.debian.org/SystemGroups">the systems group page on    debian.org</a>.</p></li>
+<li><p>Windows-specific</p>
+
+<ul>
+<li>To communicate to C.H.I.P. Pro from a Windows computer you must install <a href="https://s3-us-west-2.amazonaws.com/getchip.com/extension/drivers/windows/InstallDriver2.exe">drivers</a>.</li>
+<li>Reboot after installing drivers on previous versions (&lt;10) of Windows. </li>
+<li>During the fastboot process <strong>Windows may issue the warning &ldquo;device not recognized&rdquo;</strong>. Getting this warning during fastboot is <strong>normal</strong> and <strong>flashing should proceed</strong>.</li>
+</ul></li>
+<li><p>MacOS specific</p>
+
+<ul>
+<li>Using USB3 ports can cause the flashing to fail. If you can, try using a USB2 port, not a USB3. If you find yourself with a modern Mac that only has USB3 ports, try using a USB2 hub in your USB3 port and plug C.H.I.P. Pro into that.</li>
+<li>OS X El Capitan has been known to have issue with the flashing process. If a new cable or USB2 hub does not work and you are able to, upgrade to macOS Sierra.</li>
+</ul></li>
+</ul>
+
+<p>After you have setup your computer, press <strong>START!</strong>.</p>
+
+<p><img src="images/firstsetup.png" alt="first time setup" /></p>
+
+<p>Plug the micro USB cable into the micro USB port on C.H.I.P. Pro. Hold down the FEL button (a pencil eraser works nicely) and with the other hand plug the USB cable into the computer. When the pink power and white status LEDs on C.H.I.P. Pro light up, you can release the FEL button.</p>
+
+<p><img src="images/images/hold_plugPro.gif" alt="pushing FELL button" /></p>
+
+<p>The web flasher will search for and recognize C.H.I.P. Pro.</p>
+
+<p><img src="images/searchFlash.png" alt="searching page" /> </p>
+
+<p>You will then be directed to the page with the example images. Hover over each image to see a description and click to see more details such as file size and kernel version. When you have chosen your adventure, click <strong>FLASH TO C.H.I.P. PRO</strong>.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><a href="images/imagesPage.jpg"><img src="images/imagesPage.png" alt="image page" /></a></th>
+<th style="text-align: center"><a href="images/imageDetail.png"><img src="images/imageDetail.png" alt="flash to board" /></a></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">Choose image</td>
+<td style="text-align: center">Click FLASH TO CHIP PRO</td>
+</tr>
+</tbody></table>
+
+<p>Watch the flashing process progress and leave the browser tab open in order for it to complete. You will be notified when C.H.I.P. Pro has been flashed successfully. You are then free to unplug the C.H.I.P. Pro or connect to it via <a href="https://docs.getchip.com/chip_pro.html#usb-serial-uart1-connection">serial</a>. </p>
+
+<p><img src="images/flashFinish.png" alt="succeeded page" /></p>
+
+<p>If you are having problems with the flashing process follow the troubleshooting instructions given by the web flasher or check out the <a href="https://docs.getchip.com/chip.html#web-flasher-os-specific-issues">Web Flasher OS-Specific Issues</a> troubleshooting section. </p>
+
+<h2 id="examples">Examples</h2>
+
+<p>You can select an OS by flashing one of our examples using the web flasher <a href="http://flash.getchip.com">flash.getchip.com/pro</a> in Chrome or Chromium browser. </p>
+
+<p>We have built examples based on Buildroot that implement features exposed on the CHIP Pro <a href="https://docs.getchip.com/chip_pro_devkit.html">Dev Board</a> such as its two MICs, and array of GPIOs. If you are building a circuit that incorporates mics and LEDs with a bare C.H.I.P. Pro you can start with these examples. </p>
+
+<h4 id="blinkenlights-buildroot">Blinkenlights (Buildroot)</h4>
+
+<p>Size: ~60MB</p>
+
+<p>This Python based example provides easy-to-understand code with exciting results. Flash C.H.I.P. Pro with this image and LEDs connected to <strong>GPIO D0-D7</strong> turn on and off in a cascading pattern. LEDs connected to the <strong>PWM0 and PWM1 pins</strong> will pulse from dim to bright. </p>
+
+<h4 id="vu-meter-buildroot">VU Meter (Buildroot)</h4>
+
+<p>Size: ~60MB</p>
+
+<p>Want to make sure your mics are working? Use this handy VU Meter example. LEDs connected to GPIO D0 - D7 will light proportional to the volume of the noise captured by two mics connected to the <strong>MICIN1 and MICIN2 pins</strong>.</p>
+
+<h3 id="pro">Pro</h3>
+
+<p>Size: ~180MB</p>
+
+<p>We provide a standard Debian distribution. Once flashed connect to the C.H.I.P. Pro via <a href="https://docs.getchip.com/chip_pro.html#make-a-serial-connection">serial</a> and log in with the default username <code class="prettyprint">chip</code> and password <code class="prettyprint">chip</code>.</p>
+
+<p>If you want to configure and build the rootfs for the Debian image, take a look at our <a href="https://github.com/NextThingCo/chip-os-pro">github repo</a> </p>
+
+<h2 id="make-a-serial-connection">Make a Serial Connection</h2>
+
+<p>C.H.I.P. Pro is a headless computer, so you will need a separate computer in order to interact with it. This section will go over how to connect via USB-serial to UART, connect to a WiFi network and where to find example scripts.</p>
+
+<h3 id="usb-serial-to-uart-pins">USB-Serial to UART Pins</h3>
+
+<p>A UART to USB-serial connection between C.H.I.P. Pro and your computer offers the most comprehensive look at what&rsquo;s happening in C.H.I.P. Pro since you can get all message output from the moment it starts booting. </p>
+
+<h4 id="things-you-will-need">Things you will need</h4>
+
+<ul>
+<li>USB-UART cable (<a href="https://www.amazon.com/JBtek-WINDOWS-Supported-Raspberry-Programming/dp/B00QT7LQ88/ref=sr_1_6?srs=9123049011&amp;ie=UTF8&amp;qid=1488833574&amp;sr=8-6">for example</a>)</li>
+<li>Drivers (if required)</li>
+<li>Soldering Iron + solder</li>
+<li>Pin headers</li>
+<li>Computer with monitor (for example, a <a href="http://www.getchip.com/">C.H.I.P.</a>!)</li>
+<li>Terminal emulation software for Windows such as <a href="http://www.chipkin.com/using-putty-for-serial-com-connections-hyperterminal-replacement/">PuTTY</a> (OS X and Linux have <code class="prettyprint">screen</code> built-in)</li>
+</ul>
+
+<h4 id="install-usb-uart-cable-drivers">Install USB-UART Cable Drivers</h4>
+
+<p>Not only will you need a USB-UART cable but you will need to install the appropriate drivers that go with the cable. </p>
+
+<p>For example, <a href="https://www.amazon.com/JBtek-WINDOWS-Supported-Raspberry-Programming/dp/B00QT7LQ88/ref=sr_1_6?srs=9123049011&amp;ie=UTF8&amp;qid=1488833574&amp;sr=8-6">this</a> cable uses the Prolific hardware. The drivers are <a href="http://www.prolific.com.tw/US/ShowProduct.aspx?pcid=41&amp;showlevel=0041-0041">available on their site</a>. If you are on Windows the driver can be installed after connecting C.H.I.P. Pro to your computer and navigating to Device Manager, finding <strong>Ports (COM &amp; LPT)</strong> and double-clicking on the unrecognized USB-serial port. From the window that pops up, you will be able to tell the computer to go find the device&rsquo;s driver online and install it.</p>
+
+<h4 id="solder-headers-to-c-h-i-p-pro">Solder Headers to C.H.I.P. Pro</h4>
+
+<p>To connect the USB-UART cable to C.H.I.P. Pro you will need to solder headers onto the board for a reliable connection. </p>
+
+<p><img src="images/solderHeaders_800.jpg" alt="UART connection" /></p>
+
+<p>The below connections work for the cable linked to in the above material list. Make sure to check the manufacturer&rsquo;s product description for the correct pinout for whichever cable you are using.</p>
+
+<ul>
+<li>black -  GND</li>
+<li>green - RX</li>
+<li>white - TX</li>
+</ul>
+
+<p><img src="images/UARTconnect_800.jpg" alt="UART connection" /></p>
+
+<h4 id="power-c-h-i-p-pro">Power C.H.I.P. Pro</h4>
+
+<p>C.H.I.P. Pro can be powered through a computer&rsquo;s USB port. However, some power intensive applications might require more current than the average computers provide via their USB port. A reliable way to power C.H.I.P. Pro is through the <strong>micro USB port using an AC/DC adapter</strong> (we recommend getting one that supplies 5V and 1 amp).</p>
+
+<h3 id="os-x-amp-linux">OS X &amp; Linux</h3>
+
+<p>Mac systems and most flavors of Linux come with the terminal emulator software Screen. In case Screen is missing, it can be installed using apt-get on Debian-based systems: </p>
+<pre class="highlight plaintext"><code>sudo apt-get install screen
+</code></pre>
+<p>With C.H.I.P. Pro connected to your computer check to see if the usbserial port has appeared: </p>
+
+<p><strong>Mac</strong></p>
+<pre class="highlight plaintext"><code>ls /dev/tty.*
+</code></pre>
+<p>The port name will be <code class="prettyprint">/dev/tty.usbserial</code> or something similar.</p>
+
+<p><strong>Linux</strong> </p>
+<pre class="highlight plaintext"><code>ls /dev/ttyUSB*
+</code></pre>
+<p>The port name will be <code class="prettyprint">ttyUSB0</code> or something similar.</p>
+
+<h4 id="connect">Connect</h4>
+
+<p>Use Screen to create a serial terminal connection at 115200 bps:</p>
+
+<p><strong>Mac</strong></p>
+<pre class="highlight plaintext"><code>screen /dev/tty.usbserial 115200
+</code></pre>
+<p><strong>Linux</strong></p>
+<pre class="highlight plaintext"><code>screen /dev/ttyUSB0 115200
+</code></pre>
+<p>Once a terminal window pops up, hit the Enter key. </p>
+
+<ul>
+<li>For a Buildroot example you will automatically be logged in as <code class="prettyprint">root</code>. </li>
+<li>For the Debian example, log in with the default username and password <code class="prettyprint">chip</code>.</li>
+</ul>
+
+<h4 id="exit-screen">Exit Screen</h4>
+
+<p>When done with Screen, press Ctrl+A then Ctrl+k to kill all windows and terminate Screen. </p>
+
+<p>If you get the error <strong>&ldquo;Cannot open line&hellip; Resource busy&rdquo;</strong> when trying to connect via Screen it&rsquo;s because the last session was not properly exited. Here is how kill an open session that was not disconnected:</p>
+
+<p>Search for the open file and active process using usbserial:</p>
+<pre class="highlight plaintext"><code>lsof | grep usbserial
+</code></pre>
+<p>You will get an output that looks something like this:</p>
+<pre class="highlight plaintext"><code>screen  27127 Sefi  5u  CHR             18,0        0t0     605 /dev/tty.usbserial
+</code></pre>
+<p>Note the process ID. In this case, it&rsquo;s 27127. Then run:</p>
+<pre class="highlight plaintext"><code>screen -x 27127 
+</code></pre>
+<p>This will return you to the previous screen session. Then use Ctrl+A Ctrl+K to close it (will ask you to confirm).</p>
+
+<h3 id="windows">Windows</h3>
+
+<p>Download the <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY terminal emulator</a>.</p>
+
+<p>In Windows, open the <strong>Device Manager</strong>. Find and expand <strong>Ports (COM &amp; LPT)</strong>. Find the port labeled <strong>USB-to-Serial Port (COMx)</strong> and take note of the COMx port number. This is the port that the C.H.I.P. Pro is connected to.</p>
+
+<p>In PuTTY choose <strong>Serial</strong> as the <strong>Connection type</strong>. Plug the following items in and click <strong>Open</strong>. </p>
+
+<ul>
+<li>COMx number as the <strong>Serial Line</strong><br></li>
+<li>115200 as the <strong>Speed</strong> (baud rate)</li>
+</ul>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><a href="images/ComPort.PNG"><img src="images/ComPort.PNG" alt="Com Port" /></a></th>
+<th style="text-align: center"><a href="images/puTTYsetM.jpg"><img src="images/puTTYsetM.jpg" alt="puTTY" /></a></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">In Device Manager find COM port #</td>
+<td style="text-align: center">Plug port # and baud rate into puTTY</td>
+</tr>
+</tbody></table>
+
+<p>Once a terminal window pops up, press Enter. </p>
+
+<ul>
+<li>For a Buildroot example you will automatically be logged in as <code class="prettyprint">root</code>. </li>
+<li>For the Debian example, log in with the default username and password <code class="prettyprint">chip</code>.</li>
+</ul>
+
+<h2 id="wifi-antenna">WiFi Antenna</h2>
+
+<ul>
+<li><p>Onboard WiFi and BT ceramic antenna: <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/blob/master/v1.0/Component%20Datasheets/WiFi%20BT%20Chip%20321605%20AA055(2400-2500%2080x40)_spec-F.pdf">Unictron product no. H2U34WGTQW0100, model AA055</a>.</p></li>
+<li><p>External antenna included in the C.H.I.P. Pro Dev Kit: <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/blob/master/v1.0/Component%20Datasheets/FCCID.io-PCB-Antenna-Spec-2656771.pdf">Wacosun model HCX-P321</a>.</p></li>
+</ul>
+
+<p>C.H.I.P. Pro comes with an onboard ceramic antenna that is intended for debugging purposes only. We recommend the use of an external antenna for all product applications. Use the antenna that comes with the C.H.I.P. Pro Dev Kit or obtain any of these officially supported ones:</p>
+
+<table><thead>
+<tr>
+<th>Antenna Model</th>
+<th>Manufacturer</th>
+<th>Gain</th>
+<th>Antenna Type</th>
+<th>Connection Type</th>
+<th>Freq. Range (GHz)</th>
+<th>Cable Length (mm)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>AA107</td>
+<td>Unictron</td>
+<td>3.3 dBi</td>
+<td>PCB</td>
+<td>IPEX</td>
+<td>2.4 - 2.5</td>
+<td>100</td>
+</tr>
+<tr>
+<td>HCX-P321</td>
+<td>Wacosun</td>
+<td>2 dBi</td>
+<td>PCB</td>
+<td>IPEX</td>
+<td>2.4 - 2.5</td>
+<td>150</td>
+</tr>
+<tr>
+<td>FXP73.07.0100A</td>
+<td>Taoglas</td>
+<td>2.5 dBi</td>
+<td>PCB</td>
+<td>IPEX</td>
+<td>2.4 - 2.483</td>
+<td>100</td>
+</tr>
+<tr>
+<td>AA055</td>
+<td>Unictron</td>
+<td>2.5 dBi</td>
+<td>Ceramic</td>
+<td>SMT</td>
+<td>2.4 - 2.5</td>
+<td>n/a</td>
+</tr>
+</tbody></table>
+
+<h3 id="connect-antenna">Connect Antenna</h3>
+
+<p>C.H.I.P. Pro uses a standard 50Ω IPEX (Hirose U.FL compatible) connector for the external antenna path.</p>
+
+<p>To connect an antenna, come straight from the top and push the antenna onto the connector. Keep in mind the connector will wear out over time. We suggest keeping the disconnect/connect cycle down to 10 or less. </p>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><a href="images/wifiConnectB.jpg"><img src="images/wifiConnectB.jpg" alt="wifi antenna connector" /></a></th>
+<th style="text-align: center"><a href="images/wifiPush.jpg"><img src="images/wifiPush.jpg" alt="push antenna on" /></a></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">WiFi antenna connector</td>
+<td style="text-align: center">Push antenna onto connector</td>
+</tr>
+</tbody></table>
+
+<p><img src="images/wifiOn.jpg" alt="wifi antenna connected" /></p>
+
+<h3 id="enable-wifi-antenna">Enable Wifi Antenna</h3>
+
+<p>In order to use it, you need to set the path of the external antenna.</p>
+
+<p><strong>Buildroot</strong></p>
+
+<p>With the Buildroot C.H.I.P. Pro images comes a <a href="https://raw.githubusercontent.com/NextThingCo/CHIP-buildroot/34a8cfdab2bbecd6741c435d6c400e46848436f1/package/rtl8723ds_mp_driver/set_antenna">set_antenna script</a> which accepts two arguments of either <code class="prettyprint">pcb</code> or <code class="prettyprint">ufl</code> depending on which you want to enable. </p>
+<pre class="highlight plaintext"><code>sh set_antenna pcb|ufl
+</code></pre>
+<p><strong>Debian</strong></p>
+
+<p>In Debian, there are two ways to set the antenna path:</p>
+
+<ul>
+<li>The RF switch is connected to logic pin PB17, Sysfs GPIO #49. Manually set the logic states to choose either the onboard or external antenna.</li>
+</ul>
+
+<p>0 = onboard-antenna </p>
+
+<p>1 = external-antenna</p>
+
+<ul>
+<li><code class="prettyprint">wget</code> set_antenna script found <a href="https://raw.githubusercontent.com/NextThingCo/CHIP-buildroot/34a8cfdab2bbecd6741c435d6c400e46848436f1/package/rtl8723ds_mp_driver/set_antenna">here</a>. Run and pass either the <code class="prettyprint">pcb</code> or <code class="prettyprint">ufl</code> argument, as stating above.<br></li>
+</ul>
+
+<h2 id="edit-buildroot-examples">Edit Buildroot Examples</h2>
+
+<p>After connecting to the Dev Kit via <a href="https://docs.getchip.com/chip_pro_devkit#usb-serial-uart1-connection">USB-serial</a> you can check out and edit the scripts for each Buildroot example. Use the Vi command-line editor to read and edit example scripts found in /usr/bin. </p>
+
+<p><strong>Blinkenlights</strong></p>
+<pre class="highlight plaintext"><code>vi /usr/bin/blink-leds
+vi /usr/bin/fade-pwms
+</code></pre>
+<p><strong>VU-Meter</strong></p>
+<pre class="highlight plaintext"><code>vi /usr/bin/vu-meter
+</code></pre>
+<h3 id="basic-vi-editor-commands">Basic Vi Editor Commands</h3>
+
+<p>To <strong>edit text</strong> take Vi from command mode (default) to insert mode. Press the following keys to edit text.</p>
+
+<ul>
+<li>i - go into insert mode (to edit text)</li>
+<li>Esc - exit insert mode</li>
+</ul>
+
+<p>Vi was built for Qwerty keyboards without arrow keys. They may work but if not, use these keys to <strong>move cursor</strong>:</p>
+
+<ul>
+<li>J - move down one line</li>
+<li>K - move up one line</li>
+<li>H - move left one character</li>
+<li>L - move right one character</li>
+</ul>
+
+<p>Other helpful commands:</p>
+
+<ul>
+<li>u - undo last action</li>
+<li>:x then Enter - save and exit</li>
+<li>:q! then Enter - exit without saving</li>
+</ul>
+
+<h2 id="wifi-setup-buildroot">WiFi Setup: Buildroot</h2>
+
+<p>The Buildroot operating system uses the ConnMan command-line network manager to connect and manage your network connections. </p>
+
+<p><strong>Requirements</strong></p>
+
+<ul>
+<li>C.H.I.P. Pro running Buildroot OS</li>
+<li><a href="https://docs.getchip.com/chip_pro.html#make-a-serial-connection">Serial connection</a> to C.H.I.P. Pro</li>
+</ul>
+
+<h3 id="step-1-enable-wifi-and-find-a-network">Step 1: Enable WiFi and Find a Network</h3>
+
+<p>These three commands will in turn, enable wifi, scan for access points, and list what networks are available:</p>
+<pre class="highlight shell"><code>connmanctl <span class="nb">enable </span>wifi 
+connmanctl scan wifi
+connmanctl services
+</code></pre>
+<p>The <code class="prettyprint">services</code> command has output similar to:</p>
+<pre class="highlight shell"><code>WaffleHouse          wifi_xxxxxxxxxxxx_xxxxxx_managed_psk
+                     wifi_xxxxxxxxxxxx_hidden_managed_psk
+YOUR_NETWORK         wifi_xxxxxxxxxxxx_xxxxxx_managed_psk
+                     wifi_xxxxxxxxxxxx_xxxxxx_managed_none
+Donut_Hut            wifi_xxxxxxxxxxxx_xxxxxxxxx_managed_psk
+</code></pre>
+<h3 id="step-2-connect">Step 2: Connect</h3>
+
+<p>Copy the string that starts with &ldquo;wifi_&rsquo; to the right of the network name you want to connect to. If it has <code class="prettyprint">psk</code> at the end, that means it is password protected (short for Wi-Fi Protected Access 2 - Pre-Shared Key) and you need to scroll further down to the &rdquo; Password Protected&quot; section.</p>
+
+<h4 id="no-password">No Password</h4>
+
+<p>To connect to YOUR_NETWORK, which has no password, <code class="prettyprint">services</code> shows two choices. We want the one without <code class="prettyprint">psk</code> in the string. Use the <code class="prettyprint">connect</code> command:</p>
+<pre class="highlight shell"><code>connmanctl connect wifi_xxxxxxxxxxxx_xxxxxx_managed_none
+</code></pre>
+<p>If your network is not password protected, you&rsquo;ll get some output that will indicate a successful connection, such as:</p>
+<pre class="highlight shell"><code><span class="o">[</span>  961.780000] RTL871X: rtw_set_802_11_connect<span class="o">(</span>wlan0<span class="o">)</span>  <span class="nv">fw_state</span><span class="o">=</span>0x00000008
+<span class="o">[</span>  962.070000] RTL871X: start auth
+<span class="o">[</span>  962.080000] RTL871X: auth success, start assoc
+<span class="o">[</span>  962.090000] RTL871X: rtw_cfg80211_indicate_connect<span class="o">(</span>wlan0<span class="o">)</span> BSS not found !!
+<span class="o">[</span>  962.100000] RTL871X: assoc success
+<span class="o">[</span>  962.110000] RTL871X: send eapol packet
+<span class="o">[</span>  962.290000] RTL871X: send eapol packet
+<span class="o">[</span>  962.300000] RTL871X: <span class="nb">set </span>pairwise key camid:4, addr:xx:xx:xx:xx:xx:xx, kid:0, <span class="nb">type</span>:AES
+<span class="o">[</span>  962.320000] RTL871X: <span class="nb">set </span>group key camid:5, addr:xx:xx:xx:xx:xx:xx, kid:1, <span class="nb">type</span>:AES
+</code></pre>
+<p>If your network is password protected you&rsquo;ll get an error.</p>
+
+<h4 id="password-protected">Password Protected</h4>
+
+<p>To deal with passwords you&rsquo;ll need to put ConnMan into interactive mode:</p>
+<pre class="highlight shell"><code>connmanctl
+</code></pre>
+<p>This command gives a <code class="prettyprint">connmanctl</code> prompt:</p>
+<pre class="highlight shell"><code>connmanctl&gt;
+</code></pre>
+<p>In the shell, turn the agent on so it can process password requests:</p>
+<pre class="highlight shell"><code>  agent on
+</code></pre>
+<p>Now use the <code class="prettyprint">connect</code> command with your pasted wifi network string:</p>
+<pre class="highlight shell"><code>  connect wifi_xxxxxxxxxxxx_xxxxxx_managed_psk
+</code></pre>
+<p>Enter your password when prompted:</p>
+<pre class="highlight shell"><code>  Agent RequestInput wifi_xxxxxxxxxxxx_xxxxxx_managed_psk
+  Passphrase <span class="o">=</span> <span class="o">[</span> <span class="nv">Type</span><span class="o">=</span>psk, <span class="nv">Requirement</span><span class="o">=</span>mandatory <span class="o">]</span>
+  Passphrase?
+</code></pre>
+<p>You will be notified that you are connected:</p>
+<pre class="highlight shell"><code>  Connected wifi_xxxxxxxxxxxx_xxxxxx_managed_psk
+</code></pre>
+<p>Exit connmanctl interactive mode:</p>
+<pre class="highlight shell"><code>  quit
+</code></pre>
+<h3 id="step-3-test-connection">Step 3: Test Connection</h3>
+
+<p>Finally, you can test your connection to the internet with <code class="prettyprint">ping</code>. Google&rsquo;s DNS server at the IP address 8.8.8.8 is probably the most reliable computer on the internet, so:</p>
+<pre class="highlight shell"><code>ping -c 4 8.8.8.8
+</code></pre>
+<p>Expect ping to output some timing messages:</p>
+<pre class="highlight shell"><code>PING 8.8.8.8 <span class="o">(</span>8.8.8.8<span class="o">)</span>: 56 data bytes
+64 bytes from 8.8.8.8: <span class="nv">seq</span><span class="o">=</span>0 <span class="nv">ttl</span><span class="o">=</span>60 <span class="nb">time</span><span class="o">=</span>7.631 ms
+64 bytes from 8.8.8.8: <span class="nv">seq</span><span class="o">=</span>1 <span class="nv">ttl</span><span class="o">=</span>60 <span class="nb">time</span><span class="o">=</span>7.474 ms
+64 bytes from 8.8.8.8: <span class="nv">seq</span><span class="o">=</span>2 <span class="nv">ttl</span><span class="o">=</span>60 <span class="nb">time</span><span class="o">=</span>7.697 ms
+64 bytes from 8.8.8.8: <span class="nv">seq</span><span class="o">=</span>3 <span class="nv">ttl</span><span class="o">=</span>60 <span class="nb">time</span><span class="o">=</span>9.004 ms
+
+--- 8.8.8.8 ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max <span class="o">=</span> 7.474/7.951/9.004 ms
+</code></pre>
+<p>The <code class="prettyprint">-c 4</code> option means it will happen only 4 times.</p>
+
+<p>&#10024; <strong>Congratulations! You are now Connected to a Network</strong> &#10024;</p>
+
+<p>If your connection is not successful, then ping will tell you your network is down:</p>
+<pre class="highlight shell"><code>PING 8.8.8.8 <span class="o">(</span>8.8.8.8<span class="o">)</span>: 56 data bytes
+ping: sendto: Network is unreachable
+</code></pre>
+<h4 id="troubleshooting-connection-problems">Troubleshooting Connection Problems</h4>
+
+<ul>
+<li><p>Review any messages that the connect command gave you. Did they look like the examples of a successful connection?</p></li>
+<li><p>Double check that you used the right network with the <code class="prettyprint">connect</code> command.</p></li>
+<li><p>If everything checked out until you got to <code class="prettyprint">ping</code>, there&rsquo;s a good chance the problem is with your router or connection to the internet. Some networks have firewalls on them that will allow you to connect but prevent foreign devices from transferring information. </p></li>
+<li><p>Connman not Installed Error</p>
+
+<p>If you try to use ConnMan and you get an error that it is not found or is not a     command, chances are that you are using the Debian image. The ConnMan commands only apply to C.H.I.P. Pros running the Buildroot OS.</p></li>
+</ul>
+
+<h3 id="disconnect-from-network-with-connman">Disconnect from Network with Connman</h3>
+
+<p>To disconnect from your network, you might first want a reminder of the unfriendly string used to describe your access point:</p>
+<pre class="highlight shell"><code>connmanctl services
+</code></pre>
+<p>This command will output information about your current connection:</p>
+<pre class="highlight shell"><code>YOUR_NETWORK         wifi_xxxxxxxxxxxx_xxxxxx_managed_psk
+</code></pre>
+<p>Copy and paste the string ID along with the <code class="prettyprint">disconnect</code> command:</p>
+<pre class="highlight shell"><code>connmanctl disconnect wifi_xxxxxxxxxxxx_xxxxxx_managed_psk
+</code></pre>
+<p>You will be notified when it has disconnected: </p>
+<pre class="highlight shell"><code>Disconnected wifi_xxxxxxxxxxxx_xxxxxx_managed_psk
+</code></pre>
+<h3 id="forget-network-with-connman">Forget Network with Connman</h3>
+
+<p>Generally, ConnMan will remember and cache setup information. This means that if you reboot in the vicinity of a known network, it will attempt to connect. However, if you need to forget a network setup, navigate to:</p>
+<pre class="highlight shell"><code><span class="nb">cd</span> /var/lib/connman/
+</code></pre>
+<p>You can delete a single connection by seeing which are stored and copying the one you want to delete:</p>
+<pre class="highlight shell"><code>/var/lib/connman <span class="c"># ls</span>
+settings
+wifi_xxxxxxxxxxxx_xxxxxx_managed_psk
+wifi_xxxxxxxxxxxx_xxxxxx_managed_none
+</code></pre>
+<p>Then delete that connection:</p>
+<pre class="highlight shell"><code>rm -r wifi_xxxxxxxxxxxx_xxxxxx_managed_psk
+</code></pre>
+<p>You can delete all the “wifi” connections with:</p>
+<pre class="highlight shell"><code>rm -r wifi<span class="k">*</span>
+</code></pre>
+<p>The <code class="prettyprint">-r</code> is needed because these are directories you are deleting and the star at the end of <code class="prettyprint">wifi*</code> assumes your connection IDs all start with the string “wifi”.</p>
+
+<h2 id="wifi-setup-debian">WiFi Setup: Debian</h2>
+
+<p>If you are using the Debian OS you will find that ConnMan is not installed, you will need to use Networking/CLI or the command <code class="prettyprint">nmcli</code> instead. </p>
+
+<p><strong>Requirements</strong></p>
+
+<ul>
+<li>C.H.I.P. Pro loaded with Debian</li>
+<li><a href="https://docs.getchip.com/chip_pro.html#usb-serial-uart1-connection">Serial connection</a> to C.H.I.P. Pro</li>
+</ul>
+
+<h3 id="step-1-list-available-wi-fi-networks">Step 1: List available Wi-Fi networks</h3>
+
+<p>In terminal type:</p>
+<pre class="highlight shell"><code>nmcli device wifi list
+</code></pre>
+<p>The output will list available access points:</p>
+<pre class="highlight shell"><code><span class="k">*</span>  SSID      MODE   CHAN  RATE       SIGNAL  BARS  SECURITY
+<span class="k">*</span>  YOUR_NETWORK    Infra  11    54 Mbit/s  100     ▂▄▆█  --
+   CatCafe         Infra  6     54 Mbit/s  30      ▂___  WPA1 WPA2
+   2WIRE533        Infra  10    54 Mbit/s  44      ▂▄__  WPA1 WPA2
+</code></pre>
+<h3 id="step-2-connect">Step 2: Connect</h3>
+
+<p>You can connect to password protected or open access points.</p>
+
+<h4 id="no-password">No Password</h4>
+
+<p>To connect to an open network with no password:</p>
+<pre class="highlight shell"><code>sudo nmcli device wifi connect <span class="s2">"YOUR_NETWORK_SSID"</span> ifname wlan0
+</code></pre>
+<p>These commands will respond with information about the connection. A successful connection looks like:</p>
+<pre class="highlight shell"><code>Connection with UUID <span class="s1">'xxxxxxxx-yyyy-zzzz-xxxx-yyyyyyyyyyyy'</span> created and activated on device <span class="s1">'wlan0'</span>
+</code></pre>
+<h4 id="password-protected">Password Protected</h4>
+
+<p>To connect to a password protected network, use this command inserting your own network name and password:</p>
+<pre class="highlight shell"><code>sudo nmcli device wifi connect <span class="s2">"YOUR_NETWORK_SSID"</span> password <span class="s2">"UR_NETWORK_PASSWORD"</span> ifname wlan0
+</code></pre>
+<p>These commands will respond with information about the connection. A successful connection looks like:</p>
+<pre class="highlight shell"><code>Connection with UUID <span class="s1">'xxxxxxxx-yyyy-zzzz-xxxx-yyyyyyyyyyyy'</span> created and activated on device <span class="s1">'wlan0'</span>
+</code></pre>
+<h4 id="hidden-ssid-and-password-protected">Hidden SSID and Password Protected</h4>
+
+<p>To connect to a hidden and password-protected network:</p>
+<pre class="highlight shell"><code>sudo nmcli device wifi connect <span class="s2">"YOUR_NETWORK_SSID"</span> password <span class="s2">"UR_NETWORK_PASSWORD"</span> ifname wlan0 hidden yes
+</code></pre>
+<h3 id="step-3-test-your-connection">Step 3: Test your Connection</h3>
+
+<p>You can verify and test your wireless network connection.</p>
+
+<h4 id="verify">Verify</h4>
+<pre class="highlight shell"><code>nmcli device status
+</code></pre>
+<p>This outputs a list of the various network devices and their connections. For example, a successful connection would look like this:</p>
+<pre class="highlight shell"><code>DEVICE   TYPE      STATE         CONNECTION
+wlan0    wifi      connected     YOUR_NETWORK
+wlan1    wifi      disconnected  --
+ip6tnl0  ip6tnl    unmanaged     --
+lo       loopback  unmanaged     --
+sit0     sit       unmanaged     --
+</code></pre>
+<p>Because it is worth knowing that Linux offers many ways of doing things, another command that shows your current active connection is:</p>
+<pre class="highlight shell"><code>nmcli connection show --active
+</code></pre>
+<p>Which outputs:</p>
+<pre class="highlight shell"><code>NAME           UUID                                  TYPE             DEVICE
+YOUR_NETWORK   xxxxxxxx-yyyy-zzzz-xxxx-yyyyyyyyyyyy  802-11-wireless  wlan0
+</code></pre>
+<p>After you have connected once, C.H.I.P. Pro will automatically connect to this network next time you reboot (or start NetworkManager services).</p>
+
+<h4 id="test">Test</h4>
+
+<p>Expect ping to output some timing messages:</p>
+<pre class="highlight shell"><code>PING 8.8.8.8 <span class="o">(</span>8.8.8.8<span class="o">)</span>: 56 data bytes
+64 bytes from 8.8.8.8: <span class="nv">seq</span><span class="o">=</span>0 <span class="nv">ttl</span><span class="o">=</span>60 <span class="nb">time</span><span class="o">=</span>7.631 ms
+64 bytes from 8.8.8.8: <span class="nv">seq</span><span class="o">=</span>1 <span class="nv">ttl</span><span class="o">=</span>60 <span class="nb">time</span><span class="o">=</span>7.474 ms
+64 bytes from 8.8.8.8: <span class="nv">seq</span><span class="o">=</span>2 <span class="nv">ttl</span><span class="o">=</span>60 <span class="nb">time</span><span class="o">=</span>7.697 ms
+64 bytes from 8.8.8.8: <span class="nv">seq</span><span class="o">=</span>3 <span class="nv">ttl</span><span class="o">=</span>60 <span class="nb">time</span><span class="o">=</span>9.004 ms
+
+--- 8.8.8.8 ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max <span class="o">=</span> 7.474/7.951/9.004 ms
+</code></pre>
+<p>The <code class="prettyprint">-c 4</code> option means it will happen only 4 times.</p>
+
+<p>&#10024; <strong>Congratulations! You are now Connected to a Network</strong> &#10024;</p>
+
+<p>If your connection is not successful, then ping will tell you your network is down:</p>
+<pre class="highlight shell"><code>PING 8.8.8.8 <span class="o">(</span>8.8.8.8<span class="o">)</span>: 56 data bytes
+ping: sendto: Network is unreachable
+</code></pre>
+<h3 id="disconnect-network-with-nmcli">Disconnect Network with Nmcli</h3>
+
+<p>Disconnect from the wireless device:</p>
+<pre class="highlight shell"><code>sudo nmcli dev disconnect wlan0
+</code></pre>
+<h3 id="forget-network-with-nmcli">Forget Network with Nmcli</h3>
+
+<p>You may want to prevent auto-connection to a network. If so, you want the device to forget the a specific network. First, list the connections:</p>
+<pre class="highlight shell"><code>nmcli c
+</code></pre>
+<p>Which outputs something like:</p>
+<pre class="highlight shell"><code>NAME           UUID                                  TYPE             DEVICE 
+YOUR_NETWORK   xxxxxxxx-yyyy-zzzz-xxxx-yyyyyyyyyyyy  802-11-wireless  wlan0
+</code></pre>
+<p>Then, delete the network specified between quotes to forget it:</p>
+<pre class="highlight shell"><code>sudo nmcli connection delete id <span class="s2">"YOUR_NETWORK"</span>
+</code></pre>
+<h3 id="troubleshooting-connection-problems">Troubleshooting Connection Problems</h3>
+
+<ul>
+<li>No Network Found</li>
+</ul>
+
+<p>No network within range. If there&rsquo;s no network, you can&rsquo;t connect. Go find a network!</p>
+
+<ul>
+<li>Incorrect Password</li>
+</ul>
+
+<p>If you type in the wrong password, you&rsquo;ll get some errors like this:</p>
+<pre class="highlight shell"><code><span class="o">[</span>32258.690000] RTL871X: rtw_set_802_11_connect<span class="o">(</span>wlan0<span class="o">)</span> <span class="nv">fw_state</span><span class="o">=</span>0x00000008
+<span class="o">[</span>32258.800000] RTL871X: start auth
+<span class="o">[</span>32263.720000] RTL871X: rtw_set_802_11_connect<span class="o">(</span>wlan0<span class="o">)</span> <span class="nv">fw_state</span><span class="o">=</span>0x00000008
+<span class="o">[</span>32263.820000] RTL871X: start auth
+<span class="o">[</span>32264.430000] RTL871X: auth success, start assoc
+<span class="o">[</span>32269.850000] RTL871X: rtw_set_802_11_connect<span class="o">(</span>wlan0<span class="o">)</span> <span class="nv">fw_state</span><span class="o">=</span>0x00000008
+<span class="o">[</span>32269.970000] RTL871X: start auth
+Error: Timeout 90 sec expired.
+</code></pre>
+<p>Try connecting again with the correct password.</p>
+
+<ul>
+<li>Failed Ping</li>
+</ul>
+
+<p>If you don&rsquo;t have access to the internet, your ping to an outside IP will fail.
+It is possible that you can connect to a wireless network, but have no access to the internet, so you&rsquo;d see a connection when you request device status, but have a failed ping. This indicates a problem or restriction with the router or the access point.</p>
+
+<p>A failed ping looks something like:</p>
+<pre class="highlight shell"><code>From 192.133.2.10 <span class="nv">icmp_seq</span><span class="o">=</span>14 Destination Host Unreachable
+From 192.133.2.10 <span class="nv">icmp_seq</span><span class="o">=</span>15 Destination Host Unreachable
+From 192.133.2.10 <span class="nv">icmp_seq</span><span class="o">=</span>16 Destination Host Unreachable
+18 packets transmitted, 0 received, +9 errors, 100% packet loss, <span class="nb">time </span>17013ms
+pipe 4
+</code></pre>
+<p>Change the router or access point permissions to allow a foreign board to connect to it. Alternatively, a personal mobile hotspot can obtained and used if you are in a work environment that can not change its network security settings.</p>
+
+<ul>
+<li>Loss of Wireless Network</li>
+</ul>
+
+<p>A sudden, unplanned disconnection will post an error in the terminal window:</p>
+<pre class="highlight shell"><code><span class="o">[</span>30863.880000] RTL871X: linked_status_chk<span class="o">(</span>wlan0<span class="o">)</span> disconnect or roaming
+</code></pre>
+<p>The Network Manager will periodically try to reconnect. If the access point is restored, you&rsquo;ll get something like this in your terminal window:</p>
+<pre class="highlight shell"><code><span class="o">[</span>31798.970000] RTL871X: rtw_set_802_11_connect<span class="o">(</span>wlan0<span class="o">)</span>
+<span class="o">[</span>31799.030000] RTL871X: start auth
+<span class="o">[</span>31799.040000] RTL871X: auth success, start assoc
+<span class="o">[</span>31799.050000] RTL871X: rtw_cfg80211_indicate_connect<span class="o">(</span>wlan0<span class="o">)</span> BSS not found !!
+<span class="o">[</span>31799.060000] RTL871X: assoc success
+</code></pre>
+<ul>
+<li>Nmcli not Installed Error</li>
+</ul>
+
+<p>If you try to use <code class="prettyprint">nmcli</code> and you get an error that it is not found or is not a command, chances are that you are using a C.H.I.P. Pro Buildroot image. The <code class="prettyprint">nmcli</code> commands only apply to C.H.I.P. Pro using Debian linux.</p>
+
+<h2 id="ssh">SSH</h2>
+
+<p>Once you connect to an network you can ssh into the C.H.I.P. Pro in order to program and control it. Our <strong>Debian example comes with ssh servers</strong>, our <strong>Buildroot examples do not</strong>. If you want to ssh while using Buildroot you will need to do a manual build. </p>
+
+<h3 id="find-ip">Find IP</h3>
+<pre class="highlight plaintext"><code>ip addr
+</code></pre>
+<p>The IP is on <code class="prettyprint">wlan0</code> or sometimes on <code class="prettyprint">wlan1</code>.</p>
+
+<h3 id="connect">Connect</h3>
+<pre class="highlight plaintext"><code>ssh root@&lt;CHIPproIP&gt;
+</code></pre>
+<h2 id="access-i-o-via-sysfs">Access I/O via sysfs</h2>
+
+<p>C.H.I.P. Pro has a total of 27 GPIO pins ready for use:</p>
+
+<ul>
+<li>2 PWM
+
+<ul>
+<li>pins 9 &amp; 10</li>
+</ul></li>
+<li>3 input
+
+<ul>
+<li>pins 39 - 41</li>
+</ul></li>
+<li>22 input/output
+
+<ul>
+<li>pins 11-16, 21-25, 30-38, 43 &amp; 44</li>
+</ul></li>
+</ul>
+
+<p>To see all the functions C.H.I.P. Pro pins offer check out the <a href="https://docs.getchip.com/chip_pro.html#gr8-pins-and-multiplexing-on-c-h-i-p-pro">Multiplexing table</a>.</p>
+
+<p><img src="images/Pro_Pinout.jpg" alt="pin out" /></p>
+
+<p>GPIO is accessed through Linux&rsquo;s <a href="https://www.kernel.org/doc/Documentation/gpio/sysfs.txt">sysfs interface</a>.  </p>
+
+<p>Depending on the image that is flashed to C.H.I.P. Pro, the commands used to interact with the sysfs interface will differ. If using a <strong>Pro</strong> image, you need to act as root and use <code class="prettyprint">sudo sh -c</code> with quotes around the command string. For example:</p>
+
+<p><strong>Pro (Debian)</strong></p>
+<pre class="highlight shell"><code>sudo sh -c <span class="s1">'echo 132 &gt; /sys/class/gpio/export'</span>
+</code></pre>
+<p><strong>Buildroot</strong>:</p>
+<pre class="highlight shell"><code><span class="nb">echo </span>132 &gt; /sys/class/gpio/export
+</code></pre>
+<p>All PWM examples are done using one of NTC&rsquo;s <strong>Buildroot</strong> based images.</p>
+
+<h3 id="gpio-sysfs-numbers">GPIO Sysfs Numbers</h3>
+
+<p>To address a GPIO port via sysfs, you do not use the C.H.I.P. Pro or GR8 pin name. Sysfs sees the pins as another set of numbers. To find out what number to use for each GPIO pin reference the tables below. </p>
+
+<p><strong>Sysfs Pin Numbers</strong></p>
+
+<p>D0 - D7:</p>
+
+<table><thead>
+<tr>
+<th>C.H.I.P. Pro Pin #</th>
+<th>37</th>
+<th>36</th>
+<th>35</th>
+<th>34</th>
+<th>33</th>
+<th>32</th>
+<th>31</th>
+<th>30</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>sysfs #</td>
+<td>132</td>
+<td>133</td>
+<td>134</td>
+<td>135</td>
+<td>136</td>
+<td>137</td>
+<td>138</td>
+<td>139</td>
+</tr>
+</tbody></table>
+
+<p>TWI1, UART2:</p>
+
+<table><thead>
+<tr>
+<th>C.H.I.P. Pro Pin #</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+<th>14</th>
+<th>15</th>
+<th>16</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>sysfs #</td>
+<td>47</td>
+<td>48</td>
+<td>98</td>
+<td>99</td>
+<td>100</td>
+<td>101</td>
+</tr>
+</tbody></table>
+
+<p>I2S:</p>
+
+<table><thead>
+<tr>
+<th>C.H.I.P. Pro Pin #</th>
+<th>21</th>
+<th>22</th>
+<th>23</th>
+<th>24</th>
+<th>25</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>sysfs #</td>
+<td>37</td>
+<td>38</td>
+<td>39</td>
+<td>40</td>
+<td>41</td>
+</tr>
+</tbody></table>
+
+<p>SPI2:</p>
+
+<table><thead>
+<tr>
+<th>C.H.I.P. Pro Pin #</th>
+<th>41</th>
+<th>40</th>
+<th>39</th>
+<th>38</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>sysfs #</td>
+<td>128</td>
+<td>129</td>
+<td>130</td>
+<td>131</td>
+</tr>
+</tbody></table>
+
+<p>PWM:</p>
+
+<table><thead>
+<tr>
+<th>C.H.I.P. Pro Pin #</th>
+<th>9</th>
+<th>10</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>sysfs #</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+
+<p>UART1:</p>
+
+<p>** These pins are connected to the FE1.1S USB hub controller IC which is connected to the micro USB providing USB serial functionality. To use them as GPIO disable the USB hub controller by cutting the &ldquo;UART Disconnect&rdquo; <a href="https://docs.getchip.com/chip_pro_devkit.html#cuttable-traces">traces</a>. </p>
+
+<table><thead>
+<tr>
+<th>C.H.I.P. Pro Pin #</th>
+<th>44</th>
+<th>43</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>sysfs #</td>
+<td>195</td>
+<td>196</td>
+</tr>
+</tbody></table>
+
+<p><strong>Calculate sysfs Number</strong></p>
+
+<p>If a pin is not listed above you can calculate the sysfs number starting with the GR8 port number. All port numbers are printed on C.H.I.P. Pro for your convenience. They can also be found in the <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/blob/master/Datasheets/GR8_Datasheet_v1.0.pdf">Allwinner R8 Datasheet</a> starting on page 15. </p>
+
+<p>As an example, take a look at <strong>D0</strong> which is port <strong>PE4</strong>. Look at the letter that follows the &ldquo;P&rdquo;, in this case it&rsquo;s &ldquo;E&rdquo;. Starting with A = 0, count up in the alphabet until you arrive at &ldquo;E&rdquo; and that is the letter index. For example, <strong>E=4</strong>.</p>
+
+<p>Multiply the letter index by 32, then add the number that follows &ldquo;PE&rdquo;:</p>
+
+<p>(4*32)+4 = 132</p>
+
+<h3 id="digital-input-example">Digital Input Example</h3>
+
+<p>To access the GPIO pins through sysfs there is a process that must be adhered to. The following lines of code are an example that reads the changing state of pin <strong>PE4</strong> which corresponds to <strong>132</strong> in sysfs.</p>
+
+<p>When connecting a switch, we recommend adding a external pull-up or pull-down resistor to prevent a floating pin logic state.</p>
+
+<p><img src="images/buttonUART_800.jpg" alt="pull-down resistor" /></p>
+
+<p>In terminal, tell the system you want to listen to a pin by exporting it:</p>
+<pre class="highlight shell"><code><span class="nb">echo </span>132 &gt; /sys/class/gpio/export
+</code></pre>
+<p>Next, the pin mode needs to be set. By default, the pin modes are set to input. So, the following command that views the mode will return “in” unless the pin mode was changed to &ldquo;out&rdquo; previously:</p>
+<pre class="highlight shell"><code>cat /sys/class/gpio/gpio132/direction
+</code></pre>
+<p>Connect a switch between pin PE4 and GND. Use this line of code to read the value:</p>
+<pre class="highlight shell"><code>cat /sys/class/gpio/gpio132/value
+</code></pre>
+<p>Continuously poll a switch on pin PE4(132) for its state change:</p>
+<pre class="highlight shell"><code><span class="k">while</span> <span class="o">(</span> <span class="nb">true</span> <span class="o">)</span>; <span class="k">do </span>cat /sys/class/gpio/gpio132/value; sleep 1; <span class="k">done</span>;
+</code></pre>
+<h3 id="digital-output-example">Digital Output Example</h3>
+
+<p>Attach an LED to pin PE4 and ground. We recommend placing a current-limiting resistor in series to protect the GR8 module and LED from overcurrent or a potential short.</p>
+
+<p><img src="images/blink.gif" alt="UART connection" /></p>
+
+<p>Change the mode of the pin from &ldquo;in” to “out”:</p>
+<pre class="highlight shell"><code><span class="nb">echo </span>out &gt; /sys/class/gpio/gpio132/direction
+</code></pre>
+<p>Now that it&rsquo;s in output mode, you can write a value to the pin and turn the LED on and off:</p>
+<pre class="highlight shell"><code><span class="nb">echo </span>1 &gt; /sys/class/gpio/gpio132/value
+<span class="nb">echo </span>0 &gt; /sys/class/gpio/gpio132/value
+</code></pre>
+<h4 id="blink-an-led-on-pin-pe4-132">Blink an LED on Pin PE4(132)</h4>
+<pre class="highlight plaintext"><code>while ( true ); do echo 1 &gt; /sys/class/gpio/gpio132/value; cat /sys/class/gpio/gpio132/value; sleep 1; echo 0 &gt;  /sys/class/gpio/gpio132/value; cat /sys/class/gpio/gpio132/value; sleep 1; done;
+</code></pre>
+<h3 id="unexport-gpio">Unexport GPIO</h3>
+
+<p>When you are done experimenting, always tell the system to stop listening to the gpio pin by unexporting it:</p>
+<pre class="highlight shell"><code><span class="nb">echo </span>132 &gt; /sys/class/gpio/unexport
+</code></pre>
+<p>If pins are not unexported, the pins will be &quot;busy&rdquo; the next time you go to export them. </p>
+
+          <h1 id="power">Power</h1>
+
+<h2 id="power-c-h-i-p-pro">Power C.H.I.P. Pro</h2>
+
+<p>C.H.I.P. Pro can be powered in a few ways that are all managed by the AXP209 power management IC. </p>
+
+<p><img src="images/powerLED_800.jpg" alt="power LED USB" /></p>
+
+<p>Below is a list of the ports and pins to provide power to and pins that are necessary to initiate power in some instances. </p>
+
+<ul>
+<li><strong>Micro USB port</strong> - Use a 5V AC/DC adapter (we recommend getting one that supplies 5V and 1 amp).</li>
+</ul>
+
+<p>Pins</p>
+
+<ul>
+<li><strong>CHG-IN</strong> - Connect 5 - 5.5 volts of power to this pin (and GND) to provide power for C.H.I.P. Pro. If you have a Lithium Polymer (LiPo) battery connected to BAT, then power provided to CHG-IN will also charge the battery. </li>
+<li><strong>BAT</strong> - Connect a  single-cell 3.7V LiPo battery to this pin (and GND) to provide power to C.H.I.P. Pro and receive charge from power inputs. </li>
+<li><strong>PWR (PWRON)</strong> - Connect to ground for 1 second to turn C.H.I.P. Pro on when a battery is attached to the <strong>BAT</strong> pin. </li>
+</ul>
+
+<p><img src="images/PWRon_800.jpg" alt="PWR on" /></p>
+
+<ul>
+<li><strong>VBUS</strong> - Connect 5 volts to this pin (and GND to pin 53) to provide power to C.H.I.P. Pro. Power connected to VBUS will also charge a battery, just at a slower rate than from <strong>CHG-IN</strong>. The VBUS pin is the same one than in the microUSB connector.</li>
+</ul>
+
+<h2 id="battery-charging-and-bts-pin">Battery Charging and BTS Pin</h2>
+
+<p>C.H.I.P. Pro uses the <strong>AXP209 IC</strong> to manage battery charging. Pin 7 marked <strong>BATTEMP or BTS</strong> is directly connected to the <strong>TS</strong> pin on the AXP209. This pin supports a thermistor to monitor the battery temperature when the battery is charging or discharging.  If you do not incorporate a thermistor into your setup the pin may float from ground interfering with how much charge current is throttled to the <strong>BAT</strong> pin and the <strong>JST connector</strong>. To ensure maximum charge current without a thermistor disable the battery temperature monitoring system.</p>
+
+<p>There are two ways to do this:</p>
+
+<ul>
+<li>Connect BTS pin to ground</li>
+<li>Disable the temperature functionality in software:</li>
+</ul>
+<pre class="highlight shell"><code>sudo i2cset -y -f 0 0x34 0x82 0x82
+</code></pre>
+<p>The AXP209 IC is seen as a I2C device on C.H.I.P. Pro. By default the AXP209 is tuned for a 10KΩ 1% thermistor at 25°C with a programmable register for thermistor current to adapt to different devices. You can find more information on this setup in the <a href="https://github.com/NextThingCo/CHIP-Hardware/blob/master/CHIP%5Bv1_0%5D/CHIPv1_0-BOM-Datasheets/AXP209_Datasheet_v1.0en.pdf">AXP209 Datasheet</a>. Search &ldquo;ts pin&rdquo; to quickly find information.</p>
+
+<h2 id="power-out">Power Out</h2>
+
+<p>C.H.I.P. Pro also has options for providing power to peripherals and sensors.</p>
+
+<ul>
+<li><strong>VCC-3V3</strong> - Provides 3.3V for sensors.</li>
+<li><strong>IPSOUT</strong> - The <strong>I</strong>ntelligent <strong>P</strong>ower <strong>S</strong>elect provides up to 2.5 amps at up to 5 volts, depending on power provided at <strong>CHG-IN</strong> or <strong>VBUS</strong> pins. If a 3.7V LiPo battery is the only source of power, <strong>IPSOUT</strong> will provide a bit less than 3.7 volts. In general, the voltage at <strong>IPSOUT</strong> is a bit less than voltage in, with a max voltage of 5 volts.</li>
+</ul>
+
+<p>If you need to provide power to a USB device connected to USB1, connect <strong>IPSOUT</strong> to an appropriate switching regulator to the USB connector pad on your circuit board. </p>
+
+<h2 id="powering-off">Powering Off</h2>
+
+<p>There are two ways to power off C.H.I.P. Pro: </p>
+
+<p><strong>1)</strong> Ideally, C.H.I.P. Pro should be powered off through a terminal window using the <code class="prettyprint">poweroff</code> command. This will end all processes safely    protecting your data. </p>
+
+<p><strong>2)</strong> On the board, connect <strong>PWR</strong> pin to <strong>GND</strong> for 3+ seconds to power off. </p>
+
+<p><img src="images/PWRoff_800.gif" alt="PWR off" /></p>
+
+          <h1 id="technical-documents">Technical Documents</h1>
+
+<h2 id="c-h-i-p-pro-datasheet">C.H.I.P. Pro Datasheet</h2>
+
+<p>The complete datasheet for C.H.I.P. Pro is available <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/raw/master/Datasheets">in our C.H.I.P. Pro Hardware GitHub repo</a>.</p>
+
+<h2 id="c-h-i-p-pro-mechanical-drawing">C.H.I.P. Pro Mechanical Drawing</h2>
+
+<p><img src="images/Mech_Draw_sm.jpg" alt="Mechanical Drawing" /></p>
+
+<p>You can download a high resolution version of this image <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/Mechanical_Documents">here</a>.</p>
+
+<h2 id="c-h-i-p-pro-pcb-footprint">C.H.I.P. Pro PCB Footprint</h2>
+
+<p>C.H.I.P. Pro is designed for prototyping and dropping into a production assembly line. We have detailed diagrams for mounting C.H.I.P. Pro by hand soldering and by SMT pick-and-place machines to include in your PCB designs.</p>
+
+<ul>
+<li><a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/Footprint">Footprint - Hand soldering</a></li>
+<li><a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/Footprint">Footprint - SMT</a></li>
+<li><a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/Footprint">Carrier PCB stencil</a></li>
+</ul>
+
+<p>More detailed information on designing a PCB for C.H.I.P. Pro is found <a href="https://docs.getchip.com/chip_pro.html#pcb-design-tips">here</a>. </p>
+
+<p><img src="images/Pro_Footprint_hand.jpg" alt="C.H.I.P. Pro PCB Footprint" /></p>
+
+<p><img src="images/Pro_Footprint_SMT.jpg" alt="C.H.I.P. Pro PCB Footprint" /></p>
+
+<p><img src="images/Pro_stencil.jpg" alt="C.H.I.P. Pro PCB stencil" /></p>
+
+<h2 id="gr8-datasheet">GR8 Datasheet</h2>
+
+<p>Find the ballout diagram, technical specifications, and mechanical information in the GR8 datasheet available in our C.H.I.P. Pro Hardware Github repository in the <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/GR8">GR8 directory</a>. Looking for a reference design that uses GR8? Check out all the <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware">C.H.I.P. Pro design documents and schematics</a> also available in the C.H.I.P. Pro Hardware repository.</p>
+
+<h2 id="gr8-manual">GR8 Manual</h2>
+
+<p>All details needed to program GR8 are in the GR8 manual available in our <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/GR8/Manual">Github repository</a>.  </p>
+
+<h2 id="open-source-license">Open Source License</h2>
+
+<p>C.H.I.P. Pro is open source hardware and software. Find all you need to build a C.H.I.P. Pro in our <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware">Github repo</a>. Search our repositories for core and developing C.H.I.P. Pro software. For up-to-date announcements on software releases visit our <a href="https://nextthing.co/">website</a> and sign up to our newsletter. Or, join the community on our <a href="https://bbs.nextthing.co/">forum</a> where we actively post announcements.   </p>
+
+<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+
+          <h1 id="specifications">Specifications</h1>
+
+<h2 id="c-h-i-p-pro-exposed-interfaces">C.H.I.P. Pro Exposed Interfaces</h2>
+
+<ul>
+<li>1x Two Wire Interface</li>
+<li>2x UART (1x 2-wire and 1x 4-wire)</li>
+<li>SPI enabling SD card interface </li>
+<li>SPI Bus</li>
+<li>2x PWM</li>
+<li>6-bit ADC</li>
+<li>I2S Digital Audio</li>
+<li>S/PDIF IEC-60958 Digital Audio Input and Output </li>
+<li>2x USB HS/FS/LS
+
+<ul>
+<li>USB 2.0 Host</li>
+<li>USB 2.0 OTG</li>
+</ul></li>
+<li>Parallel Camera Interface </li>
+<li>3.3V DC supply</li>
+<li>IPS dynamic power pass-through</li>
+<li>27 GPIO</li>
+</ul>
+
+<h2 id="audio">Audio</h2>
+
+<p>Stereo audio in and out is handled by an on-die 24-bit audio codec in GR8. </p>
+
+<ul>
+<li>24-bit ADC/DAC for stereo audio in and out</li>
+<li>One-wire Audio (S/PDIF Compatible) digital out</li>
+<li>Supports 44.1 kHz, 48 kHz, 96 kHz, and 192 kHz sample rates</li>
+<li>Bi-directional I2S digital audio for interfacing with industry standard audio codecs</li>
+<li>Full-Duplex synchronous serial digital audio interfaces</li>
+<li>I2S Audio data sample rate from 8-192kHz</li>
+<li>Transmit and Receive FIFO buffers with programmable thresholds</li>
+</ul>
+
+<h2 id="power-and-battery-management">Power and Battery Management</h2>
+
+<ul>
+<li><strong>AXP209 power management IC</strong> connected to a dedicated I2C bus</li>
+<li><strong>Operating Voltage</strong> - 3.8V - 6.3V</li>
+<li><p><strong>Operating Temp</strong> - 40C - 130C </p></li>
+<li><p><strong>1.8A max</strong> battery charging current with programmable limits</p></li>
+<li><p><strong>2.5A max</strong> power distribution to system</p></li>
+</ul>
+
+<p>C.H.I.P. Pro can be powered by battery, USB or AC/DC adapter. On-board Power management with the AXP209 provides plenty of power options to better match your applications: mobile, commercial, and low-power are all possible with C.H.I.P. Pro. </p>
+
+<p>For more details, the AXP209 datasheet can be found <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/blob/master/v0.9/Component%20Datasheets/AXP209_Datasheet_v1.0en.pdf">here</a>. </p>
+
+<h2 id="wifi">WiFi</h2>
+
+<ul>
+<li>Realtek 8723DS Combination Module</li>
+<li>Bluetooth 4.2 LE</li>
+<li>2.4GHz Wifi 802.11 b/g/n</li>
+<li>Wifi and BT Unictron antenna model no. AA055</li>
+<li>IPEX (U.FL) antenna connector</li>
+<li>FCC/CE/IC certified</li>
+</ul>
+
+<p>A software controlled antenna path selects between the onboard chip antenna or a IPEX (U.FL) antenna connector where several pre-certified antennas can be added. </p>
+
+<p>FCC Modular certification (47 CFR 15.212) limits the need for final device                        “intentional radiator” certification under 47 CFR 15.247, so long as pre-certified      antennas are used with C.H.I.P. Pro. </p>
+
+<p>To learn more, find the FN-Link Module antenna datasheet <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/v1.0/Component%20Datasheets">here</a></p>
+
+          <h1 id="pin-descriptions">Pin Descriptions</h1>
+
+<h2 id="pinout-diagram">Pinout Diagram</h2>
+
+<p><img src="images/Pinout_Diagram_sm.png" alt="C.H.I.P. Pro Pins" /></p>
+
+<p>C.H.I.P. Pro has a number of specialized pins for input and output, plus 27 general purpose input and output (GPIO) pins. The image above shows the pin location and muxing on C.H.I.P. Pro, and the tables below organize pins according to their specialized functions.</p>
+
+<ul>
+<li>Pin Number</li>
+<li>Port </li>
+<li>GR8 Pin Name </li>
+<li>Signal Description</li>
+<li>Type</li>
+</ul>
+
+<p>For more detailed information about pins on C.H.I.P. Pro and the GR8, please see the data sheets available <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/">here</a>.</p>
+
+<h2 id="battemp">BATTEMP</h2>
+
+<table><thead>
+<tr>
+<th>Pin Number</th>
+<th>Port</th>
+<th>AXP209 Pin Name</th>
+<th>Signal Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>7</td>
+<td>NA</td>
+<td>BATTEMP</td>
+<td>Thermistor connection for battery heat detection</td>
+<td>I</td>
+</tr>
+</tbody></table>
+
+<h2 id="pwm">PWM</h2>
+
+<table><thead>
+<tr>
+<th>Pin Number</th>
+<th>Port</th>
+<th>GR8 Pin Name</th>
+<th>Signal Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>9</td>
+<td>PB2</td>
+<td>PWM0</td>
+<td>Pulse Width Module Channel0 Output</td>
+<td>O</td>
+</tr>
+<tr>
+<td>10</td>
+<td>PG13</td>
+<td>PWM1</td>
+<td>Pulse Width Module Channel1 Output</td>
+<td>O</td>
+</tr>
+</tbody></table>
+
+<h2 id="twi1">TWI1</h2>
+
+<table><thead>
+<tr>
+<th>Pin Number</th>
+<th>Port</th>
+<th>GR8 Pin Name</th>
+<th>Signal Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>11</td>
+<td>PB15</td>
+<td>TWI1-SCK</td>
+<td>TWI0 Clock</td>
+<td>I/O</td>
+</tr>
+<tr>
+<td>12</td>
+<td>PB16</td>
+<td>TWI1-SDA</td>
+<td>TWI0 Data/Address</td>
+<td>I/O</td>
+</tr>
+</tbody></table>
+
+<h2 id="uart-universal-asynchronous-receiver-transmitter">UART – Universal Asynchronous Receiver/Transmitter</h2>
+
+<table><thead>
+<tr>
+<th>Pin Number</th>
+<th>Port</th>
+<th>GR8 Pin Name</th>
+<th>Signal Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>44</td>
+<td>PG3</td>
+<td>UART1-TX</td>
+<td>UART1 Data Transmit</td>
+<td>O</td>
+</tr>
+<tr>
+<td>43</td>
+<td>PG4</td>
+<td>UART1-RX</td>
+<td>UART1 Data Receive</td>
+<td>I</td>
+</tr>
+<tr>
+<td>13</td>
+<td>PD2</td>
+<td>UART2-TX</td>
+<td>UART2 Data Transmit</td>
+<td>I</td>
+</tr>
+<tr>
+<td>14</td>
+<td>PD3</td>
+<td>UART2-RX</td>
+<td>UART2 Data Receive</td>
+<td>O</td>
+</tr>
+<tr>
+<td>15</td>
+<td>PD4</td>
+<td>UART2-CTS</td>
+<td>UART2 Data Clear to Send</td>
+<td>I</td>
+</tr>
+<tr>
+<td>16</td>
+<td>PD5</td>
+<td>UART2-RTS</td>
+<td>UART2 Data Request to Send</td>
+<td>I</td>
+</tr>
+</tbody></table>
+
+<h2 id="audio-codec">Audio Codec</h2>
+
+<table><thead>
+<tr>
+<th>Pin Number</th>
+<th>Port</th>
+<th>GR8 Pin Name</th>
+<th>Signal Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>26</td>
+<td>NA</td>
+<td>AGND</td>
+<td>Audio Codec Analog Ground</td>
+<td>G</td>
+</tr>
+<tr>
+<td>19</td>
+<td>NA</td>
+<td>HPCOM</td>
+<td>Headphone Common Reference Output</td>
+<td>AO</td>
+</tr>
+<tr>
+<td>18</td>
+<td>NA</td>
+<td>HPL</td>
+<td>Headphone Left Channel Output</td>
+<td>AO</td>
+</tr>
+<tr>
+<td>20</td>
+<td>NA</td>
+<td>HPR</td>
+<td>Headphone Right Channel Output</td>
+<td>AO</td>
+</tr>
+<tr>
+<td>27</td>
+<td>NA</td>
+<td>MICIN1</td>
+<td>Microphone Input</td>
+<td>AI</td>
+</tr>
+<tr>
+<td>28</td>
+<td>NA</td>
+<td>MICIN2</td>
+<td>Microphone Input</td>
+<td>AI</td>
+</tr>
+<tr>
+<td>29</td>
+<td>NA</td>
+<td>VMIC</td>
+<td>Bias Voltage Out</td>
+<td>AO</td>
+</tr>
+</tbody></table>
+
+<h2 id="i2s">I2S</h2>
+
+<table><thead>
+<tr>
+<th>Pin Number</th>
+<th>Port</th>
+<th>GR8 Pin Name</th>
+<th>Signal Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>21</td>
+<td>PB5</td>
+<td>I2S-MCLK</td>
+<td>I2S Master Clock</td>
+<td>O</td>
+</tr>
+<tr>
+<td>22</td>
+<td>PB6</td>
+<td>I2S-BCLK</td>
+<td>I2S Bit Clock</td>
+<td>I/O</td>
+</tr>
+<tr>
+<td>23</td>
+<td>PB7</td>
+<td>I2S-LRCK</td>
+<td>I2S Left/Right Channel Select Clock</td>
+<td>I/O</td>
+</tr>
+<tr>
+<td>24</td>
+<td>PB8</td>
+<td>I2S-DO</td>
+<td>I2S Data Output</td>
+<td>O</td>
+</tr>
+<tr>
+<td>25</td>
+<td>PB9</td>
+<td>I2S-DI</td>
+<td>I2S Data Input</td>
+<td>I</td>
+</tr>
+</tbody></table>
+
+<h2 id="owa-one-wire-audio">OWA – One Wire Audio</h2>
+
+<table><thead>
+<tr>
+<th>Pin Number</th>
+<th>Port</th>
+<th>GR8 Pin Name</th>
+<th>Signal Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>9</td>
+<td>PB2</td>
+<td>OWA-DO</td>
+<td>OWA Data Output</td>
+<td>O</td>
+</tr>
+</tbody></table>
+
+<h2 id="lradc">LRADC</h2>
+
+<table><thead>
+<tr>
+<th>Pin Number</th>
+<th>Port</th>
+<th>GR8 Pin Name</th>
+<th>Signal Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>42</td>
+<td>NA</td>
+<td>LRADC0</td>
+<td>ADC Input Channel0 for Multi-Button Input</td>
+<td>I</td>
+</tr>
+</tbody></table>
+
+<h2 id="spi-serial-peripheral-interface">SPI – Serial Peripheral Interface</h2>
+
+<table><thead>
+<tr>
+<th>Pin Number</th>
+<th>Port</th>
+<th>GR8 Pin Name</th>
+<th>Signal Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>41</td>
+<td>PE0</td>
+<td>SPI2-CS0</td>
+<td>SPI2 Chip Select Signal (active low)</td>
+<td>I/O</td>
+</tr>
+<tr>
+<td>40</td>
+<td>PE1</td>
+<td>SPI2-CLK</td>
+<td>SPI2 Clock Signal</td>
+<td>I/O</td>
+</tr>
+<tr>
+<td>39</td>
+<td>PE2</td>
+<td>SPI2-MOSI</td>
+<td>SPI2 Master Data Out, Slave Data In</td>
+<td>I/O</td>
+</tr>
+<tr>
+<td>38</td>
+<td>PE3</td>
+<td>SPI2-MISO</td>
+<td>SPI2 Master Data In, Slave Data Out</td>
+<td>I/O</td>
+</tr>
+</tbody></table>
+
+<h2 id="d0-d7-general-purpose-in-out">D0-D7 – General Purpose In/Out</h2>
+
+<table><thead>
+<tr>
+<th>Pin Number</th>
+<th>Port Name</th>
+<th>GR8 Pin Name</th>
+<th>Signal Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>37-30</td>
+<td>D0-D7</td>
+<td>GPIO</td>
+<td>Digital I/O</td>
+<td>I/O</td>
+</tr>
+</tbody></table>
+
+<h2 id="csi-camera-sensor-interface">CSI – Camera Sensor Interface</h2>
+
+<table><thead>
+<tr>
+<th>Pin Number</th>
+<th>Port Name</th>
+<th>GR8 Pin Name</th>
+<th>Signal Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>41</td>
+<td>PE0</td>
+<td>CSI-PCLK</td>
+<td>CSI Pixel Clock</td>
+<td>I</td>
+</tr>
+<tr>
+<td>40</td>
+<td>PE1</td>
+<td>CSI-MCLK</td>
+<td>CSI Master Clock</td>
+<td>O</td>
+</tr>
+<tr>
+<td>39</td>
+<td>PE2</td>
+<td>CSI-HSYNC</td>
+<td>CSI Horizontal Sync</td>
+<td>I</td>
+</tr>
+<tr>
+<td>38</td>
+<td>PE3</td>
+<td>CSI-VSYNC</td>
+<td>CSI Vertical Sync</td>
+<td>I</td>
+</tr>
+<tr>
+<td>37-30</td>
+<td>PE4-PE11</td>
+<td>CSI-Data[7:0]</td>
+<td>CSI Data Bit</td>
+<td>I</td>
+</tr>
+</tbody></table>
+
+<h2 id="sd-mmc">SD/MMC</h2>
+
+<table><thead>
+<tr>
+<th>Pin Number</th>
+<th>Port Name</th>
+<th>GR8 Pin Name</th>
+<th>Signal Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>37-34</td>
+<td>PE4-PE7</td>
+<td>SDC2-D[3:0]</td>
+<td>SDC2 Data Bit [3:0]</td>
+<td>I/O</td>
+</tr>
+<tr>
+<td>33</td>
+<td>PE8</td>
+<td>SDC2-CMD</td>
+<td>SDC2 Command Signal</td>
+<td>I/O</td>
+</tr>
+<tr>
+<td>32</td>
+<td>PE9</td>
+<td>SDC2-CLK</td>
+<td>SDC2 Clock</td>
+<td>O</td>
+</tr>
+</tbody></table>
+
+<h2 id="external-interrupt">External Interrupt</h2>
+
+<table><thead>
+<tr>
+<th>Pin Number</th>
+<th>Port Name</th>
+<th>GR8 Pin Name</th>
+<th>Signal Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>44</td>
+<td>PG3</td>
+<td>EINT3</td>
+<td>External Interrupt Input</td>
+<td>I</td>
+</tr>
+<tr>
+<td>43</td>
+<td>PG4</td>
+<td>EINT4</td>
+<td>External Interrupt Input</td>
+<td>I</td>
+</tr>
+<tr>
+<td>10</td>
+<td>PG13</td>
+<td>EINT13</td>
+<td>External Interrupt Input</td>
+<td>I</td>
+</tr>
+<tr>
+<td>21</td>
+<td>PB5</td>
+<td>EINT19</td>
+<td>External Interrupt Input</td>
+<td>I</td>
+</tr>
+<tr>
+<td>25</td>
+<td>PB9</td>
+<td>EINT24</td>
+<td>External Interrupt Input</td>
+<td>I</td>
+</tr>
+</tbody></table>
+
+<h2 id="usb1-and-usb0">USB1 and USB0</h2>
+
+<table><thead>
+<tr>
+<th>Pin Number</th>
+<th>Port Name</th>
+<th>GR8 Pin Name</th>
+<th>Signal Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>52</td>
+<td>UDM0</td>
+<td>USB0-DM</td>
+<td>USB0 D- Signal</td>
+<td>A I/O</td>
+</tr>
+<tr>
+<td>51</td>
+<td>UDP0</td>
+<td>USB0-DP</td>
+<td>USB0 D+ Signal</td>
+<td>A I/O</td>
+</tr>
+<tr>
+<td>48</td>
+<td>UDM1</td>
+<td>USB1-DM</td>
+<td>USB1 D- Signal</td>
+<td>A I/O</td>
+</tr>
+<tr>
+<td>47</td>
+<td>UDP1</td>
+<td>USB1-DP</td>
+<td>USB1 D+ Signal</td>
+<td>A I/O</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Pin Number</th>
+<th>Port Name</th>
+<th>AXP209 Pin Name</th>
+<th>Signal Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>50</td>
+<td>VUSB</td>
+<td>VBUS-USB</td>
+<td>VBUS Power Supply</td>
+<td>P</td>
+</tr>
+</tbody></table>
+
+<p>Note: The on-board micro-USB connector is wired in parallel with the castellated edge points at VBUS, UDP0, UDM0, and GND. If you connect a USB host to both the castellated edges AND the connector, at best your USB will no longer work, at worst you may damage your equipment. </p>
+
+          <h1 id="c-h-i-p-pro-faq">C.H.I.P. Pro FAQ</h1>
+
+<h2 id="ordering">Ordering</h2>
+
+<h3 id="how-much-does-c-h-i-p-pro-cost">How much does C.H.I.P. Pro cost?</h3>
+
+<p>C.H.I.P. Pro costs $16. To purchase, visit our <a href="https://nextthing.co/pages/store">web store</a> or contact <a href="mailto:sales@nextthing.co">sales@nextthing.co</a>.</p>
+
+<h3 id="are-there-quantity-discounts">Are there quantity discounts?</h3>
+
+<p>C.H.I.P. Pro is $16 unless you are interested in purchasing 10K+ units. If that is the case please contact <a href="mailto:sales@nextthing.co">sales@nextthing.co</a> to discuss a quantity discount.</p>
+
+<h3 id="is-c-h-i-p-pro-open-source">Is C.H.I.P. Pro open source?</h3>
+
+<p>Yes! Find all you need to build with C.H.I.P. Pro in our <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware">Github repo</a>.</p>
+
+<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+
+<h3 id="where-can-i-purchase-c-h-i-p-pro">Where can I purchase C.H.I.P. Pro?</h3>
+
+<p>We offer the C.H.I.P. Pro Dev kit and C.H.I.P. Pro in our <a href="https://nextthing.co/pages/chippro">web store</a>.</p>
+
+<h3 id="how-many-may-i-order">How many may I order?</h3>
+
+<p>As many or as few as you need: 1 to 1 million (or more). For orders over 1KU please contact <a href="mailto:sales@nextthing.co">sales@nextthing.co</a> to set up a purchase order.</p>
+
+<h2 id="building-a-product-with-c-h-i-p-pro">Building a Product with C.H.I.P. Pro</h2>
+
+<h3 id="i-made-a-c-h-i-p-prototype-will-it-be-software-and-hardware-compatible-with-c-h-i-p-pro-and-the-gr8-module">I made a C.H.I.P. prototype, will it be software and hardware compatible with C.H.I.P. Pro and the GR8 module?</h3>
+
+<p>GR8 has the same Allwinner R8 processor that is in C.H.I.P., so your C.H.I.P. software is 100% compatible with C.H.I.P. Pro. We believe you shouldn’t have to change your software to go into production. </p>
+
+<p>To see some of the hardware differences between C.H.I.P. and C.H.I.P. Pro take a look at our <a href="http://ntc-docs-unstable.surge.sh/chip_pro.html#c-h-i-p-v-c-h-i-p-pro">comparison chart</a>. Still have questions? Feel free to contact us at <a href="mailto:pro@nextthing.co">pro@nextthing.co</a>.</p>
+
+<h3 id="what-certifications-and-directives-is-c-h-i-p-pro-in-compliance-with">What certifications and directives is C.H.I.P. Pro in compliance with?</h3>
+
+<ul>
+<li>CE</li>
+<li>IC</li>
+<li>FCC (Part 15 Modular Certification)</li>
+<li>Reach</li>
+<li>RoHS</li>
+</ul>
+
+<p>Visit our <a href="https://docs.getchip.com/chip_pro.html#compliance-statement">Compliance Statement</a> section for more information about each certification.</p>
+
+<h3 id="i-have-designed-a-circuit-and-am-embedding-c-h-i-p-pro-into-a-larger-pcb-design-once-it-is-integrated-do-i-need-to-get-fcc-and-ce-re-certification">I have designed a circuit and am embedding C.H.I.P. Pro into a larger PCB design. Once it is integrated, do I need to get FCC and CE re-certification?</h3>
+
+<h4 id="fcc">FCC</h4>
+
+<p>If you are designing a consumer product, you will need some certification but the time and money put into that process can be greatly reduced by leveraging our FCC Part 15 subpart C modular certification. </p>
+
+<p>C.H.I.P. Pro is modularly certified for use with several external antennas in addition to the included on-board SMT ceramic antenna. A list of pre-cetified antennas are found in the <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/Datasheets">C.H.I.P. Pro datasheet</a> on page 11 and listed in the <a href="https://docs.getchip.com/chip_pro.html#wifi-antenna">C.H.I.P. Pro online docs</a>. Part 15 subpart C covers intentional radiation. If C.H.I.P. Pro is the only radio being used in your product&rsquo;s final circuit and you use one of the precertified antennas you can meet requirements by completing a Declaration of Conformity (DoC) and affixing the FCC ID to your own product.  </p>
+
+<p>Most likely, your final product will still need to be tested for compliance under Part 15 subpart B for unintentional radiation. </p>
+
+<p>For more information, we recommend you reach out to the <a href="https://www.fcc.gov/general/equipment-authorization-procedures">Federal Communications Commision</a> with any questions you have. </p>
+
+<h4 id="ce">CE</h4>
+
+<p>THe CE Mark is a <a href="https://ec.europa.eu/growth/single-market/ce-marking/">label</a> placed on manufactured or imported goods in the European Union. C.H.I.P. Pro has been tested and is compliant with the <a href="http://ec.europa.eu/growth/sectors/electrical-engineering/red-directive_en">Radio Equipment Directive</a> (RED) which recognizes C.H.I.P. Pro as low power short range wireless device that can be sold within the European market. </p>
+
+<p>If your product integrates C.H.I.P. Pro without modifying any of the radio frequency design and an addition of an antenna with greater gain than the certified ones, your product will likely still comply. </p>
+
+<h3 id="i-am-interested-in-creating-a-custom-pcb-that-integrates-c-h-i-p-pro-where-do-i-start">I am interested in creating a custom PCB that integrates C.H.I.P. Pro, where do I start?</h3>
+
+<p>To get started, refer to our <a href="http://ntc-docs-unstable.surge.sh/chip_pro.html#pcb-design-tips">PCB Design Guide</a>. There, you will find recommendations of services to help aid you in PCB design and fabrication plus best practices. We are also happy to do a PCB review and help where we can. If you have questions reach out to us by emailing <a href="mailto:pro@nextthing.co">pro@nextthing.co</a>.</p>
+
+<h3 id="do-you-offer-custom-flashing-solutions">Do you offer custom flashing solutions?</h3>
+
+<p>We offer flashing of custom firmware at the factory for an extra fee when you purchase 1K+ C.H.I.P. Pros.</p>
+
+<h3 id="what-companies-have-used-c-h-i-p-pro-in-their-products">What companies have used C.H.I.P. Pro in their products?</h3>
+
+<p>There are several products in different R&amp;D and production stages. Some that have been publicly announced and have made it to market are the following:</p>
+
+<ul>
+<li><p><a href="https://www.paloaltoinnovation.com/collections/sandman-clo%20%20cks/products/sandmandoppler">Sandman Doppler Alarm Clock</a> by Palo Alto Innovation</p></li>
+<li><p><a href="https://trntbl.co/">TRNTBL</a> by Vnyl</p></li>
+<li><p><a href="https://www.digitalsputnik.com/voyager/">Voyager</a> by Digital Sputnik</p></li>
+</ul>
+
+<h2 id="power">Power</h2>
+
+<h3 id="why-is-my-battery-charging-at-a-very-slow-rate-or-not-at-all">Why is my battery charging at a very slow rate or not at all?</h3>
+
+<p>First, make sure the correct power source is connected to the correct pins as stated in the <a href="https://docs.getchip.com/chip_pro.html#power-c-h-i-p-pro">documentation</a>. </p>
+
+<p>Assuming the power source is connected correctly, the issue may be with C.H.I.P. Pro&rsquo;s BTS pin which is directly connected to the TS pin on the AXP209 power management unit. This pin expects a 10K thermistor as a way to monitor the battery by providing the pin with a specific voltage range. Hitting this range tells the PMU that it is safe to charge the battery. Without an added thermistor, it&rsquo;s recommended to disable this function by either connecting the BTS pin to ground or disabling through software. Read more about the BTS pin and how to disable it in the <a href="https://docs.getchip.com/chip_pro.html#battery-charging-and-bts-pin">Power</a> section of the C.H.I.P. Pro docs. </p>
+
+<h3 id="i-think-my-c-h-i-p-pro-is-overheating">I think my C.H.I.P. Pro is overheating!</h3>
+
+<p>The cause of possible overheating issues is usually due to lack of a proper power source or a software issue. Check the most recent <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware">C.H.I.P. Pro datasheet</a> for minimum and maximum power and temperature ratings. </p>
+
+<p>There are a few reasons why your C.H.I.P. Pro may experience sudden power loss or a freeze, but heat is almost never the issue. Rest assured knowing that C.H.I.P. Pro has been tested and verified in various extreme temperatures. </p>
+
+<h3 id="my-c-h-i-p-pro-shuts-down-during-boot-or-when-under-heavy-processing-loads">My C.H.I.P. Pro shuts down during boot or when under heavy processing loads.</h3>
+
+<p>Make sure you are using an adequate power source that can provide a recommended <strong>1 Amp of current</strong>. You can also attach a single cell LiPo battery to the BAT pin to provide extra power when the processor needs it. </p>
+
+<p>Another common cause for sudden power loss is due to the AXP209’s power management shutting down if the current draw reaches a set threshold (900mA, for example). If your project has higher power needs, you may want to disable the current-limit feature and set it to &ldquo;no limit&rdquo; so that the AXP209 will allow the system to tolerate higher current. This can be found on page 33 of the <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/v1.0/Component%20Datasheets">AXP209 datasheet</a>.</p>
+
+<p>The common way to set this register is using a systemd service that issues the proper command with i2c-tools:</p>
+<pre class="highlight plaintext"><code>i2cset -f -y 0 0x34 0x30 0x03
+</code></pre>
+<p>If this register needs to be set earlier in the boot process, you can also accomplish this from U-boot:</p>
+<pre class="highlight plaintext"><code>i2c dev 0
+i2c mw 0x34 0x30 0x03 2
+</code></pre>
+<h3 id="my-c-h-i-p-pro-is-freezing-when-downloading-or-copying-files">My C.H.I.P. Pro is freezing when downloading or copying files.</h3>
+
+<p>If you are experiencing a freeze but C.H.I.P. Pro did not experience a power loss, this is most likely due to running out of storage space in the onboard memory. Try rebooting and freeing disk space in your file system.</p>
+
+<p>If C.H.I.P. Pro loses power during these operations, it is most likely a problem with your power source.</p>
+
+<h3 id="how-can-i-prevent-data-from-being-corrupted-in-the-event-of-a-power-cut-or-some-other-kind-of-immediate-shutdown">How can I prevent data from being corrupted in the event of a power cut or some other kind of immediate shutdown?</h3>
+
+<p>The best practice is to try and ensure that your device never turns off without completing a proper shutdown procedure. For example, when adding a battery to your device, it is best to write code that will monitor battery usage and power down your system gracefully when the voltage drops below a specified threshold.</p>
+
+<p>If this is not an option for your application, you can also try calling the <code class="prettyprint">sync</code> command periodically when you are writing data. This ensures that the NAND blocks are synchronized and may eliminate data corruption in the case of a sudden power loss.</p>
+
+<h3 id="is-there-an-interrupt-or-some-kind-of-event-for-the-axp209-power-management">Is there an interrupt or some kind of event for the AXP209 power management?</h3>
+
+<p>A simple way to monitor power usage would be to write a script or service that queries the AXP209 on I2C bus 0 at periodic intervals.</p>
+
+<p>The AXP209 has its own interrupts, which are connected to pin M2 (NMI) on the GR8. Currently, we do not provide documentation on how to use the NMI to respond to such events.</p>
+
+<h2 id="hardware-and-software">Hardware and Software</h2>
+
+<h3 id="how-do-i-set-the-default-state-of-the-i-o-pins-in-gadgetos">How do I set the default state of the I/O pins in GadgetOS?</h3>
+
+<p>Sometimes you may have a project where you need to set the state of the I/O as early as possible before Linux has fully booted. We can accomplish this by adding a script for the U-boot phase of the booting process.</p>
+
+<p>In the gadget-buildroot folder, edit the following file for the board you’re using:</p>
+<pre class="highlight plaintext"><code>gadget-buildroot/gadget/board/nextthing/chippro/uboot-env
+</code></pre>
+<p>Let’s say we want to set the CSID6 (sysfs #138) and CSID7 (sysfs #139) pins to default to OUTPUT instead of INPUT. To do this, we need to add a function to the file like this:</p>
+<pre class="highlight plaintext"><code>set_gpio=gpio clear 138; gpio clear 139;
+</code></pre>
+<p>In this case, “clear” means resetting the I/O to an output state. You can also use commands like <code class="prettyprint">gpio toggle</code> to invert the current value, <code class="prettyprint">gpio set</code> to set the pin HIGH, or <code class="prettyprint">gpio input</code> to set it as an input.</p>
+
+<p>Now we need to call this function as early as possible in the boot process. In the same file, find this line:</p>
+<pre class="highlight plaintext"><code>preboot=run boot_fel
+</code></pre>
+<p>And change it to this:</p>
+<pre class="highlight plaintext"><code>preboot=run set_gpio; run boot_fel
+</code></pre>
+<p>Save this file and recompile your uboot changes.</p>
+<pre class="highlight plaintext"><code>/scripts/build-gadget make uboot-reconfigure all
+</code></pre>
+<p>Re-flash with the new build and reboot. Your I/O will now be set during the u-boot portion of the booting process.</p>
+
+<p><strong>NOTE:</strong> If you then export this pin when Linux is booted, it may revert back to its default state, so be sure to set it again.</p>
+
+<h3 id="why-is-so-much-of-my-file-system-marked-as-read-only">Why is so much of my file system marked as “read only”?</h3>
+
+<p>With GadgetOS the intent was to make an operating system distribution that is as secure as possible when deployed to hundreds of devices all over the world. It was also important to limit the possibility of corrupted data during operations like over-the-air updates or sudden power loss.</p>
+
+<p>Because of this, much of the root file system is set to “read only” to create as stable of a device as possible. </p>
+
+<p>However, any files under <strong>the “/data” folder have full read/write access</strong>, so you should place any data that needs to be written in this location. </p>
+
+<h3 id="why-doesn-t-my-c-h-i-p-pro-without-the-dev-kit-register-as-a-usb-serial-device-when-connected-to-my-computer-via-the-micro-usb-port">Why doesn’t my C.H.I.P. Pro (without the Dev Kit) register as a USB serial device when connected to my computer via the micro USB port?</h3>
+
+<p>If you are using GadgetOS, the micro USB port is configured as an ethernet gadget, which you can connect to using a shell application. If you want to use this as a USB serial port, you would need to make this change in the services running on the device and bind Getty to this port.</p>
+
+<p>Alternatively, you can <a href="https://docs.getchip.com/chip_pro.html#make-a-serial-connection">connect a USB UART cable</a> to C.H.I.P. Pro’s UART1-RX and UART1-TX pins (pins 44 and 43) and communicate with it that way. This is essentially what the micro USB port does on the CHIP Pro Dev Kit.</p>
+
+<h3 id="i-m-using-docker-and-i-need-to-be-able-to-reboot-or-shutdown-my-device-from-within-a-container-how-can-i-do-this">I’m using Docker and I need to be able to reboot or shutdown my device from within a container. How can I do this?</h3>
+
+<p>The best practice would be write a script that runs outside of your Docker container which listens for some kind of event (a file change, a variable being set, etc). The script could then shut down once this event has been received from the Docker container. Another option is to install systemd on your device from the buildroot menu, although this will affect your boot time.</p>
+
+<p>For a more brute force and lightweight approach, share the /proc directory with your container as a new volume. For example:</p>
+<pre class="highlight plaintext"><code>docker run -v /proc:/host/proc -it "test" 
+</code></pre>
+<p>When your container is running, enter this command to synchronize the block devices and mount the read-only file system:</p>
+<pre class="highlight plaintext"><code>echo s &gt; /host/proc/sysrq-trigger &amp;&amp; echo u &gt; /host/proc/sysrq-trigger &amp;&amp; echo s &gt; /host/proc/sysrq-trigger
+</code></pre>
+<p>Now to initiate a reboot, enter this command:</p>
+<pre class="highlight plaintext"><code>echo b &gt; /host/proc/sysrq-trigger
+</code></pre>
+<p>Or to shutdown:</p>
+<pre class="highlight plaintext"><code>echo o &gt; /host/proc/sysrq-trigger
+</code></pre>
+<h3 id="what-kind-of-flash-memory-does-chip-pro-or-the-gr8-support-nand-sd-cards-emmc-etc">What kind of flash memory does CHIP Pro or the GR8 support? (NAND, SD cards, eMMC, etc.)</h3>
+
+<p>Currently, C.H.I.P. and C.H.I.P. Pro officially support the following NAND components:</p>
+
+<ul>
+<li>512mb Toshiba SLC NAND: TC58NVG2S0HTA00</li>
+<li>4gb Toshiba MLC NAND: TC58TEG5DCLTA00</li>
+<li>4gb Hynix MLC NAND: H27UCG8T2ETR</li>
+</ul>
+
+<h3 id="can-i-add-more-flash-memory-by-adding-raw-nand-components">Can I add more flash memory by adding raw NAND Components?</h3>
+
+<p>Additional raw NAND components may work, but will most likely require changes to the Buildroot configuration. Additionally, there are two different branches of the Next Thing Co. Linux kernel depending on what type of NAND you have: SLC or MLC.</p>
+
+<h3 id="can-i-boot-from-an-sd-card">Can I boot From an SD Card?</h3>
+
+<p>Booting from SD cards or eMMC are supported on the GR8 processor, but since C.H.I.P. Pro already reserves these data pins for the onboard NAND storage, you would need to create a custom GR8 board with some additional Buildroot configuration settings.</p>
+
+<h3 id="how-can-i-make-a-backup-of-my-nand-or-emmc-filesystem">How can I make a backup of my NAND or eMMC filesystem?</h3>
+
+<p>Using <strong>Rsync</strong> is the current recommended way to do this, as it will create a tar file of your root file system while excluding a few system directories. Here is an example of how you would use this command:</p>
+<pre class="highlight plaintext"><code>rsync -aAXv --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*",”/etc/udev/rules.d/*”,"/media/*","/lost+found","/boot/*"} / /tmp/backup &amp;&amp; tar -C /tmp/backup -cvzf myBackup.tar.gz .
+</code></pre>
+<h3 id="how-can-i-trigger-an-event-when-a-usb-device-is-added-or-removed">How can I trigger an event when a USB device is added or removed?</h3>
+
+<p>Using udev rules is the recommended way of doing this, as you can specify a command to run when a device is added or removed. To learn more about udev functionality, please read Oracle’s <a href="https://docs.oracle.com/cd/E37670_01/E41138/html/ch07s03.html">documentation</a>.</p>
+
+<h3 id="can-i-connect-an-lcd-or-oled-display-to-c-h-i-p-pro">Can I connect an LCD or OLED display to C.H.I.P. Pro?</h3>
+
+<p>There is no HDMI, VGA, or composite video connections on C.H.I.P. Pro. However, any small resolution display with a controller board that supports an SPI or I2C interface should work. Additionally, it is also possible to reserve some of the available IO to drive an 8-bit parallel display with additional driver support and configuration.</p>
+
+<p>If you wish to use the GR8 module to make your own board, it is possible to drive higher resolution displays up to 720p resolution by exposing the 8080 interface. There is also a composite video connection (sometimes known as CVBS or RCA) for use with older televisions or monitors. For more information, please consult the <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/Datasheets">GR8 datasheet</a>.</p>
+
+<h2 id="wifi-and-bluetooth">WiFi and Bluetooth</h2>
+
+<h3 id="why-won-t-gadgetos-use-my-settings-from-etc-network-interfaces">Why won’t GadgetOS use my settings from /etc/network/interfaces?</h3>
+
+<p>GadgetOS uses Connman to manage all network connections, which does not support /etc/network/interfaces and will override any of those settings. Instead, Connman uses its own settings file, which can be found here:</p>
+<pre class="highlight plaintext"><code>/var/lib/connman/*/settings
+</code></pre>
+<p>Our <a href="http://flash.getchip.com/">Debian C.H.I.P. Pro image called Pro</a> uses nmcli for its network management, which does support /etc/network/interfaces. However, if using Gadget OS, this would have to be added to your kernel configuration with some additional settings.</p>
+
+<h3 id="why-am-i-getting-poor-wifi-signal-strength-and-packet-loss-on-my-c-h-i-p-pro">Why am I getting poor WiFi signal strength and packet loss on my C.H.I.P. Pro?</h3>
+
+<p>C.H.l.P. Pro has the ability to use either the on-board ceramic SMT antenna or an external antenna via the onboard Hirose U.FL connector. Which antenna you should use depends on a few different factors (ground planes on the circuit board, location of power source in relation to the antenna connector, etc.)</p>
+
+<p>For example, if you notice poor wifi performance when using the C.H.I.P. Pro Dev Kit, you may want to switch to use the external antenna, even if you don’t have anything physically connected to it.</p>
+
+<p>To enable the external antenna, simply set pin PB17 (Sysfs GPIO pin #49) to HIGH. To enable the on-board SMT antenna, set it to LOW. This process can also be found in the <a href="https://docs.getchip.com/chip_pro.html#enable-wifi-antenna">C.H.I.P. Pro documentation page</a>.</p>
+
+<h3 id="i-built-and-flashed-a-custom-version-of-gadgetos-but-my-wifi-isn-t-working">I built and flashed a custom version of GadgetOS, but my WiFi isn’t working.</h3>
+
+<p>It’s possible that you may need to tell GadgetOS to recompile the Realtek WiFi drivers. This can be done with the following command:</p>
+<pre class="highlight plaintext"><code>./scripts/build-gadget make linux-reconfigure uboot-reconfigure rtl8723ds_mp_driver-dirclean rtl8723ds_mp_driver-rebuild rtl8723ds_bt-dirclean rtl8723ds_bt-rebuild all
+</code></pre>
+<h3 id="i-m-using-bluez-but-can-t-find-the-hcid-conf-file">I’m using Bluez, but can’t find the hcid.conf file.</h3>
+
+<p>Bluez removed the ability to store PIN data in config files after version 3 due to security risks. At this time, Next Thing Co only provides official support for Bluez 5.</p>
+
+<h3 id="i-install-bluez-and-tried-to-run-bluetoothctl-but-my-system-appears-to-have-frozen">I install Bluez and tried to run “bluetoothctl”, but my system appears to have frozen.</h3>
+
+<p>Not to worry, your system did not freeze. (You can press Ctrl-C to exit bluetoothctl.) The most likely reason this is happening because you have not yet started the dbus service. You can do this manually by running “bluetoothd” first before running “bluetoothctl”.</p>
+
+<h3 id="what-is-the-proper-way-to-set-bluetooth-s-mtu-to-reduce-power-consumption-or-change-signal-strength">What is the proper way to set Bluetooth’s MTU to reduce power consumption or change signal strength?</h3>
+
+<p>The recommended way is to add the Bluez 5.x package and then use tools such as “btgatt-client” and “btgatt-server”. Other utilities such as “hcitool” are deprecated and should no longer be used.</p>
+
+<h3 id="bluetooth-is-not-working-on-c-h-i-p-pro-debian-based-pro-image">Bluetooth is not working on C.H.I.P. Pro Debian-based Pro image.</h3>
+
+<p>Currently, the Debian-based Pro image with built-in Bluetooth drivers is a work in progress. Since our software and hardware is <a href="https://github.com/NextThingCo">open source</a> for development, our community created an image that includes a working Bluetooth utility you can use to validate whether Bluetooth is working. Follow the instructions below to manually flash C.H.I.P. Pro with a Debian image that implements the Bluetooth stack using BlueZ.</p>
+
+<p>These instructions are written for a development machine that runs a Debian distro of Linux. Depending on what OS your machine runs you will either need to install packages using a different package manager than <code class="prettyprint">apt-get</code> or your dev machine may already include them.</p>
+
+<ul>
+<li>Install Git</li>
+</ul>
+<pre class="highlight plaintext"><code>sudo apt-get update
+sudo apt-get install git -y
+</code></pre>
+<ul>
+<li>Install necessary packages to update C.H.I.P. firmware</li>
+</ul>
+<pre class="highlight plaintext"><code>sudo apt-get install sunxi-tools u-boot-tools -y
+git clone https://github.com/NextThingCo/CHIP-mtd-utils.git
+cd CHIP-mtd-utils
+make
+sudo make install
+</code></pre>
+<ul>
+<li>Clone CHIP-tools</li>
+</ul>
+<pre class="highlight plaintext"><code>git clone  https://github.com/NextThingCo/CHIP-tools.git
+cd CHIP-tools
+</code></pre>
+<ul>
+<li>Download tarball image from <a href="https://mega.nz/#!wHpXxJiA!lWTAw8ymVKOD0pe3WxE6OqVsV48FJuFtsdJJ1vCWj7E">here</a>
+and place it in CHIP-tools directory.</li>
+<li>Expand tarball</li>
+</ul>
+<pre class="highlight plaintext"><code>tar xf chip-ble.tar.gz 
+</code></pre>
+<ul>
+<li>Check to see that made a directory called <code class="prettyprint">/img</code>.</li>
+<li>Set permissions to your username</li>
+</ul>
+<pre class="highlight plaintext"><code>sudo chown -R : img/
+</code></pre>
+<ul>
+<li>Hold down the button on C.H.I.P. Pro and plug it into your development computer&rsquo;s USB port to put CHIP Pro in FEL mode.</li>
+<li>While still holding down the button, run this command in terminal:</li>
+</ul>
+<pre class="highlight plaintext"><code>sudo ./chip-update-firmware.sh -L img/
+</code></pre>
+<ul>
+<li>After you see <code class="prettyprint">fastboot...OK</code> you can release the button and wait for the flashing to finish. Once it does, you will get a message that <code class="prettyprint">&quot;CHIP is ready to roll!&quot;</code>.</li>
+<li>Unplug CHIP Pro and plug back in. Connect via UART-serial and login.<br></li>
+<li>Start the interactive <code class="prettyprint">bluetoothctl</code> command.</li>
+</ul>
+<pre class="highlight plaintext"><code>sudo bluetoothctl
+</code></pre>
+<ul>
+<li>scan, pair and connect to devices</li>
+</ul>
+<pre class="highlight plaintext"><code>scan on
+pair [MAC ADDRESS]
+connect [MAC ADDRESS]
+scan off
+</code></pre>
+<p>Original forum <a href="https://bbs.nextthing.co/t/chip-pro-bluetooth-driver-not-available/14905/26">post</a>.</p>
+
+          <h1 id="gr8-faq">GR8 FAQ</h1>
+
+<p><img src="images/GR8-Crop.png" alt="GR8" /></p>
+
+<h2 id="how-much-does-gr8-cost">How much does GR8 cost?</h2>
+
+<p>Gr8 costs $6 in any quantity.  </p>
+
+<h2 id="where-can-i-purchase-gr8">Where can I purchase GR8?</h2>
+
+<p>Contact us at <a href="mailto:sales@nextthing.co">sales@nextthing.co</a> to tell us more about your product and to set up a purchase order.</p>
+
+<h2 id="what-are-gr8-s-dimensions">What are GR8’s dimensions?</h2>
+
+<p>14mm x 14mm x 0.8mm</p>
+
+<h2 id="what-is-the-gr8-package">What is the GR8 package?</h2>
+
+<p>GR8 is built within a 252 ball FBGA (Fine Pitch Ball Grid Array) package, 0.8mm pitch.</p>
+
+<h2 id="i-have-a-prototype-of-my-product-should-i-choose-c-h-i-p-pro-or-gr8-to-move-forward-with">I have a prototype of my product, should I choose C.H.I.P. Pro or GR8 to move forward with?</h2>
+
+<p>This depends on your product&rsquo;s needs and your company&rsquo;s resources. For most customers, C.H.I.P. Pro will be the best and most convenient way to work with the GR8 SiP. C.H.I.P. Pro contains 127 already sourced components including a power management unit (PMU), micro USB port, WiFi, Bluetooth and more. </p>
+
+<p>If you have tried C.H.I.P. Pro and have found that you need a different layout and different functionality, then designing a custom PCB around GR8 is a great option. You can find out everything that GR8 has to offer in the GR8 <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/Datasheets">datasheet</a>.</p>
+
+<h2 id="i-39-m-sourcing-components-for-a-custom-pcb-which-components-work-with-gr8-out-of-the-box">I&rsquo;m sourcing components for a custom PCB, which components work with GR8 out of the box?</h2>
+
+<p>The best reference for components that are supported by our operating systems out of the box is C.H.I.P. Pro. To see if they are right for your product, datasheets for these components are found in our <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware">C.H.I.P. Pro Hardware</a> Github repo. </p>
+
+<h2 id="what-wifi-modules-does-gr8-support">What WiFi Modules Does GR8 support?</h2>
+
+<p>Technically, a WiFi module supported in Arch Linux ARM and that uses the SDIO (Secure Digital Input Output) V2.0 protocol can be used with GR8. A good reference for components supported by our software is C.H.I.P. Pro which uses the RTL8723DS module.</p>
+
+<p>What module you want to use may also depend on what kind of software support is available. Software drivers for the RTL8723DS module come with our C.H.I.P. Pro operating system making it a go-to choice if you need something that works right away. </p>
+
+<p>For more information on the SDIO protocol, please refer to the specifications found on page 221 of the <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/GR8/Manual">GR8 manual</a>. </p>
+
+<h2 id="i-m-a-distributor-can-i-carry-gr8">I’m a distributor, can I carry GR8?</h2>
+
+<p>Yes! Contact us at <a href="mailto:sales@nextthing.co">sales@nextthing.co</a>.</p>
+
+          <h1 id="gr8-pins-and-multiplexing-on-c-h-i-p-pro">GR8 Pins and Multiplexing on C.H.I.P. Pro</h1>
+
+<p><strong>Key</strong></p>
+
+<p><em>italics</em> = default pin function</p>
+
+<p>In the &ldquo;On C.H.I.P. Pro&rdquo; column:</p>
+
+<ul>
+<li>C.H.I.P. Pro pin number = exposed external pins on C.H.I.P. Pro </li>
+<li>NAND = available internal pins on C.H.I.P. Pro </li>
+<li>&ldquo;n/e&rdquo; = not exposed for use on C.H.I.P. Pro</li>
+</ul>
+
+<table><thead>
+<tr>
+<th>Function</th>
+<th>Pin Name</th>
+<th>On C.H.I.P. Pro</th>
+<th>Multi2</th>
+<th>Multi3</th>
+<th>Multi4</th>
+<th>Multi5</th>
+<th>Multi6</th>
+<th>Multi7</th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PB(21)</td>
+<td>PB0</td>
+<td>n/e</td>
+<td>TWI0_SCK</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PB1</td>
+<td>n/e</td>
+<td>TWI0_SDA</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PB2</td>
+<td>9</td>
+<td><em>PWM0</em></td>
+<td>SPDIF_DO</td>
+<td></td>
+<td></td>
+<td>EINT16</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PB3</td>
+<td>n/e</td>
+<td>IR_TX</td>
+<td></td>
+<td></td>
+<td></td>
+<td>EINT17</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PB4</td>
+<td>n/e</td>
+<td>IR_RX</td>
+<td></td>
+<td></td>
+<td></td>
+<td>EINT18</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PB5</td>
+<td>21</td>
+<td><em>I2S_MCLK</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td>EINT19</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PB6</td>
+<td>22</td>
+<td><em>I2S_BCLK</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td>EINT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PB7</td>
+<td>23</td>
+<td><em>I2S_LRCK</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td>EINT21</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PB8</td>
+<td>24</td>
+<td><em>I2S_DO</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td>EINT22</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PB9</td>
+<td>25</td>
+<td><em>I2S_DI</em></td>
+<td>SPDIF_DI</td>
+<td></td>
+<td></td>
+<td>EINT23</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PB10</td>
+<td>n/e</td>
+<td>SPI2_CS1</td>
+<td>SPDIF_DO</td>
+<td></td>
+<td></td>
+<td>EINT24</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PB11</td>
+<td>n/e</td>
+<td>SPI2_CS0</td>
+<td>JTAG_MS0</td>
+<td></td>
+<td></td>
+<td>EINT25</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PB12</td>
+<td>n/e</td>
+<td>SPI2_CLK</td>
+<td>JTAG_CK0</td>
+<td></td>
+<td></td>
+<td>EINT26</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PB13</td>
+<td>n/e</td>
+<td>SPI2_MOSI</td>
+<td>JTAG_DO0</td>
+<td></td>
+<td></td>
+<td>EINT27</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PB14</td>
+<td>n/e</td>
+<td>SPI2_MISO</td>
+<td>JTAG_DI0</td>
+<td></td>
+<td></td>
+<td>EINT28</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PB15</td>
+<td>11</td>
+<td><em>TWI1_SCK</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PB16</td>
+<td>12</td>
+<td><em>TWI1_SDA</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PB17</td>
+<td>n/e</td>
+<td>TWI2_SCK</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PB18</td>
+<td>n/e</td>
+<td>TWI2_SDA</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PC(20)</td>
+<td>PC0</td>
+<td>NAND</td>
+<td><em>NWE</em></td>
+<td>SPI0_MOSI</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PC1</td>
+<td>NAND</td>
+<td><em>NALE</em></td>
+<td>SPI0_MISO</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PC2</td>
+<td>NAND</td>
+<td><em>NCLE</em></td>
+<td>SPI0_CLK</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PC3</td>
+<td>NAND</td>
+<td><em>NCE1</em></td>
+<td>SPI0_CS0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PC4</td>
+<td>NAND</td>
+<td><em>NCE0</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PC5</td>
+<td>NAND</td>
+<td><em>NRE</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PC6</td>
+<td>NAND</td>
+<td><em>NRB0</em></td>
+<td>SDC2_CMD</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PC7</td>
+<td>NAND</td>
+<td><em>NRB1</em></td>
+<td>SDC2_CLK</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PC8</td>
+<td>NAND</td>
+<td><em>NDQ0</em></td>
+<td>SDC2_D0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PC9</td>
+<td>NAND</td>
+<td><em>NDQ1</em></td>
+<td>SDC2_D1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PC10</td>
+<td>NAND</td>
+<td><em>NDQ2</em></td>
+<td>SDC2_D2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PC11</td>
+<td>NAND</td>
+<td><em>NDQ3</em></td>
+<td>SDC2_D3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PC12</td>
+<td>NAND</td>
+<td><em>NDQ4</em></td>
+<td>SDC2_D4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PC13</td>
+<td>NAND</td>
+<td><em>NDQ5</em></td>
+<td>SDC2_D5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PC14</td>
+<td>NAND</td>
+<td><em>NDQ6</em></td>
+<td>SDC2_D6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PC15</td>
+<td>NAND</td>
+<td><em>NDQ7</em></td>
+<td>SDC2_D7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PC19</td>
+<td>NAND</td>
+<td><em>NDQS</em></td>
+<td>UART2_RX</td>
+<td>UART3_RTS</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PD2</td>
+<td>13</td>
+<td>LCD_D2</td>
+<td><em>UART2</em>TX_</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PD3</td>
+<td>14</td>
+<td>LCD_D3</td>
+<td><em>UART2</em>RX_</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PD4</td>
+<td>15</td>
+<td>LCD_D4</td>
+<td><em>UART2</em>CTS_</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PD5</td>
+<td>16</td>
+<td>LCD_D5</td>
+<td><em>UART2</em>RTS_</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PD6</td>
+<td>n/e</td>
+<td>LCD_D6</td>
+<td>ECRS</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PD7</td>
+<td>n/e</td>
+<td>LCD_D7</td>
+<td>ECOL</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PD10</td>
+<td>n/e</td>
+<td>LCD_D10</td>
+<td>ERXD0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PD11</td>
+<td>n/e</td>
+<td>LCD_D11</td>
+<td>ERXD1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PD12</td>
+<td>n/e</td>
+<td>LCD_D12</td>
+<td>ERXD2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PD13</td>
+<td>n/e</td>
+<td>LCD_D13</td>
+<td>ERXD3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PD14</td>
+<td>n/e</td>
+<td>LCD_D14</td>
+<td>ERXCK</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PD15</td>
+<td>n/e</td>
+<td>LCD_D15</td>
+<td>ERXERR</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PD18</td>
+<td>n/e</td>
+<td>LCD_D18</td>
+<td>ERXDV</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PD19</td>
+<td>n/e</td>
+<td>LCD_D19</td>
+<td>ETXD0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PD20</td>
+<td>n/e</td>
+<td>LCD_D20</td>
+<td>ETXD1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PD21</td>
+<td>n/e</td>
+<td>LCD_D21</td>
+<td>ETXD2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PD22</td>
+<td>n/e</td>
+<td>LCD_D22</td>
+<td>ETXD3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PD23</td>
+<td>n/e</td>
+<td>LCD_D23</td>
+<td>ETXEN</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PD24</td>
+<td>n/e</td>
+<td>LCD_CLK</td>
+<td>ETXCK</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PD25</td>
+<td>n/e</td>
+<td>LCD_DE</td>
+<td>ETXERR</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PD26</td>
+<td>n/e</td>
+<td>LCD_HSYNC</td>
+<td>EMDC</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PD27</td>
+<td>n/e</td>
+<td>LCD_VSYNC</td>
+<td>EMDIO</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PE(12)</td>
+<td>PE0</td>
+<td>41</td>
+<td>TS_CLK</td>
+<td>CSI_PCLK</td>
+<td><em>SPI2_CS0</em></td>
+<td></td>
+<td>EINT14</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PE1</td>
+<td>40</td>
+<td>TS_ERR</td>
+<td>CSI_MCLK</td>
+<td><em>SPI2_CLK</em></td>
+<td></td>
+<td>EINT15</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PE2</td>
+<td>39</td>
+<td>TS_SYNC</td>
+<td>CSI_HSYNC</td>
+<td><em>SPI2_MOSI</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PE3</td>
+<td>38</td>
+<td>TS_DVLD</td>
+<td>CSI_VSYNC</td>
+<td><em>SPI2_MISO</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PE4</td>
+<td>37</td>
+<td>TS_D0</td>
+<td>CSI_D0</td>
+<td><em>SDC2 D0</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PE5</td>
+<td>36</td>
+<td>TS_D1</td>
+<td>CSI_D1</td>
+<td><em>SDC2 D1</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PE6</td>
+<td>35</td>
+<td>TS_D2</td>
+<td>CSI_D2</td>
+<td><em>SDC2 D2</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PE7</td>
+<td>34</td>
+<td>TS_D3</td>
+<td>CSI_D3</td>
+<td><em>SDC2 D3</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PE8</td>
+<td>33</td>
+<td>TS_D4</td>
+<td>CSI_D4</td>
+<td><em>SDC2 CMD</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PE9</td>
+<td>32</td>
+<td>TS_D5</td>
+<td>CSI_D5</td>
+<td><em>SDC2 CLK</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PE10</td>
+<td>31</td>
+<td>TS_D6</td>
+<td>CSI_D6</td>
+<td><em>UART1 TX</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PE11</td>
+<td>30</td>
+<td>TS_D7</td>
+<td>CSI_D7</td>
+<td><em>UART1 RX</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PF(6)</td>
+<td>PF0</td>
+<td>n/e</td>
+<td>SDC0_D1</td>
+<td></td>
+<td>JTAG_MS1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PF1</td>
+<td>n/e</td>
+<td>SDC0_D0</td>
+<td></td>
+<td>JTAG_DI1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PF2</td>
+<td>n/e</td>
+<td>SDC0_CLK</td>
+<td></td>
+<td>UART0_TX</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PF3</td>
+<td>n/e</td>
+<td>SDC0_CMD</td>
+<td></td>
+<td>JTAG_DO1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PF4</td>
+<td>n/e</td>
+<td>SDC0_D3</td>
+<td></td>
+<td>UART0_RX</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PF5</td>
+<td>n/e</td>
+<td>SDC0_D2</td>
+<td></td>
+<td>JTAG_CK1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PG(14)</td>
+<td>PG0</td>
+<td>n/e</td>
+<td>GPS_CLK</td>
+<td></td>
+<td></td>
+<td></td>
+<td>EINT0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PG1</td>
+<td>n/e</td>
+<td>GPS_SIGN</td>
+<td></td>
+<td></td>
+<td></td>
+<td>EINT1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PG2</td>
+<td>n/e</td>
+<td>GPS_MAG</td>
+<td></td>
+<td></td>
+<td></td>
+<td>EINT2</td>
+<td></td>
+<td>USB0-IDDET</td>
+</tr>
+<tr>
+<td></td>
+<td>PG3</td>
+<td>n/e</td>
+<td>SDC1_CMD</td>
+<td>MS_BS</td>
+<td>UART1_TX</td>
+<td></td>
+<td>EINT3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PG4</td>
+<td>n/e</td>
+<td>SDC1_CLK</td>
+<td>MS_CLK</td>
+<td>UART1_RX</td>
+<td></td>
+<td>EINT4</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PG5</td>
+<td>n/e</td>
+<td>SDC1_D0</td>
+<td>MS_D0</td>
+<td>UART1_CTS</td>
+<td></td>
+<td>EINT5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PG6</td>
+<td>n/e</td>
+<td>SDC1_D1</td>
+<td>MS_D1</td>
+<td>UART1_RTS</td>
+<td>UART2_RTS</td>
+<td>EINT6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PG7</td>
+<td>n/e</td>
+<td>SDC1_D2</td>
+<td>MS_D2</td>
+<td></td>
+<td>UART2_TX</td>
+<td>EINT7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PG8</td>
+<td>n/e</td>
+<td>SDC1_D3</td>
+<td>MS_D3</td>
+<td></td>
+<td>UART2_RX</td>
+<td>EINT8</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PG9</td>
+<td>n/e</td>
+<td>SPI1_CS0</td>
+<td>UART3_TX</td>
+<td></td>
+<td></td>
+<td>EINT9</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PG10</td>
+<td>n/e</td>
+<td>SPI1_CLK</td>
+<td>UART3_RX</td>
+<td></td>
+<td></td>
+<td>EINT10</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PG11</td>
+<td>n/e</td>
+<td>SPI1_MOSI</td>
+<td>UART3_CTS</td>
+<td></td>
+<td></td>
+<td>EINT11</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PG12</td>
+<td>n/e</td>
+<td>SPI1_MISO</td>
+<td>UART3_RTS</td>
+<td></td>
+<td></td>
+<td>EINT12</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PG13</td>
+<td>10</td>
+<td>SPI1_CS1</td>
+<td><em>PWM1</em></td>
+<td></td>
+<td>UART2_CTS</td>
+<td>EINT13</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>TVOUT</td>
+<td>TVOUT</td>
+<td>n/e</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>USB</td>
+<td>UDM0</td>
+<td>52</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>UDP0</td>
+<td>51</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>UDM1</td>
+<td>48</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>UDP1</td>
+<td>47</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>VCC_USB</td>
+<td>n/e</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>TP</td>
+<td>TPX1</td>
+<td>n/e</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>TPX2</td>
+<td>n/e</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>TPY1</td>
+<td>n/e</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>TPY2</td>
+<td>n/e</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>LINEINL</td>
+<td>n/e</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>LINEINR</td>
+<td>n/e</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>MIC1OUTP</td>
+<td>n/e</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>MIC1OUTN</td>
+<td>n/e</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>VMIC</td>
+<td>n/e</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>MICIN2</td>
+<td>28</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>MICIN1</td>
+<td>27</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>VRA1</td>
+<td>n/e</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>VRA2</td>
+<td>n/e</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>AVCC</td>
+<td>n/e</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>VRP</td>
+<td>n/e</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>AGND</td>
+<td>n/e</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>HPR</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>HPCOM</td>
+<td>19</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>HPCOMFB</td>
+<td>n/e</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>VCC_HP</td>
+<td>n/e</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>HPBP</td>
+<td>n/e</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>HPL</td>
+<td>18</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>LRADC</td>
+<td>LRADC0</td>
+<td>42</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>LRADC1</td>
+<td>n/e</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+          <h1 id="compliance-statement">Compliance Statement</h1>
+
+<p>C.H.I.P. Pro is officially certified for CE, IC and FCC for use with multiple commercially available <a href="https://docs.getchip.com/chip_pro_devkit.html#wifi-antenna">external antennas</a> as well as the onboard ceramic SMT antenna. Find all <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/Compliance">Test Reports and Certificates</a> in the C.H.I.P. Pro Hardware repository.</p>
+
+<h2 id="fcc">FCC</h2>
+
+<p><strong>FCC ID: 2AF9F-1337R</strong></p>
+
+<p>C.H.I.P. Pro complies with part 15 subpart C of the FCC Rules. Operation is subject to the following two conditions: </p>
+
+<ol>
+<li>This device may not cause harmful interference. </li>
+<li>This device must accept any interference received, including interference that may cause undesired operation.</li>
+</ol>
+
+<p>C.H.I.P. Pro has FCC Modular Transmitter certification meaning any product with C.H.I.P. Pro as the only active radio transmitter will not require your company to run certification testing for the Intentional Radiator portion of FCC tests. When you list that your product contains our FCC-ID&rsquo;d module you avoid the need to apply for a new FCC-ID.</p>
+
+<p>This greatly lessens the workload of taking your product through FCC certification. Your product will probably still need to be tested and state compliance with FCC Part 15 subpart B for Unintentional Radiation limits. </p>
+
+<h2 id="ce-red-2014-53-eu">CE + RED 2014/53/EU</h2>
+
+<p>The CE mark on CHIP Pro enables the free movement of products into and within the European market. C.H.I.P. Pro is in compliance with the European Union&rsquo;s <strong>R</strong>adio <strong>E</strong>quipment <strong>D</strong>irective for wireless transmitters and receivers.</p>
+
+<h2 id="industry-canada">Industry Canada</h2>
+
+<p><strong>IC: 20863-1337R</strong></p>
+
+<p>This device complies with Industry Canada license-exempt RSS standard(s). Operation is subject to the following two conditions:</p>
+
+<ol>
+<li>This device may not cause harmful interference;</li>
+<li>This device must accept any interference received, including interference that may cause undesired operation of the device.</li>
+</ol>
+
+<p>Cet appareil est conforme à Industrie Canada une licence standard RSS exonérés (s). Son fonctionnement est soumis aux deux conditions suivantes:
+1. Cet appareil ne doit pas provoquer d&#39;interférences
+2. Cet appareil doit accepter toute interférence reçue, y compris les interférences pouvant provoquer un fonctionnement indésirable de l&#39;appareil.</p>
+
+<h2 id="information-to-user">Information to User</h2>
+
+<p>CAUTION: Changes or modifications not expressly approved for compliance could void your authority to operate this equipment.</p>
+
+<p>For any questions, reach out to us at pro@nextthing.co.</p>
+
+          <h1 id="pcb-design-guide">PCB Design Guide</h1>
+
+<p>C.H.I.P. Pro was created to be seamlessly embedded into products and we at NTC are here to help you do that. If you are ready to go from breadboard to PCB, read on. This section gives recommendations and provides resources and tips to help plan a successful PCB design. </p>
+
+<p><img src="images/boards.jpg" alt="C.H.I.P. Pro PCBs" /></p>
+
+<h2 id="from-1-to-1mm">From 1 to 1MM</h2>
+
+<p>To make scaling up efficient and easy, C.H.I.P. Pro is offered in small and large quantities. Purchase from the online <a href="https://nextthing.co/pages/store">store</a> or, for larger orders, email sales@nextthing.co. </p>
+
+<h2 id="tech-documents">Tech Documents</h2>
+
+<p>NTC hardware and software is open source for development. You will find the following design and technical documents for <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware">C.H.I.P. Pro</a> and <a href="https://github.com/NextThingCo/CHIP_Pro-Dev-Kit">C.H.I.P. Pro Dev Kit</a> on our Github account. </p>
+
+<ul>
+<li>C.H.I.P. Pro datasheet</li>
+<li>Component datasheets</li>
+<li>Mechanical documents</li>
+<li>C.H.I.P. Pro schematics</li>
+<li>C.H.I.P. Pro Dev Kit schematics</li>
+<li>PCB board files</li>
+<li>Eagle Footprint</li>
+</ul>
+
+<h2 id="c-h-i-p-pro-footprint">C.H.I.P. Pro Footprint</h2>
+
+<p>Create a C.H.I.P. Pro footprint with the EDA (Electronic Design Automation) software of your choice using the measurements provided in our footprint diagrams. For SMT manufacturing, you will also find a solder paste stencil.</p>
+
+<h3 id="smt-footprint">SMT Footprint</h3>
+
+<p><img src="images/Pro_Footprint_SMT.jpg" alt="C.H.I.P. Pro SMT footprint" /></p>
+
+<h3 id="solder-paste-stencil">Solder Paste Stencil</h3>
+
+<p><img src="images/Pro_stencil.jpg" alt="C.H.I.P. Pro SMT stencil" /></p>
+
+<h3 id="hand-solder-footprint">Hand Solder Footprint</h3>
+
+<p><img src="images/Pro_Footprint_hand.jpg" alt="C.H.I.P. Pro footprint" /></p>
+
+<aside class="notice">
+C.H.I.P. Pro footprints include an open space in the middle allowing for the 1.4mm height extending from the bottom of C.H.I.P. Pro. **It&rsquo;s important to include this negative space measuring 43mm x 26mm** in the design of your PCB. C.H.I.P. Pro is populated on both sides and needs this open space to sit properly on the finished PCB.
+</aside>
+
+<p>If using Eagle software to design your PCB with, we&rsquo;ve taken away the need to design one. Find our ready-made Eagle footprint <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/Footprint/EAGLE">here</a>.</p>
+
+<p>Do you want to share a footprint that you have created with us? We would like to include it here for others to use. Send your footprint to docs@nextthing.co. </p>
+
+<h2 id="pcb-software-and-services">PCB Software and Services</h2>
+
+<p>There are many software packages and services to design and manufacture a PCB with. If you are just starting out in PCB design or want to explore other options we offer suggestions below. </p>
+
+<p>The tools and services chosen are based on what we have seen used in the field and community across all levels of development. NTC does not officially recommend one EDA software package. The effectiveness of a design tool will depend on the user&rsquo;s preferences and skill level. </p>
+
+<h3 id="eda-software">EDA Software</h3>
+
+<ul>
+<li><p><a href="http://www.orcad.com/products/orcad-overview">OrCAD</a></p>
+
+<p>OrCAD is a collection of tools used to design PCBs, schematics, analyze circuits with and more. Learn how to use their schematic design tool Capture through <a href="http://www.orcadmarketplace.com/Capture-Tutorial/captutor.htm">interactive tutorials</a>.  </p></li>
+<li><p><a href="http://kicad-pcb.org/">KiCad</a></p>
+
+<p>A free and open source software suite. Design schematics, layout PCBs, and verify design for manufacturing. There are plenty of tutorials to learn from on their <a href="http://kicad-pcb.org/help/tutorials/">website</a>. </p></li>
+<li><p><a href="https://easyeda.com/">EasyEDA</a></p>
+
+<p>A cloud-based software suite that has free and professional priced packages. Not only can you design PCBS, they offer circuit simulation and take PCB fabrication orders through their website. Footprints to components can be designed and contributed by community members for use by anyone. A user contributed footprint for C.H.I.P. Pro can be found by searching CHIP_Pro in libraries. Get started with EasyEDA&rsquo;s online <a href="https://easyeda.com/Doc/Tutorial/">tutorials</a>. </p></li>
+<li><p><a href="https://www.autodesk.com/products/eagle/overview">Eagle</a> </p>
+
+<p>Eagle is powerful PCB design and schematic layout software. It&rsquo;s well used and has a strong community behind it. There are plenty of tutorials found online, such as at <a href="https://www.sparkfun.com/tutorials/108">Sparkfun</a>, <a href="https://learn.adafruit.com/ktowns-ultimate-creating-parts-in-eagle-tutorial/introduction">Adafruit</a>, and <a href="https://www.youtube.com/user/EAGLECadSoftComputer">YouTube</a>. Start by reading an overview of the software and finding links to tutorials, example projects and more on <a href="https://www.autodesk.com/products/eagle/overview">Eagle&rsquo;s product page</a>. Find our C.H.I.P. Pro Eagle compatible footprint for download above. </p></li>
+<li><p><a href="http://www.altium.com/">Altium</a></p>
+
+<p>Used by professionals and advanced hobbyists. A bigger learning curve comes with Altium but it is worth the time invested if you plan on continuing to design production ready PCBs.</p></li>
+</ul>
+
+<h3 id="pcb-fabrication-services">PCB Fabrication Services</h3>
+
+<p>When you are ready to get your board fabricated you will need to choose a PCB manufacturer. Your choice will be based on a number of factors including, turn around time, board features (flex and color options) and scale of order. All of the services listed do small quantities to get you started. Some do large scale and offer multi-layer boards and other advanced services.</p>
+
+<ul>
+<li><p><a href="http://www.4pcb.com/">Advanced Circuits</a></p>
+
+<p>Several pricing options to choose from depending on what your board design specifications are. Many board features available with no minimum quantity. Design and assembly services are also offered.</p></li>
+<li><p><a href="https://www.pcbway.com/">PCBWay</a></p>
+
+<p>No minimums, fast turn around and easy to use interface for uploading board designs and getting a quote. They offer flexible pcbs, SMD (surface mount device) stencils and assembly services. </p></li>
+<li><p><a href="http://www.allpcb.com/">AllPCB</a></p>
+
+<p>AllPCB offers low prices and quality services in small and large scale batches. Their website is comprehensive with instant quote services and a way to upload your BOM and search for specific components.</p></li>
+<li><p><a href="https://www.seeedstudio.com/fusion.html">Seeed Fusion PCB &amp; PCB Assembly</a></p>
+
+<p>They offer layout, manufacturing and assembly services along with other CNC services such as 3D printing and milling. They even offer several PCB colors options with their cheapest fabrication option.</p></li>
+<li><p><a href="https://oshpark.com/">OSH Park</a></p>
+
+<p>OSH Park does batch manufacturing meaning that your board gets created with others on the same panel. This affects the turn around time making them the slowest option on the list. However, their straight forward and simple ordering interface makes it very easy to upload and check a board design in minutes.</p></li>
+</ul>
+
+<h3 id="verify-manufacturer-design-rules">Verify Manufacturer Design Rules</h3>
+
+<p>PCB manufacturers have specifications outlining their production capabilities called &ldquo;design rules&rdquo;. These design rules include smallest possible traces, drill hole size, spacing, etc. Most PCB design software have an automated process that checks your design against these design rules using files. This is called the DRC (design rule checking) process. If the design software you are using does not have this feature some board manufacturers offer the service or you can use DRC specific software. </p>
+
+<p>As an example, OSH Park&rsquo;s PCB design rules are found on their OSH Park <a href="https://oshpark.com/guidelines">Design Submission Guidelines</a> page. Conveniently, they provide a file for checking PCB designs using Eagle software. OSH Park also provides <a href="http://docs.oshpark.com/design-tools/">design guideline documents</a> for many of the EDA software people submit designs with. To get you started, below are some design rule resources for software linked to in this doc.</p>
+
+<ul>
+<li><a href="https://techdocs.altium.com/display/ADOH/Design+Rules#">Altium</a> </li>
+<li><a href="http://kicadhowto.wikidot.com/co1drc">KiCad</a></li>
+<li><a href="https://www.youtube.com/user/EAGLECadSoftComputer/videos">Eagle</a></li>
+<li><a href="https://easyeda.com/Doc/Tutorial/introduction.htm">EasyEDA</a> </li>
+</ul>
+
+<h2 id="power-considerations">Power Considerations</h2>
+
+<h3 id="supplying-power-to-c-h-i-p-pro">Supplying Power to C.H.I.P. Pro</h3>
+
+<p>Powering C.H.I.P. Pro via the <em>CHG-IN</em> pin at 5-5.5V is the suggested route for all embedded applications. A reliable 2A+ rated power supply works well to power C.H.I.P. Pro.</p>
+
+<p>C.H.I.P. Pro can also be battery powered through <em>BAT</em>, and by a USB charger/supply connected to <em>VBUS</em>. </p>
+
+<h4 id="recommended-operating-voltage">Recommended Operating Voltage</h4>
+
+<table><thead>
+<tr>
+<th>Pin</th>
+<th>Min</th>
+<th>Typical</th>
+<th>Max</th>
+<th>Unit</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>CHG-IN</td>
+<td>3.8</td>
+<td>5-5.5</td>
+<td>6.3</td>
+<td>V</td>
+</tr>
+<tr>
+<td>BAT</td>
+<td>3.0</td>
+<td>3.8</td>
+<td>4.2+/-0.5%</td>
+<td>V</td>
+</tr>
+<tr>
+<td>VBUS</td>
+<td>3.8</td>
+<td>5-5.5</td>
+<td>6.3</td>
+<td>V</td>
+</tr>
+</tbody></table>
+
+<h4 id="pmu-power-management-unit-vout-current-available-before-loading-battery">PMU (Power Management Unit) Vout Current Available Before Loading Battery</h4>
+
+<table><thead>
+<tr>
+<th>Iout</th>
+<th>Min</th>
+<th>Typical</th>
+<th>Max</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PMU Vout</td>
+<td>500 mA</td>
+<td>900 mA</td>
+<td>2500 mA</td>
+</tr>
+</tbody></table>
+
+<p>A programmable current limit can be set in software allowing for safe attachment to USB 2.0, USB 3.0, or high-current CHG-In sources. Check the <a href="https://github.com/NextThingCo/CHIP-Hardware/blob/master">AXP209 datasheet</a>. 
+ for more information starting on page 33. The current set options are 100mA, 500mA, 900mA and &ldquo;no limit&rdquo;. C.H.I.P. Pro is set to 900mA upon boot by default. </p>
+
+<p>Keep in mind that if the current draw spikes and exceeds the threshold even momentarily this will cause a brownout and C.H.I.P. Pro will shut down. </p>
+
+<h3 id="power-consumption">Power Consumption</h3>
+
+<p>Like any feature-loaded SOM, how much current C.H.I.P. Pro draws depends on what you need it to do. The following measurements are offered as a rough starting point with which to begin to understand the range of power budgets relevant to a CHIP Pro-based device operated from a battery. Exact power consumption is significantly influenced by factors such as software power optimizations (or lack thereof), power source quality, external peripheral circuitry, and ambient operating conditions. </p>
+
+<table><thead>
+<tr>
+<th>System State</th>
+<th>Measurement</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Idle at Linux Shell</td>
+<td>Supply (BAT)</td>
+<td>4.17V</td>
+</tr>
+<tr>
+<td></td>
+<td>Current</td>
+<td>125.90 mA</td>
+</tr>
+<tr>
+<td></td>
+<td>Power</td>
+<td>525.00 mW</td>
+</tr>
+<tr>
+<td>Playing Local Audio</td>
+<td>Supply (BAT)</td>
+<td>4.17V</td>
+</tr>
+<tr>
+<td></td>
+<td>Current</td>
+<td>209.40 mA</td>
+</tr>
+<tr>
+<td></td>
+<td>Power</td>
+<td>873.62 mW</td>
+</tr>
+<tr>
+<td>WiFi Pinging</td>
+<td>Supply (BAT)</td>
+<td>4.17V</td>
+</tr>
+<tr>
+<td></td>
+<td>Current</td>
+<td>184.70 mA</td>
+</tr>
+<tr>
+<td></td>
+<td>Power</td>
+<td>770.20 mW</td>
+</tr>
+<tr>
+<td>Standby</td>
+<td>Supply (BAT)</td>
+<td>4.17V</td>
+</tr>
+<tr>
+<td></td>
+<td>Current</td>
+<td>5.30 mA</td>
+</tr>
+<tr>
+<td></td>
+<td>Power</td>
+<td>22.10 mW</td>
+</tr>
+<tr>
+<td>Shutdown</td>
+<td>Supply (BAT)</td>
+<td>4.17V</td>
+</tr>
+<tr>
+<td></td>
+<td>Current</td>
+<td>1.60 mA</td>
+</tr>
+<tr>
+<td></td>
+<td>Power</td>
+<td>6.67 mW</td>
+</tr>
+</tbody></table>
+
+<h3 id="battery-and-bts-pin">Battery and BTS Pin</h3>
+
+<p>Thinking of including a rechargeable battery as a product feature? Read on to learn more about the BTS pin. </p>
+
+<p>Pin 7 on C.H.I.P. Pro is marked <strong>BATTEMP or BTS</strong> and is directly connected to the <strong>TS</strong> pin on the AXP209 PMU. This pin supports a 10KΩ 1% thermistor to monitor the battery temperature when the battery is charging or discharging.  If you do not incorporate a thermistor into your circuit the pin may float from ground interfering with how much charge current is throttled to the <strong>BAT</strong> pin and the <strong>JST connector</strong>. </p>
+
+<p>To ensure maximum charge current without a thermistor disable the battery temperature monitoring system by one of two ways:</p>
+
+<ul>
+<li>Connect BTS pin to ground</li>
+<li>Disable the temperature functionality in software:</li>
+</ul>
+<pre class="highlight shell"><code>sudo i2cset -y -f 0 0x34 0x82 0x82
+</code></pre>
+<p>You can find more information on this setup in the <a href="https://github.com/NextThingCo/CHIP-Hardware/blob/master">AXP209 Datasheet</a> starting on page 21. </p>
+
+<h3 id="power-button">Power Button</h3>
+
+<p>The PWRON pin can be connected to GND through a button as a Power Enable Key (PEK) or hibernation/wake button. The AXP209 can automatically identify long and short button presses. Read more about this on page 10 of the <a href="https://github.com/NextThingCo/CHIP-Hardware/blob/master">AXMP209 datasheet</a>.  </p>
+
+<h2 id="additional-usb-port">Additional USB Port</h2>
+
+<p>Whether you want to add a micro USB 5V source or a host USB-A port, here are some points on power to consider while designing your PCB.</p>
+
+<ul>
+<li>Standard USB peripherals operate at 5 volts and can draw a good amount of current so, budget a power supply appropriately.</li>
+<li>IPSOUT on C.H.I.P. Pro can provide 5 volts to the 5V pin of the additional USB port if there&rsquo;s a 5 volt input via VBUS or CHG-IN. If a battery is connected and power is not available through VBUS or CHG-IN, IPSOUT will provide 3.7 volts which is most likely not sufficient for a USB peripheral.
+
+<ul>
+<li>To avoid IPSOUT dropping to 3.7V in battery mode consider using a 5V DC/DC buck/boost converter to maintain a 5 volt rail to your additional USB port. To avoid a brownout set the VBUS current limit appropriate for your USB peripheral. </li>
+</ul></li>
+</ul>
+
+<h2 id="analog-input">Analog Input</h2>
+
+<p>If your product requires analog input for sensors, keypads or potentiometers there a few ways to utilize an ADC.</p>
+
+<ul>
+<li>An I2C controlled ADC can be added to your product&rsquo;s circuit.</li>
+<li>There is a 12-bit ADC integrated in the AXP209&rsquo;s temperature sensor circuit. More info on <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/blob/master/v1.0/Component%20Datasheets/AXP209_Datasheet_v1.0en.pdf">page 25 of the AXP209 datasheet</a>.</li>
+<li>C.H.I.P. Pro has a 6-bit LRADC (Low Resolution ADC) accessible through pin 42 suitable for multi-button input. </li>
+</ul>
+
+<h2 id="wifi-signal">WiFi Signal</h2>
+
+<p>The onboard ceramic WiFi antenna is meant for debugging purposes only. For product applications use the antenna that comes with the C.H.I.P. Pro Dev Kit or obtain any of these pre-certified options:</p>
+
+<table><thead>
+<tr>
+<th>Antenna Model</th>
+<th>Manufacturer</th>
+<th>Gain</th>
+<th>Antenna Type</th>
+<th>Connection Type</th>
+<th>Freq. Range (GHz)</th>
+<th>Cable Length (mm)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>AA107</td>
+<td>Unictron</td>
+<td>3.3 dBi</td>
+<td>PCB</td>
+<td>IPEX</td>
+<td>2.4 - 2.5</td>
+<td>100</td>
+</tr>
+<tr>
+<td>HCX-P321</td>
+<td>Wacosun</td>
+<td>2 dBi</td>
+<td>PCB</td>
+<td>IPEX</td>
+<td>2.4 - 2.5</td>
+<td>150</td>
+</tr>
+<tr>
+<td>FXP73.07.0100A</td>
+<td>Taoglas</td>
+<td>2.5 dBi</td>
+<td>PCB</td>
+<td>IPEX</td>
+<td>2.4 - 2.483</td>
+<td>100</td>
+</tr>
+<tr>
+<td>AA055</td>
+<td>Unictron</td>
+<td>2.5 dBi</td>
+<td>Ceramic</td>
+<td>SMT</td>
+<td>2.4 - 2.5</td>
+<td>n/a</td>
+</tr>
+</tbody></table>
+
+<h2 id="make-use-of-modular-certification">Make Use of Modular Certification</h2>
+
+<p>To provide fast integration time into your product NTC has done most of the heavy lifting when it comes to certification.</p>
+
+<ul>
+<li><p>C.H.I.P. Pro is CE, IC, and FCC Part 15 Modular Transmitter certified for use with multiple commercially available external antennas as well as the onboard ceramic SMT antenna. </p></li>
+<li><p>Any product with C.H.I.P. Pro as the only active radio transmitter will not require your company to run certification testing for the Intentional Radiator portion of FCC tests, specifically FCC Part 15C. This lessens the workload of taking your product through full FCC certification. You will still need to test and state compliance with FCC Part 15B Unintentional Radiation limits. </p></li>
+<li><p>You will not need to apply for a new FCC-ID for your product. When you process your application with a certified test lab, they will file a Class II Permissive Change under NTC&rsquo;s FCC ID. For any questions on this, reach out to us at pro@nextthing.co. The FCC ID can be found etched on the WiFi module. </p></li>
+</ul>
+
+<p><img src="images/CHIP_Pro_FCC.png" alt="C.H.I.P. Pro FCC ID" /></p>
+
+<h2 id="do-something-gr8">Do Something GR8</h2>
+
+<p>Are you thinking of going into mass production, but not sure what path to take? We offer services at several production stages.</p>
+
+<ul>
+<li>Custom flashing </li>
+<li>NRE software </li>
+<li>Custom engineering support</li>
+<li>PCB material and manufacturer recommendations</li>
+</ul>
+
+<p>If you would like to learn more about how we can help you make a GR8 product, contact us at pro@nextthing.co.</p>
+
+          <h1 id="c-h-i-p-v-c-h-i-p-pro">C.H.I.P v C.H.I.P Pro</h1>
+
+<p>C.H.I.P and C.H.I.P Pro have a lot of similarities, but there are some very important distinctions that go beyond the obvious size differences. </p>
+
+<table><thead>
+<tr>
+<th>feature</th>
+<th>C.H.I.P</th>
+<th>C.H.I.P Pro</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>RAM</td>
+<td>512 MB</td>
+<td>256 MB</td>
+</tr>
+<tr>
+<td>Storage</td>
+<td>4GB NAND SLC or 8GB NAND MLC</td>
+<td>512 MB SLC NAND</td>
+</tr>
+<tr>
+<td>SD Card Interface</td>
+<td>Yes, 4-bit</td>
+<td>Yes, 4-bit</td>
+</tr>
+<tr>
+<td>I2S Digital Audio</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Video Interface</td>
+<td>Composite</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Certification</td>
+<td>Section 15</td>
+<td>Section 15 Modular</td>
+</tr>
+<tr>
+<td>Easy to Mass Produce with</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Easy to Play With</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>Small (40.64 mm x 60.50 mm x 11.2 mm)</td>
+<td>Tiny (30 mm x 45 mm x 5.2 mm)</td>
+</tr>
+<tr>
+<td>Pin Headers</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Operating System</td>
+<td>Debian</td>
+<td>Gadget</td>
+</tr>
+<tr>
+<td>SOC</td>
+<td>Allwinner R8 ARM7</td>
+<td>Next Thing GR8 ARM7</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>1 Ghz</td>
+<td>1 Ghz</td>
+</tr>
+<tr>
+<td>Wifi</td>
+<td>B/G/N 2.4GHz (Realtex RTL8723BS)</td>
+<td>B/G/N 2.4GHz (Realtex RTL8723DS)</td>
+</tr>
+<tr>
+<td>Bluetooth</td>
+<td>4.0</td>
+<td>4.2</td>
+</tr>
+<tr>
+<td>PWM</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Audio Input</td>
+<td>1 channel</td>
+<td>2 channel</td>
+</tr>
+</tbody></table>
+
+<p>If you are looking for a more C.H.I.P-like experience with connectors and LEDS, we recommend the <a href="http://www.getchip.com/pages/chippro.html">Development Kit</a>. </p>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>

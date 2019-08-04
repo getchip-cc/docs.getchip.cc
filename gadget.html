@@ -1,0 +1,1022 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+		<link rel="shortcut icon" href="//s3-us-west-2.amazonaws.com/ntcpublic/icon-16.png" type="image/x-icon">
+    <link rel="icon" href="//s3-us-west-2.amazonaws.com/ntcpublic/icon-16.png" type="image/x-icon">
+		
+    <title>Next Thing Co. C.H.I.P. Pro Developer's Kit Documentation</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #f8f8f2;
+  background-color: #272822;
+}
+.highlight .err {
+  color: #272822;
+  background-color: #f92672;
+}
+.highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #f4bf75;
+}
+.highlight .nt {
+  color: #f4bf75;
+}
+.highlight .o, .highlight .ow {
+  color: #f8f8f2;
+}
+.highlight .p, .highlight .pi {
+  color: #f8f8f2;
+}
+.highlight .gi {
+  color: #a6e22e;
+}
+.highlight .gd {
+  color: #f92672;
+}
+.highlight .gh {
+  color: #66d9ef;
+  background-color: #272822;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #ae81ff;
+}
+.highlight .kc {
+  color: #fd971f;
+}
+.highlight .kt {
+  color: #fd971f;
+}
+.highlight .kd {
+  color: #fd971f;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #a6e22e;
+}
+.highlight .sr {
+  color: #a1efe4;
+}
+.highlight .si {
+  color: #cc6633;
+}
+.highlight .se {
+  color: #cc6633;
+}
+.highlight .nn {
+  color: #f4bf75;
+}
+.highlight .nc {
+  color: #f4bf75;
+}
+.highlight .no {
+  color: #f4bf75;
+}
+.highlight .na {
+  color: #66d9ef;
+}
+.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
+  color: #a6e22e;
+}
+.highlight .ss {
+  color: #a6e22e;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+    
+    <link href="stylesheets/ntc_override.css" rel="stylesheet" media="screen" />
+    
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAVI
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+    
+      <div class="nav-bar-logo">
+        <a href="index.html"><img src="images/ntclogo_doccorner.png" alt="Ntclogo doccorner" /></a>
+      </div>
+      
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc">
+      </div>
+        <ul class="toc-footer">
+            <li>Have something to add or change? <br> Email us at docs@gmail.com</li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        
+          <h1 id="welcome-to-gadget">Welcome to Gadget!</h1>
+
+<p>Gadget is a suite of tools for developing, deploying, and distributing your applications to C.H.I.P. Pro and Gadget supported devices. </p>
+
+<p>This documentation starts by guiding you through the installation of Gadget then a quickstart &ldquo;hello world&rdquo; example to make sure everything is set up correctly. It then moves into more detailed instructions on how to build, share and deploy custom and community built applications. After going through the quickstart and how to build with Gadget sections, this documentation also offers helpful references and several example projects to start building with.  </p>
+
+<h1 id="what-is-gadget">What is Gadget?</h1>
+
+<p>Gadget is made up of two pieces of software that work together to simplify embedded software development.</p>
+
+<p>1) <span style="color: EB008B"><strong>GadgetCLI</strong></span> is a command-line tool you use on your development machine. It lets you manage your code, add and build containers, and deploy your finished projects to Gadget supported hardware. </p>
+
+<p><strong>Supported Systems:</strong></p>
+
+<ul>
+<li>Linux 64-bit (kernel 3.10+)</li>
+<li>OSX </li>
+<li>Windows 10 Pro 64-bit</li>
+</ul>
+
+<p>2) <span style="color: EB008B"><strong>GadgetOS</strong></span> is a <a href="https://buildroot.org/">Buildroot</a>-based Linux operating system. It boots quickly, takes up a small amount of NAND, and is designed to work with GadgetCLI. </p>
+
+<p>Buildroot is at the core of GadgetOS and features Docker support. The <strong>GadgetCLI</strong> communicates directly with the Docker daemon over ssh, using GadgetOS’s USB ethernet connection. </p>
+
+<h4 id="c-h-i-p-pro">C.H.I.P. Pro</h4>
+
+<ul>
+<li><strong>Boot time</strong> is ~5 seconds to shell on the UART. Depending on user optimization, containers can load in ~5 - 15 seconds.</li>
+<li><strong>NAND availability</strong> for containers, files, assets, etc. is 350MB. </li>
+</ul>
+
+          <h1 id="set-up-gadget">Set Up Gadget</h1>
+
+<p>To get started, download and install the following on your development machine and Gadget compatible device.</p>
+
+<h2 id="install-docker">Install Docker</h2>
+
+<p><strong>Note:</strong> Gadget requires Docker version 17.06 or greater. If Docker is already installed check which version of Docker you have with the command <code class="prettyprint">docker -v</code>.</p>
+
+<p>Gadget makes use of <a href="https://www.docker.com/">Docker&rsquo;s</a> container system. Dependent on your development machine&rsquo;s OS, download and install the appropriate version of Docker.</p>
+
+<ul>
+<li>MacOS - <a href="https://store.docker.com/search?type=edition&amp;offering=community">Docker CE</a></li>
+<li>Windows 10 (Pro Edition)- <a href="https://store.docker.com/search?type=edition&amp;offering=community">Docker CE</a></li>
+<li>Linux - <a href="https://store.docker.com/search?type=edition&amp;offering=community">Docker CE</a></li>
+</ul>
+
+<p>After you install Docker, you will need to run it once before using GadgetCLI. GadgetCLI uses the Docker daemon to pull images from <a href="https://hub.docker.com/">Docker Hub</a> or to build directly from local Dockerfiles. Learn more about Docker Hub and how to use it <a href="https://docs.docker.com/docker-hub/">here</a>.</p>
+
+<h3 id="additional-setup-for-linux">Additional Setup for Linux</h3>
+
+<h4 id="build-and-run-arm-docker-images">Build and Run ARM Docker Images</h4>
+
+<p>If your development machine runs Linux you may need to download extra packages and add missing files to the system for Docker to successfully build an <code class="prettyprint">arm32v7/*</code> Docker image. Open a terminal window and install <a href="https://packages.debian.org/stretch/binfmt-support">binfmt-support</a> and <a href="https://packages.debian.org/stretch/qemu-user-static">qemu-user-static</a> and then reboot.</p>
+<pre class="highlight plaintext"><code>sudo apt-get update
+sudo apt-get install binfmt-support qemu-user-static
+sudo reboot
+</code></pre>
+<p>In addition to installing these packages, your Linux distro may still be missing <code class="prettyprint">qemu-user-static</code> files . Follow the instructions outlined <a href="https://github.com/computermouth/qemu-static-conf">here</a> to check whether they are missing and how to obtain them.</p>
+
+<p>Check the <a href="https://docs.getchip.com/gadget.html#troubleshooting">Troubleshooting</a> section for specific errors you may be getting.</p>
+
+<h4 id="run-docker-as-unprivileged-user">Run Docker as Unprivileged User</h4>
+
+<p>In some instances, such as building NTC&rsquo;s <a href="https://github.com/NextThingCo/Gadget-OS">Gadget-OS kernel</a>, You need to run Docker as an unprivileged user. To set this up, follow Docker&rsquo;s <a href="https://docs.docker.com/engine/installation/linux/linux-postinstall/">Linux Post-install</a> instructions. </p>
+
+<h2 id="install-gadget">Install Gadget</h2>
+
+<p>Download the zip file containing the latest release of GadgetCLI and GadgetOS <a href="https://github.com/NextThingCo/gadgetcli/releases">here</a>. Put the gadget binary in your system&rsquo;s PATH or precede all the commands with <code class="prettyprint">./</code> e.g., <code class="prettyprint">./gadget</code> while in the same directory.</p>
+
+<p><strong>PATH location:</strong></p>
+
+<p><strong>MacOS</strong></p>
+
+<p>On a Mac, place the Gadget binary in this location:</p>
+<pre class="highlight plaintext"><code>/usr/local/bin
+</code></pre>
+<p>To view the current value of your PATH environment variable:</p>
+<pre class="highlight plaintext"><code>echo $PATH
+</code></pre>
+<p>To add a new path, open the /etc/paths file:</p>
+<pre class="highlight plaintext"><code>nano /etc/paths
+</code></pre>
+<p>Add the new path to the end of the file and save. </p>
+
+<p><strong>Windows 10</strong></p>
+
+<p>Put the gadget binary somewhere like C:\Program Files\gadget and edit the <em>Path</em> variable to point to that location.</p>
+
+<p>Click the Windows icon to open the Start Menu. Search for <em>Advanced System Settings</em>. When the <em>System Properties</em> window opens click on <em>Environment Variables</em>.</p>
+
+<p>Find and select the <em>Path</em> variable under <em>System Variables</em>. Click <em>Edit</em> and the <em>Edit Environment Variable</em> window will open. Click <em>New</em> and enter the directory path to the Gadget binary. Then click <em>OK</em>.</p>
+
+<p><strong>Linux</strong></p>
+
+<p>Put the Gadget binary here:</p>
+<pre class="highlight plaintext"><code>/usr/bin
+</code></pre>
+<p>To view the current value of your PATH environment variable:</p>
+<pre class="highlight plaintext"><code>echo $PATH
+</code></pre>
+<p>To add a new path to the current value after the default system paths of PATH use this command:</p>
+<pre class="highlight plaintext"><code>PATH=$PATH:/my/new/path
+</code></pre>
+<h2 id="flash-gadgetos">Flash GadgetOS</h2>
+
+<p>Use the <a href="http://flash.getchip.com/pro">web flasher</a> to install GadgetOS on your C.H.I.P. Pro Dev Kit. The latest GadgetOS is required for GadgetCLI to be able to talk to your hardware device and found in the <a href="https://github.com/NextThingCo/gadgetcli/releases">GitHub repo</a>.</p>
+
+<p>Once flashed, power cycle C.H.I.P. Pro Dev Kit by either unplugging it from the USB port or pressing the <a href="https://docs.getchip.com/chip_pro_devkit.html#power">On/Off button</a>.</p>
+
+          <h1 id="hello-world">Hello World</h1>
+
+<p>Get up and running in minutes with this straight forward <em>Hello World</em> example.</p>
+
+<h3 id="1-create-project-a-directory">1. Create Project a Directory</h3>
+<pre class="highlight shell"><code>mkdir hello-world
+<span class="nb">cd </span>hello-world
+</code></pre>
+<h3 id="2-initialize-project">2. Initialize Project</h3>
+<pre class="highlight shell"><code>gadget init
+</code></pre>
+<p>This command creates a template file called gadget.yml and generates a project called &ldquo;hello-world&rdquo; ready to be deployed.</p>
+
+<p>Open gadget.yml using Nano or your favorite command-line text editor. The .yml file should look similar to what&rsquo;s below.</p>
+<pre class="highlight shell"><code>spec: <span class="s2">"0.0"</span>
+name: directoryName
+uuid: 1789cc27-e1a8-40ef-aa1f-324092e6eff7
+<span class="nb">type</span>: docker
+onboot:
+- name: hello-world
+  uuid: 1ef762fe-a500-41d1-8cf9-bbd621dd09b8
+  image: arm32v7/hello-world
+  directory: <span class="s2">""</span>
+  net: <span class="s2">""</span>
+  <span class="nb">readonly</span>: <span class="nb">false
+  command</span>: <span class="o">[]</span>
+  binds: <span class="o">[]</span>
+  capabilities: <span class="o">[]</span>
+  devices: <span class="o">[]</span>
+services: <span class="o">[]</span>
+</code></pre>
+<h3 id="3-build">3. Build</h3>
+<pre class="highlight shell"><code>gadget build
+</code></pre>
+<h3 id="4-deploy">4. Deploy</h3>
+<pre class="highlight shell"><code>gadget deploy
+</code></pre>
+<h3 id="5-start">5. Start</h3>
+<pre class="highlight shell"><code>gadget start
+</code></pre>
+<h3 id="6-look-at-logs-and-check-status">6. Look at Logs and Check Status</h3>
+
+<p>Once the container runs, it outputs a &ldquo;hello world&rdquo; message to the log file. You can view these message by using the <code class="prettyprint">gadget logs</code> command.</p>
+<pre class="highlight shell"><code>gadget logs
+</code></pre>
+<p>You should see a message with an intro similar to this:</p>
+<pre class="highlight plaintext"><code>Hello from Docker!
+This message shows that your installation appears to be working correctly.
+...
+</code></pre>
+<p>Congrats, you have built and deployed your first Gadget project!</p>
+
+<h3 id="7-stop-and-cleanup-container">7. Stop and Cleanup Container</h3>
+
+<p>To stop the running container use the <code class="prettyprint">gadget stop</code> command.</p>
+<pre class="highlight shell"><code>gadget stop
+</code></pre>
+<p>To delete the container use the <code class="prettyprint">gadget delete</code> command.</p>
+<pre class="highlight shell"><code>gadge delete
+</code></pre>
+          <h1 id="set-up-wifi">Set Up WiFi</h1>
+
+<p>GadgetOS comes with a quick and convenient way to connect to your device through the host computer&rsquo;s USB port, which is handy for things like setting up WiFi. To connect your computer to GadgetOS type the following command.</p>
+<pre class="highlight shell"><code>gadget shell
+</code></pre>
+<h3 id="enable-wifi-and-find-a-network">Enable WiFi and Find a Network</h3>
+
+<p>Use connmanctl to enable WiFi, scan for available networks, and list all the networks in range.</p>
+<pre class="highlight shell"><code>connmanctl <span class="nb">enable </span>wifi
+connmanctl scan wifi
+connmanctl services
+</code></pre>
+<p>The <code class="prettyprint">services</code> command will give output similar to:</p>
+<pre class="highlight shell"><code>WaffleHouse          wifi_xxxxxxxxxxxx_xxxxxx_managed_psk
+                         wifi_xxxxxxxxxxxx_hidden_managed_psk
+YOUR_NETWORK         wifi_xxxxxxxxxxxx_xxxxxx_managed_psk
+                                 wifi_xxxxxxxxxxxx_xxxxxx_managed_none
+Donut_Hut            wifi_xxxxxxxxxxxx_xxxxxxxxx_managed_psk
+</code></pre>
+<h3 id="connect">Connect</h3>
+
+<p>Copy the string to the right of the network name you want to connect to that starts with &ldquo;wifi_.&rdquo; If the string contains a <code class="prettyprint">psk</code> at the end, it means the network is password protected. Follow the &ldquo;Password Protected&rdquo; section further down to connect.</p>
+
+<h4 id="no-password">No Password</h4>
+
+<p>To connect to YOUR_NETWORK, which has no password, <code class="prettyprint">services</code> shows two choices. You want the one without <code class="prettyprint">psk</code> in the string. Use the <code class="prettyprint">connect</code> command:</p>
+<pre class="highlight shell"><code>connmanctl connect wifi_xxxxxxxxxxxx_xxxxxx_managed_none
+</code></pre>
+<p>If your network is not password protected, you&rsquo;ll get some output that will indicate a successful connection, such as:</p>
+<pre class="highlight shell"><code><span class="o">[</span>  961.780000] RTL871X: rtw_set_802_11_connect<span class="o">(</span>wlan0<span class="o">)</span>  <span class="nv">fw_state</span><span class="o">=</span>0x00000008
+<span class="o">[</span>  962.070000] RTL871X: start auth
+<span class="o">[</span>  962.080000] RTL871X: auth success, start assoc
+<span class="o">[</span>  962.090000] RTL871X: rtw_cfg80211_indicate_connect<span class="o">(</span>wlan0<span class="o">)</span> BSS not found !!
+<span class="o">[</span>  962.100000] RTL871X: assoc success
+<span class="o">[</span>  962.110000] RTL871X: send eapol packet
+<span class="o">[</span>  962.290000] RTL871X: send eapol packet
+<span class="o">[</span>  962.300000] RTL871X: <span class="nb">set </span>pairwise key camid:4, addr:xx:xx:xx:xx:xx:xx, kid:0, <span class="nb">type</span>:AES
+<span class="o">[</span>  962.320000] RTL871X: <span class="nb">set </span>group key camid:5, addr:xx:xx:xx:xx:xx:xx, kid:1, <span class="nb">type</span>:AES
+</code></pre>
+<p>If your network is password protected, you&rsquo;ll get an error.</p>
+
+<h4 id="password-protected">Password Protected</h4>
+
+<p>To deal with passwords, you&rsquo;ll need to put ConnMan into interactive mode:</p>
+<pre class="highlight shell"><code>connmanctl
+</code></pre>
+<p>This command gives a <code class="prettyprint">connmanctl</code> prompt:</p>
+<pre class="highlight shell"><code>connmanctl&gt;
+</code></pre>
+<p>In the shell, turn the agent on so it can process password requests:</p>
+<pre class="highlight shell"><code>  agent on
+</code></pre>
+<p>Now use the <code class="prettyprint">connect</code> command with your pasted wifi network string:</p>
+<pre class="highlight shell"><code>  connect wifi_xxxxxxxxxxxx_xxxxxx_managed_psk
+</code></pre>
+<p>Enter your password when prompted:</p>
+<pre class="highlight shell"><code>  Agent RequestInput wifi_xxxxxxxxxxxx_xxxxxx_managed_psk
+  Passphrase <span class="o">=</span> <span class="o">[</span> <span class="nv">Type</span><span class="o">=</span>psk, <span class="nv">Requirement</span><span class="o">=</span>mandatory <span class="o">]</span>
+  Passphrase?
+</code></pre>
+<p>You will be notified that you are connected:</p>
+<pre class="highlight shell"><code>  Connected wifi_xxxxxxxxxxxx_xxxxxx_managed_psk
+</code></pre>
+<p>Exit connmanctl interactive mode:</p>
+<pre class="highlight shell"><code>  quit
+</code></pre>
+<h3 id="step-3-test-connection">Step 3: Test Connection</h3>
+
+<p>Test your connection with <code class="prettyprint">ping</code>. Google&rsquo;s DNS server at the IP address 8.8.8.8 is probably the most reliable computer on the internet, so:</p>
+<pre class="highlight shell"><code>ping -c 4 8.8.8.8
+</code></pre>
+<p>The <code class="prettyprint">-c 4</code> option means it will happen only 4 times. Expect ping to output some timing messages:</p>
+<pre class="highlight shell"><code>PING 8.8.8.8 <span class="o">(</span>8.8.8.8<span class="o">)</span>: 56 data bytes
+64 bytes from 8.8.8.8: <span class="nv">seq</span><span class="o">=</span>0 <span class="nv">ttl</span><span class="o">=</span>60 <span class="nb">time</span><span class="o">=</span>7.631 ms
+64 bytes from 8.8.8.8: <span class="nv">seq</span><span class="o">=</span>1 <span class="nv">ttl</span><span class="o">=</span>60 <span class="nb">time</span><span class="o">=</span>7.474 ms
+64 bytes from 8.8.8.8: <span class="nv">seq</span><span class="o">=</span>2 <span class="nv">ttl</span><span class="o">=</span>60 <span class="nb">time</span><span class="o">=</span>7.697 ms
+64 bytes from 8.8.8.8: <span class="nv">seq</span><span class="o">=</span>3 <span class="nv">ttl</span><span class="o">=</span>60 <span class="nb">time</span><span class="o">=</span>9.004 ms
+
+--- 8.8.8.8 ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max <span class="o">=</span> 7.474/7.951/9.004 ms
+</code></pre>
+<p>If you have issues connecting, read our &ldquo;<a href="https://docs.getchip.com/chip_pro.html#step-3-test-connection">Troubleshooting Connection Problems</a>&rdquo; on the C.H.I.P. Pro Doc page.</p>
+
+<h3 id="step-4-exit-gadget-shell">Step 4. Exit Gadget Shell</h3>
+<pre class="highlight plaintext"><code>exit
+</code></pre>
+          <h1 id="configuring-gadget-yml">Configuring Gadget.yml</h1>
+
+<p>At the heart of GadgetOS is a container system called <a href="https://docs.docker.com/">Docker</a>. While GadgetOS runs containers,  GadgetCLI helps you build, run, and manage them.
+ If you&rsquo;re new to containers, check out <a href="https://docs.docker.com/get-started/#a-brief-explanation-of-containers">this primer</a>. Together, GadgetOS and GadgetCLI make orchestrating container images easy by using one configuration file: <strong>gadget.yml</strong>.</p>
+
+<p>Gadget.yml is where you define resources available to the container, issue commands to the running container, specify which containers to run in what order, and more. For example, the <a href="https://docs.getchip.com/gadget.html#hello-world"><em>hello world</em></a> demo uses a gadget.yml file that pulls a container available on <a href="https://hub.docker.com/">Docker Hub</a>.</p>
+
+<p>There are two sections to define and configure containers in: <strong>onboot</strong> and <strong>services</strong>. You can put multiple container configurations in each section and you can use GadgetCLI to specify which container to control: all of them or just one.</p>
+
+<p>To execute commands on all containers on your development machine run the gadget command without any container image name specified.</p>
+<pre class="highlight plaintext"><code>gadget [options] COMMAND
+</code></pre>
+<p>To execute a command on a particular container specify the container name. </p>
+<pre class="highlight plaintext"><code>gadget [options] COMMAND imageName
+</code></pre>
+<h2 id="onboot">Onboot</h2>
+
+<p>Containers in the <strong>onboot</strong> section, like the <em>hello-world</em> example, are executed before containers in the <strong>services</strong> section. All containers in the gadget.yml file execute sequentially from top to bottom of the configuration file. When their command process exits, the container will stop.</p>
+
+<p>To add a container to onboot, run the following command.</p>
+<pre class="highlight plaintext"><code>gadget add onboot projectName
+</code></pre>
+<h2 id="services">Services</h2>
+
+<p>Containers defined under <strong>services</strong> run after containers listed in <strong>onboot</strong>. They are automatically restarted by Docker if it exits with a non-zero return code.</p>
+
+<p>To add a service follow the format below.</p>
+<pre class="highlight plaintext"><code>gadget add service projectName
+</code></pre>
+<h2 id="configurations">Configurations</h2>
+
+<p>When you add a project to <strong>onboot</strong> or <strong>services</strong> from the command-line, a template configuration is inserted into your gadget.yml file. You&rsquo;ll need to fill in some details depending on how your project needs to be built and what your container needs at runtime. Below are all the possible configurations and what each does.</p>
+
+<p><span style="font-size: 17px"><strong>Name: Name of project</strong></span></p>
+
+<p>This will reflect the name that you choose for your project.</p>
+<pre class="highlight plaintext"><code>gadget add service|onboot projectName
+</code></pre>
+<p>If you choose to edit the <em>Name</em> field after generation, the container will need to be built and deployed again.</p>
+
+<p><strong>Format:</strong> <code class="prettyprint">name: projectName</code></p>
+
+<p><span style="font-size: 17px"><strong>Uuid: Container ID</strong></span></p>
+
+<p>You can have several instances of the same image. These instances are identified by their UUID. For example, if you build an image then change the <strong>command</strong> configuration and build again you can see both instances on your development machine when you run:</p>
+<pre class="highlight plaintext"><code>docker images
+</code></pre>
+<p><strong>Format:</strong> <code class="prettyprint">cont-ainer-uu-i-d</code></p>
+
+<p><span style="font-size: 17px"><strong>Image: Path of Docker Hub image</strong></span></p>
+
+<p>An entry for <code class="prettyprint">image:</code> is generated when you add to onboot or services via the command:</p>
+<pre class="highlight plaintext"><code>gadget add service|onboot projectName
+</code></pre>
+<p>To pull a base image from Docker Hub change <code class="prettyprint">image:</code> to the username and repository you would like to pull. By default, the <a href="https://docs.docker.com/get-started/part2/#tag-the-image">&ldquo;latest&rdquo; tag</a> of the image is used.</p>
+
+<p><strong>Format:</strong></p>
+
+<p>Generated: <code class="prettyprint">image: parent_directory/projectname</code></p>
+
+<p>Docker Image: <code class="prettyprint">image: username/repoName:tag</code></p>
+
+<p><span style="font-size: 17px"><strong>Directory: Path to directory with Dockerfile</strong></span></p>
+
+<p>Images can be built locally, rather than pulling from an online registry. This is done by removing the value entered in <code class="prettyprint">image:</code> and entering a path in the <code class="prettyprint">directory:</code> entry. See the file structure below:</p>
+<pre class="highlight plaintext"><code>my_project/
+├── container_a
+│   ├── asset_01
+│   ├── asset_02
+│   └── Dockerfile
+└── gadget.yml
+</code></pre>
+<p>In this particular case, the appropriate <code class="prettyprint">directory:</code> value would be <code class="prettyprint">&quot;container_a&quot;</code> or <code class="prettyprint">&quot;./container_a&quot;</code>. The path must be relational. The Dockerfile can also exist in the same directory as the gadget.yml file as illustrated below:</p>
+<pre class="highlight plaintext"><code>my_project/
+├── asset_01
+├── Dockerfile
+└── gadget.yml
+</code></pre>
+<p>Here, the <code class="prettyprint">directory:</code> value would be <code class="prettyprint">&quot;.&quot;</code> or <code class="prettyprint">&quot;./&quot;</code> (the Unix value for &ldquo;here&rdquo;).</p>
+
+<p><strong>Format:</strong> <code class="prettyprint">directory: projDir/</code></p>
+
+<p><span style="font-size: 17px"><strong><a href="https://docs.docker.com/engine/reference/run/#network-settings">Net:</a> Define which network to use or none</strong></span></p>
+
+<p>By default, all containers have networking enabled and can make outgoing connections. Use the following arguments to choose which network you would like the container to use:</p>
+
+<table><thead>
+<tr>
+<th>Network</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>none</td>
+<td>No networking in the container.</td>
+</tr>
+<tr>
+<td>bridge</td>
+<td>Connect the container to the bridge via veth interfaces.</td>
+</tr>
+<tr>
+<td>host</td>
+<td>Use the host&rsquo;s network stack inside the container.</td>
+</tr>
+<tr>
+<td>container: [name-UUID]</td>
+<td>Use the network stack or another container, specified via its <strong>name</strong> or <strong>id</strong></td>
+</tr>
+<tr>
+<td>NETWORK</td>
+<td>Connects the container to a use created network (using <code class="prettyprint">docker network create</code> command)</td>
+</tr>
+</tbody></table>
+
+<p>Format: <code class="prettyprint">net: host</code></p>
+
+<p><span style="font-size: 17px"><strong><a href="https://docs.docker.com/engine/reference/commandline/run/#usage">Readonly</a> - Mount the container’s root filesystem as read only</strong></span></p>
+
+<p>Set to false by default.</p>
+
+<p><span style="font-size: 17px"><strong><a href="https://docs.docker.com/engine/reference/builder/#cmd">Command</a> - Run this command at start</strong></span></p>
+
+<p>Set a command to be executed automatically upon the start of a container. This also overwrites any <code class="prettyprint">CMD</code> specified in a project&rsquo;s Dockerfile.</p>
+
+<p><strong>Format:</strong> <code class="prettyprint">command: [&#39;python&#39;, &#39;myPyScript.py&#39;]</code></p>
+
+<p><span style="font-size: 17px"><strong><a href="https://docs.docker.com/engine/reference/commandline/run/#mount-volume--v-read-only">Binds</a> - Mount a directory</strong></span> </p>
+
+<p>Put any directories here that you would like to mount from the device into the container. </p>
+
+<p><strong>Format:</strong> <code class="prettyprint">binds: [&#39;/fromHostDir:/toContainerDir&#39;]</code></p>
+
+<p><span style="font-size: 17px"><strong><a href="https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities">Capabilities</a> - Enable <a href="http://man7.org/linux/man-pages/man7/capabilities.7.html">Linux capabilities</a></strong></span></p>
+
+<p>This is where specific Linux capabilities that bypass kernel permission checks get enabled. Some are enabled by default; all others are defined here depending on what is needed for the container at runtime.</p>
+
+<p><strong>Format:</strong> <code class="prettyprint">capabilities: [SYS_RAWIO]</code></p>
+
+<p><span style="font-size: 17px"><strong><a href="https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities">Devices</a> - Grant access to devices</strong></span></p>
+
+<p>Define a raw device in Linux to pass to a container. These are different from binds because Linux devices have several different modes of access.</p>
+
+<p><strong>Format:</strong> <code class="prettyprint">devices: [/dev/mem]</code></p>
+
+<p><strong>General Rules</strong></p>
+
+<ul>
+<li><p>When listing items in an array, surround each item with single quotes. For example:
+<code class="prettyprint">binds: [&#39;/sys:/sys&#39;]</code>
+<code class="prettyprint">command: [&#39;python&#39;, &#39;myScript.py&#39;]</code></p></li>
+<li><p>By default, Docker containers are not allowed to access any devices and are &ldquo;unprivileged.&rdquo; To access a device and get privileges to Linux capabilities they need to defined in <code class="prettyprint">capabilities</code> and <code class="prettyprint">devices</code>. GadgetOS does not promote nor enable operators to pass the <code class="prettyprint">--privileged</code> flag to Docker&rsquo;s run command.</p></li>
+</ul>
+
+          <h1 id="build-with-gadget">Build With Gadget</h1>
+
+<p>To get more familiar with using gadget.yml, go through the following examples which pulls from an image on Docker Hub and builds and deploys an image from your development machine. Each example blinks an LED on C.H.I.P. Pro Dev Kit.</p>
+
+<h2 id="pull-remote-image">Pull Remote Image</h2>
+
+<h3 id="1-set-up">1. Set Up</h3>
+
+<ul>
+<li>Make sure to install all the necessary software outlined in <a href="https://docs.getchip.com/gadget.html#set-up-gadget">Set Up</a>. </li>
+<li>Connect C.H.I.P. Pro Dev Kit to your development machine via a USB cable. </li>
+</ul>
+
+<h3 id="2-create-project-directory">2. Create project directory</h3>
+
+<p>Fire up Terminal and create a space for your project to live in:</p>
+<pre class="highlight plaintext"><code>mkdir blinkdemo
+</code></pre>
+<h3 id="3-initialize-project">3. Initialize Project</h3>
+
+<p>Enter your project directory and use <code class="prettyprint">gadget init</code> to create a <strong>gadget.yml</strong> template file.</p>
+<pre class="highlight plaintext"><code>cd blinkdemo
+gadget init
+</code></pre>
+<p>GadgetCLI will tell you that it created a new project:</p>
+<pre class="highlight plaintext"><code>Creating new project:
+  in /Users/$USER/Documents/blinkdemo
+</code></pre>
+<h3 id="4-add-service">4. Add Service</h3>
+
+<p>To build and run a project a container needs to be defined and configured either under <strong>services</strong> or <strong>onboot</strong> in the gadget.yml.  </p>
+
+<p>By default, gadget.yml is created with the example &ldquo;hello-world&rdquo; project along with a set of configurations. In this example, you&rsquo;ll add another a service called gpio to the configuration file. To do this use the <code class="prettyprint">add</code> command, set it as a <strong>service</strong>, and give it a <strong>name</strong>, such as &ldquo;gpio&rdquo;:</p>
+<pre class="highlight plaintext"><code>gadget add service gpio
+</code></pre>
+<h3 id="5-edit-gadget-yml">5. Edit gadget.yml</h3>
+
+<p>In the project directory, open gadget.yml: </p>
+<pre class="highlight plaintext"><code>nano gadget.yml
+</code></pre>
+<p>The gadget.yml file now defines two containers: &ldquo;hello-world&rdquo; under <strong>onboot</strong> and &ldquo;gpio&rdquo; in <strong>services</strong>. </p>
+
+<h4 id="make-edits-to-the-following-fields-under-services">Make edits to the following fields under services:</h4>
+
+<ul>
+<li><p><strong>image</strong></p>
+<pre class="highlight plaintext"><code>image: nextthingco/gadget-blink-c
+</code></pre></li>
+</ul>
+
+<p>Specify an image to pull from the Docker Hub repo in this field. This example pulls an image from the &ldquo;gadget-blink-c&rdquo; repo under the &ldquo;nextthingco&rdquo; username.       </p>
+
+<p><strong>Note:</strong> If an image does not receive a <a href="https://docs.docker.com/engine/reference/commandline/tag/">tag</a> when built and pushed to Docker Hub you do not include it, like for this example. However, if an image is tagged when built and you want to pull it from Docker Hub the <a href="https://docs.docker.com/docker-hub/repos/#viewing-repository-tags">tag</a> needs to be <a href="https://docs.getchip.com/gadget.html#configurations">included</a>. You can see available tags by clicking on the Tags tab in a Docker Hub repo. Sometimes tags are included in the images description on Docker Hub, but not always.</p>
+
+<ul>
+<li><p><strong>binds</strong></p>
+<pre class="highlight plaintext"><code>binds:['/sys:/sys']
+</code></pre></li>
+</ul>
+
+<p>The finished file will look like this:</p>
+<pre class="highlight plaintext"><code>services:
+- name: gpio
+uuid: Your-Containers-U-U-ID
+image: nextthingco/gadget-blink-c 
+directory: ""
+net: ""
+pid: ""
+readonly: false
+command: []
+binds: ['/sys:/sys']
+capabilities:[]
+devices:[]
+</code></pre>
+<p>Save and close gadget.yml</p>
+
+<h3 id="7-build-deploy-and-start-an-image">7. Build, Deploy, and Start an Image</h3>
+
+<p>To build an image you must be in the same directory as the gadget.yml file. By default the GadgetCLI commands will effect all the containers specified in your gadget.yml file. </p>
+
+<p>To work with one container, as you&rsquo;ll do in this example,  specify it by name when running GadgetCLI commands. For example, to <strong>only build the gpio image</strong> run the following command: </p>
+<pre class="highlight plaintext"><code>gadget build gpio
+</code></pre>
+<p>When the image is done building, deploy, and start your container. Here&rsquo;s how:</p>
+<pre class="highlight plaintext"><code>gadget deploy gpio
+gadget start gpio
+</code></pre>
+<p>If the container builds, deploys, and starts successfully you will see the following output messages and <strong>Pin 34, CSID3 will start blinking</strong>:</p>
+<pre class="highlight plaintext"><code>#### build output
+  Building:
+    'hello-world'
+    'gpio'
+
+#### deploy output
+  Stopping/deleting older 'hello-world' if applicable
+  Deploying: 'hello-world'
+    Starting transfer..
+
+  Stopping/deleting older 'gpio' if applicable
+  Deploying: 'gpio'
+    Starting transfer..
+
+#### start output
+  Starting:
+    hello-world_58915d6b-2770-4988-8f16-b681f3fc5fc7
+      - started
+  Starting:
+    gpio_582583nb-2770-7658-8f16-f681h6fc2bk8
+      - started
+</code></pre>
+<p>If any of these processes fail, GadgetCLI will output an error along with suggestions of what may be the issue. Go to the <a href="https://docs.getchip.com/gadget.html#troubleshooting">troubleshooting section</a> for more information.</p>
+
+<h3 id="8-stop-and-delete-containers">8. Stop and Delete Containers</h3>
+<pre class="highlight plaintext"><code>gadget stop gpio
+gadget delete gpio
+</code></pre>
+<h2 id="build-image-locally">Build Image Locally</h2>
+
+<p>You will most likely build container images locally as you develop and test your applications. To build an image you need a Dockerfile and supporting files AKA the build&rsquo;s context. These files can either be written from scratch or cloned from an existing repo to your computer. </p>
+
+<p>Built images are then deployed to hardware for testing and further iterations. You can share an image by pushing it to an online registry making it available to be pulled to other devices.    </p>
+
+<p>Follow along and build an example written in C that makes use of an GPIO pin on the C.H.I.P. Pro Dev Kit.</p>
+
+<h3 id="1-create-project-directory">1. Create project directory</h3>
+<pre class="highlight plaintext"><code>mkdir blinkLocal
+cd blinkLocal
+</code></pre>
+<h3 id="2-create-dockerfile">2. Create Dockerfile</h3>
+
+<p>Create a Dockerfile:</p>
+<pre class="highlight plaintext"><code>nano Dockerfile
+</code></pre>
+<p>Copy and paste the following content into the new Dockerfile. </p>
+<pre class="highlight shell"><code>FROM debian:stretch-slim
+
+WORKDIR .
+RUN apt-get -yqq update 
+RUN apt-get install -y crossbuild-essential-armhf
+COPY gpio.c .
+RUN arm-linux-gnueabihf-gcc gpio.c -o gpio -static
+
+FROM scratch
+COPY --from<span class="o">=</span>0 gpio .
+CMD <span class="o">[</span><span class="s2">"./gpio"</span><span class="o">]</span>
+</code></pre>
+<p>For an explanation of what each line of this Dockerfile does, refer to the README file in the <a href="https://github.com/NextThingCo/Gadget-Docker-Examples/tree/master/gadget-blink-c">example&rsquo;s GitHub repo</a>.</p>
+
+<p>Dockerfiles are capable of holding many kinds of instruction. To learn more about what makes a Dockerfile and it&rsquo;s full capabilities refer to Docker&rsquo;s <a href="https://docs.docker.com/engine/reference/builder/">documentation</a>. </p>
+
+<h3 id="3-create-supporting-files">3. Create Supporting Files</h3>
+
+<p>Create a .c file named &ldquo;gpio&rdquo;:</p>
+<pre class="highlight plaintext"><code>nano gpio.c
+</code></pre>
+<p>Copy and paste <a href="https://github.com/NextThingCo/Gadget-Docker-Examples/blob/master/gadget-blink-c/gpio.c">this program</a> into the newly created file.</p>
+
+<h3 id="4-build">4. Build</h3>
+
+<p>While still in the project directory build the image. Use the <a href="https://docs.docker.com/engine/reference/commandline/build/#options">-t flag</a> to give the image a name, such as &ldquo;blink&rdquo;. </p>
+<pre class="highlight plaintext"><code>docker build -t blink .
+</code></pre>
+<p>Docker will output all the build commands and tell you that it has successfully built.</p>
+
+<p><img src="images/success.png" alt="GR8" /></p>
+
+<h3 id="5-deploy">5. Deploy</h3>
+
+<p>You are now ready to use GadgetCLI to deploy the image to your hardware. </p>
+
+<p>Step up one directory and create a gadget.yml file:</p>
+<pre class="highlight plaintext"><code>cd ..
+gadget init
+</code></pre>
+<h3 id="6-add-service">6. Add Service</h3>
+
+<p>Add a new service:</p>
+<pre class="highlight plaintext"><code>gadget add service gpio-c
+</code></pre>
+<h3 id="7-edit-gadget-yml">7. Edit Gadget.yml</h3>
+<pre class="highlight plaintext"><code>nano gadget.yml
+</code></pre>
+<h4 id="make-edits-to-the-following-fields-under-services">Make edits to the following fields under <strong>services:</strong></h4>
+
+<ul>
+<li><p><strong>image</strong></p>
+<pre class="highlight plaintext"><code>image: "" #leave empty
+</code></pre>
+<p>This field is reserved for pulling images from Docker Hub, so for this workflow, it stays empty.</p></li>
+<li><p><strong>directory</strong></p>
+<pre class="highlight plaintext"><code>directory:"blinkLocal" 
+</code></pre></li>
+</ul>
+
+<p>In this field, put the path of the project directory containing the Dockerfile in relation to the gadget.yml file. </p>
+
+<ul>
+<li><p><strong>binds</strong></p>
+<pre class="highlight plaintext"><code>binds:['/sys:/sys']
+</code></pre></li>
+</ul>
+
+<p>The <code class="prettyprint">binds:</code> configuration mounts the /sys directory from the device into the container at /sys. </p>
+<pre class="highlight plaintext"><code>services:
+- name: gpio-c
+uuid: Your-Containers-U-U-ID
+image: "" 
+directory: "blinkLocal"
+net: ""
+pid: ""
+readonly: false
+command: []
+binds: ['/sys:/sys']
+capabilities:[]
+devices:[]
+</code></pre>
+<p>Save and close gadget.yml</p>
+
+<h3 id="8-build-deploy-and-start-container">8. Build, Deploy, and Start Container</h3>
+<pre class="highlight plaintext"><code>gadget build gpio-c
+gadget deploy gpio-c
+gadget start gpio-c
+</code></pre>
+<p>Pin 34, CSID3 will start blinking!</p>
+
+<h3 id="9-stop-and-delete">9. Stop and Delete</h3>
+
+<p>When ready, stop the container and clean up:</p>
+<pre class="highlight plaintext"><code>gadget stop gpio-c
+gadget delete gpio-c
+</code></pre>
+<h3 id="10-shell-into-gadgetos">10. Shell into GadgetOS</h3>
+
+<p>With GadgetCLI you have the ability to shell into GadgetOS at any time:</p>
+<pre class="highlight plaintext"><code>gadget shell
+</code></pre>
+<p>Once inside GadgetOS, use Docker commands to see images, running containers and to check NAND storage availability.</p>
+<pre class="highlight shell"><code>docker images <span class="c">#existing images</span>
+docker ps <span class="c">#running containers</span>
+df -h <span class="c">#check NAND availability</span>
+</code></pre>
+<p>To remove forgotten docker images from the host device:</p>
+<pre class="highlight shell"><code>docker rmi -f <span class="o">[</span>image ID] <span class="c">#remove images</span>
+</code></pre>
+<p>Exit shell:</p>
+<pre class="highlight plaintext"><code>exit
+</code></pre>
+<h2 id="share-image">Share Image</h2>
+
+<p>Gadget makes use of the growing community of official and community supported Docker images. Images that are pushed to <a href="https://hub.docker.com/">Docker Hub</a> can be set to private or public. If public, they can be shared, pulled and used by coworkers, friends and the general public. </p>
+
+<p><strong>Share Source Files</strong></p>
+
+<p>For collaborators to deploy and run your containers, they will need to know the <a href="https://docs.getchip.com/gadget.html#configuring-gadget-yml">configurations that go into gadget.yml</a>. We recommend sharing these in a <a href="https://github.com/">GitHub</a> repository.</p>
+
+<h3 id="1-create-registry-and-repo">1. Create Registry and Repo</h3>
+
+<p>For this process you will need:</p>
+
+<ul>
+<li><p>a <a href="https://hub.docker.com/">Docker Hub</a> registry to push and pull your built images to. </p></li>
+<li><p>a <a href="(https://github.com/)">GitHub</a> repository to hold all source files. </p></li>
+</ul>
+
+<p><a href="https://docs.gitlab.com/ee/user/project/container_registry.html#enable-the-container-registry-for-your-project">GitLab</a> has their own container registry and ways of working with Docker.</p>
+
+<h3 id="2-login">2. Login</h3>
+
+<p>Log into the Docker account you created. Enter your username and password when prompted.</p>
+<pre class="highlight plaintext"><code>docker login
+</code></pre>
+<h3 id="3-tag">3. Tag</h3>
+
+<p><a href="https://docs.docker.com/engine/reference/commandline/tag/">Tag</a> the image with a version number (optional) and create a repo for it. If an image is not tagged, it will automatically be tagged with the default of &ldquo;latest.&rdquo;</p>
+<pre class="highlight plaintext"><code>docker tag blink YourUserName/blink:v1 
+</code></pre>
+<p>This command tags the image you created called <a href="https://docs.getchip.com/gadget.html#4-build">blink</a> with &ldquo;v1&rdquo;, specified it&rsquo;s location within YourUserName, and in the repository &ldquo;blink&rdquo;. </p>
+
+<h3 id="4-push">4. Push</h3>
+
+<p>Push the image to your Docker Hub registry:</p>
+<pre class="highlight plaintext"><code>docker push YourUserName/blink:v1 
+</code></pre>
+<h3 id="5-pull">5. Pull</h3>
+
+<p>After posting to your registry, the blink image is ready to share and pull to your device. From here, the workflow is the same as the one outlined in the <a href="https://docs.getchip.com/gadget.html#pull-remote-image">Pull Image</a> section. Visit the newly created Docker repo and fill in the description and add a link to your GitHub source files.</p>
+
+<h2 id="example-images">Example Images</h2>
+
+<p>Start a project with one of our example images. You can either pull an example from our official <a href="https://hub.docker.com/r/nextthingco/">NTC Docker Hub</a> or <code class="prettyprint">git clone</code> the <a href="https://github.com/NextThingCo/Gadget-Docker-Examples">GitHub repository</a> that includes all the example source files to your development computer. All Dockerfiles and supporting files are found <a href="https://github.com/NextThingCo/Gadget-Docker-Examples">here</a>. </p>
+
+<p><strong>Docker Hub Images</strong></p>
+
+<ul>
+<li><a href="https://hub.docker.com/r/nextthingco/gadget-webserver/">Web Server</a> - Use Nginx to host web content from your device. Currently supported on MacOS and Windows.</li>
+<li><a href="https://hub.docker.com/r/nextthingco/gadget-blink-c/">Blink in C</a> - A gnu89 compatible C example of GPIO usage, easily translatable to C++. Cross compile C applications easily in a Dockerfile. </li>
+<li><a href="https://hub.docker.com/r/nextthingco/gadget-blink-go/">Blink in Go</a> - Written in Golang. </li>
+<li><a href="https://hub.docker.com/r/nextthingco/gadget-blink-rust/">Blink in Rust</a> - Written in Rustlang.</li>
+<li><a href="https://hub.docker.com/r/nextthingco/gadget-blink-node/">Blink in Node</a> - Javascript example running on top of Node.</li>
+<li><a href="https://hub.docker.com/r/nextthingco/gadget-blink-python/">Blink in Python</a> - Python GPIO example using the community-run library <a href="https://github.com/xtacocorex/CHIP_IO">CHIP_IO</a>. Currently supported on MacOS and Windows.</li>
+</ul>
+
+<p><strong>Run an Example</strong></p>
+
+<ul>
+<li>Follow the steps under <a href="https://docs.getchip.com/gadget.html#pull-remote-image">Pull Remote Image</a>.</li>
+<li>For the gadget.yml configurations, download and use the gadget.yml file found in the project directory from the source file links below.</li>
+</ul>
+
+<p><strong>Source files:</strong></p>
+
+<ul>
+<li><a href="https://github.com/NextThingCo/Gadget-Docker-Examples/tree/master/gadget-webserver">Web Server</a></li>
+<li><a href="https://github.com/NextThingCo/Gadget-Docker-Examples/tree/master/gadget-blink-c">Blink in C</a></li>
+<li><a href="https://github.com/NextThingCo/Gadget-Docker-Examples/tree/master/gadget-blink-go">Blink in Go</a></li>
+<li><a href="https://github.com/NextThingCo/Gadget-Docker-Examples/tree/master/gadget-blink-rust">Blink in Rust</a></li>
+<li><a href="https://github.com/NextThingCo/Gadget-Docker-Examples/tree/master/gadget-blink-node">Blink in Node</a></li>
+<li><a href="https://github.com/NextThingCo/Gadget-Docker-Examples/tree/master/gadget-blink-python">Blink in Python</a></li>
+<li><a href="https://github.com/NextThingCo/Gadget-Docker-Examples/tree/master/gadget-blink-multi">Blink with Multiple Containers</a></li>
+</ul>
+
+<p><strong>Edit Examples</strong></p>
+
+<ul>
+<li>Clone all the examples to your computer:</li>
+</ul>
+<pre class="highlight plaintext"><code>git clone https://github.com/NextThingCo/Gadget-Docker-Examples.git
+</code></pre>
+<ul>
+<li>Edit the source files in a chosen project directory.</li>
+<li><a href="https://docs.getchip.com/gadget.html#build-image-locally">Build and deploy the project from your development machine</a>. Each project directory has a gadget.yml file that contains the needed configurations for that specific container. </li>
+</ul>
+
+<aside class="notice">To successfully build an image in the project directory the gadget.yml config file needs to be removed from it first.</aside>
+
+          <h1 id="gadgetcli-commands">GadgetCLI Commands</h1>
+
+<p>To see all the available GadgetCLI commands and options:</p>
+<pre class="highlight plaintext"><code>gadget help
+</code></pre><pre class="highlight plaintext"><code>Options:
+
+-C &lt;path&gt; Run in directory (default ".") #gadget -C &lt;path&gt; &lt;command&gt;
+-v  Verbose execution 
+
+Commands:
+
+init        Initialize gadget project
+add         Add new container to config
+build       Build container[s]
+deploy      Deploy container[s]
+start       Run container[s]
+stop        Stop running container[s]
+status      Fetch status of container[s]
+delete      Remove container[s] from gadget
+shell       Connect to remote device running GadgetOS
+logs        Fetch logs(stdout) of container[s]
+version     Print version information
+help        Print this message
+
+</code></pre>
+<ul>
+<li>Containers can be layered in the gadget.yml configuration file by adding them as services or at onboot. For optimization, one container can be targeted by adding its name after a <code class="prettyprint">gadget</code> command. For example:</li>
+</ul>
+<pre class="highlight plaintext"><code>gadget build gpio
+</code></pre>
+<ul>
+<li>A <code class="prettyprint">gadget</code> command can be issued from a different directory. For example to build an project in a directory called &ldquo;blinkdemo&rdquo; from its parent directory: </li>
+</ul>
+<pre class="highlight plaintext"><code>gadget -C blinkdemo/ build 
+</code></pre>
+          <h1 id="docker-reference">Docker Reference</h1>
+
+<p>Read up on and polish your Docker skills with these references.</p>
+
+<ul>
+<li><a href="https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/">Dockerfile best practices</a></li>
+<li><a href="https://docs.docker.com/engine/reference/run/">Docker Run resources</a> </li>
+</ul>
+
+<p>Basic Docker Commands</p>
+
+<ul>
+<li><a href="https://docs.docker.com/engine/reference/commandline/ps/">Docker ps</a> -
+list containers</li>
+<li><a href="https://docs.docker.com/engine/reference/commandline/pull/">Docker pull</a> -
+pull an image from registry</li>
+<li><a href="https://docs.docker.com/engine/reference/commandline/images/">Docker images</a> -
+list images</li>
+<li><a href="https://docs.docker.com/engine/reference/commandline/login/">Docker login</a> -
+log in to a Docker registry</li>
+<li><a href="https://docs.docker.com/engine/reference/commandline/rmi/">Docker rmi</a> -
+remove one or more images</li>
+<li><a href="https://docs.docker.com/engine/reference/commandline/tag/">Docker tag</a> -
+Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE</li>
+</ul>
+
+          <h1 id="troubleshooting">Troubleshooting</h1>
+
+<h2 id="unable-to-gadget-deploy-image-to-board">Unable to <code class="prettyprint">gadget deploy</code> image to board</h2>
+
+<h3 id="private-key-login-error">Private key login error</h3>
+<pre class="highlight plaintext"><code>W:    Private key login failed, trying default key
+E:    Default key login also failed
+W:    Is the gadget connected and powered on?
+W:    Was the gadget first used on another computer/account?
+E:  Failed to connect to Gadget
+</code></pre>
+<ul>
+<li>Directly after flashing GadgetOS to your C.H.I.P. Pro Dev Kit the board needs to reboot. Unplug from USB port and plug back in or power cycle using the On/Off button.</li>
+<li><p>As a security precaution, GadgetCLI generates a unique set of login credentials for each computer. This means that if you have deployed a project from one computer, you will not be able to deploy from another computer unless you transfer the authorized keys found in the host computer .ssh/ directory. </p>
+
+<p><strong>File names:</strong></p>
+
+<ul>
+<li>gadget_default_rsa</li>
+<li>gadget_rsa</li>
+<li>gadget_rsa.pub</li>
+</ul>
+
+<p><strong>File Locations:</strong></p>
+
+<p><strong>Linux</strong>: /home/$USER/.ssh</p>
+
+<p><strong>Windows</strong>: C:/Users/$USER/.ssh </p>
+
+<p><strong>Mac OSX</strong>: /Users/$USER/.ssh
+* A device&rsquo;s authorized keys can also be reset by re-flashing. </p></li>
+</ul>
+
+<h3 id="transferring-has-slowed-to-a-crawl">Transferring has slowed to a crawl</h3>
+
+<p>Your NAND is most likely full. Power down your board and re-flash with GadgetOS. </p>
+
+<p>To prevent this, connect to the host device with <code class="prettyprint">gadget shell</code> and use <code class="prettyprint">df-h</code> to check NAND availability. Docker image sizes can also be checked on the host with the <code class="prettyprint">docker images</code> command.</p>
+
+<p>Make sure to delete previous images as soon as you are done with them.</p>
+
+<h2 id="unable-to-gadget-build-image">Unable to <code class="prettyprint">gadget build</code> image</h2>
+
+<h3 id="failed-to-build-valid-image-error">Failed to build/valid image error</h3>
+<pre class="highlight plaintext"><code>E:  Error response from daemon: repository jelly/spike not found: does not exist or no pull access
+E:  Failed to build 'spike'
+W:  Are you sure '%s' is a valid image [and tag]?
+W:  Is the docker daemon installed and running?
+</code></pre>
+<p>The entry next to <code class="prettyprint">image:</code> is not a valid Docker Hub username, repo or tag. Double check the entry. </p>
+
+<p>If building an image from a local Dockerfile, leave this field blank and put the project&rsquo;s path in &ldquo;directory.&rdquo;</p>
+
+<h3 id="unknown-flag-failed-to-build-error">Unknown flag/failed to build error</h3>
+<pre class="highlight plaintext"><code>I:  Running in directory:
+I:    ~/projectName
+I:  Building:
+I:    'projectName'
+E:  Unknown flag: from
+E:  Failed to build 'projectName'
+W:  Is the docker daemon installed and running?
+</code></pre>
+<p>Your version of Docker may be out of date. Docker version 17.06 or greater is required. To check which version of Docker you have run the command <code class="prettyprint">docker -v</code>.</p>
+
+<h2 id="unable-to-docker-build-an-arm32v7-image">Unable to <code class="prettyprint">Docker build</code> an <code class="prettyprint">arm32v7/*</code> image</h2>
+
+<h3 id="quot-exec-format-error-quot">&ldquo;exec format error&rdquo;</h3>
+<pre class="highlight plaintext"><code>standard_init_linux.go:187: exec user process caused "exec format error"
+
+</code></pre>
+<p>The latest versions of Docker for Windows and Docker for Mac can build non-native architecture containers which is not the case for some distributions of Linux. Additional files need to be downloaded and packages installed to enable the ability to build <code class="prettyprint">arm32v7/*</code> Docker images. To obtain the necessary files, follow the instructions in the <a href="https://docs.getchip.com/gadget.html#setup-for-linux">Setup for Linux</a> section.</p>
+<pre class="highlight plaintext"><code>standard_init_linux.go:187: exec user process caused "no such file or directory"
+
+</code></pre>
+<p>If you get the error above while building an <code class="prettyprint">arm32v7/*</code> image, you may have overlooked the second step to the <a href="https://docs.getchip.com/gadget.html#setup-for-linux">Setup for Linux</a> process. Or, the files did not copy over successfully. Head to the <a href="https://docs.getchip.com/gadget.html#setup-for-linux">Setup for Linux</a> section to complete the step of creating a directory <code class="prettyprint">binfmt.d</code>, copying files over and restarting <code class="prettyprint">systemd-binfmt.service</code>.</p>
+
+<h3 id="unable-to-restart-systemd-binfmt-service">Unable to <code class="prettyprint">restart systemd-binfmt.service</code></h3>
+<pre class="highlight plaintext"><code>Job for systemd-binfmt.service failed because the control process exited with error code.
+See "systemctl status systemd-binfmt.service" and "journalctl -xe" for details.
+
+</code></pre>
+<p>Download the <code class="prettyprint">binfmt-support</code> and <code class="prettyprint">qemu-user-static</code> packages listed in the <a href="https://docs.getchip.com/gadget.html#setup-for-linux">Setup for Linux</a> section and reboot.</p>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>
