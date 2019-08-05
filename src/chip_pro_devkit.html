@@ -1,131 +1,10 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-		<link rel="shortcut icon" href="public/icon-16.png" type="image/x-icon">
-    <link rel="icon" href="public/icon-16.png" type="image/x-icon">
-		
-    <title>Next Thing Co. C.H.I.P. Pro Developer's Kit Documentation</title>
+---
+layout: base
+permalink: /chip_pro_devkit.html
+title: Next Thing Co. C.H.I.P. Pro Developer's Kit Documentation
+---
 
-    <style>
-      .highlight table td { padding: 5px; }
-.highlight table pre { margin: 0; }
-.highlight, .highlight .w {
-  color: #f8f8f2;
-  background-color: #272822;
-}
-.highlight .err {
-  color: #272822;
-  background-color: #f92672;
-}
-.highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
-  color: #75715e;
-}
-.highlight .cp {
-  color: #f4bf75;
-}
-.highlight .nt {
-  color: #f4bf75;
-}
-.highlight .o, .highlight .ow {
-  color: #f8f8f2;
-}
-.highlight .p, .highlight .pi {
-  color: #f8f8f2;
-}
-.highlight .gi {
-  color: #a6e22e;
-}
-.highlight .gd {
-  color: #f92672;
-}
-.highlight .gh {
-  color: #66d9ef;
-  background-color: #272822;
-  font-weight: bold;
-}
-.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
-  color: #ae81ff;
-}
-.highlight .kc {
-  color: #fd971f;
-}
-.highlight .kt {
-  color: #fd971f;
-}
-.highlight .kd {
-  color: #fd971f;
-}
-.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
-  color: #a6e22e;
-}
-.highlight .sr {
-  color: #a1efe4;
-}
-.highlight .si {
-  color: #cc6633;
-}
-.highlight .se {
-  color: #cc6633;
-}
-.highlight .nn {
-  color: #f4bf75;
-}
-.highlight .nc {
-  color: #f4bf75;
-}
-.highlight .no {
-  color: #f4bf75;
-}
-.highlight .na {
-  color: #66d9ef;
-}
-.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
-  color: #a6e22e;
-}
-.highlight .ss {
-  color: #a6e22e;
-}
-    </style>
-    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
-    
-    <link href="stylesheets/ntc_override.css" rel="stylesheet" media="screen" />
-    
-      <script src="javascripts/all.js"></script>
-  </head>
-
-  <body class="index" data-languages="[]">
-    <a href="#" id="nav-button">
-      <span>
-        NAVI
-        <img src="images/navbar.png" alt="Navbar" />
-      </span>
-    </a>
-    <div class="tocify-wrapper">
-    
-      <div class="nav-bar-logo">
-        <a href="index.html"><img src="images/ntclogo_doccorner.png" alt="Ntclogo doccorner" /></a>
-      </div>
-      
-        <div class="search">
-          <input type="text" class="search" id="input-search" placeholder="Search">
-        </div>
-        <ul class="search-results"></ul>
-      <div id="toc">
-      </div>
-        <ul class="toc-footer">
-            <li>Have something to add or change? <br> Email us at docs@gmail.com</li>
-        </ul>
-    </div>
-    <div class="page-wrapper">
-      <div class="dark-box"></div>
-      <div class="content">
-        
-          <h1 id="welcome">Welcome!</h1>
+<h1 id="welcome">Welcome!</h1>
 
 <p>This documentation is a resource aimed to get you started with the C.H.I.P. Pro Developer&rsquo;s Kit. There are lists of contents, descriptions of parts, explanations of how to use the unique features of the board, and some examples to work through so you can get up and running developing your product around C.H.I.P. Pro. Have a C.H.I.P. Pro board but no Dev Kit? Check out the <a href="http://docs.getchip.com/chip_pro.html">C.H.I.P. Pro documentation site</a> to get started.</p>
 
@@ -133,7 +12,7 @@
 
 <p><img src="images/hero.jpg" alt="C.H.I.P. Pro" /></p>
 
-<p>The C.H.I.P. Pro Developer&rsquo;s Kit provides a complete electronic sandbox to test, iterate, and prototype products with the C.H.I.P. Pro module. While many developer&rsquo;s kits assume a high-degree of technical experience, we make this kit approachable, compact, and easy to use. 
+<p>The C.H.I.P. Pro Developer&rsquo;s Kit provides a complete electronic sandbox to test, iterate, and prototype products with the C.H.I.P. Pro module. While many developer&rsquo;s kits assume a high-degree of technical experience, we make this kit approachable, compact, and easy to use.
 We believe that great products can come from many backgrounds, so we provide several extras in this kit that help you get making and get comfortable. We even include an extra C.H.I.P. Pro to get you started on your own PCB. If you do know it all, you&rsquo;ll find this documentation will help your product be the best it can be whether you&rsquo;re making 1 or 1 million.</p>
 
 <h2 id="what-39-s-in-the-kit">What&rsquo;s in the Kit</h2>
@@ -347,7 +226,7 @@ sudo udevadm control --reload-rules
 <pre class="highlight plaintext"><code>screen  27127 Sefi  5u  CHR             18,0        0t0     605 /dev/tty.usbserial
 </code></pre>
 <p>Note the process ID. In this case, it&rsquo;s 27127. Then run:</p>
-<pre class="highlight plaintext"><code>screen -x 27127 
+<pre class="highlight plaintext"><code>screen -x 27127
 </code></pre>
 <p>This will return you to the previous screen session. Then use Ctrl+A Ctrl+K to close it (will ask you to confirm).</p>
 
@@ -769,7 +648,7 @@ ping: sendto: Network is unreachable
 <pre class="highlight shell"><code>nmcli c
 </code></pre>
 <p>Which outputs something like:</p>
-<pre class="highlight shell"><code>NAME           UUID                                  TYPE             DEVICE 
+<pre class="highlight shell"><code>NAME           UUID                                  TYPE             DEVICE
 YOUR_NETWORK   xxxxxxxx-yyyy-zzzz-xxxx-yyyyyyyyyyyy  802-11-wireless  wlan0
 </code></pre>
 <p>Then delete the network specified between quotes to forget it:</p>
@@ -920,10 +799,10 @@ pipe 4
 <p>The Linux kernel provides a simple <a href="https://www.kernel.org/doc/Documentation/gpio/sysfs.txt">sysfs interface</a> to access GPIO from. Depending on the image flashed to C.H.I.P. Pro, the commands used to interact with the sysfs interface will differ. If using the <strong>Pro</strong> image, you need to act as root and use <code class="prettyprint">sudo sh -c</code> with quotes around the command string. For example:</p>
 
 <p><strong>Pro (Debian)</strong> </p>
-<pre class="highlight shell"><code>sudo sh -c <span class="s1">'echo 132 &gt; /sys/class/gpio/export'</span> 
+<pre class="highlight shell"><code>sudo sh -c <span class="s1">'echo 132 &gt; /sys/class/gpio/export'</span>
 </code></pre>
 <p><strong>Buildroot</strong>:</p>
-<pre class="highlight shell"><code><span class="nb">echo </span>132 &gt; /sys/class/gpio/export 
+<pre class="highlight shell"><code><span class="nb">echo </span>132 &gt; /sys/class/gpio/export
 </code></pre>
 <p>Follow along with the examples to learn more about sysfs including how to directly read and write to sysfs. All examples in the GPIO documentation are done using one of NTC&rsquo;s <strong>Buildroot</strong> based images. </p>
 
@@ -1087,7 +966,7 @@ pipe 4
 <pre class="highlight shell"><code><span class="nb">echo </span>132 &gt; /sys/class/gpio/export
 </code></pre>
 <p>Once exported, a GPIO signal will have a path like <code class="prettyprint">/sys/class/gpio/gpioN</code> where N is the sysfs number. In the <strong>gpioN</strong> directory, you can see what attributes are available to read and write to:</p>
-<pre class="highlight shell"><code>ls /sys/class/gpio/export/gpio132 
+<pre class="highlight shell"><code>ls /sys/class/gpio/export/gpio132
 </code></pre>
 <ul>
 <li><strong>direction</strong> - Set direction of pin using &ldquo;in&rdquo; or out&quot;. All GPIOs are I/Os except for PE0, PE1 and PE2 which are input only.</li>
@@ -1215,7 +1094,7 @@ cat npwm
 ls
 </code></pre>
 <p>After exporting, you will find that a new directory <strong>pwmX</strong>, where X is the channel number, has been created. Go into the pwmX directory to check out the attributes available for use:</p>
-<pre class="highlight shell"><code><span class="nb">cd </span>pwm0 
+<pre class="highlight shell"><code><span class="nb">cd </span>pwm0
 ls
 </code></pre>
 <p>In the pwmX directory you will find: </p>
@@ -1555,10 +1434,3 @@ ls
 <p>If you need some reminding, circuit paths that came as default are indicated with a silkscreened bar under the originally connected pads.</p>
 
 <p><img src="images/traces_solderBridge.jpg" alt="Solder Bridge" /></p>
-
-      </div>
-      <div class="dark-box">
-      </div>
-    </div>
-  </body>
-</html>

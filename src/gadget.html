@@ -1,131 +1,10 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-		<link rel="shortcut icon" href="public/icon-16.png" type="image/x-icon">
-    <link rel="icon" href="public/icon-16.png" type="image/x-icon">
-		
-    <title>Next Thing Co. C.H.I.P. Pro Developer's Kit Documentation</title>
+---
+layout: base
+permalink: /gadget.html
+title: Next Thing Co. C.H.I.P. Pro Developer's Kit Documentation
+---
 
-    <style>
-      .highlight table td { padding: 5px; }
-.highlight table pre { margin: 0; }
-.highlight, .highlight .w {
-  color: #f8f8f2;
-  background-color: #272822;
-}
-.highlight .err {
-  color: #272822;
-  background-color: #f92672;
-}
-.highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
-  color: #75715e;
-}
-.highlight .cp {
-  color: #f4bf75;
-}
-.highlight .nt {
-  color: #f4bf75;
-}
-.highlight .o, .highlight .ow {
-  color: #f8f8f2;
-}
-.highlight .p, .highlight .pi {
-  color: #f8f8f2;
-}
-.highlight .gi {
-  color: #a6e22e;
-}
-.highlight .gd {
-  color: #f92672;
-}
-.highlight .gh {
-  color: #66d9ef;
-  background-color: #272822;
-  font-weight: bold;
-}
-.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
-  color: #ae81ff;
-}
-.highlight .kc {
-  color: #fd971f;
-}
-.highlight .kt {
-  color: #fd971f;
-}
-.highlight .kd {
-  color: #fd971f;
-}
-.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
-  color: #a6e22e;
-}
-.highlight .sr {
-  color: #a1efe4;
-}
-.highlight .si {
-  color: #cc6633;
-}
-.highlight .se {
-  color: #cc6633;
-}
-.highlight .nn {
-  color: #f4bf75;
-}
-.highlight .nc {
-  color: #f4bf75;
-}
-.highlight .no {
-  color: #f4bf75;
-}
-.highlight .na {
-  color: #66d9ef;
-}
-.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
-  color: #a6e22e;
-}
-.highlight .ss {
-  color: #a6e22e;
-}
-    </style>
-    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
-    
-    <link href="stylesheets/ntc_override.css" rel="stylesheet" media="screen" />
-    
-      <script src="javascripts/all.js"></script>
-  </head>
-
-  <body class="index" data-languages="[]">
-    <a href="#" id="nav-button">
-      <span>
-        NAVI
-        <img src="images/navbar.png" alt="Navbar" />
-      </span>
-    </a>
-    <div class="tocify-wrapper">
-    
-      <div class="nav-bar-logo">
-        <a href="index.html"><img src="images/ntclogo_doccorner.png" alt="Ntclogo doccorner" /></a>
-      </div>
-      
-        <div class="search">
-          <input type="text" class="search" id="input-search" placeholder="Search">
-        </div>
-        <ul class="search-results"></ul>
-      <div id="toc">
-      </div>
-        <ul class="toc-footer">
-            <li>Have something to add or change? <br> Email us at docs@gmail.com</li>
-        </ul>
-    </div>
-    <div class="page-wrapper">
-      <div class="dark-box"></div>
-      <div class="content">
-        
-          <h1 id="welcome-to-gadget">Welcome to Gadget!</h1>
+<h1 id="welcome-to-gadget">Welcome to Gadget!</h1>
 
 <p>Gadget is a suite of tools for developing, deploying, and distributing your applications to C.H.I.P. Pro and Gadget supported devices. </p>
 
@@ -599,7 +478,7 @@ gadget init
 <pre class="highlight plaintext"><code>services:
 - name: gpio
 uuid: Your-Containers-U-U-ID
-image: nextthingco/gadget-blink-c 
+image: nextthingco/gadget-blink-c
 directory: ""
 net: ""
 pid: ""
@@ -672,7 +551,7 @@ cd blinkLocal
 <pre class="highlight shell"><code>FROM debian:stretch-slim
 
 WORKDIR .
-RUN apt-get -yqq update 
+RUN apt-get -yqq update
 RUN apt-get install -y crossbuild-essential-armhf
 COPY gpio.c .
 RUN arm-linux-gnueabihf-gcc gpio.c -o gpio -static
@@ -725,7 +604,7 @@ gadget init
 </code></pre>
 <p>This field is reserved for pulling images from Docker Hub, so for this workflow, it stays empty.</p></li>
 <li><p><strong>directory</strong></p>
-<pre class="highlight plaintext"><code>directory:"blinkLocal" 
+<pre class="highlight plaintext"><code>directory:"blinkLocal"
 </code></pre></li>
 </ul>
 
@@ -741,7 +620,7 @@ gadget init
 <pre class="highlight plaintext"><code>services:
 - name: gpio-c
 uuid: Your-Containers-U-U-ID
-image: "" 
+image: ""
 directory: "blinkLocal"
 net: ""
 pid: ""
@@ -809,14 +688,14 @@ df -h <span class="c">#check NAND availability</span>
 <h3 id="3-tag">3. Tag</h3>
 
 <p><a href="https://docs.docker.com/engine/reference/commandline/tag/">Tag</a> the image with a version number (optional) and create a repo for it. If an image is not tagged, it will automatically be tagged with the default of &ldquo;latest.&rdquo;</p>
-<pre class="highlight plaintext"><code>docker tag blink YourUserName/blink:v1 
+<pre class="highlight plaintext"><code>docker tag blink YourUserName/blink:v1
 </code></pre>
 <p>This command tags the image you created called <a href="https://docs.getchip.com/gadget.html#4-build">blink</a> with &ldquo;v1&rdquo;, specified it&rsquo;s location within YourUserName, and in the repository &ldquo;blink&rdquo;. </p>
 
 <h3 id="4-push">4. Push</h3>
 
 <p>Push the image to your Docker Hub registry:</p>
-<pre class="highlight plaintext"><code>docker push YourUserName/blink:v1 
+<pre class="highlight plaintext"><code>docker push YourUserName/blink:v1
 </code></pre>
 <h3 id="5-pull">5. Pull</h3>
 
@@ -877,7 +756,7 @@ df -h <span class="c">#check NAND availability</span>
 </code></pre><pre class="highlight plaintext"><code>Options:
 
 -C &lt;path&gt; Run in directory (default ".") #gadget -C &lt;path&gt; &lt;command&gt;
--v  Verbose execution 
+-v  Verbose execution
 
 Commands:
 
@@ -903,7 +782,7 @@ help        Print this message
 <ul>
 <li>A <code class="prettyprint">gadget</code> command can be issued from a different directory. For example to build an project in a directory called &ldquo;blinkdemo&rdquo; from its parent directory: </li>
 </ul>
-<pre class="highlight plaintext"><code>gadget -C blinkdemo/ build 
+<pre class="highlight plaintext"><code>gadget -C blinkdemo/ build
 </code></pre>
           <h1 id="docker-reference">Docker Reference</h1>
 
@@ -1013,10 +892,3 @@ See "systemctl status systemd-binfmt.service" and "journalctl -xe" for details.
 
 </code></pre>
 <p>Download the <code class="prettyprint">binfmt-support</code> and <code class="prettyprint">qemu-user-static</code> packages listed in the <a href="https://docs.getchip.com/gadget.html#setup-for-linux">Setup for Linux</a> section and reboot.</p>
-
-      </div>
-      <div class="dark-box">
-      </div>
-    </div>
-  </body>
-</html>

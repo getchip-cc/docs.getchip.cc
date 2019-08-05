@@ -1,131 +1,10 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-		<link rel="shortcut icon" href="public/icon-16.png" type="image/x-icon">
-    <link rel="icon" href="public/icon-16.png" type="image/x-icon">
-		
-    <title>Next Thing Co. C.H.I.P. Pro Documentation</title>
+---
+layout: base
+permalink: /chip_pro.html
+title: Next Thing Co. C.H.I.P. Pro Documentation
+---
 
-    <style>
-      .highlight table td { padding: 5px; }
-.highlight table pre { margin: 0; }
-.highlight, .highlight .w {
-  color: #f8f8f2;
-  background-color: #272822;
-}
-.highlight .err {
-  color: #272822;
-  background-color: #f92672;
-}
-.highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
-  color: #75715e;
-}
-.highlight .cp {
-  color: #f4bf75;
-}
-.highlight .nt {
-  color: #f4bf75;
-}
-.highlight .o, .highlight .ow {
-  color: #f8f8f2;
-}
-.highlight .p, .highlight .pi {
-  color: #f8f8f2;
-}
-.highlight .gi {
-  color: #a6e22e;
-}
-.highlight .gd {
-  color: #f92672;
-}
-.highlight .gh {
-  color: #66d9ef;
-  background-color: #272822;
-  font-weight: bold;
-}
-.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
-  color: #ae81ff;
-}
-.highlight .kc {
-  color: #fd971f;
-}
-.highlight .kt {
-  color: #fd971f;
-}
-.highlight .kd {
-  color: #fd971f;
-}
-.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
-  color: #a6e22e;
-}
-.highlight .sr {
-  color: #a1efe4;
-}
-.highlight .si {
-  color: #cc6633;
-}
-.highlight .se {
-  color: #cc6633;
-}
-.highlight .nn {
-  color: #f4bf75;
-}
-.highlight .nc {
-  color: #f4bf75;
-}
-.highlight .no {
-  color: #f4bf75;
-}
-.highlight .na {
-  color: #66d9ef;
-}
-.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
-  color: #a6e22e;
-}
-.highlight .ss {
-  color: #a6e22e;
-}
-    </style>
-    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
-    
-    <link href="stylesheets/ntc_override.css" rel="stylesheet" media="screen" />
-    
-      <script src="javascripts/all.js"></script>
-  </head>
-
-  <body class="index" data-languages="[]">
-    <a href="#" id="nav-button">
-      <span>
-        NAVI
-        <img src="images/navbar.png" alt="Navbar" />
-      </span>
-    </a>
-    <div class="tocify-wrapper">
-    
-      <div class="nav-bar-logo">
-        <a href="index.html"><img src="images/ntclogo_doccorner.png" alt="Ntclogo doccorner" /></a>
-      </div>
-      
-        <div class="search">
-          <input type="text" class="search" id="input-search" placeholder="Search">
-        </div>
-        <ul class="search-results"></ul>
-      <div id="toc">
-      </div>
-        <ul class="toc-footer">
-            <li>Have something to add or change? <br> Email us at docs@nextthing.co.</li>
-        </ul>
-    </div>
-    <div class="page-wrapper">
-      <div class="dark-box"></div>
-      <div class="content">
-        
-          <h1 id="get-started-with-c-h-i-p-pro">Get Started With C.H.I.P. Pro</h1>
+<h1 id="get-started-with-c-h-i-p-pro">Get Started With C.H.I.P. Pro</h1>
 
 <p><img src="images/CHIP_ProMain.jpg" alt="C.H.I.P. Pro" /></p>
 
@@ -397,7 +276,7 @@ sudo udevadm control --reload-rules
 <pre class="highlight plaintext"><code>screen  27127 Sefi  5u  CHR             18,0        0t0     605 /dev/tty.usbserial
 </code></pre>
 <p>Note the process ID. In this case, it&rsquo;s 27127. Then run:</p>
-<pre class="highlight plaintext"><code>screen -x 27127 
+<pre class="highlight plaintext"><code>screen -x 27127
 </code></pre>
 <p>This will return you to the previous screen session. Then use Ctrl+A Ctrl+K to close it (will ask you to confirm).</p>
 
@@ -587,7 +466,7 @@ vi /usr/bin/fade-pwms
 <h3 id="step-1-enable-wifi-and-find-a-network">Step 1: Enable WiFi and Find a Network</h3>
 
 <p>These three commands will in turn, enable wifi, scan for access points, and list what networks are available:</p>
-<pre class="highlight shell"><code>connmanctl <span class="nb">enable </span>wifi 
+<pre class="highlight shell"><code>connmanctl <span class="nb">enable </span>wifi
 connmanctl scan wifi
 connmanctl services
 </code></pre>
@@ -816,7 +695,7 @@ ping: sendto: Network is unreachable
 <pre class="highlight shell"><code>nmcli c
 </code></pre>
 <p>Which outputs something like:</p>
-<pre class="highlight shell"><code>NAME           UUID                                  TYPE             DEVICE 
+<pre class="highlight shell"><code>NAME           UUID                                  TYPE             DEVICE
 YOUR_NETWORK   xxxxxxxx-yyyy-zzzz-xxxx-yyyyyyyyyyyy  802-11-wireless  wlan0
 </code></pre>
 <p>Then, delete the network specified between quotes to forget it:</p>
@@ -2018,7 +1897,7 @@ i2c mw 0x34 0x30 0x03 2
 <p>The best practice would be write a script that runs outside of your Docker container which listens for some kind of event (a file change, a variable being set, etc). The script could then shut down once this event has been received from the Docker container. Another option is to install systemd on your device from the buildroot menu, although this will affect your boot time.</p>
 
 <p>For a more brute force and lightweight approach, share the /proc directory with your container as a new volume. For example:</p>
-<pre class="highlight plaintext"><code>docker run -v /proc:/host/proc -it "test" 
+<pre class="highlight plaintext"><code>docker run -v /proc:/host/proc -it "test"
 </code></pre>
 <p>When your container is running, enter this command to synchronize the block devices and mount the read-only file system:</p>
 <pre class="highlight plaintext"><code>echo s &gt; /host/proc/sysrq-trigger &amp;&amp; echo u &gt; /host/proc/sysrq-trigger &amp;&amp; echo s &gt; /host/proc/sysrq-trigger
@@ -2128,7 +2007,7 @@ cd CHIP-tools
 and place it in CHIP-tools directory.</li>
 <li>Expand tarball</li>
 </ul>
-<pre class="highlight plaintext"><code>tar xf chip-ble.tar.gz 
+<pre class="highlight plaintext"><code>tar xf chip-ble.tar.gz
 </code></pre>
 <ul>
 <li>Check to see that made a directory called <code class="prettyprint">/img</code>.</li>
@@ -3884,7 +3763,7 @@ C.H.I.P. Pro footprints include an open space in the middle allowing for the 1.4
 </tr>
 </tbody></table>
 
-<p>A programmable current limit can be set in software allowing for safe attachment to USB 2.0, USB 3.0, or high-current CHG-In sources. Check the <a href="https://github.com/NextThingCo/CHIP-Hardware/blob/master">AXP209 datasheet</a>. 
+<p>A programmable current limit can be set in software allowing for safe attachment to USB 2.0, USB 3.0, or high-current CHG-In sources. Check the <a href="https://github.com/NextThingCo/CHIP-Hardware/blob/master">AXP209 datasheet</a>.
  for more information starting on page 33. The current set options are 100mA, 500mA, 900mA and &ldquo;no limit&rdquo;. C.H.I.P. Pro is set to 900mA upon boot by default. </p>
 
 <p>Keep in mind that if the current draw spikes and exceeds the threshold even momentarily this will cause a brownout and C.H.I.P. Pro will shut down. </p>
@@ -4197,10 +4076,3 @@ C.H.I.P. Pro footprints include an open space in the middle allowing for the 1.4
 </tbody></table>
 
 <p>If you are looking for a more C.H.I.P-like experience with connectors and LEDS, we recommend the <a href="http://www.getchip.com/pages/chippro.html">Development Kit</a>. </p>
-
-      </div>
-      <div class="dark-box">
-      </div>
-    </div>
-  </body>
-</html>
