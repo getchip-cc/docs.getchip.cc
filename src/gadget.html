@@ -64,7 +64,7 @@ sudo reboot
 </code></pre>
 <p>In addition to installing these packages, your Linux distro may still be missing <code class="prettyprint">qemu-user-static</code> files . Follow the instructions outlined <a href="https://github.com/computermouth/qemu-static-conf">here</a> to check whether they are missing and how to obtain them.</p>
 
-<p>Check the <a href="https://docs.getchip.com/gadget.html#troubleshooting">Troubleshooting</a> section for specific errors you may be getting.</p>
+<p>Check the <a href="/gadget.html#troubleshooting">Troubleshooting</a> section for specific errors you may be getting.</p>
 
 <h4 id="run-docker-as-unprivileged-user">Run Docker as Unprivileged User</h4>
 
@@ -112,7 +112,7 @@ sudo reboot
 
 <p>Use the <a href="http://flash.getchip.com/pro">web flasher</a> to install GadgetOS on your C.H.I.P. Pro Dev Kit. The latest GadgetOS is required for GadgetCLI to be able to talk to your hardware device and found in the <a href="https://github.com/NextThingCo/gadgetcli/releases">GitHub repo</a>.</p>
 
-<p>Once flashed, power cycle C.H.I.P. Pro Dev Kit by either unplugging it from the USB port or pressing the <a href="https://docs.getchip.com/chip_pro_devkit.html#power">On/Off button</a>.</p>
+<p>Once flashed, power cycle C.H.I.P. Pro Dev Kit by either unplugging it from the USB port or pressing the <a href="/chip_pro_devkit.html#power">On/Off button</a>.</p>
 
           <h1 id="hello-world">Hello World</h1>
 
@@ -256,7 +256,7 @@ Donut_Hut            wifi_xxxxxxxxxxxx_xxxxxxxxx_managed_psk
 4 packets transmitted, 4 packets received, 0% packet loss
 round-trip min/avg/max <span class="o">=</span> 7.474/7.951/9.004 ms
 </code></pre>
-<p>If you have issues connecting, read our &ldquo;<a href="https://docs.getchip.com/chip_pro.html#step-3-test-connection">Troubleshooting Connection Problems</a>&rdquo; on the C.H.I.P. Pro Doc page.</p>
+<p>If you have issues connecting, read our &ldquo;<a href="/chip_pro.html#step-3-test-connection">Troubleshooting Connection Problems</a>&rdquo; on the C.H.I.P. Pro Doc page.</p>
 
 <h3 id="step-4-exit-gadget-shell">Step 4. Exit Gadget Shell</h3>
 <pre class="highlight plaintext"><code>exit
@@ -266,7 +266,7 @@ round-trip min/avg/max <span class="o">=</span> 7.474/7.951/9.004 ms
 <p>At the heart of GadgetOS is a container system called <a href="https://docs.docker.com/">Docker</a>. While GadgetOS runs containers,  GadgetCLI helps you build, run, and manage them.
  If you&rsquo;re new to containers, check out <a href="https://docs.docker.com/get-started/#a-brief-explanation-of-containers">this primer</a>. Together, GadgetOS and GadgetCLI make orchestrating container images easy by using one configuration file: <strong>gadget.yml</strong>.</p>
 
-<p>Gadget.yml is where you define resources available to the container, issue commands to the running container, specify which containers to run in what order, and more. For example, the <a href="https://docs.getchip.com/gadget.html#hello-world"><em>hello world</em></a> demo uses a gadget.yml file that pulls a container available on <a href="https://hub.docker.com/">Docker Hub</a>.</p>
+<p>Gadget.yml is where you define resources available to the container, issue commands to the running container, specify which containers to run in what order, and more. For example, the <a href="/gadget.html#hello-world"><em>hello world</em></a> demo uses a gadget.yml file that pulls a container available on <a href="https://hub.docker.com/">Docker Hub</a>.</p>
 
 <p>There are two sections to define and configure containers in: <strong>onboot</strong> and <strong>services</strong>. You can put multiple container configurations in each section and you can use GadgetCLI to specify which container to control: all of them or just one.</p>
 
@@ -423,7 +423,7 @@ round-trip min/avg/max <span class="o">=</span> 7.474/7.951/9.004 ms
 <h3 id="1-set-up">1. Set Up</h3>
 
 <ul>
-<li>Make sure to install all the necessary software outlined in <a href="https://docs.getchip.com/gadget.html#set-up-gadget">Set Up</a>. </li>
+<li>Make sure to install all the necessary software outlined in <a href="/gadget.html#set-up-gadget">Set Up</a>. </li>
 <li>Connect C.H.I.P. Pro Dev Kit to your development machine via a USB cable. </li>
 </ul>
 
@@ -466,7 +466,7 @@ gadget init
 
 <p>Specify an image to pull from the Docker Hub repo in this field. This example pulls an image from the &ldquo;gadget-blink-c&rdquo; repo under the &ldquo;nextthingco&rdquo; username.       </p>
 
-<p><strong>Note:</strong> If an image does not receive a <a href="https://docs.docker.com/engine/reference/commandline/tag/">tag</a> when built and pushed to Docker Hub you do not include it, like for this example. However, if an image is tagged when built and you want to pull it from Docker Hub the <a href="https://docs.docker.com/docker-hub/repos/#viewing-repository-tags">tag</a> needs to be <a href="https://docs.getchip.com/gadget.html#configurations">included</a>. You can see available tags by clicking on the Tags tab in a Docker Hub repo. Sometimes tags are included in the images description on Docker Hub, but not always.</p>
+<p><strong>Note:</strong> If an image does not receive a <a href="https://docs.docker.com/engine/reference/commandline/tag/">tag</a> when built and pushed to Docker Hub you do not include it, like for this example. However, if an image is tagged when built and you want to pull it from Docker Hub the <a href="https://docs.docker.com/docker-hub/repos/#viewing-repository-tags">tag</a> needs to be <a href="/gadget.html#configurations">included</a>. You can see available tags by clicking on the Tags tab in a Docker Hub repo. Sometimes tags are included in the images description on Docker Hub, but not always.</p>
 
 <ul>
 <li><p><strong>binds</strong></p>
@@ -524,7 +524,7 @@ gadget start gpio
     gpio_582583nb-2770-7658-8f16-f681h6fc2bk8
       - started
 </code></pre>
-<p>If any of these processes fail, GadgetCLI will output an error along with suggestions of what may be the issue. Go to the <a href="https://docs.getchip.com/gadget.html#troubleshooting">troubleshooting section</a> for more information.</p>
+<p>If any of these processes fail, GadgetCLI will output an error along with suggestions of what may be the issue. Go to the <a href="/gadget.html#troubleshooting">troubleshooting section</a> for more information.</p>
 
 <h3 id="8-stop-and-delete-containers">8. Stop and Delete Containers</h3>
 <pre class="highlight plaintext"><code>gadget stop gpio
@@ -667,7 +667,7 @@ df -h <span class="c">#check NAND availability</span>
 
 <p><strong>Share Source Files</strong></p>
 
-<p>For collaborators to deploy and run your containers, they will need to know the <a href="https://docs.getchip.com/gadget.html#configuring-gadget-yml">configurations that go into gadget.yml</a>. We recommend sharing these in a <a href="https://github.com/">GitHub</a> repository.</p>
+<p>For collaborators to deploy and run your containers, they will need to know the <a href="/gadget.html#configuring-gadget-yml">configurations that go into gadget.yml</a>. We recommend sharing these in a <a href="https://github.com/">GitHub</a> repository.</p>
 
 <h3 id="1-create-registry-and-repo">1. Create Registry and Repo</h3>
 
@@ -690,7 +690,7 @@ df -h <span class="c">#check NAND availability</span>
 <p><a href="https://docs.docker.com/engine/reference/commandline/tag/">Tag</a> the image with a version number (optional) and create a repo for it. If an image is not tagged, it will automatically be tagged with the default of &ldquo;latest.&rdquo;</p>
 <pre class="highlight plaintext"><code>docker tag blink YourUserName/blink:v1
 </code></pre>
-<p>This command tags the image you created called <a href="https://docs.getchip.com/gadget.html#4-build">blink</a> with &ldquo;v1&rdquo;, specified it&rsquo;s location within YourUserName, and in the repository &ldquo;blink&rdquo;. </p>
+<p>This command tags the image you created called <a href="/gadget.html#4-build">blink</a> with &ldquo;v1&rdquo;, specified it&rsquo;s location within YourUserName, and in the repository &ldquo;blink&rdquo;. </p>
 
 <h3 id="4-push">4. Push</h3>
 
@@ -699,7 +699,7 @@ df -h <span class="c">#check NAND availability</span>
 </code></pre>
 <h3 id="5-pull">5. Pull</h3>
 
-<p>After posting to your registry, the blink image is ready to share and pull to your device. From here, the workflow is the same as the one outlined in the <a href="https://docs.getchip.com/gadget.html#pull-remote-image">Pull Image</a> section. Visit the newly created Docker repo and fill in the description and add a link to your GitHub source files.</p>
+<p>After posting to your registry, the blink image is ready to share and pull to your device. From here, the workflow is the same as the one outlined in the <a href="/gadget.html#pull-remote-image">Pull Image</a> section. Visit the newly created Docker repo and fill in the description and add a link to your GitHub source files.</p>
 
 <h2 id="example-images">Example Images</h2>
 
@@ -719,7 +719,7 @@ df -h <span class="c">#check NAND availability</span>
 <p><strong>Run an Example</strong></p>
 
 <ul>
-<li>Follow the steps under <a href="https://docs.getchip.com/gadget.html#pull-remote-image">Pull Remote Image</a>.</li>
+<li>Follow the steps under <a href="/gadget.html#pull-remote-image">Pull Remote Image</a>.</li>
 <li>For the gadget.yml configurations, download and use the gadget.yml file found in the project directory from the source file links below.</li>
 </ul>
 
@@ -744,7 +744,7 @@ df -h <span class="c">#check NAND availability</span>
 </code></pre>
 <ul>
 <li>Edit the source files in a chosen project directory.</li>
-<li><a href="https://docs.getchip.com/gadget.html#build-image-locally">Build and deploy the project from your development machine</a>. Each project directory has a gadget.yml file that contains the needed configurations for that specific container. </li>
+<li><a href="/gadget.html#build-image-locally">Build and deploy the project from your development machine</a>. Each project directory has a gadget.yml file that contains the needed configurations for that specific container. </li>
 </ul>
 
 <aside class="notice">To successfully build an image in the project directory the gadget.yml config file needs to be removed from it first.</aside>
@@ -880,15 +880,15 @@ W:  Is the docker daemon installed and running?
 <pre class="highlight plaintext"><code>standard_init_linux.go:187: exec user process caused "exec format error"
 
 </code></pre>
-<p>The latest versions of Docker for Windows and Docker for Mac can build non-native architecture containers which is not the case for some distributions of Linux. Additional files need to be downloaded and packages installed to enable the ability to build <code class="prettyprint">arm32v7/*</code> Docker images. To obtain the necessary files, follow the instructions in the <a href="https://docs.getchip.com/gadget.html#setup-for-linux">Setup for Linux</a> section.</p>
+<p>The latest versions of Docker for Windows and Docker for Mac can build non-native architecture containers which is not the case for some distributions of Linux. Additional files need to be downloaded and packages installed to enable the ability to build <code class="prettyprint">arm32v7/*</code> Docker images. To obtain the necessary files, follow the instructions in the <a href="/gadget.html#setup-for-linux">Setup for Linux</a> section.</p>
 <pre class="highlight plaintext"><code>standard_init_linux.go:187: exec user process caused "no such file or directory"
 
 </code></pre>
-<p>If you get the error above while building an <code class="prettyprint">arm32v7/*</code> image, you may have overlooked the second step to the <a href="https://docs.getchip.com/gadget.html#setup-for-linux">Setup for Linux</a> process. Or, the files did not copy over successfully. Head to the <a href="https://docs.getchip.com/gadget.html#setup-for-linux">Setup for Linux</a> section to complete the step of creating a directory <code class="prettyprint">binfmt.d</code>, copying files over and restarting <code class="prettyprint">systemd-binfmt.service</code>.</p>
+<p>If you get the error above while building an <code class="prettyprint">arm32v7/*</code> image, you may have overlooked the second step to the <a href="/gadget.html#setup-for-linux">Setup for Linux</a> process. Or, the files did not copy over successfully. Head to the <a href="/gadget.html#setup-for-linux">Setup for Linux</a> section to complete the step of creating a directory <code class="prettyprint">binfmt.d</code>, copying files over and restarting <code class="prettyprint">systemd-binfmt.service</code>.</p>
 
 <h3 id="unable-to-restart-systemd-binfmt-service">Unable to <code class="prettyprint">restart systemd-binfmt.service</code></h3>
 <pre class="highlight plaintext"><code>Job for systemd-binfmt.service failed because the control process exited with error code.
 See "systemctl status systemd-binfmt.service" and "journalctl -xe" for details.
 
 </code></pre>
-<p>Download the <code class="prettyprint">binfmt-support</code> and <code class="prettyprint">qemu-user-static</code> packages listed in the <a href="https://docs.getchip.com/gadget.html#setup-for-linux">Setup for Linux</a> section and reboot.</p>
+<p>Download the <code class="prettyprint">binfmt-support</code> and <code class="prettyprint">qemu-user-static</code> packages listed in the <a href="/gadget.html#setup-for-linux">Setup for Linux</a> section and reboot.</p>

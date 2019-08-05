@@ -10,7 +10,7 @@ title: Next Thing Co. C.H.I.P. Pro Documentation
 
 <p>The C.H.I.P. Pro System-on-Module (SOM) is designed to get you making great products instead of re-inventing computers. It&rsquo;s a low-cost, high-capability module that lets you focus on fast iterations of brilliant ideas that will be ready to manufacture. </p>
 
-<p>To get the most out of developing and designing for C.H.I.P. Pro we recommend prototyping with the <a href="http://docs.getchip.com/chip_pro_devkit.html">C.H.I.P. Pro Development Kit</a>. </p>
+<p>To get the most out of developing and designing for C.H.I.P. Pro we recommend prototyping with the <a href="/chip_pro_devkit.html">C.H.I.P. Pro Development Kit</a>. </p>
 
 <p>This document provides technical details that will make integrating C.H.I.P. Pro module into your designs a breeze, along with technical specifications and basic guides to get you connected and working with software on C.H.I.P. Pro. </p>
 
@@ -35,7 +35,7 @@ title: Next Thing Co. C.H.I.P. Pro Documentation
 <li>I2S digital audio for interfacing with industry standard audio codecs.</li>
 </ul>
 
-<p>To learn more, go to our <a href="https://docs.getchip.com/chip_pro.html#specifications">Specification</a> section.</p>
+<p>To learn more, go to our <a href="/chip_pro.html#specifications">Specification</a> section.</p>
 
 <h2 id="gr8-sip">GR8 SiP</h2>
 
@@ -152,17 +152,17 @@ sudo udevadm control --reload-rules
 </tr>
 </tbody></table>
 
-<p>Watch the flashing process progress and leave the browser tab open in order for it to complete. You will be notified when C.H.I.P. Pro has been flashed successfully. You are then free to unplug the C.H.I.P. Pro or connect to it via <a href="https://docs.getchip.com/chip_pro.html#usb-serial-uart1-connection">serial</a>. </p>
+<p>Watch the flashing process progress and leave the browser tab open in order for it to complete. You will be notified when C.H.I.P. Pro has been flashed successfully. You are then free to unplug the C.H.I.P. Pro or connect to it via <a href="/chip_pro.html#usb-serial-uart1-connection">serial</a>. </p>
 
 <p><img src="images/flashFinish.png" alt="succeeded page" /></p>
 
-<p>If you are having problems with the flashing process follow the troubleshooting instructions given by the web flasher or check out the <a href="https://docs.getchip.com/chip.html#web-flasher-os-specific-issues">Web Flasher OS-Specific Issues</a> troubleshooting section. </p>
+<p>If you are having problems with the flashing process follow the troubleshooting instructions given by the web flasher or check out the <a href="/chip.html#web-flasher-os-specific-issues">Web Flasher OS-Specific Issues</a> troubleshooting section. </p>
 
 <h2 id="examples">Examples</h2>
 
 <p>You can select an OS by flashing one of our examples using the web flasher <a href="http://flash.getchip.com">flash.getchip.com/pro</a> in Chrome or Chromium browser. </p>
 
-<p>We have built examples based on Buildroot that implement features exposed on the CHIP Pro <a href="https://docs.getchip.com/chip_pro_devkit.html">Dev Board</a> such as its two MICs, and array of GPIOs. If you are building a circuit that incorporates mics and LEDs with a bare C.H.I.P. Pro you can start with these examples. </p>
+<p>We have built examples based on Buildroot that implement features exposed on the CHIP Pro <a href="/chip_pro_devkit.html">Dev Board</a> such as its two MICs, and array of GPIOs. If you are building a circuit that incorporates mics and LEDs with a bare C.H.I.P. Pro you can start with these examples. </p>
 
 <h4 id="blinkenlights-buildroot">Blinkenlights (Buildroot)</h4>
 
@@ -180,7 +180,7 @@ sudo udevadm control --reload-rules
 
 <p>Size: ~180MB</p>
 
-<p>We provide a standard Debian distribution. Once flashed connect to the C.H.I.P. Pro via <a href="https://docs.getchip.com/chip_pro.html#make-a-serial-connection">serial</a> and log in with the default username <code class="prettyprint">chip</code> and password <code class="prettyprint">chip</code>.</p>
+<p>We provide a standard Debian distribution. Once flashed connect to the C.H.I.P. Pro via <a href="/chip_pro.html#make-a-serial-connection">serial</a> and log in with the default username <code class="prettyprint">chip</code> and password <code class="prettyprint">chip</code>.</p>
 
 <p>If you want to configure and build the rootfs for the Debian image, take a look at our <a href="https://github.com/NextThingCo/chip-os-pro">github repo</a> </p>
 
@@ -417,7 +417,7 @@ sudo udevadm control --reload-rules
 
 <h2 id="edit-buildroot-examples">Edit Buildroot Examples</h2>
 
-<p>After connecting to the Dev Kit via <a href="https://docs.getchip.com/chip_pro_devkit#usb-serial-uart1-connection">USB-serial</a> you can check out and edit the scripts for each Buildroot example. Use the Vi command-line editor to read and edit example scripts found in /usr/bin. </p>
+<p>After connecting to the Dev Kit via <a href="/chip_pro_devkit#usb-serial-uart1-connection">USB-serial</a> you can check out and edit the scripts for each Buildroot example. Use the Vi command-line editor to read and edit example scripts found in /usr/bin. </p>
 
 <p><strong>Blinkenlights</strong></p>
 <pre class="highlight plaintext"><code>vi /usr/bin/blink-leds
@@ -460,7 +460,7 @@ vi /usr/bin/fade-pwms
 
 <ul>
 <li>C.H.I.P. Pro running Buildroot OS</li>
-<li><a href="https://docs.getchip.com/chip_pro.html#make-a-serial-connection">Serial connection</a> to C.H.I.P. Pro</li>
+<li><a href="/chip_pro.html#make-a-serial-connection">Serial connection</a> to C.H.I.P. Pro</li>
 </ul>
 
 <h3 id="step-1-enable-wifi-and-find-a-network">Step 1: Enable WiFi and Find a Network</h3>
@@ -600,7 +600,7 @@ wifi_xxxxxxxxxxxx_xxxxxx_managed_none
 
 <ul>
 <li>C.H.I.P. Pro loaded with Debian</li>
-<li><a href="https://docs.getchip.com/chip_pro.html#usb-serial-uart1-connection">Serial connection</a> to C.H.I.P. Pro</li>
+<li><a href="/chip_pro.html#usb-serial-uart1-connection">Serial connection</a> to C.H.I.P. Pro</li>
 </ul>
 
 <h3 id="step-1-list-available-wi-fi-networks">Step 1: List available Wi-Fi networks</h3>
@@ -795,7 +795,7 @@ pipe 4
 </ul></li>
 </ul>
 
-<p>To see all the functions C.H.I.P. Pro pins offer check out the <a href="https://docs.getchip.com/chip_pro.html#gr8-pins-and-multiplexing-on-c-h-i-p-pro">Multiplexing table</a>.</p>
+<p>To see all the functions C.H.I.P. Pro pins offer check out the <a href="/chip_pro.html#gr8-pins-and-multiplexing-on-c-h-i-p-pro">Multiplexing table</a>.</p>
 
 <p><img src="images/Pro_Pinout.jpg" alt="pin out" /></p>
 
@@ -929,7 +929,7 @@ pipe 4
 
 <p>UART1:</p>
 
-<p>** These pins are connected to the FE1.1S USB hub controller IC which is connected to the micro USB providing USB serial functionality. To use them as GPIO disable the USB hub controller by cutting the &ldquo;UART Disconnect&rdquo; <a href="https://docs.getchip.com/chip_pro_devkit.html#cuttable-traces">traces</a>. </p>
+<p>** These pins are connected to the FE1.1S USB hub controller IC which is connected to the micro USB providing USB serial functionality. To use them as GPIO disable the USB hub controller by cutting the &ldquo;UART Disconnect&rdquo; <a href="/chip_pro_devkit.html#cuttable-traces">traces</a>. </p>
 
 <table><thead>
 <tr>
@@ -1083,7 +1083,7 @@ pipe 4
 <li><a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/Footprint">Carrier PCB stencil</a></li>
 </ul>
 
-<p>More detailed information on designing a PCB for C.H.I.P. Pro is found <a href="https://docs.getchip.com/chip_pro.html#pcb-design-tips">here</a>. </p>
+<p>More detailed information on designing a PCB for C.H.I.P. Pro is found <a href="/chip_pro.html#pcb-design-tips">here</a>. </p>
 
 <p><img src="images/Pro_Footprint_hand.jpg" alt="C.H.I.P. Pro PCB Footprint" /></p>
 
@@ -1768,7 +1768,7 @@ pipe 4
 <li>RoHS</li>
 </ul>
 
-<p>Visit our <a href="https://docs.getchip.com/chip_pro.html#compliance-statement">Compliance Statement</a> section for more information about each certification.</p>
+<p>Visit our <a href="/chip_pro.html#compliance-statement">Compliance Statement</a> section for more information about each certification.</p>
 
 <h3 id="i-have-designed-a-circuit-and-am-embedding-c-h-i-p-pro-into-a-larger-pcb-design-once-it-is-integrated-do-i-need-to-get-fcc-and-ce-re-certification">I have designed a circuit and am embedding C.H.I.P. Pro into a larger PCB design. Once it is integrated, do I need to get FCC and CE re-certification?</h3>
 
@@ -1776,7 +1776,7 @@ pipe 4
 
 <p>If you are designing a consumer product, you will need some certification but the time and money put into that process can be greatly reduced by leveraging our FCC Part 15 subpart C modular certification. </p>
 
-<p>C.H.I.P. Pro is modularly certified for use with several external antennas in addition to the included on-board SMT ceramic antenna. A list of pre-cetified antennas are found in the <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/Datasheets">C.H.I.P. Pro datasheet</a> on page 11 and listed in the <a href="https://docs.getchip.com/chip_pro.html#wifi-antenna">C.H.I.P. Pro online docs</a>. Part 15 subpart C covers intentional radiation. If C.H.I.P. Pro is the only radio being used in your product&rsquo;s final circuit and you use one of the precertified antennas you can meet requirements by completing a Declaration of Conformity (DoC) and affixing the FCC ID to your own product.  </p>
+<p>C.H.I.P. Pro is modularly certified for use with several external antennas in addition to the included on-board SMT ceramic antenna. A list of pre-cetified antennas are found in the <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/Datasheets">C.H.I.P. Pro datasheet</a> on page 11 and listed in the <a href="/chip_pro.html#wifi-antenna">C.H.I.P. Pro online docs</a>. Part 15 subpart C covers intentional radiation. If C.H.I.P. Pro is the only radio being used in your product&rsquo;s final circuit and you use one of the precertified antennas you can meet requirements by completing a Declaration of Conformity (DoC) and affixing the FCC ID to your own product.  </p>
 
 <p>Most likely, your final product will still need to be tested for compliance under Part 15 subpart B for unintentional radiation. </p>
 
@@ -1810,9 +1810,9 @@ pipe 4
 
 <h3 id="why-is-my-battery-charging-at-a-very-slow-rate-or-not-at-all">Why is my battery charging at a very slow rate or not at all?</h3>
 
-<p>First, make sure the correct power source is connected to the correct pins as stated in the <a href="https://docs.getchip.com/chip_pro.html#power-c-h-i-p-pro">documentation</a>. </p>
+<p>First, make sure the correct power source is connected to the correct pins as stated in the <a href="/chip_pro.html#power-c-h-i-p-pro">documentation</a>. </p>
 
-<p>Assuming the power source is connected correctly, the issue may be with C.H.I.P. Pro&rsquo;s BTS pin which is directly connected to the TS pin on the AXP209 power management unit. This pin expects a 10K thermistor as a way to monitor the battery by providing the pin with a specific voltage range. Hitting this range tells the PMU that it is safe to charge the battery. Without an added thermistor, it&rsquo;s recommended to disable this function by either connecting the BTS pin to ground or disabling through software. Read more about the BTS pin and how to disable it in the <a href="https://docs.getchip.com/chip_pro.html#battery-charging-and-bts-pin">Power</a> section of the C.H.I.P. Pro docs. </p>
+<p>Assuming the power source is connected correctly, the issue may be with C.H.I.P. Pro&rsquo;s BTS pin which is directly connected to the TS pin on the AXP209 power management unit. This pin expects a 10K thermistor as a way to monitor the battery by providing the pin with a specific voltage range. Hitting this range tells the PMU that it is safe to charge the battery. Without an added thermistor, it&rsquo;s recommended to disable this function by either connecting the BTS pin to ground or disabling through software. Read more about the BTS pin and how to disable it in the <a href="/chip_pro.html#battery-charging-and-bts-pin">Power</a> section of the C.H.I.P. Pro docs. </p>
 
 <h3 id="i-think-my-c-h-i-p-pro-is-overheating">I think my C.H.I.P. Pro is overheating!</h3>
 
@@ -1890,7 +1890,7 @@ i2c mw 0x34 0x30 0x03 2
 
 <p>If you are using GadgetOS, the micro USB port is configured as an ethernet gadget, which you can connect to using a shell application. If you want to use this as a USB serial port, you would need to make this change in the services running on the device and bind Getty to this port.</p>
 
-<p>Alternatively, you can <a href="https://docs.getchip.com/chip_pro.html#make-a-serial-connection">connect a USB UART cable</a> to C.H.I.P. Pro’s UART1-RX and UART1-TX pins (pins 44 and 43) and communicate with it that way. This is essentially what the micro USB port does on the CHIP Pro Dev Kit.</p>
+<p>Alternatively, you can <a href="/chip_pro.html#make-a-serial-connection">connect a USB UART cable</a> to C.H.I.P. Pro’s UART1-RX and UART1-TX pins (pins 44 and 43) and communicate with it that way. This is essentially what the micro USB port does on the CHIP Pro Dev Kit.</p>
 
 <h3 id="i-m-using-docker-and-i-need-to-be-able-to-reboot-or-shutdown-my-device-from-within-a-container-how-can-i-do-this">I’m using Docker and I need to be able to reboot or shutdown my device from within a container. How can I do this?</h3>
 
@@ -1956,7 +1956,7 @@ i2c mw 0x34 0x30 0x03 2
 
 <p>For example, if you notice poor wifi performance when using the C.H.I.P. Pro Dev Kit, you may want to switch to use the external antenna, even if you don’t have anything physically connected to it.</p>
 
-<p>To enable the external antenna, simply set pin PB17 (Sysfs GPIO pin #49) to HIGH. To enable the on-board SMT antenna, set it to LOW. This process can also be found in the <a href="https://docs.getchip.com/chip_pro.html#enable-wifi-antenna">C.H.I.P. Pro documentation page</a>.</p>
+<p>To enable the external antenna, simply set pin PB17 (Sysfs GPIO pin #49) to HIGH. To enable the on-board SMT antenna, set it to LOW. This process can also be found in the <a href="/chip_pro.html#enable-wifi-antenna">C.H.I.P. Pro documentation page</a>.</p>
 
 <h3 id="i-built-and-flashed-a-custom-version-of-gadgetos-but-my-wifi-isn-t-working">I built and flashed a custom version of GadgetOS, but my WiFi isn’t working.</h3>
 
@@ -3552,7 +3552,7 @@ scan off
 
           <h1 id="compliance-statement">Compliance Statement</h1>
 
-<p>C.H.I.P. Pro is officially certified for CE, IC and FCC for use with multiple commercially available <a href="https://docs.getchip.com/chip_pro_devkit.html#wifi-antenna">external antennas</a> as well as the onboard ceramic SMT antenna. Find all <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/Compliance">Test Reports and Certificates</a> in the C.H.I.P. Pro Hardware repository.</p>
+<p>C.H.I.P. Pro is officially certified for CE, IC and FCC for use with multiple commercially available <a href="/chip_pro_devkit.html#wifi-antenna">external antennas</a> as well as the onboard ceramic SMT antenna. Find all <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/Compliance">Test Reports and Certificates</a> in the C.H.I.P. Pro Hardware repository.</p>
 
 <h2 id="fcc">FCC</h2>
 
