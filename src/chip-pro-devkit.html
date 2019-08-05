@@ -1,23 +1,23 @@
 ---
 layout: base
-permalink: /chip_pro_devkit.html
+permalink: /chip-pro-devkit.html
 title: Next Thing Co. C.H.I.P. Pro Developer's Kit Documentation
 ---
 
 <h1 id="welcome">Welcome!</h1>
 
-<p>This documentation is a resource aimed to get you started with the C.H.I.P. Pro Developer&rsquo;s Kit. There are lists of contents, descriptions of parts, explanations of how to use the unique features of the board, and some examples to work through so you can get up and running developing your product around C.H.I.P. Pro. Have a C.H.I.P. Pro board but no Dev Kit? Check out the <a href="/chip_pro.html">C.H.I.P. Pro documentation site</a> to get started.</p>
+<p>This documentation is a resource aimed to get you started with the C.H.I.P. Pro Developer’s Kit. There are lists of contents, descriptions of parts, explanations of how to use the unique features of the board, and some examples to work through so you can get up and running developing your product around C.H.I.P. Pro. Have a C.H.I.P. Pro board but no Dev Kit? Check out the <a href="/chip-pro">C.H.I.P. Pro documentation site</a> to get started.</p>
 
 <h2 id="get-started-with-the-c-h-i-p-pro-dev-kit">Get Started with the C.H.I.P. Pro Dev Kit!</h2>
 
-<p><img src="images/hero.jpg" alt="C.H.I.P. Pro" /></p>
+<p><img src="/images/hero.jpg" alt="C.H.I.P. Pro" /></p>
 
-<p>The C.H.I.P. Pro Developer&rsquo;s Kit provides a complete electronic sandbox to test, iterate, and prototype products with the C.H.I.P. Pro module. While many developer&rsquo;s kits assume a high-degree of technical experience, we make this kit approachable, compact, and easy to use.
-We believe that great products can come from many backgrounds, so we provide several extras in this kit that help you get making and get comfortable. We even include an extra C.H.I.P. Pro to get you started on your own PCB. If you do know it all, you&rsquo;ll find this documentation will help your product be the best it can be whether you&rsquo;re making 1 or 1 million.</p>
+<p>The C.H.I.P. Pro Developer’s Kit provides a complete electronic sandbox to test, iterate, and prototype products with the C.H.I.P. Pro module. While many developer’s kits assume a high-degree of technical experience, we make this kit approachable, compact, and easy to use.
+We believe that great products can come from many backgrounds, so we provide several extras in this kit that help you get making and get comfortable. We even include an extra C.H.I.P. Pro to get you started on your own PCB. If you do know it all, you’ll find this documentation will help your product be the best it can be whether you’re making 1 or 1 million.</p>
 
-<h2 id="what-39-s-in-the-kit">What&rsquo;s in the Kit</h2>
+<h2 id="what-39-s-in-the-kit">What’s in the Kit</h2>
 
-<p><img src="images/kitContents.jpg" alt="C.H.I.P. Pro Dev Kit Package Contents" /></p>
+<p><img src="/images/kitContents.jpg" alt="C.H.I.P. Pro Dev Kit Package Contents" /></p>
 
 <p>The C.H.I.P. Pro Dev Kit comes with accessories to get you started on your first prototype:</p>
 
@@ -42,7 +42,7 @@ We believe that great products can come from many backgrounds, so we provide sev
 
 <p><strong>Buildroot</strong> is simple and stripped down making it efficient and good for single application use cases. </p>
 
-<p>C.H.I.P. Pro has 512MB of high-reliability SLC NAND storage onboard for holding the core operating system and a limited amount of user and program data. While the storage is faster and more reliable it has less capacity. Because of this, it&rsquo;s a good idea to know how much storage software will take before flashing and installing. Where needed, additional high-speed storage can be added through C.H.I.P. Pro’s SDIO bus.</p>
+<p>C.H.I.P. Pro has 512MB of high-reliability SLC NAND storage onboard for holding the core operating system and a limited amount of user and program data. While the storage is faster and more reliable it has less capacity. Because of this, it’s a good idea to know how much storage software will take before flashing and installing. Where needed, additional high-speed storage can be added through C.H.I.P. Pro’s SDIO bus.</p>
 
 <p>Ready to try out some examples? Grab these items, then read on!</p>
 
@@ -54,13 +54,13 @@ We believe that great products can come from many backgrounds, so we provide sev
 
 <h2 id="flashing-process">Flashing Process</h2>
 
-<p>Head over to the web flasher at <a href="http://flash.getchip.com/pro">flash.getchip.com/pro</a>. If it&rsquo;s your first time flashing, when you arrive you will be asked to install the NTC Flasher Chrome Extension.</p>
+<p>Head over to the web flasher at <a href="http://flash.getchip.com/pro">flash.getchip.com/pro</a>. If it’s your first time flashing, when you arrive you will be asked to install the NTC Flasher Chrome Extension.</p>
 
 <p>After installing the extension the main page will give you the option to either download an image or follow the wizard to flash C.H.I.P. Pro. For a smooth automated process, click <strong>FLASH</strong> to flash C.H.I.P. Pro.</p>
 
-<p><img src="images/main.png" alt="flasher home page" /></p>
+<p><img src="/images/main.png" alt="flasher home page" /></p>
 
-<p>You will be sent to the <strong>&ldquo;Flasher First Time Setup&rdquo;</strong> page which will have instructions dependent on the operating system of your computer. Follow along in the browser or below.</p>
+<p>You will be sent to the <strong>“Flasher First Time Setup”</strong> page which will have instructions dependent on the operating system of your computer. Follow along in the browser or below.</p>
 
 <ul>
 <li><p>Linux-specific</p>
@@ -93,7 +93,7 @@ sudo udevadm control --reload-rules
 <ul>
 <li>To communicate to C.H.I.P. Pro from a Windows computer you must install <a href="https://s3-us-west-2.amazonaws.com/getchip.com/extension/drivers/windows/InstallDriver2.exe">drivers</a>.</li>
 <li>Reboot after installing drivers on previous versions (&lt;10) of Windows. </li>
-<li>During the fastboot process <strong>Windows may issue the warning &ldquo;device not recognized&rdquo;</strong>. Getting this warning during fastboot is <strong>normal</strong> and <strong>flashing should proceed</strong>.</li>
+<li>During the fastboot process <strong>Windows may issue the warning “device not recognized”</strong>. Getting this warning during fastboot is <strong>normal</strong> and <strong>flashing should proceed</strong>.</li>
 </ul></li>
 <li><p>MacOS specific</p>
 
@@ -105,24 +105,24 @@ sudo udevadm control --reload-rules
 
 <p>When done with setup, press <strong>START!</strong>.</p>
 
-<p><img src="images/firstsetup.png" alt="first time setup" /></p>
+<p><img src="/images/firstsetup.png" alt="first time setup" /></p>
 
 <p>Once the extension is installed, plug the micro USB cable into the USB0 port on the Dev Kit (<strong>not on the C.H.I.P. Pro!</strong>). </p>
 
 <p>Hold down the FEL button (a pencil eraser works nicely) and with the other hand plug the USB cable into the computer. When the pink power and white status LEDs on C.H.I.P. Pro light up, you can release the FEL button.</p>
 
-<p><img src="images/pressPlug.jpg" alt="pushing FELL button" /></p>
+<p><img src="/images/pressPlug.jpg" alt="pushing FELL button" /></p>
 
 <p>The web flasher will search for and recognize C.H.I.P. Pro.</p>
 
-<p><img src="images/searchFlash.png" alt="searching page" /> </p>
+<p><img src="/images/searchFlash.png" alt="searching page" /> </p>
 
 <p>You will then be directed to the page with the example images. Hover over each image to see a description and click to see more details such as file size and kernel version. When you have chosen your adventure, click <strong>FLASH TO C.H.I.P. PRO</strong>.</p>
 
 <table><thead>
 <tr>
-<th style="text-align: center"><a href="images/imagesPage.jpg"><img src="images/imagesPage.png" alt="image page" /></a></th>
-<th style="text-align: center"><a href="images/imageDetail.png"><img src="images/imageDetail.png" alt="flash to board" /></a></th>
+<th style="text-align: center"><a href="images/imagesPage.jpg"><img src="/images/imagesPage.png" alt="image page" /></a></th>
+<th style="text-align: center"><a href="images/imageDetail.png"><img src="/images/imageDetail.png" alt="flash to board" /></a></th>
 </tr>
 </thead><tbody>
 <tr>
@@ -131,11 +131,11 @@ sudo udevadm control --reload-rules
 </tr>
 </tbody></table>
 
-<p>Watch the flashing process progress and leave the browser tab open in order for it to complete. You will be notified when C.H.I.P. Pro has been flashed successfully. You are then free to unplug the C.H.I.P. Pro or connect to it via <a href="/chip_pro.html#usb-serial-uart1-connection">serial</a>. </p>
+<p>Watch the flashing process progress and leave the browser tab open in order for it to complete. You will be notified when C.H.I.P. Pro has been flashed successfully. You are then free to unplug the C.H.I.P. Pro or connect to it via <a href="/chip-pro#usb-serial-uart1-connection">serial</a>. </p>
 
-<p><img src="images/flashFinish.png" alt="succeeded page" /></p>
+<p><img src="/images/flashFinish.png" alt="succeeded page" /></p>
 
-<p>If you are having problems with the flashing process follow the troubleshooting instructions given by the web flasher or check out the <a href="/chip.html#web-flasher-os-specific-issues">Web Flasher OS-Specific Issues</a> troubleshooting section. </p>
+<p>If you are having problems with the flashing process follow the troubleshooting instructions given by the web flasher or check out the <a href="/chip#web-flasher-os-specific-issues">Web Flasher OS-Specific Issues</a> troubleshooting section. </p>
 
 <h2 id="examples">Examples</h2>
 
@@ -149,23 +149,23 @@ sudo udevadm control --reload-rules
 
 <p>This example comes with the <a href="https://github.com/xtacocorex/CHIP_IO">CHIP_IO</a> library and Python, all in a very small package! </p>
 
-<p>Want to make sure your mics are working? Use this handy VU Meter example. Scream loudly, speak softly, tap the mics, and MAKE SOME NOISE, SPORTSFANS! You&rsquo;ll see the LEDs light proportional to the volume of the noise captured by the two built-in mics. Based on Buildroot.</p>
+<p>Want to make sure your mics are working? Use this handy VU Meter example. Scream loudly, speak softly, tap the mics, and MAKE SOME NOISE, SPORTSFANS! You’ll see the LEDs light proportional to the volume of the noise captured by the two built-in mics. Based on Buildroot.</p>
 
 <h4 id="pro">Pro</h4>
 
-<p>We provide a standard Debian distribution. Once flashed connect to the C.H.I.P. Pro via <a href="/chip_pro_devkit.html#usb-serial-uart1-connection">USB-serial</a> and log in with the default username <code class="prettyprint">chip</code> and password <code class="prettyprint">chip</code>.</p>
+<p>We provide a standard Debian distribution. Once flashed connect to the C.H.I.P. Pro via <a href="#usb-serial-uart1-connection">USB-serial</a> and log in with the default username <code class="prettyprint">chip</code> and password <code class="prettyprint">chip</code>.</p>
 
 <p>If you want to configure and build the rootfs for the Debian image, take a look at our <a href="https://github.com/NextThingCo/chip-os-pro">github repo</a></p>
 
 <h3 id="after-flashing-image">After Flashing Image</h3>
 
-<p><img src="images/poweroffB.gif" alt="power off button" /></p>
+<p><img src="/images/poweroffB.gif" alt="power off button" /></p>
 
 <p>When you are done or want to flash another example, hold down the power button on the Dev Kit until the Power and Activity LEDs shut off.</p>
 
 <h3 id="troubleshooting-flashing-fails">Troubleshooting Flashing Fails</h3>
 
-<p>If the flashing process fails we have <a href="/chip.html#web-flasher-os-specific-issues">troubleshooting recommendations</a> based on your OS. </p>
+<p>If the flashing process fails we have <a href="/chip#web-flasher-os-specific-issues">troubleshooting recommendations</a> based on your OS. </p>
 
           <h1 id="connect-and-control">Connect and Control</h1>
 
@@ -173,11 +173,11 @@ sudo udevadm control --reload-rules
 
 <h2 id="usb-serial-uart1-connection">USB-Serial UART1 Connection</h2>
 
-<p>This is the first thing you want to do in order to get your board online and give you access to C.H.I.P. Pro&rsquo;s software. The Dev Kit has a built-in USB to Serial converter for a direct connection to UART1. </p>
+<p>This is the first thing you want to do in order to get your board online and give you access to C.H.I.P. Pro’s software. The Dev Kit has a built-in USB to Serial converter for a direct connection to UART1. </p>
 
-<p><img src="images/usb0.jpg" alt="image page" /></p>
+<p><img src="/images/usb0.jpg" alt="image page" /></p>
 
-<p>To get started, connect the Dev Kit&rsquo;s USB0 port (<strong>not on the C.H.I.P. Pro!</strong>) to your computer with a common USB A to Micro-USB B cable. Next, you will need terminal emulation software on the computer C.H.I.P. Pro Dev Kit is connected to. Find the OS you are using below to see what software is needed and how to connect.</p>
+<p>To get started, connect the Dev Kit’s USB0 port (<strong>not on the C.H.I.P. Pro!</strong>) to your computer with a common USB A to Micro-USB B cable. Next, you will need terminal emulation software on the computer C.H.I.P. Pro Dev Kit is connected to. Find the OS you are using below to see what software is needed and how to connect.</p>
 
 <h3 id="os-x-amp-linux">OS X &amp; Linux</h3>
 
@@ -217,7 +217,7 @@ sudo udevadm control --reload-rules
 
 <p>When done with Screen, press Ctrl+A then Ctrl+k to kill all windows and terminate Screen. </p>
 
-<p>If you get the error <strong>&ldquo;Cannot open line&hellip; Resource busy&rdquo;</strong> when trying to connect via Screen it&rsquo;s because the last session was not properly exited. Here is how to back and exit properly.</p>
+<p>If you get the error <strong>“Cannot open line&hellip; Resource busy”</strong> when trying to connect via Screen it’s because the last session was not properly exited. Here is how to back and exit properly.</p>
 
 <p>Search for the open file and active process using usbserial:</p>
 <pre class="highlight plaintext"><code>lsof | grep usbserial
@@ -225,7 +225,7 @@ sudo udevadm control --reload-rules
 <p>You will get an output that looks something like this:</p>
 <pre class="highlight plaintext"><code>screen  27127 Sefi  5u  CHR             18,0        0t0     605 /dev/tty.usbserial
 </code></pre>
-<p>Note the process ID. In this case, it&rsquo;s 27127. Then run:</p>
+<p>Note the process ID. In this case, it’s 27127. Then run:</p>
 <pre class="highlight plaintext"><code>screen -x 27127
 </code></pre>
 <p>This will return you to the previous screen session. Then use Ctrl+A Ctrl+K to close it (will ask you to confirm).</p>
@@ -245,8 +245,8 @@ sudo udevadm control --reload-rules
 
 <table><thead>
 <tr>
-<th style="text-align: center"><a href="images/ComPort.PNG"><img src="images/ComPort.PNG" alt="Com Port" /></a></th>
-<th style="text-align: center"><a href="images/puTTYsetM.jpg"><img src="images/puTTYsetM.jpg" alt="puTTY" /></a></th>
+<th style="text-align: center"><a href="images/ComPort.PNG"><img src="/images/ComPort.PNG" alt="Com Port" /></a></th>
+<th style="text-align: center"><a href="images/puTTYsetM.jpg"><img src="/images/puTTYsetM.jpg" alt="puTTY" /></a></th>
 </tr>
 </thead><tbody>
 <tr>
@@ -365,8 +365,8 @@ vi /usr/bin/fade-pwms
 
 <table><thead>
 <tr>
-<th style="text-align: center"><a href="images/wifiConnectB.jpg"><img src="images/wifiConnectB.jpg" alt="wifi antenna connector" /></a></th>
-<th style="text-align: center"><a href="images/wifiPush.jpg"><img src="images/wifiPush.jpg" alt="push antenna on" /></a></th>
+<th style="text-align: center"><a href="images/wifiConnectB.jpg"><img src="/images/wifiConnectB.jpg" alt="wifi antenna connector" /></a></th>
+<th style="text-align: center"><a href="images/wifiPush.jpg"><img src="/images/wifiPush.jpg" alt="push antenna on" /></a></th>
 </tr>
 </thead><tbody>
 <tr>
@@ -375,7 +375,7 @@ vi /usr/bin/fade-pwms
 </tr>
 </tbody></table>
 
-<p><img src="images/wifiOn.jpg" alt="wifi antenna connected" /></p>
+<p><img src="/images/wifiOn.jpg" alt="wifi antenna connected" /></p>
 
 <h3 id="enable-wifi-antenna">Enable Wifi Antenna</h3>
 
@@ -410,7 +410,7 @@ vi /usr/bin/fade-pwms
 
 <ul>
 <li>C.H.I.P. Pro running buildroot OS</li>
-<li><a href="/chip_pro_devkit.html#usb-serial-uart1-connection">Serial connection</a> to C.H.I.P. Pro</li>
+<li><a href="#usb-serial-uart1-connection">Serial connection</a> to C.H.I.P. Pro</li>
 </ul>
 
 <h3 id="step-1-enable-wifi-and-find-a-network">Step 1: Enable WiFi and Find a Network</h3>
@@ -429,14 +429,14 @@ Donut_Hut            wifi_xxxxxxxxxxxx_xxxxxxxxx_managed_psk
 </code></pre>
 <h3 id="step-2-connect">Step 2: Connect</h3>
 
-<p>Copy the string that starts with &ldquo;wifi_&rsquo; to the right of the network name you want to connect to. If it has <code class="prettyprint">psk</code> at the end, that means it is password protected (short for Wi-Fi Protected Access 2 - Pre-Shared Key) and you need to scroll further down to the &rdquo; Password Protected&quot; section.</p>
+<p>Copy the string that starts with “wifi_’ to the right of the network name you want to connect to. If it has <code class="prettyprint">psk</code> at the end, that means it is password protected (short for Wi-Fi Protected Access 2 - Pre-Shared Key) and you need to scroll further down to the ” Password Protected&quot; section.</p>
 
 <h4 id="no-password">No Password</h4>
 
 <p>For example, to connect to NTC Guest, which has no password, <code class="prettyprint">services</code> shows two choices. We want the one without <code class="prettyprint">psk</code> in the string. Use the <code class="prettyprint">connect</code> command:</p>
 <pre class="highlight shell"><code>connmanctl connect wifi_xxxxxxxxxxxx_xxxxxx_managed_none
 </code></pre>
-<p>If your network is not password protected, you&rsquo;ll get some output that will indicate a successful connection, such as:</p>
+<p>If your network is not password protected, you’ll get some output that will indicate a successful connection, such as:</p>
 <pre class="highlight shell"><code><span class="o">[</span>  961.780000] RTL871X: rtw_set_802_11_connect<span class="o">(</span>wlan0<span class="o">)</span>  <span class="nv">fw_state</span><span class="o">=</span>0x00000008
 <span class="o">[</span>  962.070000] RTL871X: start auth
 <span class="o">[</span>  962.080000] RTL871X: auth success, start assoc
@@ -447,11 +447,11 @@ Donut_Hut            wifi_xxxxxxxxxxxx_xxxxxxxxx_managed_psk
 <span class="o">[</span>  962.300000] RTL871X: <span class="nb">set </span>pairwise key camid:4, addr:xx:xx:xx:xx:xx:xx, kid:0, <span class="nb">type</span>:AES
 <span class="o">[</span>  962.320000] RTL871X: <span class="nb">set </span>group key camid:5, addr:xx:xx:xx:xx:xx:xx, kid:1, <span class="nb">type</span>:AES
 </code></pre>
-<p>If your network is password protected you&rsquo;ll get an error.</p>
+<p>If your network is password protected you’ll get an error.</p>
 
 <h4 id="password-protected">Password-Protected</h4>
 
-<p>To deal with passwords you&rsquo;ll need to put ConnMan into interactive mode:</p>
+<p>To deal with passwords you’ll need to put ConnMan into interactive mode:</p>
 <pre class="highlight shell"><code>connmanctl
 </code></pre>
 <p>This command gives a <code class="prettyprint">connmanctl</code> prompt:</p>
@@ -476,7 +476,7 @@ Donut_Hut            wifi_xxxxxxxxxxxx_xxxxxxxxx_managed_psk
 </code></pre>
 <h3 id="step-3-test-connection">Step 3: Test Connection</h3>
 
-<p>Finally, you can test your connection to the internet with <code class="prettyprint">ping</code>. Google&rsquo;s DNS server at the IP address 8.8.8.8 is probably the most reliable computer on the internet, so:</p>
+<p>Finally, you can test your connection to the internet with <code class="prettyprint">ping</code>. Google’s DNS server at the IP address 8.8.8.8 is probably the most reliable computer on the internet, so:</p>
 <pre class="highlight shell"><code>ping -c 4 8.8.8.8
 </code></pre>
 <p>Expect ping to output some timing messages:</p>
@@ -503,7 +503,7 @@ ping: sendto: Network is unreachable
 <ul>
 <li><p>Review any messages that the connect command gave you. Did they look like the examples of a successful connection?</p></li>
 <li><p>Double check that you used the right network with the <code class="prettyprint">connect</code> command.</p></li>
-<li><p>If everything checked out until you got to <code class="prettyprint">ping</code>, there&rsquo;s a good chance the problem is with your router or connection to the internet. Some networks have firewalls on them that will allow you to connect but prevent foreign devices from transferring information. </p></li>
+<li><p>If everything checked out until you got to <code class="prettyprint">ping</code>, there’s a good chance the problem is with your router or connection to the internet. Some networks have firewalls on them that will allow you to connect but prevent foreign devices from transferring information. </p></li>
 <li><p>Connman not Installed Error</p>
 
 <p>If you try to use ConnMan and you get an error that it is not found or is not a     command, chances are that you are using the Debian image. The ConnMan commands only apply to C.H.I.P. Pros running the Buildroot OS.</p></li>
@@ -550,7 +550,7 @@ wifi_xxxxxxxxxxxx_xxxxxx_managed_none
 
 <ul>
 <li>C.H.I.P. Pro loaded with Debian</li>
-<li><a href="/chip_pro.html#usb-serial-uart1-connection">Serial connection</a> to C.H.I.P. Pro</li>
+<li><a href="/chip-pro#usb-serial-uart1-connection">Serial connection</a> to C.H.I.P. Pro</li>
 </ul>
 
 <h3 id="step-1-list-available-wi-fi-networks">Step 1: List available Wi-Fi networks</h3>
@@ -615,7 +615,7 @@ YOUR_NETWORK   xxxxxxxx-yyyy-zzzz-xxxx-yyyyyyyyyyyy  802-11-wireless  wlan0
 
 <h4 id="test">Test</h4>
 
-<p>Finally, you can test your connection to the internet with <code class="prettyprint">ping</code>. Google&rsquo;s DNS server at the IP address 8.8.8.8 is probably the most reliable computer on the internet, so:</p>
+<p>Finally, you can test your connection to the internet with <code class="prettyprint">ping</code>. Google’s DNS server at the IP address 8.8.8.8 is probably the most reliable computer on the internet, so:</p>
 <pre class="highlight shell"><code>ping -c 4 8.8.8.8
 </code></pre>
 <p>Expect ping to output some timing messages:</p>
@@ -660,13 +660,13 @@ YOUR_NETWORK   xxxxxxxx-yyyy-zzzz-xxxx-yyyyyyyyyyyy  802-11-wireless  wlan0
 <li>No Network Found</li>
 </ul>
 
-<p>No network within range. If there&rsquo;s no network, you can&rsquo;t connect. Go find a network!</p>
+<p>No network within range. If there’s no network, you can’t connect. Go find a network!</p>
 
 <ul>
 <li>Incorrect Password</li>
 </ul>
 
-<p>If you type in the wrong password, you&rsquo;ll get some errors like this:</p>
+<p>If you type in the wrong password, you’ll get some errors like this:</p>
 <pre class="highlight shell"><code><span class="o">[</span>32258.690000] RTL871X: rtw_set_802_11_connect<span class="o">(</span>wlan0<span class="o">)</span> <span class="nv">fw_state</span><span class="o">=</span>0x00000008
 <span class="o">[</span>32258.800000] RTL871X: start auth
 <span class="o">[</span>32263.720000] RTL871X: rtw_set_802_11_connect<span class="o">(</span>wlan0<span class="o">)</span> <span class="nv">fw_state</span><span class="o">=</span>0x00000008
@@ -682,8 +682,8 @@ Error: Timeout 90 sec expired.
 <li>Failed Ping</li>
 </ul>
 
-<p>If you don&rsquo;t have access to the internet, your ping to an outside IP will fail.
-It is possible that you can connect to a wireless network, but have no access to the internet, so you&rsquo;d see a connection when you request device status, but have a failed ping. This indicates a problem or restriction with the router or the access point.</p>
+<p>If you don’t have access to the internet, your ping to an outside IP will fail.
+It is possible that you can connect to a wireless network, but have no access to the internet, so you’d see a connection when you request device status, but have a failed ping. This indicates a problem or restriction with the router or the access point.</p>
 
 <p>A failed ping looks something like:</p>
 <pre class="highlight shell"><code>From 192.133.2.10 <span class="nv">icmp_seq</span><span class="o">=</span>14 Destination Host Unreachable
@@ -701,7 +701,7 @@ pipe 4
 <p>A sudden, unplanned disconnection will post an error in the terminal window:</p>
 <pre class="highlight shell"><code><span class="o">[</span>30863.880000] RTL871X: linked_status_chk<span class="o">(</span>wlan0<span class="o">)</span> disconnect or roaming
 </code></pre>
-<p>The Network Manager will periodically try to reconnect. If the access point is restored, you&rsquo;ll get something like this in your terminal window:</p>
+<p>The Network Manager will periodically try to reconnect. If the access point is restored, you’ll get something like this in your terminal window:</p>
 <pre class="highlight shell"><code><span class="o">[</span>31798.970000] RTL871X: rtw_set_802_11_connect<span class="o">(</span>wlan0<span class="o">)</span>
 <span class="o">[</span>31799.030000] RTL871X: start auth
 <span class="o">[</span>31799.040000] RTL871X: auth success, start assoc
@@ -743,9 +743,9 @@ pipe 4
 
 <p>There are two (2) analog MEMS (micro electro mechanical) microphones on the Dev Kit. These are enabled by default. </p>
 
-<p>If you want to use the MIC1 and MIC2 pins for audio input, you&rsquo;ll need to <a href="#back-traces">cut a trace</a>.</p>
+<p>If you want to use the MIC1 and MIC2 pins for audio input, you’ll need to <a href="#back-traces">cut a trace</a>.</p>
 
-<p>The &ldquo;Sleeve&rdquo; (bottom-most ring) on the TRRS jack can be used as a mono audio input, suitable for microphones commonly built-in to headphones. If you want to used this connector, you&rsquo;ll need to <a href="#back-traces">cut a trace</a>.</p>
+<p>The “Sleeve” (bottom-most ring) on the TRRS jack can be used as a mono audio input, suitable for microphones commonly built-in to headphones. If you want to used this connector, you’ll need to <a href="#back-traces">cut a trace</a>.</p>
 
 <h3 id="output">Output</h3>
 
@@ -790,9 +790,9 @@ pipe 4
 </ul></li>
 </ul>
 
-<p>To see all the functions C.H.I.P. Pro pins offer check out the <a href="/chip_pro.html#gr8-pins-and-multiplexing-on-c-h-i-p-pro">Multiplexing table</a>.</p>
+<p>To see all the functions C.H.I.P. Pro pins offer check out the <a href="/chip-pro#gr8-pins-and-multiplexing-on-c-h-i-p-pro">Multiplexing table</a>.</p>
 
-<p><img src="images/Pro_Pinout.jpg" alt="pin out" /></p>
+<p><img src="/images/Pro_Pinout.jpg" alt="pin out" /></p>
 
 <h3 id="interacting-with-sysfs">Interacting with Sysfs</h3>
 
@@ -804,7 +804,7 @@ pipe 4
 <p><strong>Buildroot</strong>:</p>
 <pre class="highlight shell"><code><span class="nb">echo </span>132 &gt; /sys/class/gpio/export
 </code></pre>
-<p>Follow along with the examples to learn more about sysfs including how to directly read and write to sysfs. All examples in the GPIO documentation are done using one of NTC&rsquo;s <strong>Buildroot</strong> based images. </p>
+<p>Follow along with the examples to learn more about sysfs including how to directly read and write to sysfs. All examples in the GPIO documentation are done using one of NTC’s <strong>Buildroot</strong> based images. </p>
 
 <h3 id="gpio-sysfs-numbers">GPIO Sysfs Numbers</h3>
 
@@ -924,7 +924,7 @@ pipe 4
 
 <p>UART1:</p>
 
-<p>** These pins are connected to the FE1.1S USB hub controller IC which is connected to the micro USB providing USB serial functionality. To use them as GPIO disable the USB hub controller by cutting the &ldquo;UART Disconnect&rdquo; <a href="/chip_pro_devkit.html#cuttable-traces">traces</a>. </p>
+<p>** These pins are connected to the FE1.1S USB hub controller IC which is connected to the micro USB providing USB serial functionality. To use them as GPIO disable the USB hub controller by cutting the “UART Disconnect” <a href="#cuttable-traces">traces</a>. </p>
 
 <table><thead>
 <tr>
@@ -944,15 +944,15 @@ pipe 4
 
 <p>If a pin is not listed above you can calculate the sysfs number starting with the GR8 port number. All port numbers are printed on C.H.I.P. Pro for your convenience. They can also be found in the <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/blob/master/Datasheets/GR8_Datasheet_v1.0.pdf">Allwinner R8 Datasheet</a> starting on page 15. </p>
 
-<p>As an example, take a look at <strong>D0</strong> which is port <strong>PE4</strong>. Look at the letter that follows the &ldquo;P&rdquo;, in this case it&rsquo;s &ldquo;E&rdquo;. Starting with A = 0, count up in the alphabet until you arrive at &ldquo;E&rdquo; and that is the letter index. For example, <strong>E=4</strong>.</p>
+<p>As an example, take a look at <strong>D0</strong> which is port <strong>PE4</strong>. Look at the letter that follows the “P”, in this case it’s “E”. Starting with A = 0, count up in the alphabet until you arrive at “E” and that is the letter index. For example, <strong>E=4</strong>.</p>
 
-<p>Multiply the letter index by 32, then add the number that follows &ldquo;PE&rdquo;:</p>
+<p>Multiply the letter index by 32, then add the number that follows “PE”:</p>
 
 <p>(4*32)+4 = 132</p>
 
 <h3 id="export-digital-gpios">Export Digital GPIOs</h3>
 
-<p>The GPIO control interface can be found at <code class="prettyprint">/sys/class/gpio</code>. To explore the sysfs file structure, connect to C.H.I.P. Pro via <a href="/chip_pro_devkit.html#usb-serial-uart1-connection">USB-serial</a> and in a terminal window type: </p>
+<p>The GPIO control interface can be found at <code class="prettyprint">/sys/class/gpio</code>. To explore the sysfs file structure, connect to C.H.I.P. Pro via <a href="#usb-serial-uart1-connection">USB-serial</a> and in a terminal window type: </p>
 <pre class="highlight plaintext"><code>ls /sys/class/gpio
 </code></pre>
 <p>In the <strong>gpio</strong> directory you will find:</p>
@@ -969,9 +969,9 @@ pipe 4
 <pre class="highlight shell"><code>ls /sys/class/gpio/export/gpio132
 </code></pre>
 <ul>
-<li><strong>direction</strong> - Set direction of pin using &ldquo;in&rdquo; or out&quot;. All GPIOs are I/Os except for PE0, PE1 and PE2 which are input only.</li>
+<li><strong>direction</strong> - Set direction of pin using “in” or “out.” All GPIOs are I/Os except for PE0, PE1 and PE2 which are input only.</li>
 <li><strong>value</strong> - Value of pin written or read as either 0 (low) or 1 (high).</li>
-<li><strong>edge</strong> - Written or read as either &ldquo;non&rdquo;, &ldquo;rising&rdquo;, &ldquo;falling&rdquo;, or &ldquo;both&rdquo;. This attribute only shows up when the pin can be configurred as an interrupt.</li>
+<li><strong>edge</strong> - Written or read as either “non”, “rising”, “falling”, or “both”. This attribute only shows up when the pin can be configurred as an interrupt.</li>
 <li><strong>active_low</strong> - Reads as either 0 (false) or 1 (true). Write any nonzero value to invert the value attribute both for reading and writing.</li>
 </ul>
 
@@ -981,7 +981,7 @@ pipe 4
 
 <p>The following example goes through a general command sequence to read the changing state of a pin. This example reads a switch connected to <strong>PE4</strong>. When wiring up a switch, add an external pull-up or pull-down resistor to prevent a floating pin logic state. The photo below shows a pull-down resistor.</p>
 
-<p><img src="images/pullDown.jpg" alt="pull-down resistor" /></p>
+<p><img src="/images/pullDown.jpg" alt="pull-down resistor" /></p>
 
 <p>In terminal, tell the system you want to listen to a pin by exporting it:</p>
 <pre class="highlight shell"><code><span class="nb">echo </span>132 &gt; /sys/class/gpio/export
@@ -989,7 +989,7 @@ pipe 4
 <p>Next, the pin direction needs to be set. Use <code class="prettyprint">cat</code> to read what direction the pin is currently set to:</p>
 <pre class="highlight shell"><code>cat /sys/class/gpio/gpio132/direction
 </code></pre>
-<p>Switch the pin&rsquo;s direction to &ldquo;in&rdquo;:</p>
+<p>Switch the pin’s direction to “in”:</p>
 <pre class="highlight shell"><code><span class="nb">echo </span><span class="k">in</span> &gt; /sys/class/gpio/gpio132/direction
 </code></pre>
 <p>Connect a switch between pin PE4 and GND and read the value:</p>
@@ -1013,19 +1013,19 @@ pipe 4
 
 <p><strong>Blinkenlights Image</strong></p>
 
-<p>To start with an example that demos the eight I/Os and two PWM onboard LEDs, <a href="/chip_pro_devkit.html#examples">flash C.H.I.P. Pro Dev Kit with the Blinkenlights</a> image and <a href="/chip_pro_devkit.html#edit-buildroot-examples">view the example scripts</a> using the command-line editor Vi. </p>
+<p>To start with an example that demos the eight I/Os and two PWM onboard LEDs, <a href="#examples">flash C.H.I.P. Pro Dev Kit with the Blinkenlights</a> image and <a href="#edit-buildroot-examples">view the example scripts</a> using the command-line editor Vi. </p>
 
 <p><strong>Turn LED On and Off</strong></p>
 
 <p>Follow along to turn on and off the LED attached to pin 37.</p>
 
-<p><img src="images/blink.gif" alt="UART connection" /></p>
+<p><img src="/images/blink.gif" alt="UART connection" /></p>
 
-<p>Export the pin and change the mode from &ldquo;in” to “out”:</p>
+<p>Export the pin and change the mode from “in” to “out”:</p>
 <pre class="highlight shell"><code><span class="nb">echo </span>132 &gt; /sys/class/gpio/export
 <span class="nb">echo </span>out &gt; /sys/class/gpio/gpio132/direction
 </code></pre>
-<p>Now that it&rsquo;s in output mode, you can write a value to the pin and turn the LED on and off:</p>
+<p>Now that it’s in output mode, you can write a value to the pin and turn the LED on and off:</p>
 <pre class="highlight shell"><code><span class="nb">echo </span>1 &gt; /sys/class/gpio/gpio132/value
 <span class="nb">echo </span>0 &gt; /sys/class/gpio/gpio132/value
 </code></pre>
@@ -1039,7 +1039,7 @@ pipe 4
 </code></pre>
 <h3 id="unexport-gpio">Unexport GPIO</h3>
 
-<p>If pins have not been unexported an error will occur stating the pins are &quot;busy&rdquo; the next time you go to export them. When you are done using a GPIO pin <strong>always</strong> tell the system to stop listening by unexporting it:</p>
+<p>If pins have not been unexported an error will occur stating the pins are &quot;busy” the next time you go to export them. When you are done using a GPIO pin <strong>always</strong> tell the system to stop listening by unexporting it:</p>
 <pre class="highlight shell"><code><span class="nb">echo </span>132 &gt; /sys/class/gpio/unexport
 </code></pre>
 <h2 id="pwm">PWM</h2>
@@ -1056,11 +1056,11 @@ pipe 4
 <p><strong>Buildroot</strong>:</p>
 <pre class="highlight shell"><code><span class="nb">echo </span>0 &gt; <span class="nb">export</span> <span class="c">#PWM0</span>
 </code></pre>
-<p>All PWM examples are done using one of NTC&rsquo;s <strong>Buildroot</strong> based images. </p>
+<p>All PWM examples are done using one of NTC’s <strong>Buildroot</strong> based images. </p>
 
 <h3 id="export-pwm-channel">Export PWM Channel</h3>
 
-<p>The Linux kernel provides a simple <strong>sysfs</strong> interface to access PWM from. The PWM controller can be found exported as <strong>pwmchip0</strong> at <code class="prettyprint">/sys/class/pwm/pwmchip0</code>. To test the PWM channels and explore the sysfs file structure, connect to C.H.I.P. Pro via <a href="/chip_pro_devkit.html#usb-serial-uart1-connection">USB-serial</a> and in a terminal window type: </p>
+<p>The Linux kernel provides a simple <strong>sysfs</strong> interface to access PWM from. The PWM controller can be found exported as <strong>pwmchip0</strong> at <code class="prettyprint">/sys/class/pwm/pwmchip0</code>. To test the PWM channels and explore the sysfs file structure, connect to C.H.I.P. Pro via <a href="#usb-serial-uart1-connection">USB-serial</a> and in a terminal window type: </p>
 <pre class="highlight plaintext"><code>ls /sys/class/pwm/pwmchip0
 </code></pre>
 <p>In the <strong>pwmchip0</strong> directory you will find:</p>
@@ -1071,7 +1071,7 @@ pipe 4
 <li><strong>npwm</strong> - Says how many PWM channels are available. </li>
 </ul>
 
-<p>You can see there are two PWM channels available from C.H.I.P. Pro&rsquo;s PWM controller/chip by using <code class="prettyprint">cat</code>:</p>
+<p>You can see there are two PWM channels available from C.H.I.P. Pro’s PWM controller/chip by using <code class="prettyprint">cat</code>:</p>
 <pre class="highlight plaintext"><code>cd /sys/class/pwm/pwmchip0
 cat npwm
 </code></pre>
@@ -1107,16 +1107,16 @@ ls
 
 <p>1 - enabled</p></li>
 <li><p><strong>period</strong> - Total period of inactive and active time of the PWM signal in nanoseconds.</p></li>
-<li><p><strong>polarity</strong> - Changes the polarity of the PWM signal. Value is &ldquo;normal&rdquo; or &ldquo;inversed&rdquo;.</p></li>
+<li><p><strong>polarity</strong> - Changes the polarity of the PWM signal. Value is “normal” or “inversed”.</p></li>
 </ul>
 
 <p>To test the PWM channels follow the examples below.</p>
 
 <h3 id="pwm-led-example">PWM LED Example</h3>
 
-<p>There are two onboard LEDs connected to the PWM pins for testing and learning about pulse width modulation. You can disconnect these PWM LEDs at any time by <a href="/chip_pro_devkit.html#cuttable-traces">cutting traces</a>. </p>
+<p>There are two onboard LEDs connected to the PWM pins for testing and learning about pulse width modulation. You can disconnect these PWM LEDs at any time by <a href="#cuttable-traces">cutting traces</a>. </p>
 
-<p><img src="images/fade.gif" alt="PWM0 LED fade" /></p>
+<p><img src="/images/fade.gif" alt="PWM0 LED fade" /></p>
 
 <p>Export a channel, set the polarity and enable PWM0:</p>
 <pre class="highlight shell"><code><span class="nb">echo </span>0 &gt; /sys/class/pwm/pwmchip0/export
@@ -1140,13 +1140,13 @@ ls
 </code></pre>
 <h3 id="pwm-servo-examples">PWM Servo Examples</h3>
 
-<p><img src="images/mainServo.jpg" alt="servo connected to dev kit" /></p>
+<p><img src="/images/mainServo.jpg" alt="servo connected to dev kit" /></p>
 
 <p>The C.H.I.P. Pro Dev Kit provides breakout pins to conveniently power and control servos. </p>
 
-<p>Most servos have three pins: <strong>power</strong>, <strong>ground</strong>, and a <strong>control signal</strong>. The control signal is a pulse-width-modulated input signal whose high pulse width (within a determined period) determines the servo&rsquo;s angular position. The control signal pin draws a small enough amount of current that it can be directly controlled by the PWM pins on C.H.I.P. Pro. </p>
+<p>Most servos have three pins: <strong>power</strong>, <strong>ground</strong>, and a <strong>control signal</strong>. The control signal is a pulse-width-modulated input signal whose high pulse width (within a determined period) determines the servo’s angular position. The control signal pin draws a small enough amount of current that it can be directly controlled by the PWM pins on C.H.I.P. Pro. </p>
 
-<p><img src="images/pwmPins.jpg" alt="servo connected to dev kit" /></p>
+<p><img src="/images/pwmPins.jpg" alt="servo connected to dev kit" /></p>
 
 <p>While the control signal pin draws a low amount of power, the servo motor draws more power than the C.H.I.P. Pro can provide on its own. The Dev Kit helps with this by providing a <strong>5 volt power pin</strong> next to the signal and ground pin. This pin is connected to the <strong>DC-In barrel jack</strong>. </p>
 
@@ -1157,7 +1157,7 @@ ls
 <p>Export the PWM pin you want to use:</p>
 <pre class="highlight shell"><code><span class="nb">echo </span>0 &gt; /sys/class/pwm/pwmchip0/pwm0/export
 </code></pre>
-<p><strong>Enable</strong> the channel and set the <strong>polarity</strong>, <strong>period</strong> of the waveform and <strong>duty cycle</strong>. Units are in <strong>nanoseconds</strong>. The <strong>polarity</strong> can only be set before the pin is enabled. If you set it after enabling a pin the script should still work but you will see a &ldquo;I/O error&rdquo;. Most servos operate at <strong>50Hz which translates into a 20000000 ns period</strong>. Start the <strong>duty cycle</strong> at <strong>0</strong>:</p>
+<p><strong>Enable</strong> the channel and set the <strong>polarity</strong>, <strong>period</strong> of the waveform and <strong>duty cycle</strong>. Units are in <strong>nanoseconds</strong>. The <strong>polarity</strong> can only be set before the pin is enabled. If you set it after enabling a pin the script should still work but you will see a “I/O error”. Most servos operate at <strong>50Hz which translates into a 20000000 ns period</strong>. Start the <strong>duty cycle</strong> at <strong>0</strong>:</p>
 <pre class="highlight shell"><code><span class="nb">echo </span>normal &gt; /sys/class/pwm/pwmchip0/pwm0/polarity
 <span class="nb">echo </span>1 &gt; /sys/class/pwm/pwmchip0/pwm0/enable
 <span class="nb">echo </span>20000000 &gt; /sys/class/pwm/pwmchip0/pwm0/period
@@ -1167,7 +1167,7 @@ ls
 
 <h4 id="180-servo">180º Servo</h4>
 
-<p><img src="images/sweep_180.gif" alt="180º servo sweeping" /></p>
+<p><img src="/images/sweep_180.gif" alt="180º servo sweeping" /></p>
 
 <p><strong>Servo Used in Example</strong></p>
 
@@ -1175,7 +1175,7 @@ ls
 <li>180º degree 4.8V - 6V <a href="http://hitecrcd.com/products/servos/micro-and-mini-servos/analog-micro-and-mini-servos/hs-40-economical-nano-nylon-gear-servo/product">Hitec HS-40</a></li>
 </ul>
 
-<p>Before you start to work with your servo, check the servo&rsquo;s datasheet. There you can sometimes find the pulse width range needed to control it. </p>
+<p>Before you start to work with your servo, check the servo’s datasheet. There you can sometimes find the pulse width range needed to control it. </p>
 
 <p>To rotate 180º most servos require a duty cycle where 1000000 ns/1 ms corresponds to the minimum angle and 2000000 ns/2 ms corresponds to the maximum angle. However, not all servos are the same and will require calibration. For example, the HS-40 used in this example has a minimum of 600000 ns/0.6 ms and maximum of 2400000 ns/2.4 ms. A good place to start is somewhere in the middle like 1500000 ns/1.5 ms. You can then go up and down from there to find the max. and min. </p>
 
@@ -1194,7 +1194,7 @@ ls
 
 <h4 id="360-continuos-servo">360º Continuos Servo</h4>
 
-<p><img src="images/sweep_360.gif" alt="360º sweeping" /></p>
+<p><img src="/images/sweep_360.gif" alt="360º sweeping" /></p>
 
 <p><strong>Servo Used in Example</strong></p>
 
@@ -1202,7 +1202,7 @@ ls
 <li>360º Continuous 4.8V - 6V <a href="https://cdn-shop.adafruit.com/product-files/2442/FS90R-V2.0_specs.pdf">FEETEC FS90R Micro Servo</a></li>
 </ul>
 
-<p>For a continuous servo the PWM input signal controls the speed, direction of rotation and stopping period.  Before you start to work with your servo, check the servo&rsquo;s datasheet. There you can sometimes find the pulse width range needed to control it. </p>
+<p>For a continuous servo the PWM input signal controls the speed, direction of rotation and stopping period.  Before you start to work with your servo, check the servo’s datasheet. There you can sometimes find the pulse width range needed to control it. </p>
 
 <p>A typical stop width is <strong>1500000 ns/1.5 ms</strong>. The further the time travels above and below the stop width, the slower the rotation speed gets.</p>
 
@@ -1220,7 +1220,7 @@ ls
 
 <h3 id="unexport-pwm">Unexport PWM</h3>
 
-<p>If pins have not been unexported an error will occur stating the pins are &ldquo;busy&rdquo; the next time you go to export them. When you are done using a PWM pin <strong>always</strong> tell the system to stop listening by unexporting it:</p>
+<p>If pins have not been unexported an error will occur stating the pins are “busy” the next time you go to export them. When you are done using a PWM pin <strong>always</strong> tell the system to stop listening by unexporting it:</p>
 <pre class="highlight shell"><code><span class="nb">echo </span>0 &gt; /sys/class/gpio/unexport <span class="c">#PWM0</span>
 </code></pre>
           <h1 id="power">Power</h1>
@@ -1229,7 +1229,7 @@ ls
 
 <p>After C.H.I.P. Pro has been flashed with a new image you can power off the board by holding the power button on the dev board down (for about 5 seconds). Wait for the power and status LEDs to turn off. </p>
 
-<p><img src="images/poweroffB.gif" alt="power off button" /></p>
+<p><img src="/images/poweroffB.gif" alt="power off button" /></p>
 
 <p>If running processes while connected to C.H.I.P. Pro we recommend powering off C.H.I.P. Pro via command line:</p>
 
@@ -1243,7 +1243,7 @@ ls
 
 <h2 id="power-c-h-i-p-pro-dev-kit">Power C.H.I.P. Pro Dev Kit</h2>
 
-<p><img src="images/powerIn.jpg" alt="image page" /></p>
+<p><img src="/images/powerIn.jpg" alt="image page" /></p>
 
 <p>There are three ports on the Dev Kit that support three different power supplies:</p>
 
@@ -1285,7 +1285,7 @@ ls
 </ul>
 <pre class="highlight shell"><code>sudo i2cset -y -f 0 0x34 0x82 0x82
 </code></pre>
-<p>The AXP209 IC is seen as a I2C device on C.H.I.P. Pro. By default the AXP209 is tuned for a 10KΩ 1% thermistor at 25°C with a programmable register for thermistor current to adapt to different devices. You can find more information on this setup in the <a href="https://github.com/NextThingCo/CHIP-Hardware/blob/master/CHIP%5Bv1_0%5D/CHIPv1_0-BOM-Datasheets/AXP209_Datasheet_v1.0en.pdf">AXP209 Datasheet</a>. Search &ldquo;ts pin&rdquo; to quickly find information.</p>
+<p>The AXP209 IC is seen as a I2C device on C.H.I.P. Pro. By default the AXP209 is tuned for a 10KΩ 1% thermistor at 25°C with a programmable register for thermistor current to adapt to different devices. You can find more information on this setup in the <a href="https://github.com/NextThingCo/CHIP-Hardware/blob/master/CHIP%5Bv1_0%5D/CHIPv1_0-BOM-Datasheets/AXP209_Datasheet_v1.0en.pdf">AXP209 Datasheet</a>. Search “ts pin” to quickly find information.</p>
 
 <h2 id="axp209-power-management">AXP209 Power Management</h2>
 
@@ -1319,7 +1319,7 @@ ls
 </tr>
 </tbody></table>
 
-<p>Overvoltage can cause permanent damage. Find more details for each port&rsquo;s specifications in the <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/blob/master/v0.9/Datasheets/CHIP_PRO_Datasheet_v1.0.pdf">C.H.I.P. Pro datasheet</a> and <a href="https://github.com/NextThingCo/CHIP-Hardware/blob/master/CHIP%5Bv1_0%5D/CHIPv1_0-BOM-Datasheets/AXP209_Datasheet_v1.0en.pdf">AXP209 Datasheet.</a></p>
+<p>Overvoltage can cause permanent damage. Find more details for each port’s specifications in the <a href="https://github.com/NextThingCo/CHIP_Pro-Hardware/blob/master/v0.9/Datasheets/CHIP_PRO_Datasheet_v1.0.pdf">C.H.I.P. Pro datasheet</a> and <a href="https://github.com/NextThingCo/CHIP-Hardware/blob/master/CHIP%5Bv1_0%5D/CHIPv1_0-BOM-Datasheets/AXP209_Datasheet_v1.0en.pdf">AXP209 Datasheet.</a></p>
 
           <h1 id="technical-documents">Technical Documents</h1>
 
@@ -1341,11 +1341,11 @@ ls
 
 <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
 
-          <h1 id="what-39-s-on-the-board">What&rsquo;s on the Board</h1>
+          <h1 id="what-39-s-on-the-board">What’s on the Board</h1>
 
 <h2 id="c-h-i-p-pro-dev-kit-features">C.H.I.P. Pro Dev Kit Features</h2>
 
-<p><img src="images/frontCallout.jpg" alt="Front Callouts" /></p>
+<p><img src="/images/frontCallout.jpg" alt="Front Callouts" /></p>
 
 <ul>
 <li><strong>USB1 Port (2.0 Host)</strong> - USB A jack lets C.H.I.P. Pro act as a USB EHCI/OHCI host for external devices. By default, this is powered by the USB micro jack. Cut the appropriate trace to power this from the barrel jack instead. </li>
@@ -1365,7 +1365,7 @@ ls
 
 <h2 id="pin-headers">Pin Headers</h2>
 
-<p><img src="images/ThruHoles.jpg" alt="Pin Headers" /></p>
+<p><img src="/images/ThruHoles.jpg" alt="Pin Headers" /></p>
 
 <p>There are several areas where pin headers can be soldered into through-holes for easy access and control of the pins on C.H.I.P. Pro.</p>
 
@@ -1383,49 +1383,49 @@ ls
 
 <p>Most of these traces are on the back of the board with one very important exception. The USB0 jumpers on the front are connected to the micro USB0 port on the Dev Kit. This renders the micro USB port on the C.H.I.P. Pro itself unusable. If you would like to use the micro USB port on C.H.I.P. Pro these must be cut. </p>
 
-<p><img src="images/cutJumpers.jpg" alt="Front Callouts" /></p>
+<p><img src="/images/cutJumpers.jpg" alt="Front Callouts" /></p>
 
 <h3 id="front-traces">Front Traces</h3>
 
 <ul>
-<li><strong>USB0 Disconnect</strong> - There are two traces that are important for USB communication and one (1) trace that will disconnect USB power from the main micro USB connnector to C.H.I.P. Pro. To disconnect the dev kit&rsquo;s main micro USB connector, cut between the pads for the traces marked &ldquo;+&rdquo; and &ldquo;-&rdquo;. These are for the &ldquo;D+&rdquo; and &ldquo;D-&rdquo; USB data lines. This will allow you to use the micro USB connector on the C.H.I.P. Pro.</li>
+<li><strong>USB0 Disconnect</strong> - There are two traces that are important for USB communication and one (1) trace that will disconnect USB power from the main micro USB connnector to C.H.I.P. Pro. To disconnect the dev kit’s main micro USB connector, cut between the pads for the traces marked “+” and “-”. These are for the “D+” and “D-” USB data lines. This will allow you to use the micro USB connector on the C.H.I.P. Pro.</li>
 </ul>
 
 <h3 id="back-traces">Back Traces</h3>
 
 <ul>
-<li><strong>UART Disconnect</strong> - Cut these traces to disable the UART functionality from the dev kit&rsquo;s USB micro connector. This disables the FE1.1S USB hub controller IC.</li>
+<li><strong>UART Disconnect</strong> - Cut these traces to disable the UART functionality from the dev kit’s USB micro connector. This disables the FE1.1S USB hub controller IC.</li>
 <li><strong>MIC1/MIC2 Power Select</strong> - Cut-and-solder these pads to change the power source for the onboard mics. Cut between the pads marked with the line, then solder bridge the other two pads to select 3.3 volt power instead of the default VMIC power for MIC1 or MIC2. By default the dev kit is wired to VMIC which provides power only while recording. </li>
 <li><strong>MIC1/MIC2 Ground Select</strong> - Cut-and-solder these pads to change the ground for the onboard mics. Cut between the pads with the line, then solder between the other two pads to select GND instead of the default AGND power for MIC1 or MIC2.</li>
-<li><strong>GPIO LED Disconnect</strong> - If you don&rsquo;t want the on-board GPIO LEDs to illuminate, cut this trace.</li>
+<li><strong>GPIO LED Disconnect</strong> - If you don’t want the on-board GPIO LEDs to illuminate, cut this trace.</li>
 <li><strong>MIC2 Disconnect</strong> - Cut this trace to disconnect the onboard microphone and enable the MIC2 pin on C.H.I.P. Pro.</li>
-<li><strong>PWM LED Disconnect</strong> - If you don&rsquo;t want the LEDs to illuminate when using PWM from the C.H.I.P. Pro pins, cut this trace. </li>
+<li><strong>PWM LED Disconnect</strong> - If you don’t want the LEDs to illuminate when using PWM from the C.H.I.P. Pro pins, cut this trace. </li>
 <li><strong>MIC1 Disconnect</strong> - Cut this trace to disconnect the onboard microphone and enable the MIC1 pin on C.H.I.P. Pro.</li>
-<li><strong>Enable Sleeve for MIC1 IN</strong> - Solder over these pads to use the sleeve (&ldquo;S&rdquo; of the TRRS) of the 1/8&quot; audio jack.</li>
+<li><strong>Enable Sleeve for MIC1 IN</strong> - Solder over these pads to use the sleeve (“S” of the TRRS) of the 1/8&quot; audio jack.</li>
 <li><strong>HP (headphone) Ground Select</strong> - Cut-and-solder these pads to change the grounding for the headphone jack. Cut between the pads with the line, then solder between the other two pads to use HPCOM instead of GND.</li>
-<li><strong>Battery Disconnect</strong> - If you want to add a switch for a battery, you&rsquo;ll need to cut this trace, then solder a switch into the through-holes provided.</li>
+<li><strong>Battery Disconnect</strong> - If you want to add a switch for a battery, you’ll need to cut this trace, then solder a switch into the through-holes provided.</li>
 <li><strong>USB1 Host Power Select</strong> - Cut-and-solder to power the USB A (host) jack from the barrel jack (wall power) instead of the default power from the USB Micro. </li>
 </ul>
 
 <h2 id="how-to-cut">How to Cut</h2>
 
-<p>Here&rsquo;s what you need to know about modifying and repairing the traces on the Dev Kit to experiment and test different configurations.</p>
+<p>Here’s what you need to know about modifying and repairing the traces on the Dev Kit to experiment and test different configurations.</p>
 
 <h3 id="cut">Cut</h3>
 
 <p>To get the job done you need to grab an X-acto knife or another small, sharp blade. The goal is to cut the trace connecting the two solder pads while NOT cutting anything else. The area to cut is very small so if you happen to own a pair of magnifying eye glasses now is the time to use them! To help stay in one place and not accidentally run the blade over another trace think of the cutting action as more of a digging one. </p>
 
-<p><img src="images/traces_cut.jpg" alt="Cut Jumper" /></p>
+<p><img src="/images/traces_cut.jpg" alt="Cut Jumper" /></p>
 
 <p>When you feel like you may have successfully cut through test the connection with your multimeter to confirm the disconnect.</p>
 
-<p><img src="images/traces_test.jpg" alt="Test Jumper" /></p>
+<p><img src="/images/traces_test.jpg" alt="Test Jumper" /></p>
 
 <h3 id="cut-and-solder">Cut-and-Solder</h3>
 
 <p>Some of these require both a trace cut and a solder bridge. For example, the MIC1 power has three pads. Cut between two of the pads, and bridge two with solder.</p>
 
-<p><img src="images/traces_solderCutHand.jpg" alt="Solder and Cut Jumper" /></p>
+<p><img src="/images/traces_solderCutHand.jpg" alt="Solder and Cut Jumper" /></p>
 
 <h3 id="revert-and-repair">Revert and Repair</h3>
 
@@ -1433,4 +1433,4 @@ ls
 
 <p>If you need some reminding, circuit paths that came as default are indicated with a silkscreened bar under the originally connected pads.</p>
 
-<p><img src="images/traces_solderBridge.jpg" alt="Solder Bridge" /></p>
+<p><img src="/images/traces_solderBridge.jpg" alt="Solder Bridge" /></p>

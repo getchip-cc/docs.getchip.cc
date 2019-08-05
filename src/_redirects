@@ -1,1 +1,8 @@
 https://docs-getchip-cc.netlify.com/* https://docs.getchip.cc/:splat 301!
+
+/chip_pro_devkit.html     /chip-pro-devkit    301!
+/chip_pro.html            /chip-pro           301!
+/chip.html                /chip               301!
+/dip.html                 /dip                301!
+/gadget.html              /gadget             301!
+/pocketchip.html          /pocketchip         301!

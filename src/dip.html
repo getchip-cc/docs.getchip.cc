@@ -4,11 +4,11 @@ permalink: /dip.html
 title: Next Thing Co. DIPs for C.H.I.P. Documentation
 ---
 
-<h1 id="what-39-s-a-dip">What&rsquo;s a DIP?</h1>
+<h1 id="what-39-s-a-dip">What’s a DIP?</h1>
 
 <p>DIPs are accessory boards that give new capabilities to C.H.I.P.  DIPs come in many flavors, like official Next Thing Co. HDMI and VGA DIPs that give C.H.I.P. higher resolution video output to community DIPs that add more USB ports, control motors, or blink LEDs.  C.H.I.P.s (with the proper software) automatically recognize when a DIP is attached and act accordingly.</p>
 
-<p>Here you&rsquo;ll find specs and instructions for the official Next Thing Co. HDMI and VGA DIPs as well as tips and tricks to get you started making your own.</p>
+<p>Here you’ll find specs and instructions for the official Next Thing Co. HDMI and VGA DIPs as well as tips and tricks to get you started making your own.</p>
 
 <h2 id="requirements">Requirements</h2>
 
@@ -16,23 +16,23 @@ title: Next Thing Co. DIPs for C.H.I.P. Documentation
 
 <h2 id="attaching-dips">Attaching DIPs</h2>
 
-<p>Here&rsquo;s how you connect a DIP to C.H.I.P.</p>
+<p>Here’s how you connect a DIP to C.H.I.P.</p>
 
 <p>Orient the USB connector opposite the video connector.</p>
 
-<p><img src="images/vga_attach-0.jpg" alt="Attach the DIP" /></p>
+<p><img src="/images/vga_attach-0.jpg" alt="Attach the DIP" /></p>
 
-<p>Align the pins to C.H.I.P.&rsquo;s headers and gently press with even force until&hellip;.</p>
+<p>Align the pins to C.H.I.P.’s headers and gently press with even force until&hellip;.</p>
 
-<p><img src="images/vga_attach-1.jpg" alt="Attach the DIP" /></p>
+<p><img src="/images/vga_attach-1.jpg" alt="Attach the DIP" /></p>
 
 <p>&hellip;the two pieces are joined. Tasty!</p>
 
-<p><img src="images/vga_attach-2.jpg" alt="Attach the DIP" /></p>
+<p><img src="/images/vga_attach-2.jpg" alt="Attach the DIP" /></p>
 
 <h2 id="disconnect-the-dip">Disconnect the DIP</h2>
 
-<p>With great care! It&rsquo;s important to pull with an even force to separate the DIP from the CHIP. It helps to gradually work the DIP away from the pin header at each side. When you can see a slight and even amount of exposed DIP pins on all sides, then you can grip the C.H.I.P. and DIP in the middle and pull them apart evenly. You do not want bent header pins on your DIP! We&rsquo;ve found that the <a href="https://en.wikipedia.org/wiki/IC_extractor">IC Extractor</a> is an excellent companion if you want to frequently remove DIPs.</p>
+<p>With great care! It’s important to pull with an even force to separate the DIP from the CHIP. It helps to gradually work the DIP away from the pin header at each side. When you can see a slight and even amount of exposed DIP pins on all sides, then you can grip the C.H.I.P. and DIP in the middle and pull them apart evenly. You do not want bent header pins on your DIP! We’ve found that the <a href="https://en.wikipedia.org/wiki/IC_extractor">IC Extractor</a> is an excellent companion if you want to frequently remove DIPs.</p>
 
           <h1 id="hdmi-dip">HDMI DIP</h1>
 
@@ -44,17 +44,17 @@ title: Next Thing Co. DIPs for C.H.I.P. Documentation
 
 <h2 id="parts-and-pieces">Parts and Pieces</h2>
 
-<h3 id="what-39-s-in-the-bag">What&rsquo;s in the Bag?</h3>
+<h3 id="what-39-s-in-the-bag">What’s in the Bag?</h3>
 
 <p>There is one HDMI DIP in the electrostatic bag, packaged with protective foam. HDMI cables and C.H.I.P.s are sold separately <a href="https://getchip.com/pages/store">at getchip.com</a></p>
 
 <h3 id="pictures">Pictures</h3>
 
-<p><img src="images/hdmi_callout.jpg" alt="HDMI DIP Callout Graphic" /></p>
+<p><img src="/images/hdmi_callout.jpg" alt="HDMI DIP Callout Graphic" /></p>
 
 <ul>
 <li>Power switch: We added this is located on the top edge of the PCB, as it is close to impossible to access it.</li>
-<li>Prototyping area - There is &ldquo;Proto board&rdquo; on the PCB itself. This is convenient if you would like to add a small circuit to your DIP, without having to add another board.</li>
+<li>Prototyping area - There is “Proto board” on the PCB itself. This is convenient if you would like to add a small circuit to your DIP, without having to add another board.</li>
 <li>U14 partial breakout - This makes it easy to access the GPIO, UART, audio, and ground pins.</li>
 <li>Volts - 5V &amp; 3V voltages are available below the NTC proto area.</li>
 <li>HDMI connector - A standard HDMI connector is used to send your video to a monitor, and is located at the bottom of the PCB.</li>
@@ -70,13 +70,13 @@ title: Next Thing Co. DIPs for C.H.I.P. Documentation
 <li>2A+ power adapter and micro USB cable</li>
 </ul>
 
-<p>If you don&rsquo;t have Debian with Linux kernel 4.4, or if you are unsure, <a href="#update_to_debian44">follow this guide</a>.</p>
+<p>If you don’t have Debian with Linux kernel 4.4, or if you are unsure, <a href="#update_to_debian44">follow this guide</a>.</p>
 
 <h2 id="use-it">Use It</h2>
 
-<p><img src="images/hdmi_plugged_in_half.jpg" alt="Plug it!" /></p>
+<p><img src="/images/hdmi_plugged_in_half.jpg" alt="Plug it!" /></p>
 
-<p>The HDMI DIP is extremely easy to use. Once you have your C.H.I.P. OS updated, it&rsquo;s really as simple as attaching the DIP to your C.H.I.P, plugging in an HDMI monitor, plugging into your power supply and booting up C.H.I.P. But, for posterity&rsquo;s sake, here&rsquo;s all the details.</p>
+<p>The HDMI DIP is extremely easy to use. Once you have your C.H.I.P. OS updated, it’s really as simple as attaching the DIP to your C.H.I.P, plugging in an HDMI monitor, plugging into your power supply and booting up C.H.I.P. But, for posterity’s sake, here’s all the details.</p>
 
 <ul>
 <li>Connect DIP to C.H.I.P.</li>
@@ -85,18 +85,18 @@ title: Next Thing Co. DIPs for C.H.I.P. Documentation
 <li>Power up C.H.I.P.</li>
 </ul>
 
-<p>Once C.H.I.P has power, you&rsquo;ll start seeing output on your monitor. Don&rsquo;t try to power C.H.I.P. with the HDMI DIP from your computer&rsquo;s USB power supply. There simply isn&rsquo;t enough power!
+<p>Once C.H.I.P has power, you’ll start seeing output on your monitor. Don’t try to power C.H.I.P. with the HDMI DIP from your computer’s USB power supply. There simply isn’t enough power!
 Once C.H.I.P is booted, you may want to change the resolution. You can do this with the control panel found in the Computer Things menu, going to Settings/Display</p>
 
-<p><img src="images/settings_select.jpg" alt="display control panel" /></p>
+<p><img src="/images/settings_select.jpg" alt="display control panel" /></p>
 
 <p>In the Display control panel, you can select a resolution in the Outputs menu:</p>
 
-<p><img src="images/settings_hdmi_resolution.jpg" alt="Change Resolutions" /></p>
+<p><img src="/images/settings_hdmi_resolution.jpg" alt="Change Resolutions" /></p>
 
-<p>After you select a resolution, you&rsquo;ll need to &ldquo;Apply&rdquo; it:</p>
+<p>After you select a resolution, you’ll need to “Apply” it:</p>
 
-<p><img src="images/settings_apply.jpg" alt="apply the new resolution" /></p>
+<p><img src="/images/settings_apply.jpg" alt="apply the new resolution" /></p>
 
 <p>If you like using commandline in the terminal, you can change resolutions with <code class="prettyprint">xrandr</code>, such as</p>
 <pre class="highlight shell"><code>xrandr -s 1280x720
@@ -128,17 +128,17 @@ Once C.H.I.P is booted, you may want to change the resolution. You can do this w
 
 <h3 id="how-to-disconnect-the-dip">How to Disconnect the DIP</h3>
 
-<p>With great care! It&rsquo;s important to pull with an even force to separate the DIP from the CHIP. You do not want bent header pins on your DIP! We&rsquo;ve found that the <a href="https://en.wikipedia.org/wiki/IC_extractor">IC Extractor</a> is an excellent companion if you want to frequently remove DIPs.</p>
+<p>With great care! It’s important to pull with an even force to separate the DIP from the CHIP. You do not want bent header pins on your DIP! We’ve found that the <a href="https://en.wikipedia.org/wiki/IC_extractor">IC Extractor</a> is an excellent companion if you want to frequently remove DIPs.</p>
 
 <h2 id="hack-it">Hack It</h2>
 
-<p>The HDMI DIP is hackable. There are breakouts for the headers and a small proto-board area so you can add some simple circuits. One example is adding a pin header so you can access C.H.I.P.&rsquo;s UART bus. This image shows an HDMI DIP with the added pin header soldered in place:</p>
+<p>The HDMI DIP is hackable. There are breakouts for the headers and a small proto-board area so you can add some simple circuits. One example is adding a pin header so you can access C.H.I.P.’s UART bus. This image shows an HDMI DIP with the added pin header soldered in place:</p>
 
-<p><img src="images/hdmi_uart_placement.jpg" alt="pin headers for UART passthrough to CHIP" /></p>
+<p><img src="/images/hdmi_uart_placement.jpg" alt="pin headers for UART passthrough to CHIP" /></p>
 
-<p>and the receive, transmit, and ground wires of a USB-UART cable connecting CHIP to a computer&rsquo;s serial bus:</p>
+<p>and the receive, transmit, and ground wires of a USB-UART cable connecting CHIP to a computer’s serial bus:</p>
 
-<p><img src="images/hdmi_uart_cnxn.jpg" alt="uart artfully applied" /></p>
+<p><img src="/images/hdmi_uart_cnxn.jpg" alt="uart artfully applied" /></p>
 
 <h2 id="open-source">Open Source</h2>
 
@@ -152,22 +152,22 @@ Once C.H.I.P is booted, you may want to change the resolution. You can do this w
 
 <h2 id="parts-and-pieces">Parts and Pieces</h2>
 
-<h3 id="what-39-s-in-the-bag">What&rsquo;s in the Bag</h3>
+<h3 id="what-39-s-in-the-bag">What’s in the Bag</h3>
 
 <p>There is one VGA DIP in the electrostatic bag, packaged with protective foam. VGA cables and C.H.I.P.s are sold separately <a href="https://getchip.com/pages/store">at getchip.com</a></p>
 
 <h3 id="pictures">Pictures</h3>
 
-<p><img src="images/vga_callout.jpg" alt="VGA DIP Callout Graphic" /></p>
+<p><img src="/images/vga_callout.jpg" alt="VGA DIP Callout Graphic" /></p>
 
 <ul>
-<li>RGB breakouts - RGB breakouts can be found at the edge of the VGA connector on the left side. These are available if you ever want to add cool effects, or to &ldquo;bend&rdquo; your VGA DIP</li>
+<li>RGB breakouts - RGB breakouts can be found at the edge of the VGA connector on the left side. These are available if you ever want to add cool effects, or to “bend” your VGA DIP</li>
 <li>Trim-pot breakouts (RGB) - There are three footprints for1 0K trimpots. These can be installed with only a few solder joints, and can create a really awesome visual effects like saturating colors.</li>
 <li>U14 breakouts - The U14 header breakout is directly to the left of U14. This is important if you would like to access FEL, UART, XIO, CSID, audio, etc. The name of each pin is labeled above the corresponding pad.</li>
 <li>JST connector breakout - A JST connector footprint  is available to be populated on VGA DIP. Because the VGA connector is really close to the existing JST battery connector, it makes it difficult to plug/unplug with the VGA DIP installed. Note: DO NOT INSTALL TWO BATTERIES INTO C.H.I.P. THIS WILL DAMAGE YOUR C.H.I.P.</li>
-<li>Prototyping area - There is &ldquo;Proto board&rdquo; on the PCB itself. This is convenient if you would like to add a small circuit to your VGA DIP, without having to add another board.</li>
+<li>Prototyping area - There is “Proto board” on the PCB itself. This is convenient if you would like to add a small circuit to your VGA DIP, without having to add another board.</li>
 <li>VGA connector - This is a standard female DB-15 VGA connector to carry the video signal to a VGA monitor.</li>
-<li>Power switch - A Power switch has been added to the VGA DIP. It is close to impossible to access the Power On Switch on C.H.I.P with the VGA DIP installed, so we added a second Power On Switch. This is located on the right side of the PCB, and is accompanied by a &ldquo;Power On&rdquo; symbol.</li>
+<li>Power switch - A Power switch has been added to the VGA DIP. It is close to impossible to access the Power On Switch on C.H.I.P with the VGA DIP installed, so we added a second Power On Switch. This is located on the right side of the PCB, and is accompanied by a “Power On” symbol.</li>
 </ul>
 
 <h2 id="requirements">Requirements</h2>
@@ -179,11 +179,11 @@ Once C.H.I.P is booted, you may want to change the resolution. You can do this w
 <li>2A+ power adapter and micro USB cable</li>
 </ul>
 
-<p>If you don&rsquo;t have Debian with 4.4 kernel, or if you are unsure, <a href="getchip.com/update">follow this guide</a></p>
+<p>If you don’t have Debian with 4.4 kernel, or if you are unsure, <a href="getchip.com/update">follow this guide</a></p>
 
 <h2 id="use-it">Use It</h2>
 
-<p>The VGA DIP is extremely easy to use. Once you have your C.H.I.P. OS updated, it&rsquo;s really as simple as attaching the DIP to your C.H.I.P, adding power to C.H.I.P., plugging in a VGA monitor, and booting up C.H.I.P. But, for posterity&rsquo;s sake, here&rsquo;s all the details.</p>
+<p>The VGA DIP is extremely easy to use. Once you have your C.H.I.P. OS updated, it’s really as simple as attaching the DIP to your C.H.I.P, adding power to C.H.I.P., plugging in a VGA monitor, and booting up C.H.I.P. But, for posterity’s sake, here’s all the details.</p>
 
 <ul>
 <li>Update C.H.I.P. OS</li>
@@ -193,17 +193,17 @@ Once C.H.I.P is booted, you may want to change the resolution. You can do this w
 <li>Power up C.H.I.P.</li>
 </ul>
 
-<p>Once C.H.I.P has power, you&rsquo;ll start seeing output on your monitor. Once C.H.I.P is booted, you may want to change the resolution. You can do this with the control panel found in the Computer Things menu, going to Settings/Display</p>
+<p>Once C.H.I.P has power, you’ll start seeing output on your monitor. Once C.H.I.P is booted, you may want to change the resolution. You can do this with the control panel found in the Computer Things menu, going to Settings/Display</p>
 
-<p><img src="images/settings_select.jpg" alt="display control panel" /></p>
+<p><img src="/images/settings_select.jpg" alt="display control panel" /></p>
 
 <p>In the Display control panel, you can select a resolution in the Outputs menu:</p>
 
-<p><img src="images/settings_vga_resolution.jpg" alt="Change Resolutions" /></p>
+<p><img src="/images/settings_vga_resolution.jpg" alt="Change Resolutions" /></p>
 
-<p>After you select a resolution, you&rsquo;ll need to &ldquo;Apply&rdquo; it:</p>
+<p>After you select a resolution, you’ll need to “Apply” it:</p>
 
-<p><img src="images/settings_apply.jpg" alt="apply the new resolution" /></p>
+<p><img src="/images/settings_apply.jpg" alt="apply the new resolution" /></p>
 
 <p>If you like using commandline in the terminal, you can change resolutions with <code class="prettyprint">xrandr</code>, such as</p>
 <pre class="highlight shell"><code>xrandr -s 1024x768
@@ -226,41 +226,41 @@ Once C.H.I.P is booted, you may want to change the resolution. You can do this w
 
 <h2 id="hack-it">Hack It</h2>
 
-<p>The VGA DIP is hackable. There are breakouts for the headers and a small proto-board area so you can add some simple circuits. There&rsquo;s also access to the RGB signals for extra colorful fun! Here are a couple example hacks that bring joy and utility to your VGA DIP.</p>
+<p>The VGA DIP is hackable. There are breakouts for the headers and a small proto-board area so you can add some simple circuits. There’s also access to the RGB signals for extra colorful fun! Here are a couple example hacks that bring joy and utility to your VGA DIP.</p>
 
 <h3 id="rgb-trim-pots">RGB Trim Pots</h3>
 
-<p>Heat up your soldering iron, the VGA DIP is hackable. You may have noticed the pads suitably spaced for 10K trim pots, and the RGB breakouts. Here&rsquo;s a photo guide to soldering up some trim pots so you can manually adjust the individual red, green, and blue levels in the image. You can find <a href="http://www.bourns.com/docs/Product-Datasheets/3386.pdf">these pots</a> at vendors such as <a href="http://www.digikey.com/product-detail/en/bourns-inc/3386P-1-103TLF/3386P-103TLF-ND/1232547">digikey</a> and <a href="http://www.mouser.com/ProductDetail/Bourns/3386P-1-103TLF/?qs=sGAEpiMZZMvygUB3GLcD7rufck0TIBKysL9OZJpl%2f%2fo%3d">mouser</a></p>
+<p>Heat up your soldering iron, the VGA DIP is hackable. You may have noticed the pads suitably spaced for 10K trim pots, and the RGB breakouts. Here’s a photo guide to soldering up some trim pots so you can manually adjust the individual red, green, and blue levels in the image. You can find <a href="http://www.bourns.com/docs/Product-Datasheets/3386.pdf">these pots</a> at vendors such as <a href="http://www.digikey.com/product-detail/en/bourns-inc/3386P-1-103TLF/3386P-103TLF-ND/1232547">digikey</a> and <a href="http://www.mouser.com/ProductDetail/Bourns/3386P-1-103TLF/?qs=sGAEpiMZZMvygUB3GLcD7rufck0TIBKysL9OZJpl%2f%2fo%3d">mouser</a></p>
 
 <p>Trim pots are able to go in one way on TOP of the PCB for accessibility.</p>
 
-<p><img src="images/vgapot_01place.jpg" alt="able to go in one way" /></p>
+<p><img src="/images/vgapot_01place.jpg" alt="able to go in one way" /></p>
 
 <p>Trim pots are sized and spaced for a precise alignment.</p>
 
-<p><img src="images/vgapot_02allpots.jpg" alt="sized and spaced for a precise alignment" /></p>
+<p><img src="/images/vgapot_02allpots.jpg" alt="sized and spaced for a precise alignment" /></p>
 
 <p>Here we see that there is only one way for the pots to go on the TOP side.</p>
 
-<p><img src="images/vgapot_03thruhole.jpg" alt="only one way for the pots to go" /></p>
+<p><img src="/images/vgapot_03thruhole.jpg" alt="only one way for the pots to go" /></p>
 
 <p>Solder the leads and trim them like so.</p>
 
-<p><img src="images/vgapot_04soldered.jpg" alt="Solder the leads and trim them like so." /></p>
+<p><img src="/images/vgapot_04soldered.jpg" alt="Solder the leads and trim them like so." /></p>
 
 <p>Time to start Bending Colors!!!</p>
 
-<p><img src="images/vgapot_02allpots.jpg" alt="Control and Compose" /></p>
+<p><img src="/images/vgapot_02allpots.jpg" alt="Control and Compose" /></p>
 
 <h3 id="uart-connection">UART Connection</h3>
 
-<p>Another example is adding a pin header so you can access C.H.I.P.&rsquo;s UART bus. This image shows an VGA DIP with the added pin header soldered in place:</p>
+<p>Another example is adding a pin header so you can access C.H.I.P.’s UART bus. This image shows an VGA DIP with the added pin header soldered in place:</p>
 
-<p><img src="images/vga_uart_placement.jpg" alt="pin headers for UART passthrough to CHIP" /></p>
+<p><img src="/images/vga_uart_placement.jpg" alt="pin headers for UART passthrough to CHIP" /></p>
 
-<p>and the receive, transmit, and ground wires of a USB-UART cable connecting CHIP to a computer&rsquo;s serial bus:</p>
+<p>and the receive, transmit, and ground wires of a USB-UART cable connecting CHIP to a computer’s serial bus:</p>
 
-<p><img src="images/vga_uart_cnxn.jpg" alt="uart artfully applied" /></p>
+<p><img src="/images/vga_uart_cnxn.jpg" alt="uart artfully applied" /></p>
 
 <h2 id="open-source">Open Source</h2>
 
@@ -268,7 +268,7 @@ Once C.H.I.P is booted, you may want to change the resolution. You can do this w
 
           <h1 id="update-c-h-i-p-to-linux-kernel-4-4">Update C.H.I.P to Linux kernel 4.4</h1>
 
-<p>DIPs require that C.H.I.P. is running the Debian 4.4 Linux kernel. Here&rsquo;s a detailed guide to determining if you need to update and how to update using our web flasher.</p>
+<p>DIPs require that C.H.I.P. is running the Debian 4.4 Linux kernel. Here’s a detailed guide to determining if you need to update and how to update using our web flasher.</p>
 
 <h2 id="determine-c-h-i-p-s-kernel-version">Determine C.H.I.P.’s Kernel Version</h2>
 
@@ -277,7 +277,7 @@ Then, open the Terminal application (from the drop-down menu at the top, left co
 
 <p>Once the applications loads, type <code class="prettyprint">uname -a</code>. This outputs information about your system software version.</p>
 
-<p><img src="images/update_uname.jpg" alt="uname results in terminal" /></p>
+<p><img src="/images/update_uname.jpg" alt="uname results in terminal" /></p>
 
 <p>Look for a number in appended with <code class="prettyprint">-ntc</code>, for example <code class="prettyprint">4.3.0</code> or <code class="prettyprint">4.4.0</code>. This number is the kernel version running on your C.H.I.P. If the number is <code class="prettyprint">4.4.0</code> or greater, you don’t need to upgrade your kernel version. Most likely, your number is <code class="prettyprint">4.3.0</code>, keep reading: you need to upgrade your kernel.</p>
 
@@ -286,9 +286,9 @@ Then, open the Terminal application (from the drop-down menu at the top, left co
 <p>Backup any important data on your C.H.I.P. before you upgrade your system. Upgrading will overwrite all of the C.H.I.P. storage. You can backup your user directory with a simple command in the Terminal emulator:</p>
 <pre class="highlight shell"><code>tar cfpzv homebackup.tar.gz /home/chip
 </code></pre>
-<p>You can transfer that <code class="prettyprint">tar</code> file to another computer or cloud service from C.H.I.P. There&rsquo;s more to learn in <a href="https://mylinuxramblings.wordpress.com/2010/01/10/how-to-backup-and-restore-your-home-directory/">this detailed guide</a>.</p>
+<p>You can transfer that <code class="prettyprint">tar</code> file to another computer or cloud service from C.H.I.P. There’s more to learn in <a href="https://mylinuxramblings.wordpress.com/2010/01/10/how-to-backup-and-restore-your-home-directory/">this detailed guide</a>.</p>
 
-<p>If you have installed a lot of packages with Synaptic or <code class="prettyprint">apt</code>, and would like to be able to be able to easily re-install those packages, there&rsquo;s some good <a href="http://www.debianadmin.com/clone-your-ubuntu-installation.html">guides</a> and <a href="http://serverfault.com/questions/175504/how-do-i-get-the-history-of-apt-get-install-on-ubuntu">suggestions</a> on the web.</p>
+<p>If you have installed a lot of packages with Synaptic or <code class="prettyprint">apt</code>, and would like to be able to be able to easily re-install those packages, there’s some good <a href="http://www.debianadmin.com/clone-your-ubuntu-installation.html">guides</a> and <a href="http://serverfault.com/questions/175504/how-do-i-get-the-history-of-apt-get-install-on-ubuntu">suggestions</a> on the web.</p>
 
 <h2 id="upgrade-the-kernel-with-the-c-h-i-p-flasher">Upgrade the Kernel with the C.H.I.P. Flasher</h2>
 
@@ -298,7 +298,7 @@ Then, open the Terminal application (from the drop-down menu at the top, left co
 
           <h1 id="dip-specifications">DIP Specifications</h1>
 
-<p>As you might imagine, a DIP could be almost anything that plugs into C.H.I.P. While our VGA and HDMI DIPs provide very specific capabilities, a less obvious DIP example is the PocketC.H.I.P: its touchscreen, case, keyboard, and extensive circuit board may seem to be product distinct from C.H.I.P, but it is in fact, merely a DIP that attaches to C.H.I.P. and identifies itself to the operating system. Since function isn&rsquo;t really limited by our specification, it&rsquo;s important to know that to call something that attaches to C.H.I.P. a &ldquo;DIP&rdquo;, it needs to comply with the C.H.I.P. DIP specifications described in this document.</p>
+<p>As you might imagine, a DIP could be almost anything that plugs into C.H.I.P. While our VGA and HDMI DIPs provide very specific capabilities, a less obvious DIP example is the PocketC.H.I.P: its touchscreen, case, keyboard, and extensive circuit board may seem to be product distinct from C.H.I.P, but it is in fact, merely a DIP that attaches to C.H.I.P. and identifies itself to the operating system. Since function isn’t really limited by our specification, it’s important to know that to call something that attaches to C.H.I.P. a “DIP”, it needs to comply with the C.H.I.P. DIP specifications described in this document.</p>
 
 <h2 id="form-factor">Form Factor</h2>
 
@@ -309,7 +309,7 @@ Then, open the Terminal application (from the drop-down menu at the top, left co
 <p>C.H.I.P. needs to know which extension board is attached in order to configure Linux accordingly. To do this, C.H.I.P. checks for a 1wire EEPROM at boot time.
 If a 1wire EEPROM is detected, its data is read, and if C.H.I.P. recognizes a supported DIP, it automatically sets up the software accordingly (<a href="#dip-maker-s-Guide">using a device tree overlay</a>).</p>
 
-<p>The 1wire EEPROM needs to be connected to the <strong>LCD_D2</strong> pin on <a href="chip.html#pin-headers">pin header U13</a> and should be able to store a least 122 bytes (see data-format below). The DS2431 is a common EEPROM part that works well for this.
+<p>The 1wire EEPROM needs to be connected to the <strong>LCD_D2</strong> pin on <a href="chip#pin-headers">pin header U13</a> and should be able to store a least 122 bytes (see data-format below). The DS2431 is a common EEPROM part that works well for this.
 This readable EEPROM is actually the <strong>only</strong> requirement for an extension board to comply with the DIP specification.</p>
 
 <h2 id="data-format">Data Format</h2>
@@ -382,7 +382,7 @@ This readable EEPROM is actually the <strong>only</strong> requirement for an ex
 
 <h2 id="vendor-id-and-product-id">Vendor ID and Product ID</h2>
 
-<p>Each DIP must have a unique combination of vendor and product id for C.H.I.P. to recognize it. We have a very simple, open system for makers to register vendor IDs <a href="https://github.com/NextThingCo/DIPvendor">self-contained in a github repository</a>. Even if you don&rsquo;t want to sell it, it&rsquo;s worth getting an ID, to prevent the chance of your DIP confusing C.H.I.P. in the future.</p>
+<p>Each DIP must have a unique combination of vendor and product id for C.H.I.P. to recognize it. We have a very simple, open system for makers to register vendor IDs <a href="https://github.com/NextThingCo/DIPvendor">self-contained in a github repository</a>. Even if you don’t want to sell it, it’s worth getting an ID, to prevent the chance of your DIP confusing C.H.I.P. in the future.</p>
 
 <h3 id="reserved-vids">Reserved VIDs</h3>
 
@@ -410,7 +410,7 @@ A registered vendor id does not imply the device tree overlay will be included i
 
 <p>The DIP Maker Guide provides a git repository with sample code, a script for compiling device trees, and a script for flashing EEPROM with data. Read more and get the repo <a href="#dip-maker-s-Guide">here</a>.</p>
 
-          <h1 id="dip-maker-39-s-guide">DIP Maker&rsquo;s Guide</h1>
+          <h1 id="dip-maker-39-s-guide">DIP Maker’s Guide</h1>
 
 <p>This guide provides the resources and instructions for making a Device Tree Overlay (DTO) for your DIP. The DTO provides information at boot-time that can automatically configure your C.H.I.P. with drivers and resources to make your DIP work as expected on startup.</p>
 
@@ -444,11 +444,11 @@ git clone https://github.com/NextThingCo/CHIP-dt-overlays.git
 
 <p>The settings needed for the chosen bus will be related to the specifications of the hardware on your DIP and the pins on the <a href="https://github.com/NextThingCo/CHIP-Hardware/blob/master/CHIP%5Bv1_0%5D/CHIPv1_0-BOM-Datasheets/Allwinner%20R8%20Datasheet%20V1.2.pdf">Allwinner R8</a>, which are exhaustively documented in the <a href="https://github.com/NextThingCo/CHIP-Hardware/blob/master/CHIP%5Bv1_0%5D/CHIPv1_0-BOM-Datasheets/Allwinner%20R8%20User%20Manual%20V1.1.pdf">R8 User Manual</a></p>
 
-<p>The settings needed for the overlay for the components on the bus are usually provided in the vendor&rsquo;s documents.</p>
+<p>The settings needed for the overlay for the components on the bus are usually provided in the vendor’s documents.</p>
 
 <h3 id="bus-protocols">Bus Protocols</h3>
 
-<p>The following protocols can be enabled and configured with Device Tree Overlay files. Each protocol can be configured with a &ldquo;fragment&rdquo; in a DTO. Because some of these functions share pins, not all of these can be enabled at once. For example, if SPI2 is enabled, then it would not be possible to enable the CSI interface, since they share pins on U14.</p>
+<p>The following protocols can be enabled and configured with Device Tree Overlay files. Each protocol can be configured with a “fragment” in a DTO. Because some of these functions share pins, not all of these can be enabled at once. For example, if SPI2 is enabled, then it would not be possible to enable the CSI interface, since they share pins on U14.</p>
 
 <table><thead>
 <tr>
@@ -514,17 +514,17 @@ git clone https://github.com/NextThingCo/CHIP-dt-overlays.git
 
 <h2 id="development-by-example">Development by Example</h2>
 
-<p>In this section, we&rsquo;ll use a very simple DIP that hosts a button, an LED, and a temperature sensor (<a href="http://melexis.com/Infrared-Thermometer-Sensors/Infrared-Thermometer-Sensors/MLX90614-615.aspx">Melexis MLX90614</a>) and controls it via I2C on C.H.I.P.&rsquo;s TWI1 data and clock lines. These correspond to Pins 9 and 11 on <a href="chip.html#pin-headers">pin header U13</a>. The <a href="https://github.com/NextThingCo/CHIP-Hardware/blob/master/CHIP[v1_0]/CHIPv1_0-BOM-Datasheets/Allwinner%20R8%20Datasheet%20V1.2.pdf">R8 data sheet</a> refers to these as PB15 and PB16. </p>
+<p>In this section, we’ll use a very simple DIP that hosts a button, an LED, and a temperature sensor (<a href="http://melexis.com/Infrared-Thermometer-Sensors/Infrared-Thermometer-Sensors/MLX90614-615.aspx">Melexis MLX90614</a>) and controls it via I2C on C.H.I.P.’s TWI1 data and clock lines. These correspond to Pins 9 and 11 on <a href="chip#pin-headers">pin header U13</a>. The <a href="https://github.com/NextThingCo/CHIP-Hardware/blob/master/CHIP[v1_0]/CHIPv1_0-BOM-Datasheets/Allwinner%20R8%20Datasheet%20V1.2.pdf">R8 data sheet</a> refers to these as PB15 and PB16. </p>
 
 <h3 id="make-your-add-on-device">Make your Add-on Device</h3>
 
-<p>In some ways, creating your overlay is interlaced with the process of development. As you prototype your DIP, you&rsquo;ll need to adjust your overlay as you change parts, add components, or test different hardware. </p>
+<p>In some ways, creating your overlay is interlaced with the process of development. As you prototype your DIP, you’ll need to adjust your overlay as you change parts, add components, or test different hardware. </p>
 
-<p>Fortunately, our example is very basic: the temperature sensor is the only component that requires a device tree overlay, and the driver for that component already exists. Of course, we&rsquo;ll also need to put the EEPROM on it which will be used to identify the device when C.H.I.P. boots.</p>
+<p>Fortunately, our example is very basic: the temperature sensor is the only component that requires a device tree overlay, and the driver for that component already exists. Of course, we’ll also need to put the EEPROM on it which will be used to identify the device when C.H.I.P. boots.</p>
 
 <h3 id="enable-devices-and-components-with-dts">Enable devices and components with DTS</h3>
 
-<p>Once you have a setup for your DIP, you&rsquo;ll need to create an overlay that will let you test your hardware with software. Here&rsquo;s an overlay that enables i2c1 on C.H.I.P. and configures the temperature sensor. </p>
+<p>Once you have a setup for your DIP, you’ll need to create an overlay that will let you test your hardware with software. Here’s an overlay that enables i2c1 on C.H.I.P. and configures the temperature sensor. </p>
 
 <p>The bindings for this sensor can be found in the <a href="https://github.com/NextThingCo/CHIP-linux/blob/chip/stable/Documentation/devicetree/bindings/iio/temperature/mlx90614.txt">devicetree bindings directory</a>:</p>
 <pre class="highlight shell"><code>/<span class="k">*</span>
@@ -582,16 +582,16 @@ git clone https://github.com/NextThingCo/CHIP-dt-overlays.git
 
 <h3 id="make-a-dtbo-device-tree-overlay-blob">Make a DTBO - Device Tree Overlay Blob</h3>
 
-<p>Think it&rsquo;s right? Now it&rsquo;s time to compile and test it. Unfortunately, the device tree compiler patches needed to support the overlays have not been merged into the <a href="https://git.kernel.org/cgit/utils/dtc/dtc.git">mainline <code class="prettyprint">dtc</code> code</a> yet, so you need a patched version of the compiler. Lucky for you, we have a patched version available. The first line installs some dependencies that the <code class="prettyprint">dtc</code> Makefile depends on.</p>
+<p>Think it’s right? Now it’s time to compile and test it. Unfortunately, the device tree compiler patches needed to support the overlays have not been merged into the <a href="https://git.kernel.org/cgit/utils/dtc/dtc.git">mainline <code class="prettyprint">dtc</code> code</a> yet, so you need a patched version of the compiler. Lucky for you, we have a patched version available. The first line installs some dependencies that the <code class="prettyprint">dtc</code> Makefile depends on.</p>
 <pre class="highlight shell"><code>sudo apt-get install flex bison
 git clone https://github.com/nextthingco/dtc
 <span class="nb">cd </span>dtc
 make
 sudo  make install <span class="nv">PREFIX</span><span class="o">=</span>/usr
 </code></pre>
-<p>The easy way to compile is to put your .dts file in the &ldquo;samples/&rdquo; directory of the <code class="prettyprint">CHIP-dt-overlays</code> directory, then, from the root of this repository, just run <code class="prettyprint">make</code>. This produces a .dtbo (device tree blob) file in the &ldquo;samples/&rdquo; directory with the .dts file.</p>
+<p>The easy way to compile is to put your .dts file in the “samples/” directory of the <code class="prettyprint">CHIP-dt-overlays</code> directory, then, from the root of this repository, just run <code class="prettyprint">make</code>. This produces a .dtbo (device tree blob) file in the “samples/” directory with the .dts file.</p>
 
-<p>The Makefile is designed to look in the &ldquo;samples/&rdquo; and &ldquo;firmware/&rdquo; directories for .dts files and compile them to .dtbo files using this command:</p>
+<p>The Makefile is designed to look in the “samples/” and “firmware/” directories for .dts files and compile them to .dtbo files using this command:</p>
 <pre class="highlight shell"><code>dtc -I dts -O dtb -o &lt;output file&gt;.dtbo &lt;input file&gt;.dts -@
 </code></pre>
 <p>You may find this useful if you are just want to compile a dts file in-place. More information on the device tree compiler can be found <a href="http://manpages.ubuntu.com/manpages/trusty/man1/dtc.1.html">in the ubuntu manpages site</a></p>
@@ -613,7 +613,7 @@ created:</p>
 
 <p>Before you started this procedure, you would have seen two i2c devices where <code class="prettyprint">ls /dev/i2c*</code> would output <code class="prettyprint">/dev/i2c-0  /dev/i2c-2</code>. After the overlay is applied, the output from that <code class="prettyprint">ls</code> will show the new i2c device: <code class="prettyprint">/dev/i2c-0  /dev/i2c-1  /dev/i2c-2</code></p>
 
-<p>If you want to find the device in sysfs, you can <code class="prettyprint">ls /sys/bus/i2c/devices/</code> and see a device <code class="prettyprint">1-005a</code>. The &ldquo;1&rdquo; refers to the new i2c bus <code class="prettyprint">i2c-1</code> and &ldquo;005a&rdquo; refers to the address of the device (&ldquo;reg&rdquo; in the dts file). (You&rsquo;ll also see 0-0034 and 2-0038 which are the AXP209 power management and the GPIO expander for the XIO pins that are connected to i2c0 and i2c2, respectively). You can probe even deeper with <code class="prettyprint">ls /sys/bus/i2c/devices/1-005a</code> to see what is exposed to the system for the IR temperature sensor.</p>
+<p>If you want to find the device in sysfs, you can <code class="prettyprint">ls /sys/bus/i2c/devices/</code> and see a device <code class="prettyprint">1-005a</code>. The “1” refers to the new i2c bus <code class="prettyprint">i2c-1</code> and “005a” refers to the address of the device (“reg” in the dts file). (You’ll also see 0-0034 and 2-0038 which are the AXP209 power management and the GPIO expander for the XIO pins that are connected to i2c0 and i2c2, respectively). You can probe even deeper with <code class="prettyprint">ls /sys/bus/i2c/devices/1-005a</code> to see what is exposed to the system for the IR temperature sensor.</p>
 
 <p>You can also use <code class="prettyprint">sudo i2cdetect -y 1</code> to see a table of all devices on i2c-1. That command will probe the i2c-1 bus for devices and see if any replies.</p>
 
@@ -621,17 +621,17 @@ created:</p>
 
 <h3 id="test-board-and-iterate">Test board and iterate</h3>
 
-<p>Now that C.H.I.P. knows about the new devices, it&rsquo;s time to start programming and controlling the elements on the DIP.</p>
+<p>Now that C.H.I.P. knows about the new devices, it’s time to start programming and controlling the elements on the DIP.</p>
 
 <h2 id="make-it-a-dip">Make it a DIP</h2>
 
-<p>Once you have a final product, you can place the EEPROM chip on the 1wire bus, and flash the EEPROM to make C.H.I.P. automatically configure for your DIP. The EEPROM is the secret sauce that turns a &ldquo;PCB with some stuff on it&rdquo; into a flavorful DIP that pairs perfectly with your C.H.I.P.</p>
+<p>Once you have a final product, you can place the EEPROM chip on the 1wire bus, and flash the EEPROM to make C.H.I.P. automatically configure for your DIP. The EEPROM is the secret sauce that turns a “PCB with some stuff on it” into a flavorful DIP that pairs perfectly with your C.H.I.P.</p>
 
 <h3 id="flash-eeprom">Flash EEPROM</h3>
 
-<p>With your finished board, you are now ready to flash the EEPROM with your unique data. The &ldquo;tools/&rdquo; directory in the DDK has a simple python script that can be used to generate a file that can be written to the hardware. </p>
+<p>With your finished board, you are now ready to flash the EEPROM with your unique data. The “tools/” directory in the DDK has a simple python script that can be used to generate a file that can be written to the hardware. </p>
 
-<p>Let&rsquo;s make up some values that you&rsquo;ll need to write to the EEPROM. </p>
+<p>Let’s make up some values that you’ll need to write to the EEPROM. </p>
 
 <ul>
 <li>vendor ID (vid) = 0x16 (22) [32 bit]</li>
@@ -641,15 +641,15 @@ created:</p>
 <li>product-version = 1 [8 bit]</li>
 </ul>
 
-<p>From the &ldquo;tools/&rdquo; directory, run </p>
+<p>From the “tools/” directory, run </p>
 <pre class="highlight shell"><code>python dip-header-generator.py SuperTEEPROM.img --vid 22 --pid 68 --vendor <span class="s1">'RadCo'</span> --product <span class="s1">'SuperT'</span> --product-version 1
 </code></pre>
-<p>to generate an EEPROM file &ldquo;SuperTEEPROM.img&rdquo;.</p>
+<p>to generate an EEPROM file “SuperTEEPROM.img”.</p>
 
-<p>You&rsquo;ll find the EEPROM device in the sysfs file system:</p>
+<p>You’ll find the EEPROM device in the sysfs file system:</p>
 <pre class="highlight shell"><code>ls /sys/bus/w1/devices/2<span class="k">*</span>/eeprom
 </code></pre>
-<p>Once you know the UUID (name) of the directory (e.g. &ldquo;2d-0000132785ea/&rdquo;), you can write the data to the eeprom with:</p>
+<p>Once you know the UUID (name) of the directory (e.g. “2d-0000132785ea/”), you can write the data to the eeprom with:</p>
 <pre class="highlight shell"><code>su -c <span class="s1">'cat SuperTEEPROM.img &gt; /sys/bus/w1/devices/2d-(UUID)/eeprom'</span>
 </code></pre>
 <h3 id="verify-eeprom">Verify EEPROM</h3>
@@ -661,7 +661,7 @@ created:</p>
 
 <h3 id="boot-with-dip-in-place-read-eeprom">Boot with DIP in place (read EEPROM)</h3>
 
-<p>Now that you have a functioning device tree blob and EEPROM populated with data unique to your product, you&rsquo;ll need to name your blob with a special name using your (hex) vendor ID and product id:</p>
+<p>Now that you have a functioning device tree blob and EEPROM populated with data unique to your product, you’ll need to name your blob with a special name using your (hex) vendor ID and product id:</p>
 <pre class="highlight shell"><code>dip-16-44.dtbo
 </code></pre>
 <p>then</p>
@@ -673,7 +673,7 @@ created:</p>
 
 <h3 id="use-dip-with-software">Use DIP with software</h3>
 
-<p>Now you are ready to use your DIP with software. How you control your DIP with C.H.I.P. is really up to you. This procedure simply makes the DIP&rsquo;s parts available to the operating system for further control. </p>
+<p>Now you are ready to use your DIP with software. How you control your DIP with C.H.I.P. is really up to you. This procedure simply makes the DIP’s parts available to the operating system for further control. </p>
 
 <h1 id="the-device-tree-overlay-format">The Device Tree Overlay format</h1>
 
@@ -708,11 +708,11 @@ created:</p>
 </code></pre>
 <p>The device tree is composed of nodes, where each node configures a device that Linux must relate to a driver and know what interface to present to the system.</p>
 
-<p>The top of the &ldquo;<strong>overlay</strong>&rdquo; node describes settings that are relevant to the C.H.I.P.&rsquo;s target device, such as <code class="prettyprint">&lt;&amp;i2c1&gt;</code>, <code class="prettyprint">&lt;&amp;spi2&gt;</code>, <code class="prettyprint">&lt;&amp;pwm&gt;</code>. Example settings and documentation for these take some detective work in the C.H.I.P.-linux repo, for example device trees for <a href="https://github.com/NextThingCo/CHIP-linux/blob/nextthing/4.4/next/arch/arm/boot/dts/sun5i.dtsi">sun5i</a> and <a href="https://github.com/NextThingCo/CHIP-linux/blob/nextthing/4.4/next/arch/arm/boot/dts/sun5i-r8-chip.dts">sun5i-r8</a></p>
+<p>The top of the “<strong>overlay</strong>” node describes settings that are relevant to the C.H.I.P.’s target device, such as <code class="prettyprint">&lt;&amp;i2c1&gt;</code>, <code class="prettyprint">&lt;&amp;spi2&gt;</code>, <code class="prettyprint">&lt;&amp;pwm&gt;</code>. Example settings and documentation for these take some detective work in the C.H.I.P.-linux repo, for example device trees for <a href="https://github.com/NextThingCo/CHIP-linux/blob/nextthing/4.4/next/arch/arm/boot/dts/sun5i.dtsi">sun5i</a> and <a href="https://github.com/NextThingCo/CHIP-linux/blob/nextthing/4.4/next/arch/arm/boot/dts/sun5i-r8-chip.dts">sun5i-r8</a></p>
 
-<p>Documentation for the settings that will go in the controller sub-node depends on the device and what is built on the DIP. Much of this type of information can be found in the <a href="https://github.com/NextThingCo/CHIP-linux/tree/chip/stable/Documentation/devicetree/bindings/">bindings directory</a> of the C.H.I.P.-linux repo. You may also need to refer to the hardware&rsquo;s data sheet to get some data for the node.</p>
+<p>Documentation for the settings that will go in the controller sub-node depends on the device and what is built on the DIP. Much of this type of information can be found in the <a href="https://github.com/NextThingCo/CHIP-linux/tree/chip/stable/Documentation/devicetree/bindings/">bindings directory</a> of the C.H.I.P.-linux repo. You may also need to refer to the hardware’s data sheet to get some data for the node.</p>
 
-<p>We realize this is fairly unspecific instruction; given the number of mainline Linux driver, devices and possible combinations, it&rsquo;s difficult to provide much more than <em>guidance</em>.</p>
+<p>We realize this is fairly unspecific instruction; given the number of mainline Linux driver, devices and possible combinations, it’s difficult to provide much more than <em>guidance</em>.</p>
 
 <p>You may find these resources for other hardware useful:
   * <a href="https://learn.adafruit.com/introduction-to-the-beaglebone-black-device-tree/device-tree-overlays">Beagle Bone Black</a>
