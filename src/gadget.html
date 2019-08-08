@@ -35,7 +35,7 @@ title: Next Thing Co. C.H.I.P. Pro Developer's Kit Documentation
 <li><strong>NAND availability</strong> for containers, files, assets, etc. is 350MB. </li>
 </ul>
 
-          <h1 id="set-up-gadget">Set Up Gadget</h1>
+<h1 id="set-up-gadget">Set Up Gadget</h1>
 
 <p>To get started, download and install the following on your development machine and Gadget compatible device.</p>
 
@@ -114,7 +114,7 @@ sudo reboot
 
 <p>Once flashed, power cycle C.H.I.P. Pro Dev Kit by either unplugging it from the USB port or pressing the <a href="/chip-pro-devkit#power">On/Off button</a>.</p>
 
-          <h1 id="hello-world">Hello World</h1>
+<h1 id="hello-world">Hello World</h1>
 
 <p>Get up and running in minutes with this straight forward <em>Hello World</em> example.</p>
 
@@ -174,7 +174,7 @@ This message shows that your installation appears to be working correctly.
 <p>To delete the container use the <code class="prettyprint">gadget delete</code> command.</p>
 <pre class="highlight shell"><code>gadge delete
 </code></pre>
-          <h1 id="set-up-wifi">Set Up WiFi</h1>
+<h1 id="set-up-wifi">Set Up WiFi</h1>
 
 <p>GadgetOS comes with a quick and convenient way to connect to your device through the host computer’s USB port, which is handy for things like setting up WiFi. To connect your computer to GadgetOS type the following command.</p>
 <pre class="highlight shell"><code>gadget shell
@@ -261,7 +261,7 @@ round-trip min/avg/max <span class="o">=</span> 7.474/7.951/9.004 ms
 <h3 id="step-4-exit-gadget-shell">Step 4. Exit Gadget Shell</h3>
 <pre class="highlight plaintext"><code>exit
 </code></pre>
-          <h1 id="configuring-gadget-yml">Configuring Gadget.yml</h1>
+<h1 id="configuring-gadget-yml">Configuring Gadget.yml</h1>
 
 <p>At the heart of GadgetOS is a container system called <a href="https://docs.docker.com/">Docker</a>. While GadgetOS runs containers,  GadgetCLI helps you build, run, and manage them.
  If you’re new to containers, check out <a href="https://docs.docker.com/get-started/#a-brief-explanation-of-containers">this primer</a>. Together, GadgetOS and GadgetCLI make orchestrating container images easy by using one configuration file: <strong>gadget.yml</strong>.</p>
@@ -414,7 +414,7 @@ round-trip min/avg/max <span class="o">=</span> 7.474/7.951/9.004 ms
 <li><p>By default, Docker containers are not allowed to access any devices and are “unprivileged.” To access a device and get privileges to Linux capabilities they need to defined in <code class="prettyprint">capabilities</code> and <code class="prettyprint">devices</code>. GadgetOS does not promote nor enable operators to pass the <code class="prettyprint">--privileged</code> flag to Docker’s run command.</p></li>
 </ul>
 
-          <h1 id="build-with-gadget">Build With Gadget</h1>
+<h1 id="build-with-gadget">Build With Gadget</h1>
 
 <p>To get more familiar with using gadget.yml, go through the following examples which pulls from an image on Docker Hub and builds and deploys an image from your development machine. Each example blinks an LED on C.H.I.P. Pro Dev Kit.</p>
 
@@ -749,7 +749,7 @@ df -h <span class="c">#check NAND availability</span>
 
 <aside class="notice">To successfully build an image in the project directory the gadget.yml config file needs to be removed from it first.</aside>
 
-          <h1 id="gadgetcli-commands">GadgetCLI Commands</h1>
+<h1 id="gadgetcli-commands">GadgetCLI Commands</h1>
 
 <p>To see all the available GadgetCLI commands and options:</p>
 <pre class="highlight plaintext"><code>gadget help
@@ -784,7 +784,7 @@ help        Print this message
 </ul>
 <pre class="highlight plaintext"><code>gadget -C blinkdemo/ build
 </code></pre>
-          <h1 id="docker-reference">Docker Reference</h1>
+<h1 id="docker-reference">Docker Reference</h1>
 
 <p>Read up on and polish your Docker skills with these references.</p>
 
@@ -810,7 +810,7 @@ remove one or more images</li>
 Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE</li>
 </ul>
 
-          <h1 id="troubleshooting">Troubleshooting</h1>
+<h1 id="troubleshooting">Troubleshooting</h1>
 
 <h2 id="unable-to-gadget-deploy-image-to-board">Unable to <code class="prettyprint">gadget deploy</code> image to board</h2>
 
