@@ -25,7 +25,7 @@ We believe that great products can come from many backgrounds, so we provide sev
 <li>1 Dev board with C.H.I.P. Pro soldered on</li>
 <li>1 C.H.I.P. Pro (loose)</li>
 <li>4 Male/Female jumper wires</li>
-<li>Male 0.1&quot; pin headers</li>
+<li>Male 0.1" pin headers</li>
 <li>1 Button with cap</li>
 <li>1 Mini breadboard</li>
 <li>4 Little Rubber Feet (LRF)</li>
@@ -429,7 +429,7 @@ Donut_Hut            wifi_xxxxxxxxxxxx_xxxxxxxxx_managed_psk
 </code></pre>
 <h3 id="step-2-connect">Step 2: Connect</h3>
 
-<p>Copy the string that starts with “wifi_’ to the right of the network name you want to connect to. If it has <code class="prettyprint">psk</code> at the end, that means it is password protected (short for Wi-Fi Protected Access 2 - Pre-Shared Key) and you need to scroll further down to the ” Password Protected&quot; section.</p>
+<p>Copy the string that starts with “wifi_’ to the right of the network name you want to connect to. If it has <code class="prettyprint">psk</code> at the end, that means it is password protected (short for Wi-Fi Protected Access 2 - Pre-Shared Key) and you need to scroll further down to the “Password Protected” section.</p>
 
 <h4 id="no-password">No Password</h4>
 
@@ -1039,7 +1039,7 @@ pipe 4
 </code></pre>
 <h3 id="unexport-gpio">Unexport GPIO</h3>
 
-<p>If pins have not been unexported an error will occur stating the pins are &quot;busy” the next time you go to export them. When you are done using a GPIO pin <strong>always</strong> tell the system to stop listening by unexporting it:</p>
+<p>If pins have not been unexported an error will occur stating the pins are “busy” the next time you go to export them. When you are done using a GPIO pin <strong>always</strong> tell the system to stop listening by unexporting it:</p>
 <pre class="highlight shell"><code><span class="nb">echo </span>132 &gt; /sys/class/gpio/unexport
 </code></pre>
 <h2 id="pwm">PWM</h2>
@@ -1352,7 +1352,7 @@ ls
 <li><strong>USB0 VBUS Power LED</strong> - When there is power available to the USB1 port, this LED will illumniate.</li>
 <li><strong>USB0 + UART1</strong> - The micro USB jack provides serial and USB gadget connectivity, power from a USB power source, and UART connectivity for complete terminal messages from boot time.</li>
 <li><strong>3.7 LiPo battery jack</strong> - a JST connector for connecting and powering the dev kit from a 3.7 volt Lithium Polymer battery.</li>
-<li><strong>1/8&quot; Audio Jack</strong> - This TRRS jack provides stereo audio out and optional mono input.</li>
+<li><strong>1/8" Audio Jack</strong> - This TRRS jack provides stereo audio out and optional mono input.</li>
 <li><strong>DC In Jack</strong> - Connect a power supply ranging from 6V to 23V to power the C.H.I.P. Pro.</li>
 <li><strong>CHG-IN On/Off Switch</strong> - Switch can enable or disable the power feed from the DC in jack, allowing you to isolate the power source.</li>
 <li><strong>PWM0/1 LEDs</strong> - Two LEDs are connected directly to the PWM pins on C.H.I.P. Pro to make it easy to test PWM in software by dimming these LEDs.</li>
@@ -1401,7 +1401,7 @@ ls
 <li><strong>MIC2 Disconnect</strong> - Cut this trace to disconnect the onboard microphone and enable the MIC2 pin on C.H.I.P. Pro.</li>
 <li><strong>PWM LED Disconnect</strong> - If you don’t want the LEDs to illuminate when using PWM from the C.H.I.P. Pro pins, cut this trace. </li>
 <li><strong>MIC1 Disconnect</strong> - Cut this trace to disconnect the onboard microphone and enable the MIC1 pin on C.H.I.P. Pro.</li>
-<li><strong>Enable Sleeve for MIC1 IN</strong> - Solder over these pads to use the sleeve (“S” of the TRRS) of the 1/8&quot; audio jack.</li>
+<li><strong>Enable Sleeve for MIC1 IN</strong> - Solder over these pads to use the sleeve (“S” of the TRRS) of the 1/8" audio jack.</li>
 <li><strong>HP (headphone) Ground Select</strong> - Cut-and-solder these pads to change the grounding for the headphone jack. Cut between the pads with the line, then solder between the other two pads to use HPCOM instead of GND.</li>
 <li><strong>Battery Disconnect</strong> - If you want to add a switch for a battery, you’ll need to cut this trace, then solder a switch into the through-holes provided.</li>
 <li><strong>USB1 Host Power Select</strong> - Cut-and-solder to power the USB A (host) jack from the barrel jack (wall power) instead of the default power from the USB Micro. </li>
