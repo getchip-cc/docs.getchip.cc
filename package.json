@@ -19,6 +19,6 @@
     "build": "npx @11ty/eleventy"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.9.0-beta.1"
+    "@11ty/eleventy": "^0.9.0-beta.3"
   }
 }
