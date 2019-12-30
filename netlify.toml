@@ -1,0 +1,41 @@
+[[redirects]]
+  from   = "https://docs-getchip-cc.netlify.com/*"
+  to     = "https://docs.getchip.cc/:splat"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/chip_pro_devkit.html"
+  to     = "/chip-pro-devkit"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/chip_pro.html"
+  to     = "/chip-pro"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/chip.html"
+  to     = "/chip"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/dip.html"
+  to     = "/dip"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/gadget.html"
+  to     = "/gadget"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/pocketchip.html"
+  to     = "/pocketchip"
+  status = 301
+  force  = true
