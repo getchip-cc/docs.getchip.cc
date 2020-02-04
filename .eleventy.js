@@ -1,16 +1,15 @@
-module.exports = eleventyConfig => {
-  const inputDir = './src';
-  const outputDir = './public';
-
-  ['fonts', 'images', 'javascripts', 'public', 'stylesheets', '_redirects'].forEach(path => {
-    eleventyConfig.addPassthroughCopy({ [`${inputDir}/${path}`]: true });
-  });
+module.exports = eleventy => {
+  eleventy.addPassthroughCopy('./src/fonts');
+  eleventy.addPassthroughCopy('./src/images');
+  eleventy.addPassthroughCopy('./src/javascripts');
+  eleventy.addPassthroughCopy('./src/public');
+  eleventy.addPassthroughCopy('./src/stylesheets');
 
   return {
     dir: {
-      input: inputDir,
+      input: './src',
       layouts: '_layouts',
-      output: outputDir
+      output: './public'
     },
     templateFormats: ['html']
   }
