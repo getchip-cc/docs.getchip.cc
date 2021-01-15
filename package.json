@@ -13,17 +13,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jgarber623/docs.getchip.cc.git"
+    "url": "https://github.com/jgarber623/docs.getchip.cc"
   },
   "scripts": {
     "build": "npx @11ty/eleventy --quiet",
-    "clean": "npx rimraf public",
+    "clean": "rm -rf public",
     "prebuild": "npm run clean",
     "prestart": "npm run clean",
     "start": "npx @11ty/eleventy --quiet --serve"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
-    "rimraf": "^3.0.2"
+    "@11ty/eleventy": "^0.10.0"
   }
 }
