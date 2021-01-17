@@ -16,11 +16,11 @@
     "url": "https://github.com/jgarber623/docs.getchip.cc"
   },
   "scripts": {
-    "build": "npx @11ty/eleventy --quiet",
+    "build": "eleventy --quiet",
     "clean": "rm -rf public",
     "prebuild": "npm run clean",
     "prestart": "npm run clean",
-    "start": "npx @11ty/eleventy --quiet --serve"
+    "start": "eleventy --quiet --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1"
