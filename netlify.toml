@@ -11,6 +11,12 @@
   status = 301
   force  = true
 
+  [[redirects]]
+    from   = "https://www.getchip.cc/*"
+    to     = "https://docs.getchip.cc/:splat"
+    status = 301
+    force  = true
+
 [[redirects]]
   from   = "https://docs-getchip-cc.netlify.com/*"
   to     = "https://docs.getchip.cc/:splat"
