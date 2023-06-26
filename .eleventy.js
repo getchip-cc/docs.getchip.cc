@@ -1,7 +1,10 @@
-module.exports = function(eleventyConfig) => {
+module.exports = function(eleventyConfig) {
+  eleventyConfig.addPlugin(require('./lib/plugins/sass.js'));
+
   return {
     dir: {
-      input: './src'
+      input: './src',
+      output: './public'
     }
   };
 };
