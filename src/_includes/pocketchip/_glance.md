@@ -1,6 +1,6 @@
 # PocketC.H.I.P. at a Glance
 
-![PocketC.H.I.P. front and back](front-and-back.png)
+![PocketC.H.I.P. front and back](images/front-and-back.png)
 
 ## Touchscreen
 
