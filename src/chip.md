@@ -1,7 +1,6 @@
 ---
 layout: "base.liquid"
 permalink: "/chip.html"
-templateEngineOverride: "liquid,md"
 title: "Next Thing Co Documentation"
 ---
 

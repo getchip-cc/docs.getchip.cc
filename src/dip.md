@@ -1,7 +1,6 @@
 ---
 layout: "base.liquid"
 permalink: "/dip.html"
-templateEngineOverride: "liquid,md"
 title: "Next Thing Co. DIPs for C.H.I.P. Documentation"
 ---
 

@@ -1,7 +1,6 @@
 ---
 layout: "base.liquid"
 permalink: "/pocketchip.html"
-templateEngineOverride: "liquid,md"
 title: "Next Thing Co. PocketC.H.I.P. Documentation"
 ---
 

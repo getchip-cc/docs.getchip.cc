@@ -1,7 +1,6 @@
 ---
 layout: "base.liquid"
 permalink: "/chip_pro_devkit.html"
-templateEngineOverride: "liquid,md"
 title: "Next Thing Co. C.H.I.P. Pro Developer's Kit Documentation"
 ---
 
