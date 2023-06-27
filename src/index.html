@@ -2,15 +2,32 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Next Thing Co. Docs</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    // Closure-wrapped for security.
+    // https://stackoverflow.com/a/21198129
+    (function() {
+      var hash = window.location.hash.substring(1);
+      var urlSplit = document.URL.split('#');
+      var nurl = '/chip.html#' + urlSplit[1];
 
-  <link rel="shortcut icon" href="/public/icon-16.png">
-  <link rel="stylesheet" href="/public/main.min.css">
+      if (hash) {
+        // Best practice for JavaScript redirects.
+        // https://stackoverflow.com/a/506004
+        window.location.replace(nurl);
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="/stylesheets/main.css">
+
+  <link rel="shortcut icon" href="/favicon.ico">
 </head>
 <body>
+
   <header>
     <div>
       <h1>Docs</h1>
@@ -20,13 +37,14 @@
 
   <section class="docs">
     <div>
-      <a href="/chip-pro"><div class="doc chip_pro"></div></a>
-      <a href="/chip-pro-devkit"><div class="doc chip_pro_devkit"></div></a>
-      <a href="/chip"><div class="doc chip"></div></a>
-      <a href="/pocketchip"><div class="doc pc"></div></a>
-      <a href="/dip"><div class="doc dip"></div></a>
-      <a href="/gadget"><div class="doc gadget"></div></a>
+      <a href="/chip_pro.html"><div class="doc chip_pro"></div></a>
+      <a href="/chip_pro_devkit.html"><div class="doc chip_pro_devkit"></div></a>
+      <a href="/chip.html"><div class="doc chip"></div></a>
+      <a href="/pocketchip.html"><div class="doc pc"></div></a>
+      <a href="/dip.html"><div class="doc dip"></div></a>
+      <a href="/gadget.html"><div class="doc gadget"></div></a>
     </div>
   </section>
+
 </body>
 </html>

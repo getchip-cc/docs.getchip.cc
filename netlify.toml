@@ -6,6 +6,12 @@
     X-XSS-Protection = "0"
 
 [[headers]]
+  for = "/favicon.ico"
+  [headers.values]
+    Cache-Control = "public, s-max-age=604800"
+    Content-Type = "image/x-icon"
+
+[[headers]]
   for = "/fonts/*"
   [headers.values]
     Cache-Control = "public, s-max-age=604800"
@@ -17,11 +23,6 @@
 
 [[headers]]
   for = "/javascripts/*"
-  [headers.values]
-    Cache-Control = "public, s-max-age=604800"
-
-[[headers]]
-  for = "/public/*"
   [headers.values]
     Cache-Control = "public, s-max-age=604800"
 
@@ -43,43 +44,13 @@
   force  = true
 
 [[redirects]]
-  from   = "https://docs-getchip-cc.netlify.com/*"
+  from   = "https://docs-getchip-cc.netlify.app/*"
   to     = "https://docs.getchip.cc/:splat"
   status = 301
   force  = true
 
 [[redirects]]
-  from   = "/chip_pro_devkit.html"
-  to     = "/chip-pro-devkit"
-  status = 301
-  force  = true
-
-[[redirects]]
-  from   = "/chip_pro.html"
-  to     = "/chip-pro"
-  status = 301
-  force  = true
-
-[[redirects]]
-  from   = "/chip.html"
-  to     = "/chip"
-  status = 301
-  force  = true
-
-[[redirects]]
-  from   = "/dip.html"
-  to     = "/dip"
-  status = 301
-  force  = true
-
-[[redirects]]
-  from   = "/gadget.html"
-  to     = "/gadget"
-  status = 301
-  force  = true
-
-[[redirects]]
-  from   = "/pocketchip.html"
-  to     = "/pocketchip"
+  from   = "/pro.html"
+  to     = "/chip_pro_devkit.html"
   status = 301
   force  = true
