@@ -1,7 +1,7 @@
 ---
 layout: "base.liquid"
 permalink: "/chip.html"
-title: "Next Thing Co Documentation"
+title: "Next Thing Co. Documentation"
 ---
 
 {% include "chip/_welcome-to-derp.md" %}
