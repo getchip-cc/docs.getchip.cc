@@ -22,7 +22,7 @@ $pink: #eb008b;
   font-family: '232MK';
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/232MKMedium.ttf');
+  src: url('../fonts/232MKMedium.ttf');
 }
 
 * {
@@ -142,22 +142,22 @@ section.docs {
       background-repeat: no-repeat;
       background-position: center bottom;
       &.chip {
-        background-image: url('/images/chipDoc.png');
+        background-image: url('../images/chipDoc.png');
       }
       &.pc {
-        background-image: url('/images/pocketChipDoc.png');
+        background-image: url('../images/pocketChipDoc.png');
       }
       &.dip {
-        background-image: url('/images/dipDoc.png');
+        background-image: url('../images/dipDoc.png');
       }
       &.chip_pro {
-        background-image: url('/images/chipProDoc.png');
+        background-image: url('../images/chipProDoc.png');
       }
       &.chip_pro_devkit {
-        background-image: url('/images/chipProDevKitDoc.png');
+        background-image: url('../images/chipProDevKitDoc.png');
       }
       &.gadget {
-        background-image: url('/images/gadgetDoc.png');
+        background-image: url('../images/gadgetDoc.png');
       }
       &:hover {
         cursor: pointer;
