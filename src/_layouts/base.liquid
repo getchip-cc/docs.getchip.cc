@@ -2,41 +2,46 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="shortcut icon" href="/favicon.ico">
+  <title>{{ title | default: "Next Thing Co. Docs" }}</title>
 
-  <title>{{ title | default: "API Documentation" }}</title>
+  <script src="/javascripts/all.js"></script>
 
   <link rel="stylesheet" href="/stylesheets/highlight.css">
   <link rel="stylesheet" href="/stylesheets/screen.css" media="screen">
-  <link rel="stylesheet" href="/stylesheets/print.css" media="print">
   <link rel="stylesheet" href="/stylesheets/ntc_override.css" media="screen">
+  <link rel="stylesheet" href="/stylesheets/print.css" media="print">
 
-  <script src="/javascripts/all.js"></script>
+  <link rel="shortcut icon" href="/favicon.ico">
 </head>
 <body>
+
   <a href="#" id="nav-button">
     <span>
       NAVI
       <img src="/images/navbar.png" alt="">
     </span>
   </a>
+
   <div class="tocify-wrapper">
     <div class="nav-bar-logo">
-      <a href="index.html"><img src="/images/ntclogo_doccorner.png" alt="Next Thing Co."></a>
+      <a href="/"><img src="/images/ntclogo_doccorner.png" alt="Next Thing Co."></a>
     </div>
 
     <div class="search">
       <input type="text" class="search" id="input-search" placeholder="Search">
     </div>
+
     <ul class="search-results"></ul>
+
     <div id="toc"></div>
+
     <ul class="toc-footer">
       <li>Have something to add or change? <br> Email us at docs@nextthing.co.</li>
     </ul>
   </div>
+
   <div class="page-wrapper">
     <div class="dark-box"></div>
     <div class="content">
@@ -44,5 +49,6 @@
     </div>
     <div class="dark-box"></div>
   </div>
+
 </body>
 </html>
