@@ -17,6 +17,7 @@
     "test": "test -f ./public/index.html"
   },
   "dependencies": {
+    "imagesloaded": "3.1.8",
     "lunr": "0.5.7"
   },
   "devDependencies": {
