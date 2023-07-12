@@ -13,7 +13,7 @@ module.exports = [
       globals: {
         ...globals.browser,
         ...globals.jquery,
-        lunr: false
+        lunr: 'readonly'
       }
     }
   }
