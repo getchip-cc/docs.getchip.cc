@@ -1,5 +1,5 @@
 ---
-layout: "base.liquid"
+layout: "page.liquid"
 permalink: "/chip.html"
 title: "Next Thing Co. Documentation"
 ---

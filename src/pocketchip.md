@@ -1,5 +1,5 @@
 ---
-layout: "base.liquid"
+layout: "page.liquid"
 permalink: "/pocketchip.html"
 title: "Next Thing Co. PocketC.H.I.P. Documentation"
 ---

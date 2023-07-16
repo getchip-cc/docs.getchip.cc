@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ title | default: "Next Thing Co. Docs" }}</title>
+
+  {% block javascripts -%}
+  <script src="/javascripts/all.js"></script>
+  {%- endblock %}
+
+  {% block stylesheets -%}
+  <link rel="stylesheet" href="/stylesheets/highlight.css">
+  <link rel="stylesheet" href="/stylesheets/screen.css" media="screen">
+  <link rel="stylesheet" href="/stylesheets/ntc_override.css" media="screen">
+  <link rel="stylesheet" href="/stylesheets/print.css" media="print">
+  {%- endblock %}
+
+  <link rel="shortcut icon" href="/favicon.ico">
+</head>
+<body>
+
+  {% block content %}{{ content }}{% endblock %}
+
+</body>
+</html>

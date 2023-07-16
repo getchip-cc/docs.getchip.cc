@@ -1,5 +1,5 @@
 ---
-layout: "base.liquid"
+layout: "page.liquid"
 permalink: "/chip_pro_devkit.html"
 title: "Next Thing Co. C.H.I.P. Pro Developer's Kit Documentation"
 ---
