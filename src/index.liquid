@@ -6,13 +6,11 @@
     // https://stackoverflow.com/a/21198129
     (function() {
       var hash = window.location.hash.substring(1);
-      var urlSplit = document.URL.split('#');
-      var nurl = '/chip.html#' + urlSplit[1];
 
       if (hash) {
         // Best practice for JavaScript redirects.
         // https://stackoverflow.com/a/506004
-        window.location.replace(nurl);
+        window.location.replace(`/chip.html#${hash}`);
       }
     })();
   </script>
