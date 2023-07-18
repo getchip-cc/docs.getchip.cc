@@ -5,7 +5,7 @@ const config = require('@jgarber/eslint-config');
 module.exports = [
   ...config,
   {
-    ignores: ['public/*', 'src/javascripts/lib/*']
+    ignores: ['_site/*', 'src/javascripts/lib/*']
   },
   {
     files: ['src/javascripts/**/*.js'],
