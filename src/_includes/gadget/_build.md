@@ -203,7 +203,7 @@ docker build -t blink .
 
 Docker will output all the build commands and tell you that it has successfully built.
 
-![GR8](images/success.png)
+![GR8](/images/success.png)
 
 
 ### 5. Deploy

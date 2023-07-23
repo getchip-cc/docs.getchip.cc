@@ -4,7 +4,7 @@
 
 C.H.I.P. Pro can be powered in a few ways that are all managed by the AXP209 power management IC.
 
-![power LED USB](images/powerLED_800.jpg)
+![power LED USB](/images/powerLED_800.jpg)
 
 Below is a list of the ports and pins to provide power to and pins that are necessary to initiate power in some instances.
 
@@ -16,7 +16,7 @@ Pins
 * **BAT** - Connect a  single-cell 3.7V LiPo battery to this pin (and GND) to provide power to C.H.I.P. Pro and receive charge from power inputs.
 * **PWR (PWRON)** - Connect to ground for 1 second to turn C.H.I.P. Pro on when a battery is attached to the **BAT** pin.
 
-![PWR on](images/PWRon_800.jpg)
+![PWR on](/images/PWRon_800.jpg)
 
 * **VBUS** - Connect 5 volts to this pin (and GND to pin 53) to provide power to C.H.I.P. Pro. Power connected to VBUS will also charge a battery, just at a slower rate than from **CHG-IN**. The VBUS pin is the same one than in the microUSB connector.
 
@@ -53,4 +53,4 @@ There are two ways to power off C.H.I.P. Pro:
 **2)** On the board, connect **PWR** pin to **GND** for 3+ seconds to power off.
 
 
-![PWR off](images/PWRoff_800.gif)
+![PWR off](/images/PWRoff_800.gif)

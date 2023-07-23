@@ -1,15 +1,15 @@
 # Settings
-![settings](images/bright.png)
+![settings](/images/bright.png)
 
 Use the **PocketC.H.I.P.** settings to change **WiFi**, **screen brightness**, or **volume levels**.
 
-![sproket](images/no_scale/settings-icon.jpg)
+![sproket](/images/no_scale/settings-icon.jpg)
 
 To access the **PocketC.H.I.P. settings**, tap on the sprocket icon on the Home Screen.
 
 
 ## WiFi & Bluetooth
-![wifi settings](images/wifi-setting.jpg)
+![wifi settings](/images/wifi-setting.jpg)
 
 From the Settings Screen, tap the toggle switch next to the WiFi icon to turn WiFi on or off.
 
@@ -20,12 +20,12 @@ When prompted, enter the network password in the text field, then touch the **Co
 Currently only WiFi is configurable from the PocketC.H.I.P graphical interface. If you want to configure Bluetooth, consult the C.H.I.P. documentation page [here](/).
 
 ## Screen Brightness
-![brightness](images/brightness.jpg)
+![brightness](/images/brightness.jpg)
 
 Tap the brightness slider on the left to decrease brightness or tap the right to increase. Lowering the brightness is an easy way to increase battery life.
 
 ## Volume
-![volume](images/volume.jpg)
+![volume](/images/volume.jpg)
 
 Adjust the volume slider by tapping on the left to decrease volume or on the right to increase it. Of course, you'll need to have headphones or speakers attached to PocketC.H.I.P. to hear anything.
 
@@ -50,7 +50,7 @@ For more information on using sudo, see the C.H.I.P. docs [here](/chip#terminal-
 
 ### Changing Your Password
 
-![terminal icon](images/no_scale/terminal-icon.png)
+![terminal icon](/images/no_scale/terminal-icon.png)
 
 **You should change your password** for both the chip and root account to something other than the default, chip. Open the **terminal application** from the PocketC.H.I.P. Home Screen and type the following command:
 

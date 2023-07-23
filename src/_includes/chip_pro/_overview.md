@@ -1,6 +1,6 @@
 # Get Started With C.H.I.P. Pro
 
-![C.H.I.P. Pro](images/CHIP_ProMain.jpg)
+![C.H.I.P. Pro](/images/CHIP_ProMain.jpg)
 
 The C.H.I.P. Pro System-on-Module (SOM) is designed to get you making great products instead of re-inventing computers. It's a low-cost, high-capability module that lets you focus on fast iterations of brilliant ideas that will be ready to manufacture. 
 
@@ -29,7 +29,7 @@ To learn more, go to our [Specification](/chip_pro#specifications) section.
 
 ## GR8 SiP
 
-![GR8](images/CHIP-Pro-Exploded-View.png)
+![GR8](/images/CHIP-Pro-Exploded-View.png)
 
 C.H.I.P. Pro is powered by Next Thing Co’s GR8 SiP (System in Package). GR8 features a 1GHz Allwinner R8 ARMv7 Cortex-A8 processor with NEON SIMD extensions and a Mali-400 GPU. 256MB of Nanya DDR3 SDRAM is combined with the R8 processor into a 14mm x 14mm, 0.8mm pitch 252 ball FBGA package. 
 
@@ -39,4 +39,4 @@ More information about the GR8 SiP can be found in the [GR8 data sheet.](https:/
 
 ## Block Diagram
 
-![C.H.I.P. Pro Block Diagram](images/blockDiagram.jpg)
+![C.H.I.P. Pro Block Diagram](/images/blockDiagram.jpg)

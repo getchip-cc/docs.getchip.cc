@@ -37,7 +37,7 @@ Connect a USB to UART cable to the Ground (GND), Transmit (TX), and Recieve (RX)
 We'll find those on header U14, pin outs 1,3 and 5.
 See the following diagram, which assumes CHIP's USB ports are pointed up...
 
-![Pinout diagram for CHIP](images/chip_pinouts.jpg)
+![Pinout diagram for CHIP](/images/chip_pinouts.jpg)
 
 #### About the Cable
 If you need a connector, search your favorite shop for 'USB to UART cable' - any will do.
@@ -67,11 +67,11 @@ Please check your data sheets!
 
 The correct pins are on U14 at 1, 3, and 5.
 
-![Pinout diagram for CHIP](images/chip_pinouts.jpg)
+![Pinout diagram for CHIP](/images/chip_pinouts.jpg)
 
  Here's a photo of the cable properly plugged in:
 
-![Properly connect USB to UART cable](images/uart_connection.jpg)
+![Properly connect USB to UART cable](/images/uart_connection.jpg)
 
 
 ### SSH
@@ -177,11 +177,11 @@ You are now free to do whatever it is you do with Linux command line on CHIP.
 #### Using PuTTy
 If you are on Windows using PuTTy, you'll probably want to open the windows Device Manager to get the COM name for the serial port. The device won't show up in the Ports list until after the kernel loads and presents the device, so it may take a minute or so before Windows actually detects it.
 
-![Device Manager showing serial ports](images/win_putty_00.jpg)
+![Device Manager showing serial ports](/images/win_putty_00.jpg)
 
 In the PuTTy configuration panel, you can now use the COM name to set it up. In this case, it's "COM4":
 
-![PuTTy configuration](images/win_putty_01.jpg)
+![PuTTy configuration](/images/win_putty_01.jpg)
 
 Press "Open" to open a terminal window ,where you can log in to CHIP with username and password `chip`.
 

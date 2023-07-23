@@ -7,7 +7,7 @@ Then, open the Terminal application (from the drop-down menu at the top, left co
 
 Once the applications loads, type `uname -a`. This outputs information about your system software version.
 
-![uname results in terminal](images/update_uname.jpg)
+![uname results in terminal](/images/update_uname.jpg)
 
 Look for a number in appended with `-ntc`, for example `4.3.0` or `4.4.0`. This number is the kernel version running on your C.H.I.P. If the number is `4.4.0` or greater, you don’t need to upgrade your kernel version. Most likely, your number is `4.3.0`, keep reading: you need to upgrade your kernel.
 

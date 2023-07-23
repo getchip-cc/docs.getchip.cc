@@ -13,15 +13,15 @@ Here's how you connect a DIP to C.H.I.P.
 
 Orient the USB connector opposite the video connector.
 
-![Attach the DIP](images/vga_attach-0.jpg)
+![Attach the DIP](/images/vga_attach-0.jpg)
 
 Align the pins to C.H.I.P.'s headers and gently press with even force until....
 
-![Attach the DIP](images/vga_attach-1.jpg)
+![Attach the DIP](/images/vga_attach-1.jpg)
 
 ...the two pieces are joined. Tasty!
 
-![Attach the DIP](images/vga_attach-2.jpg)
+![Attach the DIP](/images/vga_attach-2.jpg)
 
 ## Disconnect the DIP
 

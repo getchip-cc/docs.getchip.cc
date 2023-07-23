@@ -26,7 +26,7 @@ Download an image to look at the source code or store and flash a board with it 
 
 Click **FLASH** to flash C.H.I.P. Pro.
 
-![flasher home page](images/main.png)
+![flasher home page](/images/main.png)
 
 You will then arrive at the **"Flasher First Time Setup"** page which will have setup instructions specific to your computer's operating system. Follow along in the browser or below.
 
@@ -73,25 +73,25 @@ You will then arrive at the **"Flasher First Time Setup"** page which will have 
 
 After you have setup your computer, press **START!**.
 
-![first time setup](images/firstsetup.png)
+![first time setup](/images/firstsetup.png)
   
 Plug the micro USB cable into the micro USB port on C.H.I.P. Pro. Hold down the FEL button (a pencil eraser works nicely) and with the other hand plug the USB cable into the computer. When the pink power and white status LEDs on C.H.I.P. Pro light up, you can release the FEL button.
 
-![pushing FELL button](images/hold_plugPro.gif)
+![pushing FELL button](/images/hold_plugPro.gif)
 
 The web flasher will search for and recognize C.H.I.P. Pro.
 
-![searching page](images/searchFlash.png) 
+![searching page](/images/searchFlash.png) 
 
 You will then be directed to the page with the example images. Hover over each image to see a description and click to see more details such as file size and kernel version. When you have chosen your adventure, click **FLASH TO C.H.I.P. PRO**.
 
-[![image page](images/imagesPage.png)] (images/imagesPage.jpg) | [![flash to board](images/imageDetail.png)] (images/imageDetail.png) | 
+[![image page](/images/imagesPage.png)] (images/imagesPage.jpg) | [![flash to board](/images/imageDetail.png)] (images/imageDetail.png) | 
 |:---:|:---:|
 | Choose image | Click FLASH TO CHIP PRO |
 
 Watch the flashing process progress and leave the browser tab open in order for it to complete. You will be notified when C.H.I.P. Pro has been flashed successfully. You are then free to unplug the C.H.I.P. Pro or connect to it via [serial](/chip_pro#usb-serial-uart1-connection). 
 
-![succeeded page](images/flashFinish.png)
+![succeeded page](/images/flashFinish.png)
 
 If you are having problems with the flashing process follow the troubleshooting instructions given by the web flasher or check out the [Web Flasher OS-Specific Issues](/chip#web-flasher-os-specific-issues) troubleshooting section. 
 
@@ -145,7 +145,7 @@ For example, [this](https://www.amazon.com/JBtek-WINDOWS-Supported-Raspberry-Pro
 
 To connect the USB-UART cable to C.H.I.P. Pro you will need to solder headers onto the board for a reliable connection. 
 
-![UART connection](images/solderHeaders_800.jpg)
+![UART connection](/images/solderHeaders_800.jpg)
 
 The below connections work for the cable linked to in the above material list. Make sure to check the manufacturer's product description for the correct pinout for whichever cable you are using.
  
@@ -154,7 +154,7 @@ The below connections work for the cable linked to in the above material list. M
 * white - TX
 
 
-![UART connection](images/UARTconnect_800.jpg)
+![UART connection](/images/UARTconnect_800.jpg)
 
 #### Power C.H.I.P. Pro 
 
@@ -244,7 +244,7 @@ In PuTTY choose **Serial** as the **Connection type**. Plug the following items 
 * COMx number as the **Serial Line**  
 * 115200 as the **Speed** (baud rate)
 
-[![Com Port](images/ComPort.PNG)] (images/ComPort.PNG) | [![puTTY](images/puTTYsetM.jpg)] (images/puTTYsetM.jpg) | 
+[![Com Port](/images/ComPort.PNG)] (images/ComPort.PNG) | [![puTTY](/images/puTTYsetM.jpg)] (images/puTTYsetM.jpg) | 
 |:---:|:---:|
 | In Device Manager find COM port # | Plug port # and baud rate into puTTY | 
 
@@ -274,11 +274,11 @@ C.H.I.P. Pro uses a standard 50Ω IPEX (Hirose U.FL compatible) connector for th
 
 To connect an antenna, come straight from the top and push the antenna onto the connector. Keep in mind the connector will wear out over time. We suggest keeping the disconnect/connect cycle down to 10 or less. 
 
-[![wifi antenna connector](images/wifiConnectB.jpg)] (images/wifiConnectB.jpg) | [![push antenna on](images/wifiPush.jpg)] (images/wifiPush.jpg) | 
+[![wifi antenna connector](/images/wifiConnectB.jpg)] (images/wifiConnectB.jpg) | [![push antenna on](/images/wifiPush.jpg)] (images/wifiPush.jpg) | 
 |:---:|:---:|
 | WiFi antenna connector | Push antenna onto connector |
 
-![wifi antenna connected](images/wifiOn.jpg)
+![wifi antenna connected](/images/wifiOn.jpg)
 
 ### Enable Wifi Antenna
 In order to use it, you need to set the path of the external antenna.
@@ -785,7 +785,7 @@ C.H.I.P. Pro has a total of 27 GPIO pins ready for use:
 
 To see all the functions C.H.I.P. Pro pins offer check out the [Multiplexing table](/chip_pro#gr8-pins-and-multiplexing-on-c-h-i-p-pro).
 
-![pin out](images/Pro_Pinout.jpg)
+![pin out](/images/Pro_Pinout.jpg)
 
 GPIO is accessed through Linux's [sysfs interface](https://www.kernel.org/doc/Documentation/gpio/sysfs.txt).  
 
@@ -865,7 +865,7 @@ To access the GPIO pins through sysfs there is a process that must be adhered to
 
 When connecting a switch, we recommend adding a external pull-up or pull-down resistor to prevent a floating pin logic state.
 
-![pull-down resistor](images/buttonUART_800.jpg)
+![pull-down resistor](/images/buttonUART_800.jpg)
 
 In terminal, tell the system you want to listen to a pin by exporting it:
 
@@ -895,7 +895,7 @@ while ( true ); do cat /sys/class/gpio/gpio132/value; sleep 1; done;
 
 Attach an LED to pin PE4 and ground. We recommend placing a current-limiting resistor in series to protect the GR8 module and LED from overcurrent or a potential short.
 
-![UART connection](images/blink.gif)
+![UART connection](/images/blink.gif)
 
 Change the mode of the pin from "in” to “out”:
 

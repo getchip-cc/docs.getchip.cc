@@ -1,5 +1,5 @@
 # GR8 FAQ
-![GR8](images/GR8-Crop.png)
+![GR8](/images/GR8-Crop.png)
 
 ## How much does GR8 cost?
 Gr8 costs $6 in any quantity.  

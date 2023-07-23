@@ -2,7 +2,7 @@
 
 C.H.I.P. Pro was created to be seamlessly embedded into products and we at NTC are here to help you do that. If you are ready to go from breadboard to PCB, read on. This section gives recommendations and provides resources and tips to help plan a successful PCB design.
 
-![C.H.I.P. Pro PCBs](images/boards.jpg)
+![C.H.I.P. Pro PCBs](/images/boards.jpg)
 
 ## From 1 to 1MM
 
@@ -26,15 +26,15 @@ Create a C.H.I.P. Pro footprint with the EDA (Electronic Design Automation) soft
 
 ### SMT Footprint
 
-![C.H.I.P. Pro SMT footprint](images/Pro_Footprint_SMT.jpg)
+![C.H.I.P. Pro SMT footprint](/images/Pro_Footprint_SMT.jpg)
 
 ### Solder Paste Stencil
 
-![C.H.I.P. Pro SMT stencil](images/Pro_stencil.jpg)
+![C.H.I.P. Pro SMT stencil](/images/Pro_stencil.jpg)
 
 ### Hand Solder Footprint
 
-![C.H.I.P. Pro footprint](images/Pro_Footprint_hand.jpg)
+![C.H.I.P. Pro footprint](/images/Pro_Footprint_hand.jpg)
 
 
 <aside class="notice">
@@ -217,7 +217,7 @@ To provide fast integration time into your product NTC has done most of the heav
 
 * You will not need to apply for a new FCC-ID for your product. When you process your application with a certified test lab, they will file a Class II Permissive Change under NTC's FCC ID. For any questions on this, reach out to us at pro@nextthing.co. The FCC ID can be found etched on the WiFi module.
 
-![C.H.I.P. Pro FCC ID](images/CHIP_Pro_FCC.png)
+![C.H.I.P. Pro FCC ID](/images/CHIP_Pro_FCC.png)
 
 ## Do Something GR8
 

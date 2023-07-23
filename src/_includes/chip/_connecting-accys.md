@@ -26,7 +26,7 @@ Not only is there only one USB port (keeping CHIP nice and small), but CHIP's mi
 ## Keyboard and Mouse
 Many keyboards have USB hubs built-in, so you can attach a mouse to the keyboard, attach the keyboard to CHIP, and immediately have control. However, it's likely the two will draw too much current, so you'll want to connect to a powered hub before you connect.
 
-![keyboard, mouse, and powered USB hub connected to CHIP](images/chip_usbconnections.jpg)
+![keyboard, mouse, and powered USB hub connected to CHIP](/images/chip_usbconnections.jpg)
 
 ## Bluetooth Keyboard and Mouse
 As you know, CHIP has built-in bluetooth. If you want to use a keyboard and mouse, you can keep your USB port free for other things (like mass storage or a MIDI controller!) and keep your desk clean. See [connecting to bluetooth section](#bluetooth)
@@ -34,16 +34,16 @@ As you know, CHIP has built-in bluetooth. If you want to use a keyboard and mous
 ## Monitor
 In the spirit of keeping things small, CHIP packs all the audio and video into a small TRRS (Tip-Ring-Ring-Sleeve) connector. Built-in video output is restricted to standard composite video resolution of 640x480. Higher video resolutions are possible using the [VGA and HMDI](https://getchip.com/pages/store) DIP boards.
 
-![monitor connected to CHIP](images/chip_withmonitor.jpg)
+![monitor connected to CHIP](/images/chip_withmonitor.jpg)
 
 Here's what the other end of the cable looks like, attached to a monitor with stereo audio inputs (red and white) and the composite video plug, moved so you can see the label on the monitor:
 
-![monitor connected to CHIP](images/chip_withmonitor_cnxn.jpg)
+![monitor connected to CHIP](/images/chip_withmonitor_cnxn.jpg)
 
 ### About the TRRS Connector
 CHIP has a 1/8" (3.5mm) Tip-Ring-Ring-Sleeve (TRRS) output jack, capable of carrying stereo audio, and either composite video out, or microphone in.
 
-![Typical AV cable that carries stereo audio and composite video](images/avcable.jpg)
+![Typical AV cable that carries stereo audio and composite video](/images/avcable.jpg)
 
 This is a fairly common port, but there are a few different arrangements of the conductors, so not all cables are equal.  Fortunately, CHIP uses the same conductor arrangement as Pi, Zune, and iPod audio/video cables, so the most common "mini to RCA A/V" cables should work just fine.
 
@@ -55,7 +55,7 @@ Some cables will route signals a bit differently, using the Red RCA cable for Vi
 
 The conductors on the TRRS plug are arranged like this:
 
-![Tip: Audio Left, Ring: Audio Right, Ring: Ground, Sleeve: Video](images/trrs_annotated.jpg)
+![Tip: Audio Left, Ring: Audio Right, Ring: Ground, Sleeve: Video](/images/trrs_annotated.jpg)
 
 If you want to learn even more about TRRS connectors and the general lack of standardization with them, [this page](http://wiki.robotz.com/index.php/TRRS_Phono_Plug) has even more details.
 
@@ -83,32 +83,32 @@ setenv video-mode sunxi:720x576-24@50,monitor=composite-pal,overscan_x=40,oversc
 The audio and video connector on CHIP can be dedicated to audio output suitable for headphones or connecting to an amplifier for filling a room or public space with glorious sound.
 Just connect a standard 3.5 mm (1/8") TRS audio plug into CHIP's a/v jack. Of course, if headphones are plugged in, there will be no room for a composite video output jack. You can also get audio left, common, and right output from [pins 4, 6 & 8 on header U14](#pin-headers).
 
-![CHIP connected to headphones](images/chip_withaudio.jpg)
+![CHIP connected to headphones](/images/chip_withaudio.jpg)
 
 ## Microphone and Audio Input
 If you want to use audio input, you might find it easiest to use the pins on [pins 10 and 12 on header U14](#pin-headers). However, if you want to use the 1/8" TRRS connector, you can modify the CHIP board to replace the composite video connection with an audio input connection.
 
 If you look at the bottom of CHIP with the audio and USB jacks pointed up, you'll see three small contact pads to the left of the audio jack. The left pad has a small label of **mic** and the right pad has a **tv** label. Between the middle pad and the **tv** pad is a trace that can be carefully cut with an Exacto or utility razor blade. Once that is cut (check with a volt or continuity meter), you can put a solder blob between the **mic** and middle pad. Now the outer ring can be used for audio input.
 
-![Slice video trace, bridge mic in pad](images/chip_audioinbridge.jpg)
+![Slice video trace, bridge mic in pad](/images/chip_audioinbridge.jpg)
 
 As another reference, if you had X-ray vision and you were looking from the **bottom** of CHIP, you'd see a trace like this:
 
-![Xray vision of TV and Mic traces from top of CHIP](images/chip_tvmonxray.jpg)
+![Xray vision of TV and Mic traces from top of CHIP](/images/chip_tvmonxray.jpg)
 
 If the composite video connection is needed again, just reverse the process: desolder the connection between **mic** and the middle pad, then solder a bridge between **tv** and the middle pad.
 
 ### Microphone with Header Pins
 If you want to use the [pins 10 and 12 on header U14](#pin-headers), you'll most likely need to add some additional circuitry to get a good input signal. Here is a schematic of the simple circuit:
 
-![Schematic for adding a microphone input to MIC pins on CHIP](images/microphone_schematic.jpg)
+![Schematic for adding a microphone input to MIC pins on CHIP](/images/microphone_schematic.jpg)
 
 You'll need two 4.7 microfarad capacitors, one 100 nanofarad capacitor, and a 3300 picofarad capacitor. You'll also need one 2 kilo-ohm and one 4.3 kilo-ohm resistors.
 
 ## USB Storage
 If you have files that you want to modify, use, or transfer to CHIP's internal storage, you can attach a USB thumb drive, card-reader, or hard drive. Open the file manager and access the files.
 
-![USB drive attatched to CHIP](images/chip_usbstorage.jpg)
+![USB drive attatched to CHIP](/images/chip_usbstorage.jpg)
 
 ## USB Audio
 CHIP can use Class-compliant USB audio devices. A popular, and inexpensive choice for audio devices are USB dongles based on the C-Media chipset. These have been tested successfully with CHIP and can often be purchased for less than $10. Some good resources for linux and audio compatibility are on the [linux audio](http://wiki.linuxaudio.org/wiki/hardware_matrix) and [alsa project](http://www.alsa-project.org/main/index.php/Matrix:Main) websites.

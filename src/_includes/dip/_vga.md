@@ -12,7 +12,7 @@ There is one VGA DIP in the electrostatic bag, packaged with protective foam. VG
 
 ### Pictures
 
-![VGA DIP Callout Graphic](images/vga_callout.jpg)
+![VGA DIP Callout Graphic](/images/vga_callout.jpg)
 
  * RGB breakouts - RGB breakouts can be found at the edge of the VGA connector on the left side. These are available if you ever want to add cool effects, or to "bend" your VGA DIP
  * Trim-pot breakouts (RGB) - There are three footprints for1 0K trimpots. These can be installed with only a few solder joints, and can create a really awesome visual effects like saturating colors.
@@ -43,15 +43,15 @@ The VGA DIP is extremely easy to use. Once you have your C.H.I.P. OS updated, it
 
 Once C.H.I.P has power, you'll start seeing output on your monitor. Once C.H.I.P is booted, you may want to change the resolution. You can do this with the control panel found in the Computer Things menu, going to Settings/Display
 
-![display control panel](images/settings_select.jpg)
+![display control panel](/images/settings_select.jpg)
 
 In the Display control panel, you can select a resolution in the Outputs menu:
 
-![Change Resolutions](images/settings_vga_resolution.jpg)
+![Change Resolutions](/images/settings_vga_resolution.jpg)
 
 After you select a resolution, you'll need to "Apply" it:
 
-![apply the new resolution](images/settings_apply.jpg)
+![apply the new resolution](/images/settings_apply.jpg)
 
 If you like using commandline in the terminal, you can change resolutions with `xrandr`, such as
 
@@ -81,33 +81,33 @@ Heat up your soldering iron, the VGA DIP is hackable. You may have noticed the p
 
 Trim pots are able to go in one way on TOP of the PCB for accessibility.
 
-![able to go in one way](images/vgapot_01place.jpg)
+![able to go in one way](/images/vgapot_01place.jpg)
 
 Trim pots are sized and spaced for a precise alignment.
 
-![sized and spaced for a precise alignment](images/vgapot_02allpots.jpg)
+![sized and spaced for a precise alignment](/images/vgapot_02allpots.jpg)
 
 Here we see that there is only one way for the pots to go on the TOP side.
 
-![only one way for the pots to go](images/vgapot_03thruhole.jpg)
+![only one way for the pots to go](/images/vgapot_03thruhole.jpg)
 
 Solder the leads and trim them like so.
 
-![Solder the leads and trim them like so.](images/vgapot_04soldered.jpg)
+![Solder the leads and trim them like so.](/images/vgapot_04soldered.jpg)
 
 Time to start Bending Colors!!!
 
-![Control and Compose](images/vgapot_02allpots.jpg)
+![Control and Compose](/images/vgapot_02allpots.jpg)
 
 ### UART Connection
 
 Another example is adding a pin header so you can access C.H.I.P.'s UART bus. This image shows an VGA DIP with the added pin header soldered in place:
 
-![pin headers for UART passthrough to CHIP](images/vga_uart_placement.jpg)
+![pin headers for UART passthrough to CHIP](/images/vga_uart_placement.jpg)
 
 and the receive, transmit, and ground wires of a USB-UART cable connecting CHIP to a computer's serial bus:
 
-![uart artfully applied](images/vga_uart_cnxn.jpg)
+![uart artfully applied](/images/vga_uart_cnxn.jpg)
 
 ## Open Source
 

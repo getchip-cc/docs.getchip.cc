@@ -20,7 +20,7 @@ Head over to the web flasher at [flash.getchip.com/pro](http://flash.getchip.com
 
 After installing the extension the main page will give you the option to either download an image or follow the wizard to flash C.H.I.P. Pro. For a smooth automated process, click **FLASH** to flash C.H.I.P. Pro.
 
-![flasher home page](images/main.png)
+![flasher home page](/images/main.png)
 
 You will be sent to the **"Flasher First Time Setup"** page which will have instructions dependent on the operating system of your computer. Follow along in the browser or below.
 
@@ -68,27 +68,27 @@ You will be sent to the **"Flasher First Time Setup"** page which will have inst
 
 When done with setup, press **START!**.
 
-![first time setup](images/firstsetup.png)
+![first time setup](/images/firstsetup.png)
 
 Once the extension is installed, plug the micro USB cable into the USB0 port on the Dev Kit (**not on the C.H.I.P. Pro!**). 
 
 Hold down the FEL button (a pencil eraser works nicely) and with the other hand plug the USB cable into the computer. When the pink power and white status LEDs on C.H.I.P. Pro light up, you can release the FEL button.
 
-![pushing FELL button](images/pressPlug.jpg)
+![pushing FELL button](/images/pressPlug.jpg)
 
 The web flasher will search for and recognize C.H.I.P. Pro.
 
-![searching page](images/searchFlash.png) 
+![searching page](/images/searchFlash.png) 
 
 You will then be directed to the page with the example images. Hover over each image to see a description and click to see more details such as file size and kernel version. When you have chosen your adventure, click **FLASH TO C.H.I.P. PRO**.
 
-[![image page](images/imagesPage.png)] (images/imagesPage.jpg) | [![flash to board](images/imageDetail.png)] (images/imageDetail.png) | 
+[![image page](/images/imagesPage.png)] (images/imagesPage.jpg) | [![flash to board](/images/imageDetail.png)] (images/imageDetail.png) | 
 |:---:|:---:|
 | Choose image | Click FLASH TO CHIP PRO |
 
 Watch the flashing process progress and leave the browser tab open in order for it to complete. You will be notified when C.H.I.P. Pro has been flashed successfully. You are then free to unplug the C.H.I.P. Pro or connect to it via [serial](/chip_pro#usb-serial-uart1-connection). 
 
-![succeeded page](images/flashFinish.png)
+![succeeded page](/images/flashFinish.png)
 
 If you are having problems with the flashing process follow the troubleshooting instructions given by the web flasher or check out the [Web Flasher OS-Specific Issues](/chip#web-flasher-os-specific-issues) troubleshooting section. 
 
@@ -115,7 +115,7 @@ If you want to configure and build the rootfs for the Debian image, take a look 
 
 ### After Flashing Image
 
-![power off button](images/poweroffB.gif)
+![power off button](/images/poweroffB.gif)
 
 When you are done or want to flash another example, hold down the power button on the Dev Kit until the Power and Activity LEDs shut off.
 

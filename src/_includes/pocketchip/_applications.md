@@ -1,6 +1,6 @@
 # Applications
 
-![Homescreen](images/homescreen.png)
+![Homescreen](/images/homescreen.png)
 
 Your PocketC.H.I.P. comes with six applications on the Home Screen.
 
@@ -13,17 +13,17 @@ Your PocketC.H.I.P. comes with six applications on the Home Screen.
 
 ## PICO-8
 
-![PICO-8 icon](images/no_scale/pico8-icon.jpg)
+![PICO-8 icon](/images/no_scale/pico8-icon.jpg)
 
 ### Play PICO-8
 
-![Playing PICO-8 games](images/pico-play.jpg)
+![Playing PICO-8 games](/images/pico-play.jpg)
 
 Play games, change games, and make games with PICO-8! With a couple keystrokes you can join the PICO-8 community and modify their games, or even make your own!
 
 For more resources to learn PICO-8, search YouTube for **PICO-8** videos and check out the PICO-8 Fanzine [link](https://sectordub.itch.io/pico-8-fanzine-1).
 
-![Splore all the games](images/pico-splore-with-hands.jpg)
+![Splore all the games](/images/pico-splore-with-hands.jpg)
 
 **PICO-8** starts in **splore mode**, which lets you select which game to load.
 
@@ -55,13 +55,13 @@ While in the splore mode, press **ESC** and select **EXIT TO CONSOLE** to start 
 
 ### Make Games (with PICO-8)
 
-![Edit Screens](images/pico8-icon-callout.png)
+![Edit Screens](/images/pico8-icon-callout.png)
 
 Gamers, get ready to become game-makers. In addition to playing the community's games, PICO-8 allows you to modify existing games, or create games of your own using the code, graphics, and sound editors. See the image above to learn which icon stands for which editing mode, and keep reading for an explanation of each mode.
 
 ### Code Editor
 
-![Write your own PICO-8 games](images/pico-code.jpg)
+![Write your own PICO-8 games](/images/pico-code.jpg)
 
 **Access the code editor** from the command line by pressing **ESC**. If you are in the middle of a game, press **ESC** and select **EDIT THIS CART** to  edit the game's code. Some other helpful shortcuts are:
 
@@ -76,7 +76,7 @@ The code editor is not the only editor in PICO-8. Access the other editors by ta
 
 ### Sprite Editor
 
-![Draw custom graphics](images/pico-sprites.jpg)
+![Draw custom graphics](/images/pico-sprites.jpg)
 
 Use the sprite editor to create custom artwork that makes up tiles, characters, or other graphical elements of the game. The navigator at the bottom of the sprite editor screen shows an 8x8 pixel box that is displayed in the sprite sheet window. It is possible to use the tools (pan, select) to edit larger areas.
 
@@ -111,13 +111,13 @@ The tools can be found directly below the 8x8 editor widow and above the sprite 
 * If no selection is active, the fill will be limited to the area in the editor window.
 
 ### Map Editor
-![Create your own levels](images/map.jpg)
+![Create your own levels](/images/map.jpg)
 
 The tools for the map editor work similarly to those in the sprite editor. However, rather than choosing colors, select a sprite and use the draw or fill tool to place sprites into the map sheet.
 
 ### Sound Effects Editor
 
-![Customize sound effects](images/pico-soundfx.jpg)
+![Customize sound effects](/images/pico-soundfx.jpg)
 
 PICO-8's sound editor has two view modes: **graph view** and **tracker view**. Switch between modes by tapping on the graph and tracker buttons in the upper-left corner of the sound editor.
 
@@ -174,7 +174,7 @@ The 8 effects are:
 * **7** - slow arpeggio
 
 ### Music Editor
-![Compose your soundtrack](images/pico-music.jpg)
+![Compose your soundtrack](/images/pico-music.jpg)
 
 The **music editor** allows **up to four effects at a time** for your game's soundtrack. Click on the boxes above each column to activate the track and choose which effects will be included in each song pattern.
 
@@ -185,7 +185,7 @@ The **music editor** allows **up to four effects at a time** for your game's sou
 
 ## SunVox
 
-![SunVox Icon](images/no_scale/sunvox-icon.png)
+![SunVox Icon](/images/no_scale/sunvox-icon.png)
 
 The **SunVox tracker** is a fully featured music production studio. It's lightweight, sounds great, and is designed to work with a stylus on a single, small screen. As a result, it's a perfect fit for for making music and playing with sound on PocketC.H.I.P..
 
@@ -194,7 +194,7 @@ To get started launch **SunVox**, put on some headphones, press **SHIFT-space** 
 ### Interface Overview
 Here's a quick overview of what you see when you launch **SunVox**, and what the different parts of the interface do. Visit [the SunVox page](http://www.warmplace.ru/wiki/sunvox:manual_en) for more information, including complete keyboard mappings. There are also lots of introductory SunVox videos on YouTube, just search for **SunVox intro videos**.
 
-![SunVox screen areas notated](images/sunvox_editpattern_callout.jpg)
+![SunVox screen areas notated](/images/sunvox_editpattern_callout.jpg)
 
 ### Keyboard Shortcuts
 
@@ -211,7 +211,7 @@ octaves 0-8 | Shift-[0-8]
 
 ### Pattern Editor
 
-![SunVox pattern editor](images/sunvox_editpattern.jpg)
+![SunVox pattern editor](/images/sunvox_editpattern.jpg)
 
 The **Pattern Editor** is **like a page of sheet music**. Instead of staffs, measures, clefs, notes, and articulations, it has 32 rows and several columns that represent pitch, timing, and even how a pitch is played (soft, hard, bright, etc).
 
@@ -236,7 +236,7 @@ For **sharp** and **flat** notes, use the row above. For example, **S** is a c-s
 
 ### Modules (synths and effects)
 
-![SunVox modules](images/sunvox_modules.jpg)
+![SunVox modules](/images/sunvox_modules.jpg)
 
 The **Module Editor** is located below the **Touch Keyboard** on its right. This includes the **different instruments**, **synthesizers**, or **effects** you can use to change the sounds that you put into the patterns above. You can add new modules, delete current modules or rearrange modules to fit your needs.
 
@@ -286,7 +286,7 @@ Change the octave of the touch keyboard.
 
 	In **Timeline**, you can also freely record notes while you play them with the **Record** button, or you can clone patterns to repeat them. Move the pattern blocks around to create your composition. When finished, you can render a finished stereo file and distribute it as you want!
 
-![SunVox timeline view](images/sunvox_timeline.jpg)
+![SunVox timeline view](/images/sunvox_timeline.jpg)
 
 * **_MIDI_**
 
@@ -294,7 +294,7 @@ Change the octave of the touch keyboard.
 
 ## Terminal
 
-![image of terminal](images/no_scale/terminal-icon.png)
+![image of terminal](/images/no_scale/terminal-icon.png)
 
 Many may find the **Terminal** archaic or intimidating, it's a place to **type commands directly to the computer** for execution and evaluation by the operating system. There are no icons, just text.
 
@@ -302,7 +302,7 @@ Use the terminal to dive into the operating system’s guts, quickly move files 
 
 ### Terminal Top Buttons
 
-![Terminal buttons](images/no_scale/application_terminal_top.jpg)
+![Terminal buttons](/images/no_scale/application_terminal_top.jpg)
 
 The Terminal has a few small buttons at top.  From left to right, they are:
 
@@ -318,19 +318,19 @@ The Terminal has a few small buttons at top.  From left to right, they are:
 
 ## Write
 
-![image of write](images/no_scale/write-icon.png)
+![image of write](/images/no_scale/write-icon.png)
 
 **Write is a minimalist text editor** that's well suited for basic text entry tasks. If you're looking to code with Write, you'll be pleased to learn that it supports line numbering and auto indentation, just look under the **"Option"** menu.
 
 
 ## File Browser
 
-![image of file browser](images/no_scale/browser-icon.png)
+![image of file browser](/images/no_scale/browser-icon.png)
 
 The **File Browser** provides a **visual representation** of the files on your PocketC.H.I.P. using icons. Drag, drop, and double-click your way through this application for full control over every file on your device.
 
 ## Help
 
-![image of help icon](images/no_scale/help-icon.jpg)
+![image of help icon](/images/no_scale/help-icon.jpg)
 
 You are reading it right now. No kidding! This document is available online and locally on PocketC.H.I.P., which means anywhere PocketC.H.I.P. goes, help will be right there with it.

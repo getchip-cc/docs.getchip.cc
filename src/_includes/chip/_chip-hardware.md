@@ -2,8 +2,8 @@
 At around 30 grams, CHIP is small, but it packs a lot of hardware on the PCB. Here's an overview of the connections and components.
 
 ## Parts and Pieces
-![Callout graphic of chip parts on top](images/chip_top_annotated.jpg)
-![Callout graphic of chip parts on bottom](images/chip_bottom_annotated.jpg)
+![Callout graphic of chip parts on top](/images/chip_top_annotated.jpg)
+![Callout graphic of chip parts on bottom](/images/chip_bottom_annotated.jpg)
 
 ## Wireless
 ### WiFi
@@ -26,7 +26,7 @@ Audio Input uses the same connection on the TRRS connector as the composite vide
 ## Pin Headers
 The Pin Headers provide a massive amount of connectivity, making CHIP a suitable platform for product development for physical computing and "internet of things" devices. Here's a basic diagram that labels all the pins:
 
-![CHIP pinout](images/chip_pinouts.jpg)
+![CHIP pinout](/images/chip_pinouts.jpg)
 
 U13L | U13R | U14L | U14R
 ------|------|------|------
@@ -55,11 +55,11 @@ GND : ground | LCD-DE : RGB666 data | GND : ground | GND : ground
 
 ## Mechanical Drawing
 
-![CHIP mechanical drawing](images/chip_mechanical.jpg)
+![CHIP mechanical drawing](/images/chip_mechanical.jpg)
 
 Our git repo for CHIP hardware has a [mechanical drawing](https://github.com/NextThingCo/CHIP-Hardware/tree/master/CHIP%5Bv1_0%5D/C.H.I.P._Mechanical)
 
 ## Open Source Hardware: Where To Get It
 CHIP is open source hardware. Here's where you can get all the data you need to make, modify, or learn about your own CHIP. Visit the [CHIP Hardware git repository](https://github.com/NextThingCo/CHIP-Hardware).
 
-![Sample schematic of CHIP](images/chip_schematic.jpg)
+![Sample schematic of CHIP](/images/chip_schematic.jpg)

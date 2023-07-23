@@ -2,7 +2,7 @@
 
 ## Battery Life
 
-![Check out that battery](images/back.jpg)
+![Check out that battery](/images/back.jpg)
 
 Your PocketC.H.I.P. uses a **3.7-volt LiPo battery**, that should last for about **five hours** of use. Increase battery life by dimming the screen brightness and turning off WiFi. 
 
@@ -10,7 +10,7 @@ The top left corner of the screen shows your battery level, and PocketC.H.I.P. w
 
 ## Charge PocketC.H.I.P.
 
-![Charging PocketC.H.I.P. ](images/wall-power.jpg)
+![Charging PocketC.H.I.P. ](/images/wall-power.jpg)
 
 **Plug PocketC.H.I.P. into a 5-volt 1.5A power supply with a USB-micro cable to charge the 3.7V battery.**
 
@@ -20,7 +20,7 @@ PocketC.H.I.P. is compatible with with most cell phone chargers that use a USB-m
 
 ## Sleep and Shutdown
 
-![Power icon](images/no_scale/power-icon.jpg)
+![Power icon](/images/no_scale/power-icon.jpg)
 
 ### Sleep
 
@@ -32,7 +32,7 @@ PocketC.H.I.P. is designed to turn off the screen and backlight after a few minu
 
 To wake up PocketC.H.I.P. from sleep state, simply touch the screen or press a key.
 
-![Power menu](images/power-menu.jpg)
+![Power menu](/images/power-menu.jpg)
 
 ### Shutdown
 

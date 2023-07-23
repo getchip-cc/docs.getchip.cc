@@ -4,7 +4,7 @@ We made a computer. *A $9 computer*. And every computer needs an operating syste
 
 Ours is The CHIP Operating System. Grab an old TV (or any screen with a composite video input), a keyboard and mouse, and stick some electricity in the micro USB port. In a few seconds, you'll have CHIP's operating system on your screen, ready to do **computer things.** 
 
-![DERP desktop](images/screen_desktop.jpg)
+![DERP desktop](/images/screen_desktop.jpg)
 
 CHIP is built for making - we've packed a powerful processor, 4 GB of storage, stereo audio, video out,  and lots of connections for playing and making your projects and products. 
 

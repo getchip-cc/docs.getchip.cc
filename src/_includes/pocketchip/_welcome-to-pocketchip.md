@@ -1,6 +1,6 @@
 # Welcome to PocketC.H.I.P. 
 
-![PocketC.H.I.P. Front](images/front-and-back.png)
+![PocketC.H.I.P. Front](/images/front-and-back.png)
 
 Hey! Thanks for checking out **PocketC.H.I.P.**!
 
@@ -17,7 +17,7 @@ The Docs will *not* teach you how to code (though it will give tips), how to pro
 # Quick Start
 This section explains how to **turn on PocketC.H.I.P.**, **setup WiFi**, and **charge your device**. 
 
-![Step 1](images/image_1.png)
+![Step 1](/images/image_1.png)
 
 **Turn on PocketC.H.I.P.** by pressing down the **Home/Power button** located at the bottom in the middle of the keyboard for about **two seconds**. 
 
@@ -27,7 +27,7 @@ Once PocketC.H.I.P. is ready you will see a series of slides showing the PocketC
 
 Once you have clicked through the basics, you will see a screen with six icons. This is the **Home Screen**.
 
-![Annotated HOME screen](images/home.jpg)
+![Annotated HOME screen](/images/home.jpg)
 
 Use a **finger** or **stylus** (or really anything that's solid and isn't sharp) to tap on the application you want to use. Press gently enough to make contact with the screen. There's no need to apply a lot of force. A gentle touch will do.
 
@@ -35,7 +35,7 @@ While using an application, **press the Home/Power button to return to the Home 
 
 ### WiFi Setup
 
-![Settings icon](images/no_scale/settings-icon.jpg)
+![Settings icon](/images/no_scale/settings-icon.jpg)
 
 From the Home Screen, tap the **settings icon** in the bottom right corner to access the Settings Screen. 
 
@@ -44,7 +44,7 @@ Press the button to the right of the WiFi toggle switch to open a menu of all th
 When prompted, enter the network password in the text field, then touch the **Connect** button. It may take a few seconds to connect.
 
 ### Charging
-![image of PocketC.H.I.P. with cable plugged in](images/wall-power.jpg)
+![image of PocketC.H.I.P. with cable plugged in](/images/wall-power.jpg)
 
 **Plug in PocketC.H.I.P.** to a **5-volt 1.5A power** supply with a USB-micro cable to charge the **3.7V battery**.
 

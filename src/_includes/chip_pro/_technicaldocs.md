@@ -6,7 +6,7 @@ The complete datasheet for C.H.I.P. Pro is available [in our C.H.I.P. Pro Hardwa
 
 ## C.H.I.P. Pro Mechanical Drawing
 
-![Mechanical Drawing](images/Mech_Draw_sm.jpg)
+![Mechanical Drawing](/images/Mech_Draw_sm.jpg)
 
 You can download a high resolution version of this image [here](https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/Mechanical_Documents).
 
@@ -20,11 +20,11 @@ C.H.I.P. Pro is designed for prototyping and dropping into a production assembly
 
 More detailed information on designing a PCB for C.H.I.P. Pro is found [here](/chip_pro#pcb-design-tips). 
 
-![C.H.I.P. Pro PCB Footprint](images/Pro_Footprint_hand.jpg)
+![C.H.I.P. Pro PCB Footprint](/images/Pro_Footprint_hand.jpg)
 
-![C.H.I.P. Pro PCB Footprint](images/Pro_Footprint_SMT.jpg)
+![C.H.I.P. Pro PCB Footprint](/images/Pro_Footprint_SMT.jpg)
 
-![C.H.I.P. Pro PCB stencil](images/Pro_stencil.jpg)
+![C.H.I.P. Pro PCB stencil](/images/Pro_stencil.jpg)
 
 ## GR8 Datasheet
 

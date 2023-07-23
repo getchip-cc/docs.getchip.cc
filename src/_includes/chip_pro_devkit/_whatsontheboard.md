@@ -2,7 +2,7 @@
 
 ## C.H.I.P. Pro Dev Kit Features
 
-![Front Callouts](images/frontCallout.jpg)
+![Front Callouts](/images/frontCallout.jpg)
 
 * **USB1 Port (2.0 Host)** - USB A jack lets C.H.I.P. Pro act as a USB EHCI/OHCI host for external devices. By default, this is powered by the USB micro jack. Cut the appropriate trace to power this from the barrel jack instead. 
 * **USB0 VBUS Power LED** - When there is power available to the USB1 port, this LED will illumniate.
@@ -20,7 +20,7 @@
 
 ## Pin Headers
 
-![Pin Headers](images/ThruHoles.jpg)
+![Pin Headers](/images/ThruHoles.jpg)
 
 There are several areas where pin headers can be soldered into through-holes for easy access and control of the pins on C.H.I.P. Pro.
 
@@ -36,7 +36,7 @@ Default circuit paths are indicated with a silkscreened bar under the connected 
 
 Most of these traces are on the back of the board with one very important exception. The USB0 jumpers on the front are connected to the micro USB0 port on the Dev Kit. This renders the micro USB port on the C.H.I.P. Pro itself unusable. If you would like to use the micro USB port on C.H.I.P. Pro these must be cut. 
 
-![Front Callouts](images/cutJumpers.jpg)
+![Front Callouts](/images/cutJumpers.jpg)
 
 ### Front Traces
 
@@ -63,20 +63,20 @@ Here's what you need to know about modifying and repairing the traces on the Dev
 ### Cut 
 To get the job done you need to grab an X-acto knife or another small, sharp blade. The goal is to cut the trace connecting the two solder pads while NOT cutting anything else. The area to cut is very small so if you happen to own a pair of magnifying eye glasses now is the time to use them! To help stay in one place and not accidentally run the blade over another trace think of the cutting action as more of a digging one. 
 
-![Cut Jumper](images/traces_cut.jpg)
+![Cut Jumper](/images/traces_cut.jpg)
 
 When you feel like you may have successfully cut through test the connection with your multimeter to confirm the disconnect.
  	
-![Test Jumper](images/traces_test.jpg)
+![Test Jumper](/images/traces_test.jpg)
 
 ### Cut-and-Solder
 Some of these require both a trace cut and a solder bridge. For example, the MIC1 power has three pads. Cut between two of the pads, and bridge two with solder.
 
-![Solder and Cut Jumper](images/traces_solderCutHand.jpg)
+![Solder and Cut Jumper](/images/traces_solderCutHand.jpg)
 
 ### Revert and Repair
 Once you cut a trace it can be reverted to the original behavior. To replace the jumper solder a small piece of wire across all the contacts you wish to reconnect, or, if you are nimble, bridge the contacts with a solder blob.
 
 If you need some reminding, circuit paths that came as default are indicated with a silkscreened bar under the originally connected pads.
 
-![Solder Bridge](images/traces_solderBridge.jpg)
+![Solder Bridge](/images/traces_solderBridge.jpg)

@@ -6,7 +6,7 @@ C.H.I.P. Pro is a headless computer, so you will need a separate computer in ord
 
 This is the first thing you want to do in order to get your board online and give you access to C.H.I.P. Pro's software. The Dev Kit has a built-in USB to Serial converter for a direct connection to UART1. 
 
-![image page](images/usb0.jpg)
+![image page](/images/usb0.jpg)
 
 To get started, connect the Dev Kit's USB0 port (**not on the C.H.I.P. Pro!**) to your computer with a common USB A to Micro-USB B cable. Next, you will need terminal emulation software on the computer C.H.I.P. Pro Dev Kit is connected to. Find the OS you are using below to see what software is needed and how to connect.
 
@@ -93,7 +93,7 @@ In PuTTY choose **Serial** as the **Connection type**. Plug the following items 
 * COMx number as the **Serial Line**  
 * 115200 as the **Speed** (baud rate)
 
-[![Com Port](images/ComPort.PNG)] (images/ComPort.PNG) | [![puTTY](images/puTTYsetM.jpg)] (images/puTTYsetM.jpg) | 
+[![Com Port](/images/ComPort.PNG)] (images/ComPort.PNG) | [![puTTY](/images/puTTYsetM.jpg)] (images/puTTYsetM.jpg) | 
 |:---:|:---:|
 | In Device Manager find COM port # | Plug port # and baud rate into puTTY | 
 
@@ -161,11 +161,11 @@ C.H.I.P. Pro uses a standard 50Ω IPEX (Hirose U.FL compatible) connector for th
 
 To connect an antenna, come straight from the top and push the antenna onto the connector. Keep in mind the connector will wear out over time. We suggest keeping the disconnect/connect cycle down to 10 or less. 
 
-[![wifi antenna connector](images/wifiConnectB.jpg)] (images/wifiConnectB.jpg) | [![push antenna on](images/wifiPush.jpg)] (images/wifiPush.jpg) | 
+[![wifi antenna connector](/images/wifiConnectB.jpg)] (images/wifiConnectB.jpg) | [![push antenna on](/images/wifiPush.jpg)] (images/wifiPush.jpg) | 
 |:---:|:---:|
 | WiFi antenna connector | Push antenna onto connector |
 
-![wifi antenna connected](images/wifiOn.jpg)
+![wifi antenna connected](/images/wifiOn.jpg)
 
 ### Enable Wifi Antenna
 In order to use it, you need to set the path of the external antenna.
@@ -677,7 +677,7 @@ C.H.I.P. Pro has a total of 27 GPIO pins ready for use:
 
 To see all the functions C.H.I.P. Pro pins offer check out the [Multiplexing table](/chip_pro#gr8-pins-and-multiplexing-on-c-h-i-p-pro).
 
-![pin out](images/Pro_Pinout.jpg)
+![pin out](/images/Pro_Pinout.jpg)
 
 ### Interacting with Sysfs
 
@@ -786,7 +786,7 @@ Learn more about the sysfs interface [here](https://www.kernel.org/doc/Documenta
 
 The following example goes through a general command sequence to read the changing state of a pin. This example reads a switch connected to **PE4**. When wiring up a switch, add an external pull-up or pull-down resistor to prevent a floating pin logic state. The photo below shows a pull-down resistor.
 
-![pull-down resistor](images/pullDown.jpg)
+![pull-down resistor](/images/pullDown.jpg)
 
 In terminal, tell the system you want to listen to a pin by exporting it:
 
@@ -840,7 +840,7 @@ To start with an example that demos the eight I/Os and two PWM onboard LEDs, [fl
 
 Follow along to turn on and off the LED attached to pin 37.
 
-![UART connection](images/blink.gif)
+![UART connection](/images/blink.gif)
 
 Export the pin and change the mode from "in” to “out”:
 
@@ -953,7 +953,7 @@ To test the PWM channels follow the examples below.
 
 There are two onboard LEDs connected to the PWM pins for testing and learning about pulse width modulation. You can disconnect these PWM LEDs at any time by [cutting traces](/chip_pro_devkit#cuttable-traces). 
 
-![PWM0 LED fade](images/fade.gif)
+![PWM0 LED fade](/images/fade.gif)
 
 Export a channel, set the polarity and enable PWM0:
 
@@ -988,13 +988,13 @@ echo 0 > /sys/class/pwm/pwmchip0/unexport
 
 ### PWM Servo Examples
 
-![servo connected to dev kit](images/mainServo.jpg)
+![servo connected to dev kit](/images/mainServo.jpg)
 
 The C.H.I.P. Pro Dev Kit provides breakout pins to conveniently power and control servos. 
 
 Most servos have three pins: **power**, **ground**, and a **control signal**. The control signal is a pulse-width-modulated input signal whose high pulse width (within a determined period) determines the servo's angular position. The control signal pin draws a small enough amount of current that it can be directly controlled by the PWM pins on C.H.I.P. Pro. 
 
-![servo connected to dev kit](images/pwmPins.jpg)
+![servo connected to dev kit](/images/pwmPins.jpg)
 
 While the control signal pin draws a low amount of power, the servo motor draws more power than the C.H.I.P. Pro can provide on its own. The Dev Kit helps with this by providing a **5 volt power pin** next to the signal and ground pin. This pin is connected to the **DC-In barrel jack**. 
 
@@ -1021,7 +1021,7 @@ Once you do this initial setup, to rotate the servo change the **duty_cycle**. W
   
 #### 180º Servo
 
-![180º servo sweeping](images/sweep_180.gif)
+![180º servo sweeping](/images/sweep_180.gif)
 
 **Servo Used in Example**
 
@@ -1052,7 +1052,7 @@ echo 0 > /sys/class/pwm/pwmchip0/unexport
 
 #### 360º Continuos Servo 
 
-![360º sweeping](images/sweep_360.gif)
+![360º sweeping](/images/sweep_360.gif)
 
 **Servo Used in Example**
 

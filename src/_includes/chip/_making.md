@@ -20,7 +20,7 @@ CHIP has several General Purpose Input/Output (GPIO) pins available for you to b
 ### How You See GPIO
 There are eight (8) GPIO pins always available for connecting CHIP to the sense-able world. If you orient CHIP with the USB connector pointed up, you'll find the GPIO pins in the middle of the right header, U14, Pins 13-20, labeled XIO-P0 to P7: 
 
-![Pinout diagram for CHIP](images/chip_pinouts.jpg)
+![Pinout diagram for CHIP](/images/chip_pinouts.jpg)
 
 ### GPIO Library
 There is an excellent library for working with GPIO and CHIP's IO busses, made available by our wonderful community. Check out the [Adafruit_Python_GPIO](https://github.com/xtacocorex/Adafruit_Python_GPIO) and the [CHIP_IO](https://github.com/xtacocorex/CHIP_IO) libraries. These make it very easy to get started with making things with CHIP.

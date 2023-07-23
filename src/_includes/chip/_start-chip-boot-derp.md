@@ -13,12 +13,12 @@ CHIP is silent. It doesn't take much energy, so it's not very hot. It has no dis
 ### Power From The Wall
 The CHIP's microUSB connector is used to provide power from most any USB power source. USB wall-wart adapters are probably littered all over your house. If for some reason you don't have one, you can buy one at any electronics retailer. We recommend a 5V powersupply with 2 Amps current available. Just plug a USB-A-to-microUSB-B cable (that's the same cable most phones, tablets, and whatnot use to charge) into the wall-wart and CHIP, and you'll see the `PWR` LED light up. This CHIP is using the power from a computer's USB port:
 
-![CHIP indicator LEDs](images/chip_ledon.jpg)
+![CHIP indicator LEDs](/images/chip_ledon.jpg)
 
 ### Power From A Battery
 CHIP can also be battery powered. Specifically, any single cell (1S) 3.7V Lithium Polymer (LiPo) battery with a 2-pin JST-PH 2.0mm end can be connected to the JST-PH socket.
 
-![CHIP powered by a battery. Slick!](images/chip_battery.jpg)
+![CHIP powered by a battery. Slick!](/images/chip_battery.jpg)
 
 The JST can only plug it in one way: if you are having a hard time lining things up, turn it around! Needless to say, do not force the battery connector into the socket if something doesn't feel right!
 
@@ -34,24 +34,24 @@ There is a tiny tiny button on CHIP next to pin header U13 that is used for turn
 ## Connect To WiFi
 Connecting to a WiFi network is easy using the WiFi icon the top right system tray. Just select a network to initiate a connection. If the network requires a password you’ll be prompted for it. You can also [set up Wi-Fi from the command line](#wifi-connection).
 
-![Select a wireless connection access point](images/screen_wifisettings.jpg)
+![Select a wireless connection access point](/images/screen_wifisettings.jpg)
 
 If you need more control and information over your network connection, use the Settings->Network Connections panel to show your connections. Double click on a connection to bring up the connection editor:
 
-![Network connection editor](images/screen_networksettings.jpg)
+![Network connection editor](/images/screen_networksettings.jpg)
 
 ## Connect Bluetooth
 Bluetooth device setup can be accessed using the Bluetooth icon in the top right system tray.
 
-![Bluetooth settings menu](images/screen_btsettings.jpg)
+![Bluetooth settings menu](/images/screen_btsettings.jpg)
 
 When you begin a connection, you'll be guided through the necessary steps to connect to your device. For example, when you pair with a keyboard, you'll often be prompted for a code to enter to ensure a unique connection. Once you have paired a device, future connections will usually be automatic when the devices are in range and powered up.
 
-![Bluetooth settings menu](images/screen_btsetup01.jpg)
+![Bluetooth settings menu](/images/screen_btsetup01.jpg)
 
 You can manage, and also connect to, your devices using the the Bluetooth Devices panel, accessed from the Bluetooth system tray:
 
-![Bluetooth devices panel](images/screen_btdevices.jpg)
+![Bluetooth devices panel](/images/screen_btdevices.jpg)
 
 ## Using The Terminal
 
