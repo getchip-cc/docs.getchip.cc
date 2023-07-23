@@ -1,6 +1,5 @@
 ---
 layout: "page.liquid"
-permalink: "/dip.html"
 title: "Next Thing Co. DIPs for C.H.I.P. Documentation"
 ---
 

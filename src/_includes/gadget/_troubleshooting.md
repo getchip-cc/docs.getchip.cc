@@ -78,14 +78,14 @@ Your version of Docker may be out of date. Docker version 17.06 or greater is re
 standard_init_linux.go:187: exec user process caused "exec format error"
 
 ```
-The latest versions of Docker for Windows and Docker for Mac can build non-native architecture containers which is not the case for some distributions of Linux. Additional files need to be downloaded and packages installed to enable the ability to build `arm32v7/*` Docker images. To obtain the necessary files, follow the instructions in the [Setup for Linux](/gadget.html#setup-for-linux) section.
+The latest versions of Docker for Windows and Docker for Mac can build non-native architecture containers which is not the case for some distributions of Linux. Additional files need to be downloaded and packages installed to enable the ability to build `arm32v7/*` Docker images. To obtain the necessary files, follow the instructions in the [Setup for Linux](/gadget#setup-for-linux) section.
 
 ```
 standard_init_linux.go:187: exec user process caused "no such file or directory"
 
 ```
 
-If you get the error above while building an `arm32v7/*` image, you may have overlooked the second step to the [Setup for Linux](/gadget.html#setup-for-linux) process. Or, the files did not copy over successfully. Head to the [Setup for Linux](/gadget.html#setup-for-linux) section to complete the step of creating a directory `binfmt.d`, copying files over and restarting `systemd-binfmt.service`.
+If you get the error above while building an `arm32v7/*` image, you may have overlooked the second step to the [Setup for Linux](/gadget#setup-for-linux) process. Or, the files did not copy over successfully. Head to the [Setup for Linux](/gadget#setup-for-linux) section to complete the step of creating a directory `binfmt.d`, copying files over and restarting `systemd-binfmt.service`.
 
 ### Unable to `restart systemd-binfmt.service`
 
@@ -95,4 +95,4 @@ See "systemctl status systemd-binfmt.service" and "journalctl -xe" for details.
 
 ```
 
-Download the `binfmt-support` and `qemu-user-static` packages listed in the [Setup for Linux](/gadget.html#setup-for-linux) section and reboot.
+Download the `binfmt-support` and `qemu-user-static` packages listed in the [Setup for Linux](/gadget#setup-for-linux) section and reboot.

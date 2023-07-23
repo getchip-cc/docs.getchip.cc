@@ -26,7 +26,7 @@ As many or as few as you need: 1 to 1 million (or more). For orders over 1KU ple
 
 GR8 has the same Allwinner R8 processor that is in C.H.I.P., so your C.H.I.P. software is 100% compatible with C.H.I.P. Pro. We believe you shouldn’t have to change your software to go into production. 
 
-To see some of the hardware differences between C.H.I.P. and C.H.I.P. Pro take a look at our [comparison chart](http://ntc-docs-unstable.surge.sh/chip_pro.html#c-h-i-p-v-c-h-i-p-pro). Still have questions? Feel free to contact us at [pro@nextthing.co](mailto:pro@nextthing.co).
+To see some of the hardware differences between C.H.I.P. and C.H.I.P. Pro take a look at our [comparison chart](http://ntc-docs-unstable.surge.sh/chip_pro#c-h-i-p-v-c-h-i-p-pro). Still have questions? Feel free to contact us at [pro@nextthing.co](mailto:pro@nextthing.co).
 
 ### What certifications and directives is C.H.I.P. Pro in compliance with?
 
@@ -36,7 +36,7 @@ To see some of the hardware differences between C.H.I.P. and C.H.I.P. Pro take a
 * Reach
 * RoHS
 
-Visit our [Compliance Statement](/chip_pro.html#compliance-statement) section for more information about each certification.
+Visit our [Compliance Statement](/chip_pro#compliance-statement) section for more information about each certification.
 
 
 ### I have designed a circuit and am embedding C.H.I.P. Pro into a larger PCB design. Once it is integrated, do I need to get FCC and CE re-certification? 
@@ -45,7 +45,7 @@ Visit our [Compliance Statement](/chip_pro.html#compliance-statement) section fo
 
 If you are designing a consumer product, you will need some certification but the time and money put into that process can be greatly reduced by leveraging our FCC Part 15 subpart C modular certification. 
 
-C.H.I.P. Pro is modularly certified for use with several external antennas in addition to the included on-board SMT ceramic antenna. A list of pre-cetified antennas are found in the [C.H.I.P. Pro datasheet](https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/Datasheets) on page 11 and listed in the [C.H.I.P. Pro online docs](/chip_pro.html#wifi-antenna). Part 15 subpart C covers intentional radiation. If C.H.I.P. Pro is the only radio being used in your product's final circuit and you use one of the precertified antennas you can meet requirements by completing a Declaration of Conformity (DoC) and affixing the FCC ID to your own product.  
+C.H.I.P. Pro is modularly certified for use with several external antennas in addition to the included on-board SMT ceramic antenna. A list of pre-cetified antennas are found in the [C.H.I.P. Pro datasheet](https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/Datasheets) on page 11 and listed in the [C.H.I.P. Pro online docs](/chip_pro#wifi-antenna). Part 15 subpart C covers intentional radiation. If C.H.I.P. Pro is the only radio being used in your product's final circuit and you use one of the precertified antennas you can meet requirements by completing a Declaration of Conformity (DoC) and affixing the FCC ID to your own product.  
 
 Most likely, your final product will still need to be tested for compliance under Part 15 subpart B for unintentional radiation. 
 
@@ -60,7 +60,7 @@ If your product integrates C.H.I.P. Pro without modifying any of the radio frequ
 
 ### I am interested in creating a custom PCB that integrates C.H.I.P. Pro, where do I start? 
 
-To get started, refer to our [PCB Design Guide](http://ntc-docs-unstable.surge.sh/chip_pro.html#pcb-design-tips). There, you will find recommendations of services to help aid you in PCB design and fabrication plus best practices. We are also happy to do a PCB review and help where we can. If you have questions reach out to us by emailing [pro@nextthing.co](mailto:pro@nextthing.co).
+To get started, refer to our [PCB Design Guide](http://ntc-docs-unstable.surge.sh/chip_pro#pcb-design-tips). There, you will find recommendations of services to help aid you in PCB design and fabrication plus best practices. We are also happy to do a PCB review and help where we can. If you have questions reach out to us by emailing [pro@nextthing.co](mailto:pro@nextthing.co).
 
 ### Do you offer custom flashing solutions?
 We offer flashing of custom firmware at the factory for an extra fee when you purchase 1K+ C.H.I.P. Pros.
@@ -80,9 +80,9 @@ There are several products in different R&D and production stages. Some that hav
 ## Power
 
 ### Why is my battery charging at a very slow rate or not at all?
-First, make sure the correct power source is connected to the correct pins as stated in the [documentation](/chip_pro.html#power-c-h-i-p-pro). 
+First, make sure the correct power source is connected to the correct pins as stated in the [documentation](/chip_pro#power-c-h-i-p-pro). 
 
-Assuming the power source is connected correctly, the issue may be with C.H.I.P. Pro's BTS pin which is directly connected to the TS pin on the AXP209 power management unit. This pin expects a 10K thermistor as a way to monitor the battery by providing the pin with a specific voltage range. Hitting this range tells the PMU that it is safe to charge the battery. Without an added thermistor, it's recommended to disable this function by either connecting the BTS pin to ground or disabling through software. Read more about the BTS pin and how to disable it in the [Power](/chip_pro.html#battery-charging-and-bts-pin) section of the C.H.I.P. Pro docs. 
+Assuming the power source is connected correctly, the issue may be with C.H.I.P. Pro's BTS pin which is directly connected to the TS pin on the AXP209 power management unit. This pin expects a 10K thermistor as a way to monitor the battery by providing the pin with a specific voltage range. Hitting this range tells the PMU that it is safe to charge the battery. Without an added thermistor, it's recommended to disable this function by either connecting the BTS pin to ground or disabling through software. Read more about the BTS pin and how to disable it in the [Power](/chip_pro#battery-charging-and-bts-pin) section of the C.H.I.P. Pro docs. 
 
 ### I think my C.H.I.P. Pro is overheating!
 
@@ -181,7 +181,7 @@ However, any files under **the “/data” folder have full read/write access**,
 
 If you are using GadgetOS, the micro USB port is configured as an ethernet gadget, which you can connect to using a shell application. If you want to use this as a USB serial port, you would need to make this change in the services running on the device and bind Getty to this port.
 
-Alternatively, you can [connect a USB UART cable](/chip_pro.html#make-a-serial-connection) to C.H.I.P. Pro’s UART1-RX and UART1-TX pins (pins 44 and 43) and communicate with it that way. This is essentially what the micro USB port does on the CHIP Pro Dev Kit.
+Alternatively, you can [connect a USB UART cable](/chip_pro#make-a-serial-connection) to C.H.I.P. Pro’s UART1-RX and UART1-TX pins (pins 44 and 43) and communicate with it that way. This is essentially what the micro USB port does on the CHIP Pro Dev Kit.
 
 ### I’m using Docker and I need to be able to reboot or shutdown my device from within a container. How can I do this?
 
@@ -263,7 +263,7 @@ C.H.l.P. Pro has the ability to use either the on-board ceramic SMT antenna or a
 
 For example, if you notice poor wifi performance when using the C.H.I.P. Pro Dev Kit, you may want to switch to use the external antenna, even if you don’t have anything physically connected to it.
 
-To enable the external antenna, simply set pin PB17 (Sysfs GPIO pin #49) to HIGH. To enable the on-board SMT antenna, set it to LOW. This process can also be found in the [C.H.I.P. Pro documentation page](/chip_pro.html#enable-wifi-antenna).
+To enable the external antenna, simply set pin PB17 (Sysfs GPIO pin #49) to HIGH. To enable the on-board SMT antenna, set it to LOW. This process can also be found in the [C.H.I.P. Pro documentation page](/chip_pro#enable-wifi-antenna).
 
 ### I built and flashed a custom version of GadgetOS, but my WiFi isn’t working.
 

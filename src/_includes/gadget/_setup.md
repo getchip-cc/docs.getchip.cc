@@ -27,7 +27,7 @@ sudo reboot
 ```
 In addition to installing these packages, your Linux distro may still be missing `qemu-user-static` files . Follow the instructions outlined [here](https://github.com/computermouth/qemu-static-conf) to check whether they are missing and how to obtain them.
 
-Check the [Troubleshooting](/gadget.html#troubleshooting) section for specific errors you may be getting.
+Check the [Troubleshooting](/gadget#troubleshooting) section for specific errors you may be getting.
 
 #### Run Docker as Unprivileged User
 
@@ -95,4 +95,4 @@ PATH=$PATH:/my/new/path
 
 Use the [web flasher](http://flash.getchip.com/pro) to install GadgetOS on your C.H.I.P. Pro Dev Kit. The latest GadgetOS is required for GadgetCLI to be able to talk to your hardware device and found in the [GitHub repo](https://github.com/NextThingCo/gadgetcli/releases).
 
-Once flashed, power cycle C.H.I.P. Pro Dev Kit by either unplugging it from the USB port or pressing the [On/Off button](/chip_pro_devkit.html#power).
+Once flashed, power cycle C.H.I.P. Pro Dev Kit by either unplugging it from the USB port or pressing the [On/Off button](/chip_pro_devkit#power).

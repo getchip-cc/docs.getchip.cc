@@ -6,7 +6,7 @@ To get more familiar with using gadget.yml, go through the following examples wh
 
 ### 1. Set Up
 
-* Make sure to install all the necessary software outlined in [Set Up](/gadget.html#set-up-gadget).
+* Make sure to install all the necessary software outlined in [Set Up](/gadget#set-up-gadget).
 * Connect C.H.I.P. Pro Dev Kit to your development machine via a USB cable.
 
 ### 2. Create project directory
@@ -63,7 +63,7 @@ The gadget.yml file now defines two containers: "hello-world" under **onboot** a
 
 Specify an image to pull from the Docker Hub repo in this field. This example pulls an image from the "gadget-blink-c" repo under the "nextthingco" username.
 
-**Note:** If an image does not receive a [tag](https://docs.docker.com/engine/reference/commandline/tag/) when built and pushed to Docker Hub you do not include it, like for this example. However, if an image is tagged when built and you want to pull it from Docker Hub the [tag](https://docs.docker.com/docker-hub/repos/#viewing-repository-tags) needs to be [included](/gadget.html#configurations). You can see available tags by clicking on the Tags tab in a Docker Hub repo. Sometimes tags are included in the images description on Docker Hub, but not always.
+**Note:** If an image does not receive a [tag](https://docs.docker.com/engine/reference/commandline/tag/) when built and pushed to Docker Hub you do not include it, like for this example. However, if an image is tagged when built and you want to pull it from Docker Hub the [tag](https://docs.docker.com/docker-hub/repos/#viewing-repository-tags) needs to be [included](/gadget#configurations). You can see available tags by clicking on the Tags tab in a Docker Hub repo. Sometimes tags are included in the images description on Docker Hub, but not always.
 
 
 * **binds**
@@ -133,7 +133,7 @@ If the container builds, deploys, and starts successfully you will see the follo
       - started
 ```
 
-If any of these processes fail, GadgetCLI will output an error along with suggestions of what may be the issue. Go to the [troubleshooting section](/gadget.html#troubleshooting) for more information.
+If any of these processes fail, GadgetCLI will output an error along with suggestions of what may be the issue. Go to the [troubleshooting section](/gadget#troubleshooting) for more information.
 
 ### 8. Stop and Delete Containers
 
@@ -326,7 +326,7 @@ Gadget makes use of the growing community of official and community supported Do
 
 **Share Source Files**
 
-For collaborators to deploy and run your containers, they will need to know the [configurations that go into gadget.yml](/gadget.html#configuring-gadget-yml). We recommend sharing these in a [GitHub](https://github.com/) repository.
+For collaborators to deploy and run your containers, they will need to know the [configurations that go into gadget.yml](/gadget#configuring-gadget-yml). We recommend sharing these in a [GitHub](https://github.com/) repository.
 
 
 ### 1. Create Registry and Repo
@@ -354,7 +354,7 @@ docker login
 ```
 docker tag blink YourUserName/blink:v1
 ```
-This command tags the image you created called [blink](/gadget.html#4-build) with "v1", specified it's location within YourUserName, and in the repository "blink".
+This command tags the image you created called [blink](/gadget#4-build) with "v1", specified it's location within YourUserName, and in the repository "blink".
 
 ### 4. Push
 
@@ -366,7 +366,7 @@ docker push YourUserName/blink:v1
 
 ### 5. Pull
 
-After posting to your registry, the blink image is ready to share and pull to your device. From here, the workflow is the same as the one outlined in the [Pull Image](/gadget.html#pull-remote-image) section. Visit the newly created Docker repo and fill in the description and add a link to your GitHub source files.
+After posting to your registry, the blink image is ready to share and pull to your device. From here, the workflow is the same as the one outlined in the [Pull Image](/gadget#pull-remote-image) section. Visit the newly created Docker repo and fill in the description and add a link to your GitHub source files.
 
 ## Example Images
 
@@ -383,7 +383,7 @@ Start a project with one of our example images. You can either pull an example f
 
 **Run an Example**
 
-* Follow the steps under [Pull Remote Image](/gadget.html#pull-remote-image).
+* Follow the steps under [Pull Remote Image](/gadget#pull-remote-image).
 * For the gadget.yml configurations, download and use the gadget.yml file found in the project directory from the source file links below.
 
 
@@ -406,6 +406,6 @@ git clone https://github.com/NextThingCo/Gadget-Docker-Examples.git
 ```
 
 * Edit the source files in a chosen project directory.
-* [Build and deploy the project from your development machine](/gadget.html#build-image-locally). Each project directory has a gadget.yml file that contains the needed configurations for that specific container.
+* [Build and deploy the project from your development machine](/gadget#build-image-locally). Each project directory has a gadget.yml file that contains the needed configurations for that specific container.
 
 <aside class="notice">To successfully build an image in the project directory the gadget.yml config file needs to be removed from it first.</aside>

@@ -89,16 +89,16 @@ You will then be directed to the page with the example images. Hover over each i
 |:---:|:---:|
 | Choose image | Click FLASH TO CHIP PRO |
 
-Watch the flashing process progress and leave the browser tab open in order for it to complete. You will be notified when C.H.I.P. Pro has been flashed successfully. You are then free to unplug the C.H.I.P. Pro or connect to it via [serial](/chip_pro.html#usb-serial-uart1-connection). 
+Watch the flashing process progress and leave the browser tab open in order for it to complete. You will be notified when C.H.I.P. Pro has been flashed successfully. You are then free to unplug the C.H.I.P. Pro or connect to it via [serial](/chip_pro#usb-serial-uart1-connection). 
 
 ![succeeded page](images/flashFinish.png)
 
-If you are having problems with the flashing process follow the troubleshooting instructions given by the web flasher or check out the [Web Flasher OS-Specific Issues](/chip.html#web-flasher-os-specific-issues) troubleshooting section. 
+If you are having problems with the flashing process follow the troubleshooting instructions given by the web flasher or check out the [Web Flasher OS-Specific Issues](/chip#web-flasher-os-specific-issues) troubleshooting section. 
 
 ## Examples
 You can select an OS by flashing one of our examples using the web flasher [flash.getchip.com/pro](http://flash.getchip.com) in Chrome or Chromium browser. 
 
-We have built examples based on Buildroot that implement features exposed on the CHIP Pro [Dev Board](/chip_pro_devkit.html) such as its two MICs, and array of GPIOs. If you are building a circuit that incorporates mics and LEDs with a bare C.H.I.P. Pro you can start with these examples. 
+We have built examples based on Buildroot that implement features exposed on the CHIP Pro [Dev Board](/chip_pro_devkit) such as its two MICs, and array of GPIOs. If you are building a circuit that incorporates mics and LEDs with a bare C.H.I.P. Pro you can start with these examples. 
 
 #### Blinkenlights (Buildroot)
 Size: ~60MB
@@ -113,7 +113,7 @@ Want to make sure your mics are working? Use this handy VU Meter example. LEDs c
 ### Pro
 Size: ~180MB
 
-We provide a standard Debian distribution. Once flashed connect to the C.H.I.P. Pro via [serial](/chip_pro.html#make-a-serial-connection) and log in with the default username `chip` and password `chip`.
+We provide a standard Debian distribution. Once flashed connect to the C.H.I.P. Pro via [serial](/chip_pro#make-a-serial-connection) and log in with the default username `chip` and password `chip`.
 
 If you want to configure and build the rootfs for the Debian image, take a look at our [github repo](https://github.com/NextThingCo/chip-os-pro) 
 
@@ -350,7 +350,7 @@ The Buildroot operating system uses the ConnMan command-line network manager to 
 **Requirements**
 
   * C.H.I.P. Pro running Buildroot OS
-  * [Serial connection](/chip_pro.html#make-a-serial-connection) to C.H.I.P. Pro
+  * [Serial connection](/chip_pro#make-a-serial-connection) to C.H.I.P. Pro
     
 ### Step 1: Enable WiFi and Find a Network
 
@@ -550,7 +550,7 @@ If you are using the Debian OS you will find that ConnMan is not installed, you 
 **Requirements**
 
   * C.H.I.P. Pro loaded with Debian
-  * [Serial connection](/chip_pro.html#usb-serial-uart1-connection) to C.H.I.P. Pro
+  * [Serial connection](/chip_pro#usb-serial-uart1-connection) to C.H.I.P. Pro
 
 ### Step 1: List available Wi-Fi networks
 In terminal type:
@@ -783,7 +783,7 @@ C.H.I.P. Pro has a total of 27 GPIO pins ready for use:
 	* pins 11-16, 21-25, 30-38, 43 & 44
 
 
-To see all the functions C.H.I.P. Pro pins offer check out the [Multiplexing table](/chip_pro.html#gr8-pins-and-multiplexing-on-c-h-i-p-pro).
+To see all the functions C.H.I.P. Pro pins offer check out the [Multiplexing table](/chip_pro#gr8-pins-and-multiplexing-on-c-h-i-p-pro).
 
 ![pin out](images/Pro_Pinout.jpg)
 
@@ -843,7 +843,7 @@ PWM:
 
 UART1:
 
-** These pins are connected to the FE1.1S USB hub controller IC which is connected to the micro USB providing USB serial functionality. To use them as GPIO disable the USB hub controller by cutting the "UART Disconnect" [traces](/chip_pro_devkit.html#cuttable-traces). 
+** These pins are connected to the FE1.1S USB hub controller IC which is connected to the micro USB providing USB serial functionality. To use them as GPIO disable the USB hub controller by cutting the "UART Disconnect" [traces](/chip_pro_devkit#cuttable-traces). 
 
 | C.H.I.P. Pro Pin # | 44 | 43 | 
 |------------|-----|-----|

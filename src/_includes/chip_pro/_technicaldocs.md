@@ -18,7 +18,7 @@ C.H.I.P. Pro is designed for prototyping and dropping into a production assembly
 * [Footprint - SMT](https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/Footprint)
 * [Carrier PCB stencil](https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/Footprint)
 
-More detailed information on designing a PCB for C.H.I.P. Pro is found [here](/chip_pro.html#pcb-design-tips). 
+More detailed information on designing a PCB for C.H.I.P. Pro is found [here](/chip_pro#pcb-design-tips). 
 
 ![C.H.I.P. Pro PCB Footprint](images/Pro_Footprint_hand.jpg)
 

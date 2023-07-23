@@ -1,1 +1,2 @@
-/pro.html /chip_pro_devkit.html 301
+/pro.html  /chip_pro_devkit  301
+/*.html    /:splat           301

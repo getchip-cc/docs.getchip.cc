@@ -86,11 +86,11 @@ You will then be directed to the page with the example images. Hover over each i
 |:---:|:---:|
 | Choose image | Click FLASH TO CHIP PRO |
 
-Watch the flashing process progress and leave the browser tab open in order for it to complete. You will be notified when C.H.I.P. Pro has been flashed successfully. You are then free to unplug the C.H.I.P. Pro or connect to it via [serial](/chip_pro.html#usb-serial-uart1-connection). 
+Watch the flashing process progress and leave the browser tab open in order for it to complete. You will be notified when C.H.I.P. Pro has been flashed successfully. You are then free to unplug the C.H.I.P. Pro or connect to it via [serial](/chip_pro#usb-serial-uart1-connection). 
 
 ![succeeded page](images/flashFinish.png)
 
-If you are having problems with the flashing process follow the troubleshooting instructions given by the web flasher or check out the [Web Flasher OS-Specific Issues](/chip.html#web-flasher-os-specific-issues) troubleshooting section. 
+If you are having problems with the flashing process follow the troubleshooting instructions given by the web flasher or check out the [Web Flasher OS-Specific Issues](/chip#web-flasher-os-specific-issues) troubleshooting section. 
 
 
 ## Examples
@@ -109,7 +109,7 @@ Want to make sure your mics are working? Use this handy VU Meter example. Scream
 
 #### Pro
 
-We provide a standard Debian distribution. Once flashed connect to the C.H.I.P. Pro via [USB-serial](/chip_pro_devkit.html#usb-serial-uart1-connection) and log in with the default username `chip` and password `chip`.
+We provide a standard Debian distribution. Once flashed connect to the C.H.I.P. Pro via [USB-serial](/chip_pro_devkit#usb-serial-uart1-connection) and log in with the default username `chip` and password `chip`.
 
 If you want to configure and build the rootfs for the Debian image, take a look at our [github repo](https://github.com/NextThingCo/chip-os-pro)
 
@@ -121,4 +121,4 @@ When you are done or want to flash another example, hold down the power button o
 
 ### Troubleshooting Flashing Fails
 
-If the flashing process fails we have [troubleshooting recommendations](/chip.html#web-flasher-os-specific-issues) based on your OS. 
+If the flashing process fails we have [troubleshooting recommendations](/chip#web-flasher-os-specific-issues) based on your OS. 

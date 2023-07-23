@@ -198,7 +198,7 @@ The Buildroot operating system uses the ConnMan command-line network manager to 
 **Requirements**
 
   * C.H.I.P. Pro running buildroot OS
-  * [Serial connection](/chip_pro_devkit.html#usb-serial-uart1-connection) to C.H.I.P. Pro
+  * [Serial connection](/chip_pro_devkit#usb-serial-uart1-connection) to C.H.I.P. Pro
     
 ### Step 1: Enable WiFi and Find a Network
 
@@ -398,7 +398,7 @@ If you are using the Debian OS you will find that ConnMan is not installed, you 
 **Requirements**
 
   * C.H.I.P. Pro loaded with Debian
-  * [Serial connection](/chip_pro.html#usb-serial-uart1-connection) to C.H.I.P. Pro
+  * [Serial connection](/chip_pro#usb-serial-uart1-connection) to C.H.I.P. Pro
 
 ### Step 1: List available Wi-Fi networks
 In terminal type:
@@ -675,7 +675,7 @@ C.H.I.P. Pro has a total of 27 GPIO pins ready for use:
 	* pins 11-16, 21-25, 30-38, 43 & 44
 
 
-To see all the functions C.H.I.P. Pro pins offer check out the [Multiplexing table](/chip_pro.html#gr8-pins-and-multiplexing-on-c-h-i-p-pro).
+To see all the functions C.H.I.P. Pro pins offer check out the [Multiplexing table](/chip_pro#gr8-pins-and-multiplexing-on-c-h-i-p-pro).
 
 ![pin out](images/Pro_Pinout.jpg)
 
@@ -735,7 +735,7 @@ PWM:
 
 UART1:
 
-** These pins are connected to the FE1.1S USB hub controller IC which is connected to the micro USB providing USB serial functionality. To use them as GPIO disable the USB hub controller by cutting the "UART Disconnect" [traces](/chip_pro_devkit.html#cuttable-traces). 
+** These pins are connected to the FE1.1S USB hub controller IC which is connected to the micro USB providing USB serial functionality. To use them as GPIO disable the USB hub controller by cutting the "UART Disconnect" [traces](/chip_pro_devkit#cuttable-traces). 
 
 | C.H.I.P. Pro Pin # | 44 | 43 | 
 |------------|-----|-----|
@@ -753,7 +753,7 @@ Multiply the letter index by 32, then add the number that follows "PE":
 
 ### Export Digital GPIOs
 
-The GPIO control interface can be found at `/sys/class/gpio`. To explore the sysfs file structure, connect to C.H.I.P. Pro via [USB-serial](/chip_pro_devkit.html#usb-serial-uart1-connection) and in a terminal window type: 
+The GPIO control interface can be found at `/sys/class/gpio`. To explore the sysfs file structure, connect to C.H.I.P. Pro via [USB-serial](/chip_pro_devkit#usb-serial-uart1-connection) and in a terminal window type: 
 
 ```
 ls /sys/class/gpio
@@ -834,7 +834,7 @@ The Dev Kit provides ten onboard LEDs to make testing the GPIOs easy without hav
 
 **Blinkenlights Image**
 
-To start with an example that demos the eight I/Os and two PWM onboard LEDs, [flash C.H.I.P. Pro Dev Kit with the Blinkenlights](/chip_pro_devkit.html#examples) image and [view the example scripts](/chip_pro_devkit.html#edit-buildroot-examples) using the command-line editor Vi. 
+To start with an example that demos the eight I/Os and two PWM onboard LEDs, [flash C.H.I.P. Pro Dev Kit with the Blinkenlights](/chip_pro_devkit#examples) image and [view the example scripts](/chip_pro_devkit#edit-buildroot-examples) using the command-line editor Vi. 
 
 **Turn LED On and Off**
 
@@ -900,7 +900,7 @@ All PWM examples are done using one of NTC's **Buildroot** based images.
 
 ### Export PWM Channel
 
-The Linux kernel provides a simple **sysfs** interface to access PWM from. The PWM controller can be found exported as **pwmchip0** at `/sys/class/pwm/pwmchip0`. To test the PWM channels and explore the sysfs file structure, connect to C.H.I.P. Pro via [USB-serial](/chip_pro_devkit.html#usb-serial-uart1-connection) and in a terminal window type: 
+The Linux kernel provides a simple **sysfs** interface to access PWM from. The PWM controller can be found exported as **pwmchip0** at `/sys/class/pwm/pwmchip0`. To test the PWM channels and explore the sysfs file structure, connect to C.H.I.P. Pro via [USB-serial](/chip_pro_devkit#usb-serial-uart1-connection) and in a terminal window type: 
 
 ```
 ls /sys/class/pwm/pwmchip0
@@ -951,7 +951,7 @@ To test the PWM channels follow the examples below.
 
 ### PWM LED Example
 
-There are two onboard LEDs connected to the PWM pins for testing and learning about pulse width modulation. You can disconnect these PWM LEDs at any time by [cutting traces](/chip_pro_devkit.html#cuttable-traces). 
+There are two onboard LEDs connected to the PWM pins for testing and learning about pulse width modulation. You can disconnect these PWM LEDs at any time by [cutting traces](/chip_pro_devkit#cuttable-traces). 
 
 ![PWM0 LED fade](images/fade.gif)
 

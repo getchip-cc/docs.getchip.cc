@@ -120,7 +120,7 @@ PING 8.8.8.8 (8.8.8.8): 56 data bytes
 round-trip min/avg/max = 7.474/7.951/9.004 ms
 ```
 
-If you have issues connecting, read our "[Troubleshooting Connection Problems](/chip_pro.html#step-3-test-connection)" on the C.H.I.P. Pro Doc page.
+If you have issues connecting, read our "[Troubleshooting Connection Problems](/chip_pro#step-3-test-connection)" on the C.H.I.P. Pro Doc page.
 
 ### Step 4. Exit Gadget Shell
 

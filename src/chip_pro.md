@@ -1,6 +1,5 @@
 ---
 layout: "page.liquid"
-permalink: "/chip_pro.html"
 title: "Next Thing Co. C.H.I.P. Pro Documentation"
 ---
 

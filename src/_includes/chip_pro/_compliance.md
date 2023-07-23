@@ -1,6 +1,6 @@
 # Compliance Statement
 
-C.H.I.P. Pro is officially certified for CE, IC and FCC for use with multiple commercially available [external antennas](/chip_pro_devkit.html#wifi-antenna) as well as the onboard ceramic SMT antenna. Find all [Test Reports and Certificates](https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/Compliance) in the C.H.I.P. Pro Hardware repository.
+C.H.I.P. Pro is officially certified for CE, IC and FCC for use with multiple commercially available [external antennas](/chip_pro_devkit#wifi-antenna) as well as the onboard ceramic SMT antenna. Find all [Test Reports and Certificates](https://github.com/NextThingCo/CHIP_Pro-Hardware/tree/master/Compliance) in the C.H.I.P. Pro Hardware repository.
 
 ## FCC
 

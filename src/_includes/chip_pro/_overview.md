@@ -4,7 +4,7 @@
 
 The C.H.I.P. Pro System-on-Module (SOM) is designed to get you making great products instead of re-inventing computers. It's a low-cost, high-capability module that lets you focus on fast iterations of brilliant ideas that will be ready to manufacture. 
 
-To get the most out of developing and designing for C.H.I.P. Pro we recommend prototyping with the [C.H.I.P. Pro Development Kit](/chip_pro_devkit.html). 
+To get the most out of developing and designing for C.H.I.P. Pro we recommend prototyping with the [C.H.I.P. Pro Development Kit](/chip_pro_devkit). 
 
 This document provides technical details that will make integrating C.H.I.P. Pro module into your designs a breeze, along with technical specifications and basic guides to get you connected and working with software on C.H.I.P. Pro. 
 
@@ -25,7 +25,7 @@ Comprehensive audio handling includes:
 * one-wire audio digital out
 * I2S digital audio for interfacing with industry standard audio codecs.
 
-To learn more, go to our [Specification](/chip_pro.html#specifications) section.
+To learn more, go to our [Specification](/chip_pro#specifications) section.
 
 ## GR8 SiP
 

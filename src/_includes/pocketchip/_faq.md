@@ -22,7 +22,7 @@ No. At this time PocketC.H.I.P. does not support multiple displays.
 
 **Will my Bluetooth device work?**
 
-Yes, so long as the device is supported under Debian Linux. However, you will need to setup the bluetooth pairing using the terminal [here](/chip.html#connecting-bluetooth-devices). Our initial release of PocketC.H.I.P. does not provide graphical bluetooth configuration.
+Yes, so long as the device is supported under Debian Linux. However, you will need to setup the bluetooth pairing using the terminal [here](/chip#connecting-bluetooth-devices). Our initial release of PocketC.H.I.P. does not provide graphical bluetooth configuration.
 
 **Pinch-zooming isn't working, is my screen bad?**
 
