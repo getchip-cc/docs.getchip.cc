@@ -9,7 +9,9 @@
   "scripts": {
     "build": "eleventy --quiet",
     "clean": "rm -rf public",
-    "lint": "eslint .",
+    "lint": "FORCE_COLOR=1 npm-run-all --continue-on-error --serial lint:**",
+    "lint:scripts": "eslint .",
+    "lint:styles": "stylelint ./src/**/*.scss",
     "prebuild": "npm run clean",
     "prestart": "npm run clean",
     "pretest": "npm run build",
@@ -27,9 +29,12 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@jgarber/eslint-config": "^1.1.0",
+    "@jgarber/stylelint-config": "^1.0.0",
     "globals": "^13.20.0",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.7",
-    "sass": "^1.63.6"
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.63.6",
+    "stylelint-config-standard-scss": "^10.0.0"
   }
 }
