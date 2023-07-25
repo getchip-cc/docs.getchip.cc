@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @import "normalize.css/normalize";
 @import "variables";
 @import "icon-font";
@@ -464,11 +466,11 @@ body {
     }
 
     tr:nth-child(odd) > td {
-      background-color: lighten($main-bg, 4.2%);
+      background-color: color.adjust($main-bg, $lightness: 4.2%);
     }
 
     tr:nth-child(even) > td {
-      background-color: lighten($main-bg, 2.4%);
+      background-color: color.adjust($main-bg, $lightness: 2.4%);
     }
   }
 
@@ -512,16 +514,16 @@ body {
     margin-top: 1.5em;
     padding-bottom: 1em;
     padding-top: 1em;
-    text-shadow: 0 1px 0 lighten($aside-notice-bg, 15%);
+    text-shadow: 0 1px 0 color.adjust($aside-notice-bg, $lightness: 15%);
 
     &.warning {
       background-color: $aside-warning-bg;
-      text-shadow: 0 1px 0 lighten($aside-warning-bg, 15%);
+      text-shadow: 0 1px 0 color.adjust($aside-warning-bg, $lightness: 15%);
     }
 
     &.success {
       background-color: $aside-success-bg;
-      text-shadow: 0 1px 0 lighten($aside-success-bg, 15%);
+      text-shadow: 0 1px 0 color.adjust($aside-success-bg, $lightness: 15%);
     }
   }
 

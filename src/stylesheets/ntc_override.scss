@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @import "normalize.css/normalize";
 @import "variables";
 @import "ntc_variables";
@@ -136,23 +138,23 @@
     }
 
     td:nth-child(odd) {
-      background-color: darken($main-bg, 0%);
+      background-color: color.adjust($main-bg, $lightness: -0%);
     }
 
     th:nth-child(odd) {
-      background-color: darken($main-bg, 12%);
+      background-color: color.adjust($main-bg, $lightness: -12%);
     }
 
     th:nth-child(even) {
-      background-color: darken($main-bg, 12%);
+      background-color: color.adjust($main-bg, $lightness: -12%);
     }
 
     tr:nth-child(odd) > td {
-      background-color: darken($main-bg, 0%);
+      background-color: color.adjust($main-bg, $lightness: -0%);
     }
 
     tr:nth-child(even) > td {
-      background-color: darken($main-bg, 5%);
+      background-color: color.adjust($main-bg, $lightness: -5%);
     }
   }
 }

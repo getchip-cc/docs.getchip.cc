@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @mixin media($bp) {
   @if $bp == xs {
     @media (width >= 480px) { @content; }
