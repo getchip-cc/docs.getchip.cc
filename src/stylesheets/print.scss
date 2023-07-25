@@ -52,18 +52,16 @@ body {
     font-size: 0.8em;
   }
 
-  pre {
-    code {
-      border: 0;
-    }
+  code {
+    padding: 0.2em;
   }
 
   pre {
     padding: 1.3em;
-  }
 
-  code {
-    padding: 0.2em;
+    code {
+      border: 0;
+    }
   }
 
   table {
