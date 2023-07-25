@@ -1,5 +1,5 @@
 @font-face {
-  font-family: slate;
+  font-family: Slate;
   font-style: normal;
   font-weight: normal;
   src: url("../fonts/slate.eot?-syv14m");
@@ -12,7 +12,7 @@
 }
 
 %icon {
-  font-family: slate;
+  font-family: Slate;
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -26,16 +26,19 @@
 
   content: "\e600";
 }
+
 %icon-info-sign {
   @extend %icon;
 
   content: "\e602";
 }
+
 %icon-ok-sign {
   @extend %icon;
 
   content: "\e606";
 }
+
 %icon-search {
   @extend %icon;
 
