@@ -7,6 +7,6 @@ module.exports = {
         ignoreFontFamilies: ['Slate']
       }
     ],
-    'scss/comment-no-loud': false
+    'scss/comment-no-loud': null
   }
 };
