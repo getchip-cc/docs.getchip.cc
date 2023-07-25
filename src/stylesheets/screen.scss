@@ -234,14 +234,14 @@ a {
 // button to show navigation on mobile devices
 #nav-button {
   span {
+    $side-pad: $main-padding / 2 - 8px;
+
     background-color: rgba($main-bg, 0.7);
     border-radius: 0 0 0 5px;
     display: block;
     padding: $side-pad $side-pad $side-pad;
     transform: rotate(-90deg) translate(-100%, 0);
     transform-origin: 0 0;
-
-    $side-pad: $main-padding / 2 - 8px;
   }
 
   color: #000;
