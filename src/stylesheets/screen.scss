@@ -86,12 +86,12 @@ body {
   }
 
   // This is the logo at the top of the ToC
-  & > img {
+  > img {
     display: block;
     max-width: 100%;
   }
 
-  & > .search {
+  > .search {
     position: relative;
 
     input {
@@ -203,7 +203,7 @@ body {
     // for embossed look:
     @include embossed-bg;
 
-    & > li:last-child {
+    > li:last-child {
       box-shadow: none; // otherwise it'll overflow out of the subheader
     }
   }
@@ -348,18 +348,18 @@ body {
     display: block;
   }
 
-  & > h1,
-  & > h2,
-  & > h3,
-  & > h4,
-  & > h5,
-  & > h6,
-  & > p,
-  & > table,
-  & > ul,
-  & > ol,
-  & > aside,
-  & > dl {
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6,
+  > p,
+  > table,
+  > ul,
+  > ol,
+  > aside,
+  > dl {
     box-sizing: border-box;
     display: block;
     margin-right: $examples-width;
@@ -369,15 +369,15 @@ body {
     @extend %left-col;
   }
 
-  & > ul,
-  & > ol {
+  > ul,
+  > ol {
     padding-left: $main-padding + 15px;
   }
 
   // the div is the tocify hidden div for placeholding stuff
-  & > h1,
-  & > h2,
-  & > div {
+  > h1,
+  > h2,
+  > div {
     clear: both;
   }
 
@@ -491,8 +491,7 @@ body {
   dt,
   dd {
     line-height: 1.6;
-
-    //margin-top: 0;
+    // margin-top: 0;
   }
 
   img {
@@ -581,7 +580,7 @@ body {
 
     @extend %right-col;
 
-    & > p { margin: 0; }
+    > p { margin: 0; }
 
     a {
       border-bottom: dashed 1px #ccc;
@@ -595,7 +594,7 @@ body {
   }
 
   blockquote {
-    & > p {
+    > p {
       background-color: $code-annotation-bg;
       border-bottom: 1px solid #404040;
       border-radius: 5px;

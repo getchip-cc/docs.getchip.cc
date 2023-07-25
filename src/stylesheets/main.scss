@@ -52,7 +52,7 @@ header {
     padding: 4rem 0;
   }
 
-  & div {
+  div {
     @media (width <= 479px) {
       width: 100%;
     }
@@ -65,7 +65,7 @@ header {
       width: 80%;
     }
 
-    & h1 {
+    h1 {
       @media (width <= 479px) {
         font-size: 3.5rem;
       }
@@ -83,7 +83,7 @@ header {
       text-transform: uppercase;
     }
 
-    & p {
+    p {
       margin: 0;
       padding: 0;
       text-align: center;
@@ -96,7 +96,7 @@ section.docs {
   justify-content: center;
   width: 100%;
 
-  & div {
+  div {
     text-align: center;
 
     @media (width <= 479px) {
@@ -112,7 +112,7 @@ section.docs {
       width: 80%;
     }
 
-    & div.doc {
+    div.doc {
       background-color: $pink;
       background-position: center bottom;
       background-repeat: no-repeat;
@@ -172,7 +172,7 @@ section.docs {
       }
 
       &:hover {
-        background-color: darken($pink, 5%);
+        background-color: color.scale($pink, $lightness: -5%);
         cursor: pointer;
       }
     }

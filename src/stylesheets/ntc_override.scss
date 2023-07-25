@@ -13,15 +13,15 @@
 
 // This is the logo at the top of the ToC
 .tocify-wrapper {
-  & > img {
+  > img {
     display: block;
   }
 
-  & .nav-bar-logo {
+  .nav-bar-logo {
     padding-top: 15px;
     text-align: center;
 
-    & img {
+    img {
       width: 40%;
     }
   }
@@ -74,7 +74,7 @@
 // This is all the stuff with the light background in the left half of the page
 
 .content {
-  & a {
+  a {
     color: #eb008b;
     text-decoration: none;
 
@@ -83,18 +83,18 @@
     }
   }
 
-  & > h1,
-  & > h2,
-  & > h3,
-  & > h4,
-  & > h5,
-  & > h6,
-  & > p,
-  & > table,
-  & > ul,
-  & > ol,
-  & > aside,
-  & > dl {
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6,
+  > p,
+  > table,
+  > ul,
+  > ol,
+  > aside,
+  > dl {
     margin-right: inherit;
   }
 
