@@ -1,28 +1,28 @@
 @mixin media($bp) {
   @if $bp == xs {
-    @media (min-width: 480px) { @content; }
+    @media (width >= 480px) { @content; }
   }
   @else if $bp == sm {
-    @media (min-width: 768px) { @content; }
+    @media (width >= 768px) { @content; }
   }
   @else if $bp == md {
-    @media (min-width: 992px) { @content; }
+    @media (width >= 992px) { @content; }
   }
   @else if $bp == lg {
-    @media (min-width: 1200px) { @content; }
+    @media (width >= 1200px) { @content; }
   }
   @else {
-    @warn 'Not a supported value';
+    @warn "Not a supported value";
   }
 }
 
 $pink: #eb008b;
 
 @font-face {
-  font-family: '232MK';
+  font-family: "232MK";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/232MKMedium.ttf');
+  src: url("../fonts/232MKMedium.ttf");
 }
 
 * {
@@ -30,56 +30,61 @@ $pink: #eb008b;
 }
 
 body {
+  font-family: "232MK", sans-serif;
+  font-size: 16px;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
-  font-family: '232MK', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  letter-spacing: 1px;
-  -webkit-font-smoothing: antialiased;
-  font-smooth: always;
 }
 
 header {
-  display: flex;
-  justify-content: center;
   background: #313232;
   color: #fff;
+  display: flex;
+  justify-content: center;
 
-  @media (max-width: 479px) {
-    padding: 2rem 15px;
+  @media (width <= 479px) {
     margin-bottom: 2rem;
+    padding: 2rem 15px;
   }
+
   @include media (xs) {
-    padding: 4rem 0;
     margin-bottom: 4rem;
+    padding: 4rem 0;
   }
 
   & div {
-    @media (max-width: 479px) {
+    @media (width <= 479px) {
       width: 100%;
     }
+
     @include media (xs) {
-      width: 90%
+      width: 90%;
     }
+
     @include media (sm) {
-      width: 80%
+      width: 80%;
     }
 
     & h1 {
-      @media (max-width: 479px) {
+      @media (width <= 479px) {
         font-size: 3.5rem;
       }
+
       @include media (xs) {
         font-size: 4.5rem;
       }
+
+      color: $pink;
+      font-weight: 400;
       margin: 0;
       margin-bottom: 0.5rem;
       padding: 0;
       text-align: center;
       text-transform: uppercase;
-      font-weight: 400;
-      color: $pink;
     }
 
     & p {
@@ -87,7 +92,6 @@ header {
       padding: 0;
       text-align: center;
     }
-
   }
 }
 
@@ -99,69 +103,81 @@ section.docs {
   & div {
     text-align: center;
 
-    @media (max-width: 479px) {
+    @media (width <= 479px) {
+      padding: 0 15px 15px;
       width: 100%;
-      padding: 0 15px 15px 15px;
     }
+
     @include media (xs) {
-      width: 90%
+      width: 90%;
     }
+
     @include media (md) {
-      width: 80%
+      width: 80%;
     }
 
     & div.doc {
+      background-color: $pink;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: 100%;
       display: inline-block;
-      padding: 0;
       margin-bottom: 15px;
+      padding: 0;
 
-      @media (max-width: 297px) {
-        width: 100%;
+      @media (width <= 297px) {
         height: 198px;
-      }
-      @media (min-width: 298px) and (max-width: 350px) {
         width: 100%;
+      }
+
+      @media (width >= 298px) and (width <= 350px) {
         height: 235px;
-      }
-      @media (min-width: 351px) and (max-width: 420px) {
         width: 100%;
+      }
+
+      @media (width >= 351px) and (width <= 420px) {
         height: 280px;
-      }
-      @media (min-width: 421px) and (max-width: 479px) {
         width: 100%;
-        height: 308px;
       }
+
+      @media (width >= 421px) and (width <= 479px) {
+        height: 308px;
+        width: 100%;
+      }
+
       @include media (xs) {
-        width: 300px;
         height: 205px;
         margin: 15px;
+        width: 300px;
       }
 
-      background-color: $pink;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-position: center bottom;
       &.chip {
-        background-image: url('../images/chipDoc.png');
+        background-image: url("../images/chipDoc.png");
       }
+
       &.pc {
-        background-image: url('../images/pocketChipDoc.png');
+        background-image: url("../images/pocketChipDoc.png");
       }
+
       &.dip {
-        background-image: url('../images/dipDoc.png');
+        background-image: url("../images/dipDoc.png");
       }
+
       &.chip_pro {
-        background-image: url('../images/chipProDoc.png');
+        background-image: url("../images/chipProDoc.png");
       }
+
       &.chip_pro_devkit {
-        background-image: url('../images/chipProDevKitDoc.png');
+        background-image: url("../images/chipProDevKitDoc.png");
       }
+
       &.gadget {
-        background-image: url('../images/gadgetDoc.png');
+        background-image: url("../images/gadgetDoc.png");
       }
+
       &:hover {
-        cursor: pointer;
         background-color: darken($pink, 5%);
+        cursor: pointer;
       }
     }
   }
