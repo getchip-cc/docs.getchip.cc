@@ -28,7 +28,7 @@ under the License.
 ////////////////////////////////////////////////////////////////////////////////
 
 html,
- body {
+body {
   background-color: $main-bg;
   color: $main-text;
   -webkit-font-smoothing: antialiased;
@@ -118,7 +118,7 @@ html,
   }
 
   img + .tocify,
- .lang-selector + .tocify {
+  .lang-selector + .tocify {
     margin-top: $logo-margin;
   }
 
@@ -155,7 +155,7 @@ html,
   }
 
   .tocify-item > a,
- .toc-footer li {
+  .toc-footer li {
     display: block;
     overflow-x: hidden;
     padding: 0 $nav-padding 0 $nav-padding;
@@ -167,7 +167,7 @@ html,
   // unordered lists.  These styles remove the default
   // styling of an unordered list because it is ugly.
   ul,
- li {
+  li {
     line-height: 28px;
     list-style: none;
     margin: 0;
@@ -214,7 +214,7 @@ html,
     padding: 1em 0;
 
     li,
-a {
+    a {
       color: $nav-text;
       text-decoration: none;
     }
@@ -314,7 +314,7 @@ a {
     text-decoration: none;
 
     &:active,
- &:focus {
+    &:focus {
       background-color: $lang-select-pressed-bg;
       color: $lang-select-pressed-text;
     }
@@ -349,17 +349,17 @@ a {
   }
 
   & > h1,
- & > h2,
- & > h3,
- & > h4,
- & > h5,
- & > h6,
- & > p,
- & > table,
- & > ul,
- & > ol,
- & > aside,
- & > dl {
+  & > h2,
+  & > h3,
+  & > h4,
+  & > h5,
+  & > h6,
+  & > p,
+  & > table,
+  & > ul,
+  & > ol,
+  & > aside,
+  & > dl {
     box-sizing: border-box;
     display: block;
     margin-right: $examples-width;
@@ -370,14 +370,14 @@ a {
   }
 
   & > ul,
- & > ol {
+  & > ol {
     padding-left: $main-padding + 15px;
   }
 
   // the div is the tocify hidden div for placeholding stuff
   & > h1,
- & > h2,
- & > div {
+  & > h2,
+  & > div {
     clear: both;
   }
 
@@ -396,7 +396,7 @@ a {
   }
 
   h1:first-child,
- div:first-child + h1 {
+  div:first-child + h1 {
     border-top-width: 0;
     margin-top: 0;
   }
@@ -416,15 +416,15 @@ a {
   // h2s right after h1s should bump right up
   // against the h1s.
   h1 + h2,
- h1 + div + h2 {
+  h1 + div + h2 {
     border-top: none;
     margin-top: $h1-margin-bottom * -1;
   }
 
   h3,
- h4,
- h5,
- h6 {
+  h4,
+  h5,
+  h6 {
     @extend %header-font;
 
     font-size: 15px;
@@ -433,8 +433,8 @@ a {
   }
 
   h4,
- h5,
- h6 {
+  h5,
+  h6 {
     font-size: 10px;
   }
 
@@ -449,7 +449,7 @@ a {
     overflow: auto;
 
     th,
-td {
+    td {
       line-height: 1.6;
       text-align: left;
       vertical-align: top;
@@ -487,9 +487,9 @@ td {
   }
 
   p,
- li,
- dt,
- dd {
+  li,
+  dt,
+  dd {
     line-height: 1.6;
 
     //margin-top: 0;
@@ -568,7 +568,7 @@ td {
 
 .content {
   pre,
- blockquote {
+  blockquote {
     background-color: $code-bg;
     box-sizing: border-box;
     clear: right;
@@ -663,13 +663,13 @@ td {
 }
 
 .highlight .c,
- .highlight .cm,
- .highlight .c1,
- .highlight .cs {
+.highlight .cm,
+.highlight .c1,
+.highlight .cs {
   color: #909090;
 }
 
 .highlight,
- .highlight .w {
+.highlight .w {
   background-color: $code-bg;
 }

@@ -84,17 +84,17 @@
   }
 
   & > h1,
- & > h2,
- & > h3,
- & > h4,
- & > h5,
- & > h6,
- & > p,
- & > table,
- & > ul,
- & > ol,
- & > aside,
- & > dl {
+  & > h2,
+  & > h3,
+  & > h4,
+  & > h5,
+  & > h6,
+  & > p,
+  & > table,
+  & > ul,
+  & > ol,
+  & > aside,
+  & > dl {
     margin-right: inherit;
   }
 
@@ -112,17 +112,17 @@
   }
 
   h3,
- h4,
- h5,
- h6 {
+  h4,
+  h5,
+  h6 {
     color: $pink51;
     font-size: 18px;
     margin-top: 1em;
   }
 
   h4,
- h5,
- h6 {
+  h5,
+  h6 {
     font-size: 15px;
   }
 
@@ -179,7 +179,7 @@
 
 .content {
   pre,
- blockquote {
+  blockquote {
     float: none;
     width: inherit;
   }
@@ -203,13 +203,13 @@
 }
 
 .highlight .c,
- .highlight .cm,
- .highlight .c1,
- .highlight .cs {
+.highlight .cm,
+.highlight .c1,
+.highlight .cs {
   color: #909090;
 }
 
 .highlight,
- .highlight .w {
+.highlight .w {
   background-color: $code-bg;
 }

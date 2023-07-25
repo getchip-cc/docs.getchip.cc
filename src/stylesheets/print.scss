@@ -27,10 +27,10 @@ body {
 }
 
 .tocify,
- .toc-footer,
- .lang-selector,
- .search,
- #nav-button {
+.toc-footer,
+.lang-selector,
+.search,
+#nav-button {
   display: none;
 }
 
@@ -43,7 +43,7 @@ body {
   font-size: 12px;
 
   pre,
- code {
+  code {
     @extend %code-font;
     @extend %break-words;
 
@@ -74,7 +74,7 @@ body {
     }
 
     td,
-th {
+    th {
       padding: 0.7em;
     }
   }
@@ -111,14 +111,14 @@ th {
   }
 
   h1 + h2,
- h1 + div + h2 {
+  h1 + div + h2 {
     border-top: none;
     margin-top: 0;
     padding-top: 0;
   }
 
   h3,
- h4 {
+  h4 {
     @extend %header-font;
 
     font-size: 0.8em;
@@ -128,7 +128,7 @@ th {
   }
 
   h5,
- h6 {
+  h6 {
     text-transform: uppercase;
   }
 

@@ -1,17 +1,13 @@
 @mixin media($bp) {
   @if $bp == xs {
     @media (width >= 480px) { @content; }
-  }
-  @else if $bp == sm {
+  } @else if $bp == sm {
     @media (width >= 768px) { @content; }
-  }
-  @else if $bp == md {
+  } @else if $bp == md {
     @media (width >= 992px) { @content; }
-  }
-  @else if $bp == lg {
+  } @else if $bp == lg {
     @media (width >= 1200px) { @content; }
-  }
-  @else {
+  } @else {
     @warn "Not a supported value";
   }
 }
