@@ -724,10 +724,8 @@
       if (elem.parent().is(headerClass) || elem.next().is(subheaderClass)) {
         // Shows the next sub-header element
         self.show(elem.next(subheaderClass), scroll);
-      }
-
       // If the current element's parent is a subheader element
-      else if (elem.parent().is(subheaderClass)) {
+      } else if (elem.parent().is(subheaderClass)) {
         // Shows the parent sub-header element
         self.show(elem.parent(), scroll);
       }
@@ -747,10 +745,8 @@
 
         // Adds the default styling to the dropdown list
         this.element.addClass('ui-widget').find('.toc-title').addClass('ui-widget-header').end().find('li').addClass('ui-widget-content');
-      }
-
       // If the user wants a twitterBootstrap theme
-      else if (this.options.theme === 'bootstrap') {
+      } else if (this.options.theme === 'bootstrap') {
         this.element.find(headerClass + ',' + subheaderClass).addClass('nav nav-list');
         this.focusClass = 'active';
       // If a user does not want a prebuilt theme
