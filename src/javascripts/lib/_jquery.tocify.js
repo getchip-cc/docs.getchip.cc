@@ -22,11 +22,9 @@
   'use strict';
 
   var tocClassName = 'tocify',
-    tocClass = '.' + tocClassName,
     tocFocusClassName = 'tocify-focus',
     tocHoverClassName = 'tocify-hover',
     hideTocClassName = 'tocify-hide',
-    hideTocClass = '.' + hideTocClassName,
     headerClassName = 'tocify-header',
     headerClass = '.' + headerClassName,
     subheaderClassName = 'tocify-subheader',
@@ -390,8 +388,7 @@
         // Finds the previous header DOM element
         previousHeader = $(self.options.selectors).eq(index - 1),
         currentTagName = +$(this).prop('tagName').charAt(1),
-        previousTagName = +previousHeader.prop('tagName').charAt(1),
-        lastSubheader;
+        previousTagName = +previousHeader.prop('tagName').charAt(1);
 
       // If the current header DOM element is smaller than the previous header DOM element or the first subheader
       if (currentTagName < previousTagName) {
@@ -423,11 +420,7 @@
       // _Local variables_
 
       // Stores the plugin context in the self variable
-      var self = this,
-        // Instantiates a new variable that will be used to hold a specific element's context
-        $self,
-        // Instantiates a new variable that will be used to determine the smoothScroll animation time duration
-        duration;
+      var self = this;
 
       // Event delegation that looks for any clicks on list item elements inside of the HTML element calling the plugin
       this.element.on('click.tocify', 'li', function(event) {
@@ -622,8 +615,7 @@
     //      Opens the current sub-header
     show: function(elem, scroll) {
       // Stores the plugin context in the `self` variable
-      var self = this,
-        element = elem;
+      var self = this;
 
       // If the sub-header is not already visible
       if (!elem.is(':visible')) {
