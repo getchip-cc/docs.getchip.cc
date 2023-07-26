@@ -22,19 +22,19 @@
   'use strict';
 
   var tocClassName = 'tocify',
-  tocClass = '.' + tocClassName,
-  tocFocusClassName = 'tocify-focus',
-  tocHoverClassName = 'tocify-hover',
-  hideTocClassName = 'tocify-hide',
-  hideTocClass = '.' + hideTocClassName,
-  headerClassName = 'tocify-header',
-  headerClass = '.' + headerClassName,
-  subheaderClassName = 'tocify-subheader',
-  subheaderClass = '.' + subheaderClassName,
-  itemClassName = 'tocify-item',
-  itemClass = '.' + itemClassName,
-  extendPageClassName = 'tocify-extend-page',
-  extendPageClass = '.' + extendPageClassName;
+    tocClass = '.' + tocClassName,
+    tocFocusClassName = 'tocify-focus',
+    tocHoverClassName = 'tocify-hover',
+    hideTocClassName = 'tocify-hide',
+    hideTocClass = '.' + hideTocClassName,
+    headerClassName = 'tocify-header',
+    headerClass = '.' + headerClassName,
+    subheaderClassName = 'tocify-subheader',
+    subheaderClass = '.' + subheaderClassName,
+    itemClassName = 'tocify-item',
+    itemClass = '.' + itemClassName,
+    extendPageClassName = 'tocify-extend-page',
+    extendPageClass = '.' + extendPageClassName;
 
   // Calling the jQueryUI Widget Factory Method
   $.widget('toc.tocify', {
@@ -194,13 +194,11 @@
 
       // Stores the plugin context in the self variable
       var self = this,
-
-      // All of the HTML tags found within the context provided (i.e. body) that match the top level jQuery selector above
-      firstElem,
-
-      // Instantiated variable that will store the top level newly created unordered list DOM element
-      ul,
-      ignoreSelector = self.options.ignoreSelector;
+        // All of the HTML tags found within the context provided (i.e. body) that match the top level jQuery selector above
+        firstElem,
+        // Instantiated variable that will store the top level newly created unordered list DOM element
+        ul,
+        ignoreSelector = self.options.ignoreSelector;
 
       // If the selectors option has a comma within the string
       if (this.options.selectors.indexOf(',') !== -1) {
@@ -233,8 +231,8 @@
             id: headerClassName + index,
             class: headerClassName
           })
-          // Appends a top level list item HTML element to the previously created HTML header
-          .append(self._nestElements($(this), index));
+            // Appends a top level list item HTML element to the previously created HTML header
+            .append(self._nestElements($(this), index));
 
         // Add the created unordered list element to the HTML element calling the plugin
         self.element.append(ul);
@@ -270,8 +268,8 @@
 
     _setActiveElement: function(pageload) {
       var self = this,
-      hash = window.location.hash.substring(1),
-      elem = self.element.find('li[data-unique="' + hash + '"]');
+        hash = window.location.hash.substring(1),
+        elem = self.element.find('li[data-unique="' + hash + '"]');
 
       if (hash.length) {
         // Removes highlighting from all of the list item's
@@ -348,7 +346,7 @@
     //      Generates the hash value that will be used to refer to each item.
     _generateHashValue: function(arr, self, index) {
       var hashValue = '',
-      hashGeneratorOption = this.options.hashGenerator;
+        hashGeneratorOption = this.options.hashGenerator;
 
       if (hashGeneratorOption === 'pretty') {
         // remove weird characters
@@ -389,11 +387,11 @@
     _appendSubheaders: function(self, ul) {
       // The current element index
       var index = $(this).index(self.options.selectors),
-      // Finds the previous header DOM element
-      previousHeader = $(self.options.selectors).eq(index - 1),
-      currentTagName = +$(this).prop('tagName').charAt(1),
-      previousTagName = +previousHeader.prop('tagName').charAt(1),
-      lastSubheader;
+        // Finds the previous header DOM element
+        previousHeader = $(self.options.selectors).eq(index - 1),
+        currentTagName = +$(this).prop('tagName').charAt(1),
+        previousTagName = +previousHeader.prop('tagName').charAt(1),
+        lastSubheader;
 
       // If the current header DOM element is smaller than the previous header DOM element or the first subheader
       if (currentTagName < previousTagName) {
@@ -426,10 +424,10 @@
 
       // Stores the plugin context in the self variable
       var self = this,
-      // Instantiates a new variable that will be used to hold a specific element's context
-      $self,
-      // Instantiates a new variable that will be used to determine the smoothScroll animation time duration
-      duration;
+        // Instantiates a new variable that will be used to hold a specific element's context
+        $self,
+        // Instantiates a new variable that will be used to determine the smoothScroll animation time duration
+        duration;
 
       // Event delegation that looks for any clicks on list item elements inside of the HTML element calling the plugin
       this.element.on('click.tocify', 'li', function(event) {
@@ -487,16 +485,16 @@
 
           // Stores how far the user has scrolled
           var winScrollTop = $(window).scrollTop(),
-          // Stores the height of the window
-          winHeight = $(window).height(),
-          // Stores the height of the document
-          docHeight = $(document).height(),
-          scrollHeight = $('body')[0].scrollHeight,
-          // Instantiates a variable that will be used to hold a selected HTML element
-          elem,
-          lastElem,
-          lastElemOffset,
-          currentElem;
+            // Stores the height of the window
+            winHeight = $(window).height(),
+            // Stores the height of the document
+            docHeight = $(document).height(),
+            scrollHeight = $('body')[0].scrollHeight,
+            // Instantiates a variable that will be used to hold a selected HTML element
+            elem,
+            lastElem,
+            lastElemOffset,
+            currentElem;
 
           if (self.options.extendPage) {
             // If the user has scrolled to the bottom of the page and the last toc item is not focused
@@ -530,8 +528,8 @@
 
             // Stores the distance to the closest anchor
             var // Stores the index of the closest anchor
-            closestAnchorIdx = null,
-            anchorText;
+              closestAnchorIdx = null,
+              anchorText;
 
             // if never calculated before, calculate and cache the heights
             if (self.cachedHeights.length == 0) {
@@ -567,7 +565,8 @@
               var scrollToElem = $(elem).closest('.tocify-header');
 
               var elementOffset = scrollToElem.offset().top,
-              wrapperOffset = tocifyWrapper.offset().top;
+                wrapperOffset = tocifyWrapper.offset().top;
+
               var offset = elementOffset - wrapperOffset;
 
               if (offset >= $(window).height()) {
@@ -624,7 +623,7 @@
     show: function(elem, scroll) {
       // Stores the plugin context in the `self` variable
       var self = this,
-      element = elem;
+        element = elem;
 
       // If the sub-header is not already visible
       if (!elem.is(':visible')) {
@@ -779,8 +778,8 @@
     //      Scrolls to a specific element
     _scrollTo: function(elem) {
       var self = this,
-      duration = self.options.smoothScroll || 0,
-      scrollTo = self.options.scrollTo;
+        duration = self.options.smoothScroll || 0,
+        scrollTo = self.options.scrollTo;
 
       // Once all animations on the page are complete, this callback function will be called
       $('html, body').promise().done(function() {
