@@ -379,7 +379,7 @@
       }
 
       // add the index if we need to
-      if (arr.length) { hashValue += ''+index; }
+      if (arr.length) { hashValue += '' + index; }
 
       // return the value
       return hashValue;
