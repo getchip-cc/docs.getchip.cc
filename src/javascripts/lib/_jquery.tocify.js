@@ -40,7 +40,7 @@
 
   // Calling the jQueryUI Widget Factory Method
   $.widget('toc.tocify', {
-    //Plugin version
+    // Plugin version
     version: '1.8.0',
 
     // These options will be used as defaults
@@ -224,7 +224,7 @@
 
       // Loops through each top level selector
       firstElem.each(function(index) {
-        //If the element matches the ignoreSelector then we skip it
+        // If the element matches the ignoreSelector then we skip it
         if($(this).is(ignoreSelector)) {
           return;
         }
@@ -247,7 +247,7 @@
           if($(this).find(self.options.selectors).length === 0) {
             // Loops through all of the subheader elements
             $(this).filter(self.options.selectors).each(function() {
-              //If the element matches the ignoreSelector then we skip it
+              // If the element matches the ignoreSelector then we skip it
               if($(this).is(ignoreSelector)) {
                 return;
               }
@@ -258,7 +258,7 @@
           } else {
             // Loops through all of the subheader elements
             $(this).find(self.options.selectors).each(function() {
-              //If the element matches the ignoreSelector then we skip it
+              // If the element matches the ignoreSelector then we skip it
               if($(this).is(ignoreSelector)) {
                 return;
               }
@@ -425,6 +425,7 @@
     //      Adds jQuery event handlers to the newly generated table of contents
     _setEventHandlers: function() {
       // _Local variables_
+
       // Stores the plugin context in the self variable
       var self = this,
       // Instantiates a new variable that will be used to hold a specific element's context
@@ -639,25 +640,25 @@
           elem = elem.closest(subheaderClass);
         }
 
-        //Determines what jQuery effect to use
+        // Determines what jQuery effect to use
         switch (self.options.showEffect) {
-          //Uses `no effect`
+          // Uses `no effect`
           case 'none':
             elem.show();
             break;
-          //Uses the jQuery `show` special effect
+          // Uses the jQuery `show` special effect
           case 'show':
             elem.show(self.options.showEffectSpeed);
             break;
-          //Uses the jQuery `slideDown` special effect
+          // Uses the jQuery `slideDown` special effect
           case 'slideDown':
             elem.slideDown(self.options.showEffectSpeed);
             break;
-          //Uses the jQuery `fadeIn` special effect
+          // Uses the jQuery `fadeIn` special effect
           case 'fadeIn':
             elem.fadeIn(self.options.showEffectSpeed);
             break;
-          //If none of the above options were passed, then a `jQueryUI show effect` is expected
+          // If none of the above options were passed, then a `jQueryUI show effect` is expected
           default:
             elem.show();
             break;
@@ -685,7 +686,7 @@
       // Stores the plugin context in the `self` variable
       var self = this;
 
-      //Determines what jQuery effect to use
+      // Determines what jQuery effect to use
       switch (self.options.hideEffect) {
         // Uses `no effect`
         case 'none':
@@ -803,4 +804,4 @@
       return self;
     }
   });
-})); //end of plugin
+})); // end of plugin
