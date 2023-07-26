@@ -525,7 +525,7 @@
               anchorText;
 
             // if never calculated before, calculate and cache the heights
-            if (self.cachedHeights.length == 0) {
+            if (self.cachedHeights.length === 0) {
               self.calculateHeights();
             }
 
@@ -577,11 +577,7 @@
                   history.replaceState({}, '', '#' + anchorText);
                   // provide a fallback
                 } else {
-                  scrollV = document.body.scrollTop;
-                  scrollH = document.body.scrollLeft;
                   location.hash = '#' + anchorText;
-                  document.body.scrollTop = scrollV;
-                  document.body.scrollLeft = scrollH;
                 }
               }
             }
