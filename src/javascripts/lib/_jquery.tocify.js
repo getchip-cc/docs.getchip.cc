@@ -151,7 +151,7 @@
       self._generateToc();
 
       // Caches heights and anchors
-      self.cachedHeights = [],
+      self.cachedHeights = [];
       self.cachedAnchors = [];
 
       // Adds CSS classes to the newly generated table of contents HTML
