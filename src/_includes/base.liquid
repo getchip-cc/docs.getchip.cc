@@ -17,6 +17,13 @@
   <link rel="stylesheet" href="/stylesheets/print.css" media="print">
   {%- endblock %}
 
+  {% block preloads -%}
+  <link rel="preload" href="/javascripts/all.js" as="script">
+  <link rel="preload" href="/stylesheets/highlight.css" as="style">
+  <link rel="preload" href="/stylesheets/screen.css" as="style">
+  <link rel="preload" href="/stylesheets/ntc_override.css" as="style">
+  {%- endblock %}
+
   <link rel="shortcut icon" href="/favicon.ico">
 </head>
 <body>
