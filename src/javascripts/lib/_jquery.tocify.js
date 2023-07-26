@@ -181,7 +181,7 @@
         $('html, body').promise().done(function() {
           setTimeout(function() {
             self.extendPageScroll = false;
-          },0);
+          }, 0);
         });
       });
     },
@@ -205,11 +205,11 @@
       // If the selectors option has a comma within the string
       if (this.options.selectors.indexOf(',') !== -1) {
         // Grabs the first selector from the string
-        firstElem = $(this.options.context).find(this.options.selectors.replace(/ /g,'').substr(0, this.options.selectors.indexOf(',')));
+        firstElem = $(this.options.context).find(this.options.selectors.replace(/ /g, '').substr(0, this.options.selectors.indexOf(',')));
       // If the selectors option does not have a comman within the string
       } else {
         // Grabs the first selector from the string and makes sure there are no spaces
-        firstElem = $(this.options.context).find(this.options.selectors.replace(/ /g,''));
+        firstElem = $(this.options.context).find(this.options.selectors.replace(/ /g, ''));
       }
 
       if (!firstElem.length) {
