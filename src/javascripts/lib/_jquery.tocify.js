@@ -160,9 +160,9 @@
       self._addCSSClasses();
 
       self.webkit = (function() {
-        for(var prop in window) {
-          if(prop) {
-            if(prop.toLowerCase().indexOf('webkit') !== -1) {
+        for (var prop in window) {
+          if (prop) {
+            if (prop.toLowerCase().indexOf('webkit') !== -1) {
               return true;
             }
           }
@@ -205,7 +205,7 @@
       ignoreSelector = self.options.ignoreSelector;
 
       // If the selectors option has a comma within the string
-      if(this.options.selectors.indexOf(',') !== -1) {
+      if (this.options.selectors.indexOf(',') !== -1) {
         // Grabs the first selector from the string
         firstElem = $(this.options.context).find(this.options.selectors.replace(/ /g,'').substr(0, this.options.selectors.indexOf(',')));
       // If the selectors option does not have a comman within the string
@@ -214,7 +214,7 @@
         firstElem = $(this.options.context).find(this.options.selectors.replace(/ /g,''));
       }
 
-      if(!firstElem.length) {
+      if (!firstElem.length) {
         self.element.addClass(hideTocClassName);
 
         return;
@@ -225,7 +225,7 @@
       // Loops through each top level selector
       firstElem.each(function(index) {
         // If the element matches the ignoreSelector then we skip it
-        if($(this).is(ignoreSelector)) {
+        if ($(this).is(ignoreSelector)) {
           return;
         }
 
@@ -244,11 +244,11 @@
         // Finds all of the HTML tags between the header and subheader elements
         $(this).nextUntil(this.nodeName.toLowerCase()).each(function() {
           // If there are no nested subheader elemements
-          if($(this).find(self.options.selectors).length === 0) {
+          if ($(this).find(self.options.selectors).length === 0) {
             // Loops through all of the subheader elements
             $(this).filter(self.options.selectors).each(function() {
               // If the element matches the ignoreSelector then we skip it
-              if($(this).is(ignoreSelector)) {
+              if ($(this).is(ignoreSelector)) {
                 return;
               }
 
@@ -259,7 +259,7 @@
             // Loops through all of the subheader elements
             $(this).find(self.options.selectors).each(function() {
               // If the element matches the ignoreSelector then we skip it
-              if($(this).is(ignoreSelector)) {
+              if ($(this).is(ignoreSelector)) {
                 return;
               }
 
@@ -275,7 +275,7 @@
       hash = window.location.hash.substring(1),
       elem = self.element.find('li[data-unique="' + hash + '"]');
 
-      if(hash.length) {
+      if (hash.length) {
         // Removes highlighting from all of the list item's
         self.element.find('.' + self.focusClass).removeClass(self.focusClass);
 
@@ -283,7 +283,7 @@
         elem.addClass(self.focusClass);
 
         // If the showAndHide option is true
-        if(self.options.showAndHide) {
+        if (self.options.showAndHide) {
           // Triggers the click event on the currently focused TOC item
           elem.click();
         }
@@ -291,7 +291,7 @@
         // Removes highlighting from all of the list item's
         self.element.find('.' + self.focusClass).removeClass(self.focusClass);
 
-        if(!hash.length && pageload && self.options.highlightDefault) {
+        if (!hash.length && pageload && self.options.highlightDefault) {
           // Highlights the first TOC item if no other items are highlighted
           self.element.find(itemClass).first().addClass(self.focusClass);
         }
@@ -311,7 +311,7 @@
       });
 
       // If there is already a duplicate TOC item
-      if(arr.length) {
+      if (arr.length) {
         // Adds the current TOC item text and index (for slight randomization) to the internal array
         this.items.push(self.text() + index);
       // If there not a duplicate TOC item
@@ -398,11 +398,11 @@
       lastSubheader;
 
       // If the current header DOM element is smaller than the previous header DOM element or the first subheader
-      if(currentTagName < previousTagName) {
+      if (currentTagName < previousTagName) {
         // Selects the last unordered list HTML found within the HTML element calling the plugin
         self.element.find(subheaderClass + '[data-tag=' + currentTagName + ']').last().append(self._nestElements($(this), index));
       // If the current header DOM element is the same type of header(eg. h4) as the previous header DOM element
-      } else if(currentTagName === previousTagName) {
+      } else if (currentTagName === previousTagName) {
         ul.find(itemClass).last().after(self._nestElements($(this), index));
       } else {
         // Selects the last unordered list HTML found within the HTML element calling the plugin
@@ -435,7 +435,7 @@
 
       // Event delegation that looks for any clicks on list item elements inside of the HTML element calling the plugin
       this.element.on('click.tocify', 'li', function(event) {
-        if(self.options.history) {
+        if (self.options.history) {
           window.location.hash = $(this).attr('data-unique');
         }
 
@@ -446,7 +446,7 @@
         $(this).addClass(self.focusClass);
 
         // If the showAndHide option is true
-        if(self.options.showAndHide) {
+        if (self.options.showAndHide) {
           var elem = $('li[data-unique="' + $(this).attr('data-unique') + '"]');
 
           self._triggerShow(elem);
@@ -468,7 +468,7 @@
 
         // Mouseleave event handler
         'mouseleave.tocify': function() {
-          if(self.options.theme !== 'bootstrap') {
+          if (self.options.theme !== 'bootstrap') {
             // Removes the hover CSS class from the current list item
             $(this).removeClass(self.hoverClass);
           }
@@ -500,13 +500,13 @@
           lastElemOffset,
           currentElem;
 
-          if(self.options.extendPage) {
+          if (self.options.extendPage) {
             // If the user has scrolled to the bottom of the page and the last toc item is not focused
-            if((self.webkit && winScrollTop >= scrollHeight - winHeight - self.options.extendPageOffset) || (!self.webkit && winHeight + winScrollTop > docHeight - self.options.extendPageOffset)) {
-              if(!$(extendPageClass).length) {
+            if ((self.webkit && winScrollTop >= scrollHeight - winHeight - self.options.extendPageOffset) || (!self.webkit && winHeight + winScrollTop > docHeight - self.options.extendPageOffset)) {
+              if (!$(extendPageClass).length) {
                 lastElem = $('div[data-unique="' + $(itemClass).last().attr('data-unique') + '"]');
 
-                if(!lastElem.length) return;
+                if (!lastElem.length) return;
 
                 // Gets the top offset of the page header that is linked to the last toc item
                 lastElemOffset = lastElem.offset().top;
@@ -518,7 +518,7 @@
                   'data-unique': extendPageClassName
                 }));
 
-                if(self.extendPageScroll) {
+                if (self.extendPageScroll) {
                   currentElem = self.element.find('li.active');
                   self._scrollTo($('div[data-unique=' + currentElem.attr('data-unique') + ']'));
                 }
@@ -557,7 +557,7 @@
             elem = $('li[data-unique="' + anchorText + '"]');
 
             // If the `highlightOnScroll` option is true and a next element is found
-            if(self.options.highlightOnScroll && elem.length && !elem.hasClass(self.focusClass)) {
+            if (self.options.highlightOnScroll && elem.length && !elem.hasClass(self.focusClass)) {
               // Removes highlighting from all of the list item's
               self.element.find('.' + self.focusClass).removeClass(self.focusClass);
 
@@ -580,10 +580,10 @@
               }
             }
 
-            if(self.options.scrollHistory) {
+            if (self.options.scrollHistory) {
               // IF STATEMENT ADDED BY ROBERT
-              if(window.location.hash !== '#' + anchorText && anchorText !== undefined) {
-                if(history.replaceState) {
+              if (window.location.hash !== '#' + anchorText && anchorText !== undefined) {
+                if (history.replaceState) {
                   history.replaceState({}, '', '#' + anchorText);
                   // provide a fallback
                 } else {
@@ -597,7 +597,7 @@
             }
 
             // If the `showAndHideOnScroll` option is true
-            if(self.options.showAndHideOnScroll && self.options.showAndHide) {
+            if (self.options.showAndHideOnScroll && self.options.showAndHide) {
               self._triggerShow(elem, true);
             }
           }, 0);
@@ -631,11 +631,11 @@
       // If the sub-header is not already visible
       if (!elem.is(':visible')) {
         // If the current element does not have any nested subheaders, is not a header, and its parent is not visible
-        if(!elem.find(subheaderClass).length && !elem.parent().is(headerClass) && !elem.parent().is(':visible')) {
+        if (!elem.find(subheaderClass).length && !elem.parent().is(headerClass) && !elem.parent().is(':visible')) {
           // Sets the current element to all of the subheaders within the current header
           elem = elem.parents(subheaderClass).add(elem);
         // If the current element does not have any nested subheaders and is not a header
-        } else if(!elem.children(subheaderClass).length && !elem.parent().is(headerClass)) {
+        } else if (!elem.children(subheaderClass).length && !elem.parent().is(headerClass)) {
           // Sets the current element to the closest subheader
           elem = elem.closest(subheaderClass);
         }
@@ -666,7 +666,7 @@
       }
 
       // If the current subheader parent element is a header
-      if(elem.parent().is(headerClass)) {
+      if (elem.parent().is(headerClass)) {
         // Hides all non-active sub-headers
         self.hide($(subheaderClass).not(elem));
       // If the current subheader parent element is not a header
@@ -721,13 +721,13 @@
       var self = this;
 
       // If the current element's parent is a header element or the next element is a nested subheader element
-      if(elem.parent().is(headerClass) || elem.next().is(subheaderClass)) {
+      if (elem.parent().is(headerClass) || elem.next().is(subheaderClass)) {
         // Shows the next sub-header element
         self.show(elem.next(subheaderClass), scroll);
       }
 
       // If the current element's parent is a subheader element
-      else if(elem.parent().is(subheaderClass)) {
+      else if (elem.parent().is(subheaderClass)) {
         // Shows the parent sub-header element
         self.show(elem.parent(), scroll);
       }
@@ -741,7 +741,7 @@
     //      Adds CSS classes to the newly generated table of contents HTML
     _addCSSClasses: function() {
       // If the user wants a jqueryUI theme
-      if(this.options.theme === 'jqueryui') {
+      if (this.options.theme === 'jqueryui') {
         this.focusClass = 'ui-state-default';
         this.hoverClass = 'ui-state-hover';
 
@@ -750,7 +750,7 @@
       }
 
       // If the user wants a twitterBootstrap theme
-      else if(this.options.theme === 'bootstrap') {
+      else if (this.options.theme === 'bootstrap') {
         this.element.find(headerClass + ',' + subheaderClass).addClass('nav nav-list');
         this.focusClass = 'active';
       // If a user does not want a prebuilt theme
