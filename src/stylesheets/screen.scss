@@ -239,12 +239,10 @@ body {
 
   // stylelint-disable-next-line no-descending-specificity
   span {
-    $side-pad: $main-padding / 2 - 8px;
-
     background-color: rgba($main-bg, 0.7);
     border-radius: 0 0 0 5px;
     display: block;
-    padding: $side-pad $side-pad $side-pad;
+    padding: 6px;
     transform: rotate(-90deg) translate(-100%, 0);
     transform-origin: 0 0;
   }
