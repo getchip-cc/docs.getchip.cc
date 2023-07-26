@@ -304,7 +304,7 @@
     _nestElements: function(self, index) {
       var arr, item, hashValue;
 
-      arr = $.grep(this.items, function (item) {
+      arr = $.grep(this.items, function(item) {
         return item === self.text();
       });
 
