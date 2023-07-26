@@ -228,13 +228,13 @@
         }
 
         // Creates an unordered list HTML element and adds a dynamic ID and standard class name
-        ul = $('<ul/>', {
-          id: headerClassName + index,
-          class: headerClassName
-        }).
-
-        // Appends a top level list item HTML element to the previously created HTML header
-        append(self._nestElements($(this), index));
+        ul =
+          $('<ul/>', {
+            id: headerClassName + index,
+            class: headerClassName
+          })
+          // Appends a top level list item HTML element to the previously created HTML header
+          .append(self._nestElements($(this), index));
 
         // Add the created unordered list element to the HTML element calling the plugin
         self.element.append(ul);
