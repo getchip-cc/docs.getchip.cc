@@ -76,6 +76,7 @@
 // This is all the stuff with the light background in the left half of the page
 
 .content {
+  // stylelint-disable no-descending-specificity
   a {
     color: #eb008b;
     text-decoration: none;
@@ -84,6 +85,7 @@
       color: #6b56d0;
     }
   }
+  // stylelint-enable no-descending-specificity
 
   > h1,
   > h2,
@@ -179,6 +181,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 // This is all the stuff that appears in the right half of the page
 
+// stylelint-disable-next-line no-duplicate-selectors
 .content {
   pre,
   blockquote {

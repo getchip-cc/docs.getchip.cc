@@ -73,16 +73,6 @@ body {
   width: $nav-width;
   z-index: 30;
 
-  // language selector for mobile devices
-  .lang-selector {
-    display: none;
-
-    a {
-      padding-bottom: 0.5em;
-      padding-top: 0.5em;
-    }
-  }
-
   // This is the logo at the top of the ToC
   > img {
     display: block;
@@ -115,8 +105,7 @@ body {
     }
   }
 
-  img + .tocify,
-  .lang-selector + .tocify {
+  img + .tocify {
     margin-top: $logo-margin;
   }
 
@@ -152,6 +141,7 @@ body {
     }
   }
 
+  // stylelint-disable no-descending-specificity
   .tocify-item > a,
   .toc-footer li {
     display: block;
@@ -178,6 +168,7 @@ body {
     transition-property: background;
     transition-timing-function: linear;
   }
+  // stylelint-enable no-descending-specificity
 
   // This is the currently selected ToC entry
   .tocify-focus {
@@ -211,6 +202,7 @@ body {
     margin-top: 1em;
     padding: 1em 0;
 
+    // stylelint-disable no-descending-specificity
     li,
     a {
       color: $nav-text;
@@ -226,22 +218,12 @@ body {
       line-height: 1.7;
       text-decoration: none;
     }
+    // stylelint-enable no-descending-specificity
   }
 }
 
 // button to show navigation on mobile devices
 #nav-button {
-  span {
-    $side-pad: $main-padding / 2 - 8px;
-
-    background-color: rgba($main-bg, 0.7);
-    border-radius: 0 0 0 5px;
-    display: block;
-    padding: $side-pad $side-pad $side-pad;
-    transform: rotate(-90deg) translate(-100%, 0);
-    transform-origin: 0 0;
-  }
-
   color: #000;
   display: none;
   font-weight: bold;
@@ -254,6 +236,18 @@ body {
   top: 0;
   transition: left 0.3s ease-in-out;
   z-index: 100;
+
+  // stylelint-disable-next-line no-descending-specificity
+  span {
+    $side-pad: $main-padding / 2 - 8px;
+
+    background-color: rgba($main-bg, 0.7);
+    border-radius: 0 0 0 5px;
+    display: block;
+    padding: $side-pad $side-pad $side-pad;
+    transform: rotate(-90deg) translate(-100%, 0);
+    transform-origin: 0 0;
+  }
 
   img {
     height: 16px;
@@ -288,45 +282,6 @@ body {
     right: 0;
     top: 0;
     width: $examples-width;
-  }
-
-  .lang-selector {
-    border-bottom: 5px solid $lang-select-active-bg;
-    position: fixed;
-    z-index: 50;
-  }
-}
-
-.lang-selector {
-  background-color: $lang-select-bg;
-  font-weight: bold;
-  width: 100%;
-
-  a {
-    color: $lang-select-text;
-    display: block;
-    float: left;
-    line-height: 30px;
-    outline: 0;
-    padding: 0 10px;
-    text-decoration: none;
-
-    &:active,
-    &:focus {
-      background-color: $lang-select-pressed-bg;
-      color: $lang-select-pressed-text;
-    }
-
-    &.active {
-      background-color: $lang-select-active-bg;
-      color: $lang-select-active-text;
-    }
-  }
-
-  &::after {
-    clear: both;
-    content: "";
-    display: block;
   }
 }
 
@@ -482,6 +437,7 @@ body {
     margin-left: 15px;
   }
 
+  // stylelint-disable no-descending-specificity
   p,
   li,
   dt,
@@ -492,6 +448,7 @@ body {
   img {
     max-width: 100%;
   }
+  // stylelint-enable no-descending-specificity
 
   code {
     background-color: rgb(0 0 0 / 5%);
@@ -560,6 +517,7 @@ body {
 ////////////////////////////////////////////////////////////////////////////////
 // This is all the stuff that appears in the right half of the page
 
+// stylelint-disable-next-line no-duplicate-selectors
 .content {
   pre,
   blockquote {
@@ -577,6 +535,7 @@ body {
 
     > p { margin: 0; }
 
+    // stylelint-disable-next-line no-descending-specificity
     a {
       border-bottom: dashed 1px #ccc;
       color: #fff;
@@ -636,14 +595,6 @@ body {
 
   %left-col {
     margin-right: 0;
-  }
-
-  .tocify-wrapper .lang-selector {
-    display: block;
-  }
-
-  .page-wrapper .lang-selector {
-    display: none;
   }
 
   %right-col {
