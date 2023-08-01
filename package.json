@@ -23,7 +23,7 @@
     "jquery": "2.2.0",
     "jquery-ui": "jquery/jquery-ui#1.11.3",
     "jquery.highlight-bartaz": "1.0.0",
-    "lunr": "0.5.7",
+    "lunr": "2.3.9",
     "normalize.css": "3.0.2"
   },
   "devDependencies": {
