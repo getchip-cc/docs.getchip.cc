@@ -19,7 +19,7 @@
     "test": "test -f ./_site/index.html"
   },
   "dependencies": {
-    "imagesloaded": "3.1.8",
+    "imagesloaded": "5.0.0",
     "jquery": "2.2.0",
     "jquery-ui": "jquery/jquery-ui#1.11.3",
     "jquery.highlight-bartaz": "1.0.0",
