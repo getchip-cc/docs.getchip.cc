@@ -1,5 +1,5 @@
 const config = require('@jgarber/eslint-config');
-const globals = require('globals');
+// const globals = require('globals');
 
 module.exports = [
   ...config,
@@ -7,13 +7,19 @@ module.exports = [
     ignores: ['_site/*', 'src/javascripts/lib/*']
   },
   {
-    files: ['src/javascripts/**/*.js'],
+    files: ['src/javascripts/app/**/*.js'],
     languageOptions: {
       globals: {
-        ...globals.browser,
-        ...globals.jquery,
-        lunr: 'readonly'
+        $: 'readonly',
+        document: 'readonly',
+        lunr: 'readonly',
+        window: 'readonly'
       }
+    }
+  },
+  {
+    rules: {
+      'jsdoc/require-jsdoc': 'off'
     }
   }
 ];
