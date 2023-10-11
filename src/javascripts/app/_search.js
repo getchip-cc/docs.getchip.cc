@@ -4,7 +4,7 @@
   let content;
   let searchResults;
 
-  const highlightOpts = { element: 'span', className: 'search-highlight' };
+  const highlightOptions = { element: 'span', className: 'search-highlight' };
   const index = new lunr.Index();
 
   index.ref('id');
@@ -49,8 +49,8 @@
       if (results.length) {
         searchResults.empty();
         $.each(results, function(index, result) {
-          const elem = document.getElementById(result.ref);
-          searchResults.append('<li><a href="#' + result.ref + '">' + $(elem).text() + '</a></li>');
+          const element = document.getElementById(result.ref);
+          searchResults.append('<li><a href="#' + result.ref + '">' + $(element).text() + '</a></li>');
         });
         highlight.call(this);
       } else {
@@ -64,10 +64,10 @@
   }
 
   function highlight() {
-    if (this.value) content.highlight(this.value, highlightOpts);
+    if (this.value) content.highlight(this.value, highlightOptions);
   }
 
   function unhighlight() {
-    content.unhighlight(highlightOpts);
+    content.unhighlight(highlightOptions);
   }
 })();
