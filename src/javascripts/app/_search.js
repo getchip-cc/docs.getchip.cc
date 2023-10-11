@@ -4,7 +4,7 @@
   let content;
   let searchResults;
 
-  const highlightOptions = { element: 'span', className: 'search-highlight' };
+  const highlightOptions = { className: 'search-highlight', element: 'span' };
   const index = new lunr.Index();
 
   index.ref('id');
@@ -20,9 +20,9 @@
       const title = $(this);
       const body = title.nextUntil('h1, h2');
       index.add({
+        body: body.text(),
         id: title.prop('id'),
-        title: title.text(),
-        body: body.text()
+        title: title.text()
       });
     });
   }
