@@ -8,19 +8,19 @@
 
   const makeToc = function() {
     global.toc = $('#toc').tocify({
-      selectors: 'h1, h2, h3',
       extendPage: false,
-      theme: 'none',
-      smoothScroll: false,
-      showEffectSpeed: 0,
-      hideEffectSpeed: 180,
-      ignoreSelector: '.toc-ignore',
-      highlightOffset: 60,
-      scrollTo: -1,
-      scrollHistory: true,
       hashGenerator: function(text, element) {
         return element.prop('id');
-      }
+      },
+      hideEffectSpeed: 180,
+      highlightOffset: 60,
+      ignoreSelector: '.toc-ignore',
+      scrollHistory: true,
+      scrollTo: -1,
+      selectors: 'h1, h2, h3',
+      showEffectSpeed: 0,
+      smoothScroll: false,
+      theme: 'none'
     }).data('toc-tocify');
 
     $('#nav-button').click(function() {
