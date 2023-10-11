@@ -1,5 +1,4 @@
 const config = require('@jgarber/eslint-config');
-// const globals = require('globals');
 
 module.exports = [
   ...config,
@@ -7,7 +6,7 @@ module.exports = [
     ignores: ['_site/*', 'src/javascripts/lib/*']
   },
   {
-    files: ['src/javascripts/app/**/*.js'],
+    files: ['src/javascripts/app/*.js'],
     languageOptions: {
       globals: {
         $: 'readonly',
