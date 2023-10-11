@@ -49,7 +49,7 @@
       if (results.length > 0) {
         searchResults.empty();
         $.each(results, function(index, result) {
-          const element = document.getElementById(result.ref);
+          const element = document.querySelector('#' + result.ref);
           searchResults.append('<li><a href="#' + result.ref + '">' + $(element).text() + '</a></li>');
         });
         highlight.call(this);
