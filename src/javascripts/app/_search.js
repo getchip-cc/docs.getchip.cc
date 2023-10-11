@@ -46,7 +46,7 @@
         return r.score > 0.0001;
       });
 
-      if (results.length) {
+      if (results.length > 0) {
         searchResults.empty();
         $.each(results, function(index, result) {
           const element = document.getElementById(result.ref);
