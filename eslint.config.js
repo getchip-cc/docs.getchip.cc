@@ -1,10 +1,10 @@
 const config = require('@jgarber/eslint-config');
 
 module.exports = [
-  ...config,
   {
-    ignores: ['_site/*', 'src/javascripts/lib/*']
+    ignores: ['_site', 'src/javascripts/lib']
   },
+  ...config,
   {
     files: ['src/javascripts/app/*.js'],
     languageOptions: {
@@ -14,11 +14,6 @@ module.exports = [
         lunr: 'readonly',
         window: 'readonly'
       }
-    }
-  },
-  {
-    rules: {
-      'jsdoc/require-jsdoc': 'off'
     }
   }
 ];
