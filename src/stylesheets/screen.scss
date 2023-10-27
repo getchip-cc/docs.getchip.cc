@@ -65,8 +65,7 @@ body {
   font-size: 13px;
   font-weight: bold;
   left: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden auto;
   position: fixed;
   top: 0;
   transition: left 0.3s ease-in-out;
@@ -113,8 +112,7 @@ body {
     box-sizing: border-box;
     height: 0;
     margin-top: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden auto;
     transition-duration: 180ms;
     transition-property: height, margin;
     transition-timing-function: ease-in-out;
