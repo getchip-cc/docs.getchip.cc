@@ -28,9 +28,9 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@jgarber/eslint-config": "^3.0.0",
-    "@jgarber/stylelint-config-scss": "^1.0.0",
+    "@jgarber/stylelint-config-scss": "^2.0.0",
     "markdown-it": "^14.0.0",
     "markdown-it-anchor": "^8.6.7",
-    "sass": "^1.69.6"
+    "sass": "^1.69.7"
   }
 }
