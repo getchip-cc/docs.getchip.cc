@@ -6,10 +6,13 @@ module.exports = function(eleventyConfig) {
     .addPassthroughCopy('./src/fonts')
     .addPassthroughCopy('./src/images');
 
-  // Libraries
-  eleventyConfig.setLibrary('md', require('./lib/libraries/markdown.js'));
-
   // Plugins
+  eleventyConfig.addPlugin(require('@jgarber/eleventy-plugin-markdown'), {
+    plugins: [
+      [require('markdown-it-anchor'), { tabIndex: false }]
+    ]
+  });
+
   eleventyConfig.addPlugin(require('./lib/plugins/sass.js'));
 
   return {
