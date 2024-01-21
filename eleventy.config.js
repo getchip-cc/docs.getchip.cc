@@ -13,7 +13,7 @@ module.exports = function(eleventyConfig) {
     ]
   });
 
-  eleventyConfig.addPlugin(require('./lib/plugins/sass.js'));
+  eleventyConfig.addPlugin(require('@jgarber/eleventy-plugin-sass'));
 
   return {
     dir: {
