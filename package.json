@@ -8,7 +8,7 @@
   "repository": "github:getchip-cc/docs.getchip.cc",
   "scripts": {
     "build": "eleventy --quiet",
-    "clean": "rm -rf public",
+    "clean": "rm -rf _site",
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "stylelint ./src/**/*.scss",
     "lint:js": "eslint .",
