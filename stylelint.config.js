@@ -1,12 +1,12 @@
 module.exports = {
-  extends: ['@jgarber/stylelint-config-scss'],
+  extends: "@jgarber/stylelint-config-scss",
   rules: {
-    'font-family-no-missing-generic-family-keyword': [
+    "font-family-no-missing-generic-family-keyword": [
       true,
       {
-        ignoreFontFamilies: ['Slate']
-      }
+        ignoreFontFamilies: ["Slate"],
+      },
     ],
-    'scss/comment-no-loud': null
-  }
+    "scss/comment-no-loud": null,
+  },
 };
