@@ -1,4 +1,9 @@
-module.exports = function(eleventyConfig) {
+import eleventyPluginMarkdown from "@jgarber/eleventy-plugin-markdown";
+import eleventyPluginSass from "@jgarber/eleventy-plugin-sass";
+
+import markdownItAnchor from "markdown-it-anchor";
+
+export default function(eleventyConfig) {
   // Passthrough File Copy
   eleventyConfig
     .addPassthroughCopy("./src/_{headers,redirects}")
@@ -7,17 +12,17 @@ module.exports = function(eleventyConfig) {
     .addPassthroughCopy("./src/images");
 
   // Plugins
-  eleventyConfig.addPlugin(require("@jgarber/eleventy-plugin-markdown"), {
+  eleventyConfig.addPlugin(eleventyPluginMarkdown, {
     plugins: [
-      [require("markdown-it-anchor"), { tabIndex: false }],
+      [markdownItAnchor, { tabIndex: false }],
     ],
   });
 
-  eleventyConfig.addPlugin(require("@jgarber/eleventy-plugin-sass"));
+  eleventyConfig.addPlugin(eleventyPluginSass);
+}
 
-  return {
-    dir: {
-      input: "./src",
-    },
-  };
+export const config = {
+  dir: {
+    input: "./src",
+  },
 };

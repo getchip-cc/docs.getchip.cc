@@ -3,15 +3,15 @@ layout: "page.liquid"
 title: "Next Thing Co. Documentation"
 ---
 
-{% include "chip/_welcome-to-derp.md" %}
-{% include "chip/_start-chip-boot-derp.md" %}
-{% include "chip/_connecting-accys.md" %}
-{% include "chip/_using-derp.md" %}
-{% include "chip/_chip-hardware.md" %}
-{% include "chip/_making.md" %}
-{% include "chip/_flash-in-browser.md" %}
-{% include "chip/_advanced.md" %}
-{% include "chip/_advanced-headless.md" %}
-{% include "chip/_faq.md" %}
-{% include "chip/_trouble-faq.md" %}
-{% include "chip/_compliance.md" %}
+{% render "chip/_welcome-to-derp.md" %}
+{% render "chip/_start-chip-boot-derp.md" %}
+{% render "chip/_connecting-accys.md" %}
+{% render "chip/_using-derp.md" %}
+{% render "chip/_chip-hardware.md" %}
+{% render "chip/_making.md" %}
+{% render "chip/_flash-in-browser.md" %}
+{% render "chip/_advanced.md" %}
+{% render "chip/_advanced-headless.md" %}
+{% render "chip/_faq.md" %}
+{% render "chip/_trouble-faq.md" %}
+{% render "chip/_compliance.md" %}
