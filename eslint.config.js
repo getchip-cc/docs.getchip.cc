@@ -1,7 +1,7 @@
 import config from "@jgarber/eslint-config";
 
 export default [
-  { ignores: ["_site", "src/javascripts/lib"] },
+  { ignores: ["src/javascripts/lib"] },
   ...config,
   {
     files: ["src/javascripts/app/*.js"],
